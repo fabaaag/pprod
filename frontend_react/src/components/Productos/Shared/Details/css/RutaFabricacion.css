@@ -1,0 +1,103 @@
+.process-item .process-content h6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.estandares-por-maquina {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.estandar-maquina-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.estandar-maquina-item:last-child {
+    border-bottom: none;
+}
+
+.estandar-maquina-item:hover {
+    background-color: #f8f9fa;
+}
+
+.estandar-maquina-item.selected {
+    background-color: #e9f0ff;
+}
+
+.maquina-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.maquina-descripcion {
+    font-size: 0.9rem;
+}
+
+.estandar-value {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.process-group {
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.process-group.expanded {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.process-header {
+    display: flex;
+    padding: 12px 15px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.process-header:hover {
+    background-color: #e9ecef;
+}
+
+.maquinas-alternativas-panel {
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: 1px solid #e9ecef;
+}
+
+.maquinas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.maquina-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.maquina-item:hover {
+    background-color: #f8f9fa;
+}
+
+.maquina-item.active {
+    background-color: #e9f0ff;
+}

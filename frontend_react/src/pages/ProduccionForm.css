@@ -1,0 +1,500 @@
+/* ProduccionForm.css */
+.produccion-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Loading */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+/* Mensajes */
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  border: 1px solid #fcc;
+}
+
+.success-message {
+  background: #efe;
+  color: #363;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  border: 1px solid #cfc;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+  font-style: italic;
+}
+
+/* Búsqueda */
+.busqueda-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.search-form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+.operadores-list h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.operador-card {
+  background: white;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.operador-card:hover {
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.operador-card.con-trabajo {
+  border-color: #28a745;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fff9 100%);
+}
+
+.operador-card.sin-trabajo {
+  border-color: #6c757d;
+  opacity: 0.8;
+}
+
+.operador-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 15px auto;
+}
+
+.operador-info h4 {
+  color: #333;
+  margin: 0 0 8px 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.operador-info .rut {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  margin: 4px 0;
+}
+
+.operador-info .empresa {
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin: 4px 0 15px 0;
+}
+
+.operador-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.stat-item {
+  background: #f8f9fa;
+  padding: 6px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.stat-item.active {
+  background: #007bff;
+  color: white;
+}
+
+.trabajo-activo-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #28a745;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.no-operadores {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.no-operadores p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Dashboard */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+.dashboard-header h2 {
+  color: #333;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+}
+
+.stat-card p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  color: #333;
+  margin: 0;
+}
+
+.asignaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.asignacion-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+.asignacion-card h4 {
+  color: #007bff;
+  margin: 0 0 15px 0;
+}
+
+.asignacion-card p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.progress-info {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #28a745;
+  transition: width 0.3s ease;
+}
+
+.cantidad-info {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.estado-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.estado-pendiente { background: #ffc107; color: #000; }
+.estado-en_proceso { background: #007bff; color: white; }
+.estado-completado { background: #28a745; color: white; }
+
+.ingresos-section {
+  margin-top: 30px;
+}
+
+.ingresos-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.ingresos-list {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ingreso-item {
+  display: grid;
+  grid-template-columns: 80px 120px 1fr 120px auto;
+  gap: 15px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  font-size: 14px;
+}
+
+.ingreso-item:last-child {
+  border-bottom: none;
+}
+
+.ingreso-item .hora { color: #666; }
+.ingreso-item .ot { font-weight: bold; color: #007bff; }
+.ingreso-item .proceso { color: #333; }
+.ingreso-item .cantidad { color: #28a745; font-weight: bold; }
+.ingreso-item .falla { color: #dc3545; font-size: 12px; }
+
+/* Formulario de ingreso */
+.ingreso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+.ingreso-header h2 {
+  color: #333;
+  margin: 0;
+}
+
+.ingreso-form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.asignacion-detalle {
+  margin: 20px 0;
+}
+
+.detalle-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.detalle-card h4 {
+  color: #007bff;
+  margin: 0 0 15px 0;
+}
+
+.detalle-card p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.form-actions {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* Botones */
+.btn-primary {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.btn-primary:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .produccion-app {
+    padding: 10px;
+  }
+  
+  .dashboard-header,
+  .ingreso-header,
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .asignaciones-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ingreso-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .operadores-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .selector-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .operador-stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

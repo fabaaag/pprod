@@ -1,0 +1,419 @@
+.timeline-tiempo-real {
+    margin: 20px 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .timeline-item-tiempo-real {
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  
+  .timeline-item-tiempo-real.editable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  .timeline-item-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2px 4px;
+  }
+  
+  .item-title {
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .progress-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+  }
+  
+  .edit-badge {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  .timeline-container {
+    height: 400px;
+    overflow: auto;
+  }
+  
+  /* Estados específicos */
+  .timeline-item-tiempo-real.completado {
+    border-left: 4px solid #28a745;
+  }
+  
+  .timeline-item-tiempo-real.en_proceso {
+    border-left: 4px solid #17a2b8;
+  }
+  
+  .timeline-item-tiempo-real.detenido {
+    border-left: 4px solid #dc3545;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.7; }
+  }
+
+  .timeline-item-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    background: white;
+    transition: all 0.2s ease;
+    height: 100%;
+  }
+  
+  .timeline-item-card.clickeable {
+    cursor: pointer;
+  }
+  
+  .timeline-item-card.clickeable:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: #007bff;
+  }
+  
+  .item-header {
+    border-bottom: 1px solid #f8f9fa;
+    padding-bottom: 0.5rem;
+  }
+  
+  .item-name {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #495057;
+  }
+  
+  .item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .item-dates {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+  }
+  
+  /* Bordes de color según estado */
+  .timeline-item-card[data-estado="COMPLETADO"] {
+    border-left: 4px solid #28a745;
+  }
+  
+  .timeline-item-card[data-estado="EN_PROCESO"] {
+    border-left: 4px solid #007bff;
+  }
+  
+  .timeline-item-card[data-estado="PAUSADO"] {
+    border-left: 4px solid #ffc107;
+  }
+  
+  .timeline-item-card[data-estado="PENDIENTE"] {
+    border-left: 4px solid #6c757d;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .timeline-item-card {
+      margin-bottom: 1rem;
+    }
+    
+    .item-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+
+  /* Grupos de OT en timeline */
+  .timeline-group-ot {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+
+  /* Grupos de proceso en timeline */
+  .timeline-group-proceso {
+    background: #e9ecef;
+    border-left: 4px solid #6c757d;
+    border-radius: 4px;
+  }
+
+  .timeline-group-proceso.estado-completado {
+    border-left-color: #28a745;
+    background: #d4edda;
+  }
+
+  .timeline-group-proceso.estado-en_proceso {
+    border-left-color: #007bff;
+    background: #d1ecf1;
+  }
+
+  .timeline-group-proceso.estado-pausado {
+    border-left-color: #dc3545;
+    background: #f8d7da;
+  }
+
+  /* Items de timeline */
+  .timeline-item-completado {
+    background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+  }
+
+  .timeline-item-en_proceso {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+  }
+
+  .timeline-item-pausado {
+    background: linear-gradient(135deg, #dc3545, #c82333) !important;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+  }
+
+  .timeline-item-pendiente {
+    background: linear-gradient(135deg, #6c757d, #5a6268) !important;
+    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.3);
+  }
+
+  /* Cards de procesos */
+  .ot-timeline-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+  }
+
+  .proceso-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 8px;
+  }
+
+  .proceso-card.clickeable:hover {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .proceso-card:not(.clickeable) {
+    background-color: #f8f9fa;
+    opacity: 0.8;
+  }
+
+  /* Animaciones */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  .proceso-card.clickeable:active {
+    animation: pulse 0.3s ease;
+  }
+
+  /* Mejoras de accesibilidad */
+  .proceso-card[data-estado="EN_PROCESO"] {
+    border-left: 4px solid #007bff;
+  }
+
+  .proceso-card[data-estado="COMPLETADO"] {
+    border-left: 4px solid #28a745;
+  }
+
+  .proceso-card[data-estado="PAUSADO"] {
+    border-left: 4px solid #dc3545;
+  }
+
+  .proceso-card[data-estado="PENDIENTE"] {
+    border-left: 4px solid #6c757d;
+  }
+
+  /* Timeline responsiva */
+  @media (max-width: 768px) {
+    .timeline-tiempo-real-container {
+      padding: 10px;
+      max-height: calc(100vh - 100px);
+    }
+    
+    .timeline-wrapper {
+      height: 400px;
+    }
+    
+    .timeline-cards-view {
+      max-height: 400px;
+    }
+    
+    .proceso-card {
+      margin-bottom: 15px;
+      min-height: 100px;
+    }
+  }
+
+  /* Control específico de la altura del viewport */
+  @media (max-height: 600px) {
+    .timeline-wrapper {
+      height: 300px;
+    }
+    
+    .timeline-cards-view {
+      max-height: 300px;
+    }
+  }
+
+  /* Estados visuales mejorados */
+  .timeline-content .alert {
+    margin: 20px 0;
+  }
+
+  .btn-group .btn {
+    white-space: nowrap;
+  }
+
+  /* Mejoras para debugging */
+  .timeline-debug {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 10px;
+  }
+
+  /* NUEVO: Estilos para items extendidos al horario laboral */
+  .timeline-wrapper .react-calendar-timeline .rct-item {
+    border-radius: 4px !important;
+    border: 2px solid transparent !important;
+    min-height: 20px !important;
+  }
+
+  .timeline-wrapper .react-calendar-timeline .rct-item[data-extended-view="true"] {
+    background: linear-gradient(90deg, 
+      rgba(255,255,255,0.3) 0%, 
+      var(--item-color, #007bff) 15%, 
+      var(--item-color, #007bff) 85%, 
+      rgba(255,255,255,0.3) 100%
+    ) !important;
+    border: 2px solid var(--item-color, #007bff) !important;
+    opacity: 0.85 !important;
+  }
+
+  .timeline-wrapper .react-calendar-timeline .rct-item[data-is-multi-day="true"] {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--item-color, #007bff),
+      var(--item-color, #007bff) 10px,
+      rgba(255,255,255,0.2) 10px,
+      rgba(255,255,255,0.2) 12px
+    ) !important;
+  }
+
+  /* Indicadores de horario laboral en el header */
+  .timeline-wrapper .react-calendar-timeline .rct-header {
+    position: relative;
+  }
+
+  .timeline-wrapper .react-calendar-timeline .rct-header::before {
+    content: "Horario laboral: 7:45 - 17:45";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    z-index: 10;
+  }
+
+  /* Mejorar visibilidad del texto en items */
+  .timeline-wrapper .react-calendar-timeline .rct-item-content {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    padding: 2px 6px !important;
+  }
+
+  /* Hover effects mejorados */
+  .timeline-wrapper .react-calendar-timeline .rct-item:hover {
+    transform: scaleY(1.1) !important;
+    z-index: 100 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+    transition: all 0.2s ease !important;
+  }
+
+  /* Indicadores visuales para diferentes estados */
+  .timeline-wrapper .rct-item[data-estado="COMPLETADO"] {
+    --item-color: #28a745;
+  }
+
+  .timeline-wrapper .rct-item[data-estado="EN_PROCESO"] {
+    --item-color: #007bff;
+  }
+
+  .timeline-wrapper .rct-item[data-estado="PAUSADO"] {
+    --item-color: #dc3545;
+  }
+
+  .timeline-wrapper .rct-item[data-estado="PENDIENTE"] {
+    --item-color: #6c757d;
+  }
+
+  /* Marcadores de horario de trabajo en el timeline */
+  .horario-trabajo-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #28a745;
+    opacity: 0.6;
+    z-index: 5;
+  }
+
+  .horario-trabajo-marker.inicio {
+    background-color: #28a745;
+  }
+
+  .horario-trabajo-marker.fin {
+    background-color: #dc3545;
+  }
+
+  /* Tooltip mejorado para items extendidos */
+  .timeline-wrapper .rct-item[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: pre-line;
+    z-index: 1000;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    max-width: 250px;
+    word-wrap: break-word;
+  }

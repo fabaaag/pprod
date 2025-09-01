@@ -1,0 +1,1490 @@
+2025-06-25 10:44:29,139 - INFO - === INICIANDO COMANDO REIMPORTAR �RDENES DE TRABAJO ===
+2025-06-25 10:44:29,140 - INFO - Timestamp: 2025-06-25 10:44:29
+2025-06-25 10:44:29,140 - INFO - Archivo OT: W:\ot.txt
+2025-06-25 10:44:29,140 - INFO - Archivo Rutas OT: W:\ruta_ot.txt
+2025-06-25 10:44:29,140 - ERROR - Archivo no encontrado: W:\ot.txt
+2025-06-25 10:44:29,141 - ERROR - Archivo no encontrado: W:\ruta_ot.txt
+2025-06-25 11:09:25,338 - INFO - === INICIANDO COMANDO REIMPORTAR �RDENES DE TRABAJO ===
+2025-06-25 11:09:25,339 - INFO - Timestamp: 2025-06-25 11:09:25
+2025-06-25 11:09:25,339 - INFO - Archivo OT: C:\Users\desar\AppData\Roaming\Microsoft\Windows\Network Shortcuts\migracion\ot.txt
+2025-06-25 11:09:25,339 - INFO - Archivo Rutas OT: C:\Users\desar\AppData\Roaming\Microsoft\Windows\Network Shortcuts\migracion\ruta_ot.txt
+2025-06-25 11:09:25,339 - ERROR - Archivo no encontrado: C:\Users\desar\AppData\Roaming\Microsoft\Windows\Network Shortcuts\migracion\ot.txt
+2025-06-25 11:09:25,339 - ERROR - Archivo no encontrado: C:\Users\desar\AppData\Roaming\Microsoft\Windows\Network Shortcuts\migracion\ruta_ot.txt
+2025-06-25 11:17:55,374 - INFO - === INICIANDO COMANDO REIMPORTAR �RDENES DE TRABAJO ===
+2025-06-25 11:17:55,374 - INFO - Timestamp: 2025-06-25 11:17:55
+2025-06-25 11:17:55,375 - INFO - Archivo OT: \\WEBSERVER\migracion\ot.txt
+2025-06-25 11:17:55,375 - INFO - Archivo Rutas OT: \\WEBSERVER\migracion\ruta_ot.txt
+2025-06-25 11:17:55,387 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-06-25 11:17:55,417 - INFO - Registros encontrados para eliminar:
+2025-06-25 11:17:55,417 - INFO -   - ejecuciones_tarea: 0
+2025-06-25 11:17:55,417 - INFO -   - tareas_fragmentadas: 0
+2025-06-25 11:17:55,418 - INFO -   - historial_planificacion: 0
+2025-06-25 11:17:55,418 - INFO -   - reportes_diarios: 0
+2025-06-25 11:17:55,419 - INFO -   - programa_orden_trabajo: 0
+2025-06-25 11:17:55,419 - INFO -   - item_ruta: 454
+2025-06-25 11:17:55,420 - INFO -   - ruta_ot: 102
+2025-06-25 11:17:55,420 - INFO -   - orden_trabajo: 102
+2025-06-25 11:17:55,420 - WARNING - MODO DRY-RUN: No se eliminar�n registros
+2025-06-25 11:17:55,422 - INFO - MODO DRY-RUN: No se realizar�n m�s operaciones
+2025-06-25 11:19:12,523 - INFO - === INICIANDO COMANDO REIMPORTAR �RDENES DE TRABAJO ===
+2025-06-25 11:19:12,524 - INFO - Timestamp: 2025-06-25 11:19:12
+2025-06-25 11:19:12,524 - INFO - Archivo OT: \\WEBSERVER\migracion\ot.txt
+2025-06-25 11:19:12,524 - INFO - Archivo Rutas OT: \\WEBSERVER\migracion\ruta_ot.txt
+2025-06-25 11:19:12,535 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-06-25 11:19:12,548 - INFO - Registros encontrados para eliminar:
+2025-06-25 11:19:12,549 - INFO -   - ejecuciones_tarea: 0
+2025-06-25 11:19:12,549 - INFO -   - tareas_fragmentadas: 0
+2025-06-25 11:19:12,549 - INFO -   - historial_planificacion: 0
+2025-06-25 11:19:12,550 - INFO -   - reportes_diarios: 0
+2025-06-25 11:19:12,550 - INFO -   - programa_orden_trabajo: 0
+2025-06-25 11:19:12,550 - INFO -   - item_ruta: 454
+2025-06-25 11:19:12,550 - INFO -   - ruta_ot: 102
+2025-06-25 11:19:12,551 - INFO -   - orden_trabajo: 102
+2025-06-25 11:19:12,551 - INFO - Eliminando EjecucionTarea...
+2025-06-25 11:19:12,560 - INFO - Eliminando TareaFragmentada...
+2025-06-25 11:19:12,565 - INFO - Eliminando HistorialPlanificacion...
+2025-06-25 11:19:12,566 - INFO - Eliminando ReporteDiarioPrograma...
+2025-06-25 11:19:12,568 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-06-25 11:19:12,569 - INFO - Eliminando ItemRuta...
+2025-06-25 11:19:12,607 - INFO - Eliminando RutaOT...
+2025-06-25 11:19:12,613 - INFO - Eliminando OrdenTrabajo...
+2025-06-25 11:19:12,651 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-06-25 11:19:12,652 - INFO - === INICIANDO IMPORTACI�N DE �RDENES DE TRABAJO ===
+2025-06-25 11:19:12,652 - INFO - Archivo: \\WEBSERVER\migracion\ot.txt
+2025-06-25 11:20:19,092 - INFO - Usando codificaci�n detectada: ISO-8859-1
+2025-06-25 11:20:31,910 - ERROR - Fila 4499 inv�lida: esperadas 24 columnas, obtenidas 25
+2025-06-25 11:22:11,769 - INFO - Orden de trabajo 43036 creada.
+2025-06-25 11:22:14,017 - INFO - Orden de trabajo 43777 creada.
+2025-06-25 11:22:14,683 - INFO - Orden de trabajo 44000 creada.
+2025-06-25 11:22:14,693 - INFO - Orden de trabajo 44001 creada.
+2025-06-25 11:22:14,745 - INFO - Orden de trabajo 44012 creada.
+2025-06-25 11:22:14,756 - INFO - Orden de trabajo 44013 creada.
+2025-06-25 11:22:14,767 - INFO - Orden de trabajo 44014 creada.
+2025-06-25 11:22:14,781 - INFO - Orden de trabajo 44015 creada.
+2025-06-25 11:22:14,794 - INFO - Orden de trabajo 44016 creada.
+2025-06-25 11:22:14,807 - INFO - Orden de trabajo 44017 creada.
+2025-06-25 11:22:14,820 - INFO - Orden de trabajo 44018 creada.
+2025-06-25 11:22:14,832 - INFO - Orden de trabajo 44019 creada.
+2025-06-25 11:22:14,848 - INFO - Orden de trabajo 44020 creada.
+2025-06-25 11:22:14,862 - INFO - Orden de trabajo 44021 creada.
+2025-06-25 11:22:14,874 - INFO - Orden de trabajo 44022 creada.
+2025-06-25 11:22:14,886 - INFO - Orden de trabajo 44023 creada.
+2025-06-25 11:22:14,898 - INFO - Orden de trabajo 44024 creada.
+2025-06-25 11:22:14,913 - INFO - Orden de trabajo 44025 creada.
+2025-06-25 11:22:14,925 - INFO - Orden de trabajo 44026 creada.
+2025-06-25 11:22:14,938 - INFO - Orden de trabajo 44027 creada.
+2025-06-25 11:22:14,948 - INFO - Orden de trabajo 44028 creada.
+2025-06-25 11:22:14,963 - INFO - Orden de trabajo 44029 creada.
+2025-06-25 11:22:15,003 - INFO - Orden de trabajo 44036 creada.
+2025-06-25 11:22:15,017 - INFO - Orden de trabajo 44037 creada.
+2025-06-25 11:22:15,035 - INFO - Orden de trabajo 44038 creada.
+2025-06-25 11:22:15,154 - INFO - Orden de trabajo 44070 creada.
+2025-06-25 11:22:15,168 - INFO - Orden de trabajo 44071 creada.
+2025-06-25 11:22:15,182 - INFO - Orden de trabajo 44072 creada.
+2025-06-25 11:22:15,216 - INFO - Orden de trabajo 44079 creada.
+2025-06-25 11:22:15,345 - INFO - Orden de trabajo 44108 creada.
+2025-06-25 11:22:15,392 - INFO - Orden de trabajo 44117 creada.
+2025-06-25 11:22:15,422 - INFO - Orden de trabajo 44123 creada.
+2025-06-25 11:22:15,490 - INFO - Orden de trabajo 44137 creada.
+2025-06-25 11:22:15,512 - INFO - Orden de trabajo 44141 creada.
+2025-06-25 11:22:15,539 - INFO - Orden de trabajo 44146 creada.
+2025-06-25 11:22:15,578 - INFO - Orden de trabajo 44155 creada.
+2025-06-25 11:22:15,665 - INFO - Orden de trabajo 44177 creada.
+2025-06-25 11:22:15,678 - INFO - Orden de trabajo 44179 creada.
+2025-06-25 11:22:15,735 - INFO - Orden de trabajo 44192 creada.
+2025-06-25 11:22:15,751 - INFO - Orden de trabajo 44194 creada.
+2025-06-25 11:22:15,765 - INFO - Orden de trabajo 44195 creada.
+2025-06-25 11:22:15,778 - INFO - Orden de trabajo 44196 creada.
+2025-06-25 11:22:15,793 - INFO - Orden de trabajo 44198 creada.
+2025-06-25 11:22:15,830 - INFO - Orden de trabajo 44205 creada.
+2025-06-25 11:22:15,846 - INFO - Orden de trabajo 44207 creada.
+2025-06-25 11:22:15,865 - INFO - Orden de trabajo 44210 creada.
+2025-06-25 11:22:15,879 - INFO - Orden de trabajo 44211 creada.
+2025-06-25 11:22:15,891 - INFO - Orden de trabajo 44212 creada.
+2025-06-25 11:22:15,908 - INFO - Orden de trabajo 44214 creada.
+2025-06-25 11:22:15,925 - INFO - Orden de trabajo 44215 creada.
+2025-06-25 11:22:15,941 - INFO - Orden de trabajo 44216 creada.
+2025-06-25 11:22:15,960 - INFO - Orden de trabajo 44217 creada.
+2025-06-25 11:22:15,984 - INFO - Orden de trabajo 44220 creada.
+2025-06-25 11:22:16,008 - INFO - Orden de trabajo 44223 creada.
+2025-06-25 11:22:16,027 - INFO - Orden de trabajo 44224 creada.
+2025-06-25 11:22:16,044 - INFO - Orden de trabajo 44226 creada.
+2025-06-25 11:22:16,061 - INFO - Orden de trabajo 44228 creada.
+2025-06-25 11:22:16,079 - INFO - Orden de trabajo 44230 creada.
+2025-06-25 11:22:16,093 - INFO - Orden de trabajo 44231 creada.
+2025-06-25 11:22:16,107 - INFO - Orden de trabajo 44232 creada.
+2025-06-25 11:22:16,119 - INFO - Orden de trabajo 44233 creada.
+2025-06-25 11:22:16,133 - INFO - Orden de trabajo 44234 creada.
+2025-06-25 11:22:16,145 - INFO - Orden de trabajo 44235 creada.
+2025-06-25 11:22:16,157 - INFO - Orden de trabajo 44236 creada.
+2025-06-25 11:22:16,170 - INFO - Orden de trabajo 44237 creada.
+2025-06-25 11:22:16,181 - INFO - Orden de trabajo 44238 creada.
+2025-06-25 11:22:16,195 - INFO - Orden de trabajo 44239 creada.
+2025-06-25 11:22:16,209 - INFO - Orden de trabajo 44240 creada.
+2025-06-25 11:22:16,221 - INFO - Orden de trabajo 44241 creada.
+2025-06-25 11:22:16,241 - INFO - Orden de trabajo 44244 creada.
+2025-06-25 11:22:16,255 - INFO - Orden de trabajo 44246 creada.
+2025-06-25 11:22:16,265 - INFO - Orden de trabajo 44247 creada.
+2025-06-25 11:22:16,282 - INFO - Orden de trabajo 44249 creada.
+2025-06-25 11:22:16,295 - INFO - Orden de trabajo 44250 creada.
+2025-06-25 11:22:16,309 - INFO - Orden de trabajo 44251 creada.
+2025-06-25 11:22:16,320 - INFO - Orden de trabajo 44252 creada.
+2025-06-25 11:22:16,337 - INFO - Orden de trabajo 44255 creada.
+2025-06-25 11:22:16,351 - INFO - Orden de trabajo 44256 creada.
+2025-06-25 11:22:16,363 - INFO - Orden de trabajo 44257 creada.
+2025-06-25 11:22:16,380 - INFO - Orden de trabajo 44259 creada.
+2025-06-25 11:22:16,417 - INFO - Orden de trabajo 44263 creada.
+2025-06-25 11:22:16,431 - INFO - Orden de trabajo 44264 creada.
+2025-06-25 11:22:16,452 - INFO - Orden de trabajo 44268 creada.
+2025-06-25 11:22:16,463 - INFO - Orden de trabajo 44269 creada.
+2025-06-25 11:22:16,477 - INFO - Orden de trabajo 44270 creada.
+2025-06-25 11:22:16,493 - INFO - Orden de trabajo 44272 creada.
+2025-06-25 11:22:16,513 - INFO - Orden de trabajo 44274 creada.
+2025-06-25 11:22:16,527 - INFO - Orden de trabajo 44275 creada.
+2025-06-25 11:22:16,540 - INFO - Orden de trabajo 44276 creada.
+2025-06-25 11:22:16,552 - INFO - Orden de trabajo 44277 creada.
+2025-06-25 11:22:16,566 - INFO - Orden de trabajo 44278 creada.
+2025-06-25 11:22:16,581 - INFO - Orden de trabajo 44279 creada.
+2025-06-25 11:22:16,594 - INFO - Orden de trabajo 44280 creada.
+2025-06-25 11:22:16,606 - INFO - Orden de trabajo 44281 creada.
+2025-06-25 11:22:16,620 - INFO - Orden de trabajo 44282 creada.
+2025-06-25 11:22:16,634 - INFO - Orden de trabajo 44283 creada.
+2025-06-25 11:22:16,647 - INFO - Orden de trabajo 44284 creada.
+2025-06-25 11:22:16,661 - INFO - Orden de trabajo 44285 creada.
+2025-06-25 11:22:16,674 - INFO - Orden de trabajo 44286 creada.
+2025-06-25 11:22:16,684 - INFO - Orden de trabajo 44287 creada.
+2025-06-25 11:22:16,696 - INFO - Orden de trabajo 44288 creada.
+2025-06-25 11:22:16,708 - INFO - Orden de trabajo 44289 creada.
+2025-06-25 11:22:16,721 - INFO - Orden de trabajo 44290 creada.
+2025-06-25 11:22:16,731 - INFO - Orden de trabajo 44291 creada.
+2025-06-25 11:22:16,744 - INFO - Orden de trabajo 44292 creada.
+2025-06-25 11:22:16,761 - INFO - Orden de trabajo 44293 creada.
+2025-06-25 11:22:16,773 - INFO - Orden de trabajo 44294 creada.
+2025-06-25 11:22:16,784 - INFO - Orden de trabajo 44295 creada.
+2025-06-25 11:22:16,796 - INFO - Orden de trabajo 44296 creada.
+2025-06-25 11:22:16,808 - INFO - Orden de trabajo 44297 creada.
+2025-06-25 11:22:16,822 - INFO - Orden de trabajo 44298 creada.
+2025-06-25 11:22:16,833 - INFO - Orden de trabajo 44299 creada.
+2025-06-25 11:22:16,847 - INFO - Orden de trabajo 44300 creada.
+2025-06-25 11:22:16,859 - INFO - Orden de trabajo 44301 creada.
+2025-06-25 11:22:16,872 - INFO - Orden de trabajo 44302 creada.
+2025-06-25 11:22:16,886 - INFO - Orden de trabajo 44303 creada.
+2025-06-25 11:22:16,899 - INFO - Orden de trabajo 44304 creada.
+2025-06-25 11:22:16,913 - INFO - Orden de trabajo 44305 creada.
+2025-06-25 11:22:16,924 - INFO - Orden de trabajo 44306 creada.
+2025-06-25 11:22:16,944 - INFO - Orden de trabajo 44307 creada.
+2025-06-25 11:22:16,947 - INFO - === IMPORTACI�N DE �RDENES COMPLETADA ===
+2025-06-25 11:22:16,948 - INFO - Creadas: 120, Actualizadas: 0, Fallidas: 1
+2025-06-25 11:22:16,948 - INFO - === INICIANDO IMPORTACI�N DE RUTAS OT ===
+2025-06-25 11:22:16,948 - INFO - Archivo: \\WEBSERVER\migracion\ruta_ot.txt
+2025-06-25 11:22:16,952 - INFO - Encontradas 120 �rdenes de trabajo existentes
+2025-06-25 11:22:24,679 - INFO - Usando codificaci�n detectada: ascii
+2025-06-25 11:22:30,265 - INFO - === IMPORTACI�N DE RUTAS COMPLETADA ===
+2025-06-25 11:22:30,265 - INFO - Creadas: 520, Actualizadas: 0, Fallidas: 0
+2025-06-25 11:22:30,266 - INFO - === RESUMEN FINAL ===
+2025-06-25 11:22:30,266 - INFO - Datos eliminados:
+2025-06-25 11:22:30,266 - INFO -   - ejecuciones_tarea: 0
+2025-06-25 11:22:30,266 - INFO -   - tareas_fragmentadas: 0
+2025-06-25 11:22:30,267 - INFO -   - historial_planificacion: 0
+2025-06-25 11:22:30,267 - INFO -   - reportes_diarios: 0
+2025-06-25 11:22:30,267 - INFO -   - programa_orden_trabajo: 0
+2025-06-25 11:22:30,268 - INFO -   - item_ruta: 454
+2025-06-25 11:22:30,268 - INFO -   - ruta_ot: 102
+2025-06-25 11:22:30,268 - INFO -   - orden_trabajo: 102
+2025-06-25 11:22:30,268 - INFO - �rdenes de trabajo:
+2025-06-25 11:22:30,269 - INFO -   - Creadas: 120
+2025-06-25 11:22:30,270 - INFO -   - Actualizadas: 0
+2025-06-25 11:22:30,270 - INFO -   - Fallidas: 1
+2025-06-25 11:22:30,270 - INFO - Rutas de �rdenes:
+2025-06-25 11:22:30,271 - INFO -   - Creadas: 520
+2025-06-25 11:22:30,271 - INFO -   - Actualizadas: 0
+2025-06-25 11:22:30,271 - INFO -   - Fallidas: 0
+2025-06-25 11:22:30,272 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
+2025-06-25 11:22:30,272 - INFO - Log detallado guardado en: C:\Users\desar\Downloads\Nueva carpeta\copia_proyecto (para git)\proyecto_abasolo\reimportar_ot.log
+2025-06-25 11:24:43,790 - INFO - === INICIANDO COMANDO REIMPORTAR �RDENES DE TRABAJO ===
+2025-06-25 11:24:43,790 - INFO - Timestamp: 2025-06-25 11:24:43
+2025-06-25 11:24:43,790 - INFO - Archivo OT: \\WEBSERVER\migracion\ot.txt
+2025-06-25 11:24:43,791 - INFO - Archivo Rutas OT: \\WEBSERVER\migracion\ruta_ot.txt
+2025-06-25 11:24:43,800 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-06-25 11:24:43,832 - INFO - Registros encontrados para eliminar:
+2025-06-25 11:24:43,833 - INFO -   - ejecuciones_tarea: 0
+2025-06-25 11:24:43,833 - INFO -   - tareas_fragmentadas: 0
+2025-06-25 11:24:43,833 - INFO -   - historial_planificacion: 0
+2025-06-25 11:24:43,834 - INFO -   - reportes_diarios: 0
+2025-06-25 11:24:43,834 - INFO -   - programa_orden_trabajo: 0
+2025-06-25 11:24:43,835 - INFO -   - item_ruta: 520
+2025-06-25 11:24:43,836 - INFO -   - ruta_ot: 119
+2025-06-25 11:24:43,836 - INFO -   - orden_trabajo: 120
+2025-06-25 11:24:43,837 - INFO - Eliminando EjecucionTarea...
+2025-06-25 11:24:43,838 - INFO - Eliminando TareaFragmentada...
+2025-06-25 11:24:43,840 - INFO - Eliminando HistorialPlanificacion...
+2025-06-25 11:24:43,841 - INFO - Eliminando ReporteDiarioPrograma...
+2025-06-25 11:24:43,842 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-06-25 11:24:43,843 - INFO - Eliminando ItemRuta...
+2025-06-25 11:24:43,879 - INFO - Eliminando RutaOT...
+2025-06-25 11:24:43,883 - INFO - Eliminando OrdenTrabajo...
+2025-06-25 11:24:43,899 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-06-25 11:24:43,899 - INFO - === INICIANDO IMPORTACI�N DE �RDENES DE TRABAJO ===
+2025-06-25 11:24:43,899 - INFO - Archivo: \\WEBSERVER\migracion\ot.txt
+2025-06-25 11:25:45,693 - INFO - Usando codificaci�n detectada: ISO-8859-1
+2025-06-25 11:25:58,084 - ERROR - Fila 4499 inv�lida: esperadas 24 columnas, obtenidas 25
+2025-06-25 11:27:27,684 - INFO - Orden de trabajo 43036 creada.
+2025-06-25 11:27:29,911 - INFO - Orden de trabajo 43777 creada.
+2025-06-25 11:27:30,599 - INFO - Orden de trabajo 44000 creada.
+2025-06-25 11:27:30,614 - INFO - Orden de trabajo 44001 creada.
+2025-06-25 11:27:30,665 - INFO - Orden de trabajo 44012 creada.
+2025-06-25 11:27:30,679 - INFO - Orden de trabajo 44013 creada.
+2025-06-25 11:27:30,693 - INFO - Orden de trabajo 44014 creada.
+2025-06-25 11:27:30,707 - INFO - Orden de trabajo 44015 creada.
+2025-06-25 11:27:30,721 - INFO - Orden de trabajo 44016 creada.
+2025-06-25 11:27:30,735 - INFO - Orden de trabajo 44017 creada.
+2025-06-25 11:27:30,747 - INFO - Orden de trabajo 44018 creada.
+2025-06-25 11:27:30,761 - INFO - Orden de trabajo 44019 creada.
+2025-06-25 11:27:30,774 - INFO - Orden de trabajo 44020 creada.
+2025-06-25 11:27:30,788 - INFO - Orden de trabajo 44021 creada.
+2025-06-25 11:27:30,798 - INFO - Orden de trabajo 44022 creada.
+2025-06-25 11:27:30,811 - INFO - Orden de trabajo 44023 creada.
+2025-06-25 11:27:30,824 - INFO - Orden de trabajo 44024 creada.
+2025-06-25 11:27:30,836 - INFO - Orden de trabajo 44025 creada.
+2025-06-25 11:27:30,847 - INFO - Orden de trabajo 44026 creada.
+2025-06-25 11:27:30,862 - INFO - Orden de trabajo 44027 creada.
+2025-06-25 11:27:30,875 - INFO - Orden de trabajo 44028 creada.
+2025-06-25 11:27:30,887 - INFO - Orden de trabajo 44029 creada.
+2025-06-25 11:27:30,916 - INFO - Orden de trabajo 44036 creada.
+2025-06-25 11:27:30,929 - INFO - Orden de trabajo 44037 creada.
+2025-06-25 11:27:30,943 - INFO - Orden de trabajo 44038 creada.
+2025-06-25 11:27:31,059 - INFO - Orden de trabajo 44070 creada.
+2025-06-25 11:27:31,069 - INFO - Orden de trabajo 44071 creada.
+2025-06-25 11:27:31,085 - INFO - Orden de trabajo 44072 creada.
+2025-06-25 11:27:31,116 - INFO - Orden de trabajo 44079 creada.
+2025-06-25 11:27:31,255 - INFO - Orden de trabajo 44108 creada.
+2025-06-25 11:27:31,294 - INFO - Orden de trabajo 44117 creada.
+2025-06-25 11:27:31,325 - INFO - Orden de trabajo 44123 creada.
+2025-06-25 11:27:31,381 - INFO - Orden de trabajo 44137 creada.
+2025-06-25 11:27:31,401 - INFO - Orden de trabajo 44141 creada.
+2025-06-25 11:27:31,427 - INFO - Orden de trabajo 44146 creada.
+2025-06-25 11:27:31,465 - INFO - Orden de trabajo 44155 creada.
+2025-06-25 11:27:31,546 - INFO - Orden de trabajo 44177 creada.
+2025-06-25 11:27:31,559 - INFO - Orden de trabajo 44179 creada.
+2025-06-25 11:27:31,623 - INFO - Orden de trabajo 44192 creada.
+2025-06-25 11:27:31,635 - INFO - Orden de trabajo 44194 creada.
+2025-06-25 11:27:31,645 - INFO - Orden de trabajo 44195 creada.
+2025-06-25 11:27:31,657 - INFO - Orden de trabajo 44196 creada.
+2025-06-25 11:27:31,671 - INFO - Orden de trabajo 44198 creada.
+2025-06-25 11:27:31,704 - INFO - Orden de trabajo 44205 creada.
+2025-06-25 11:27:31,716 - INFO - Orden de trabajo 44207 creada.
+2025-06-25 11:27:31,735 - INFO - Orden de trabajo 44210 creada.
+2025-06-25 11:27:31,746 - INFO - Orden de trabajo 44211 creada.
+2025-06-25 11:27:31,759 - INFO - Orden de trabajo 44212 creada.
+2025-06-25 11:27:31,775 - INFO - Orden de trabajo 44214 creada.
+2025-06-25 11:27:31,786 - INFO - Orden de trabajo 44215 creada.
+2025-06-25 11:27:31,796 - INFO - Orden de trabajo 44216 creada.
+2025-06-25 11:27:31,809 - INFO - Orden de trabajo 44217 creada.
+2025-06-25 11:27:31,828 - INFO - Orden de trabajo 44220 creada.
+2025-06-25 11:27:31,847 - INFO - Orden de trabajo 44223 creada.
+2025-06-25 11:27:31,861 - INFO - Orden de trabajo 44224 creada.
+2025-06-25 11:27:31,880 - INFO - Orden de trabajo 44226 creada.
+2025-06-25 11:27:31,897 - INFO - Orden de trabajo 44228 creada.
+2025-06-25 11:27:31,915 - INFO - Orden de trabajo 44230 creada.
+2025-06-25 11:27:31,930 - INFO - Orden de trabajo 44231 creada.
+2025-06-25 11:27:31,946 - INFO - Orden de trabajo 44232 creada.
+2025-06-25 11:27:31,958 - INFO - Orden de trabajo 44233 creada.
+2025-06-25 11:27:31,971 - INFO - Orden de trabajo 44234 creada.
+2025-06-25 11:27:31,982 - INFO - Orden de trabajo 44235 creada.
+2025-06-25 11:27:31,996 - INFO - Orden de trabajo 44236 creada.
+2025-06-25 11:27:32,010 - INFO - Orden de trabajo 44237 creada.
+2025-06-25 11:27:32,022 - INFO - Orden de trabajo 44238 creada.
+2025-06-25 11:27:32,032 - INFO - Orden de trabajo 44239 creada.
+2025-06-25 11:27:32,045 - INFO - Orden de trabajo 44240 creada.
+2025-06-25 11:27:32,057 - INFO - Orden de trabajo 44241 creada.
+2025-06-25 11:27:32,076 - INFO - Orden de trabajo 44244 creada.
+2025-06-25 11:27:32,093 - INFO - Orden de trabajo 44246 creada.
+2025-06-25 11:27:32,107 - INFO - Orden de trabajo 44247 creada.
+2025-06-25 11:27:32,122 - INFO - Orden de trabajo 44249 creada.
+2025-06-25 11:27:32,134 - INFO - Orden de trabajo 44250 creada.
+2025-06-25 11:27:32,149 - INFO - Orden de trabajo 44251 creada.
+2025-06-25 11:27:32,164 - INFO - Orden de trabajo 44252 creada.
+2025-06-25 11:27:32,183 - INFO - Orden de trabajo 44255 creada.
+2025-06-25 11:27:32,196 - INFO - Orden de trabajo 44256 creada.
+2025-06-25 11:27:32,208 - INFO - Orden de trabajo 44257 creada.
+2025-06-25 11:27:32,223 - INFO - Orden de trabajo 44259 creada.
+2025-06-25 11:27:32,245 - INFO - Orden de trabajo 44263 creada.
+2025-06-25 11:27:32,257 - INFO - Orden de trabajo 44264 creada.
+2025-06-25 11:27:32,275 - INFO - Orden de trabajo 44268 creada.
+2025-06-25 11:27:32,285 - INFO - Orden de trabajo 44269 creada.
+2025-06-25 11:27:32,296 - INFO - Orden de trabajo 44270 creada.
+2025-06-25 11:27:32,312 - INFO - Orden de trabajo 44272 creada.
+2025-06-25 11:27:32,329 - INFO - Orden de trabajo 44274 creada.
+2025-06-25 11:27:32,343 - INFO - Orden de trabajo 44275 creada.
+2025-06-25 11:27:32,355 - INFO - Orden de trabajo 44276 creada.
+2025-06-25 11:27:32,365 - INFO - Orden de trabajo 44277 creada.
+2025-06-25 11:27:32,380 - INFO - Orden de trabajo 44278 creada.
+2025-06-25 11:27:32,393 - INFO - Orden de trabajo 44279 creada.
+2025-06-25 11:27:32,405 - INFO - Orden de trabajo 44280 creada.
+2025-06-25 11:27:32,414 - INFO - Orden de trabajo 44281 creada.
+2025-06-25 11:27:32,428 - INFO - Orden de trabajo 44282 creada.
+2025-06-25 11:27:32,441 - INFO - Orden de trabajo 44283 creada.
+2025-06-25 11:27:32,452 - INFO - Orden de trabajo 44284 creada.
+2025-06-25 11:27:32,464 - INFO - Orden de trabajo 44285 creada.
+2025-06-25 11:27:32,479 - INFO - Orden de trabajo 44286 creada.
+2025-06-25 11:27:32,494 - INFO - Orden de trabajo 44287 creada.
+2025-06-25 11:27:32,509 - INFO - Orden de trabajo 44288 creada.
+2025-06-25 11:27:32,522 - INFO - Orden de trabajo 44289 creada.
+2025-06-25 11:27:32,536 - INFO - Orden de trabajo 44290 creada.
+2025-06-25 11:27:32,551 - INFO - Orden de trabajo 44291 creada.
+2025-06-25 11:27:32,564 - INFO - Orden de trabajo 44292 creada.
+2025-06-25 11:27:32,578 - INFO - Orden de trabajo 44293 creada.
+2025-06-25 11:27:32,591 - INFO - Orden de trabajo 44294 creada.
+2025-06-25 11:27:32,606 - INFO - Orden de trabajo 44295 creada.
+2025-06-25 11:27:32,645 - INFO - Orden de trabajo 44296 creada.
+2025-06-25 11:27:32,660 - INFO - Orden de trabajo 44297 creada.
+2025-06-25 11:27:32,678 - INFO - Orden de trabajo 44298 creada.
+2025-06-25 11:27:32,694 - INFO - Orden de trabajo 44299 creada.
+2025-06-25 11:27:32,710 - INFO - Orden de trabajo 44300 creada.
+2025-06-25 11:27:32,723 - INFO - Orden de trabajo 44301 creada.
+2025-06-25 11:27:32,738 - INFO - Orden de trabajo 44302 creada.
+2025-06-25 11:27:32,750 - INFO - Orden de trabajo 44303 creada.
+2025-06-25 11:27:32,765 - INFO - Orden de trabajo 44304 creada.
+2025-06-25 11:27:32,779 - INFO - Orden de trabajo 44305 creada.
+2025-06-25 11:27:32,791 - INFO - Orden de trabajo 44306 creada.
+2025-06-25 11:27:32,804 - INFO - Orden de trabajo 44307 creada.
+2025-06-25 11:27:32,808 - INFO - === IMPORTACI�N DE �RDENES COMPLETADA ===
+2025-06-25 11:27:32,808 - INFO - Creadas: 120, Actualizadas: 0, Fallidas: 1
+2025-06-25 11:27:32,809 - INFO - === INICIANDO IMPORTACI�N DE RUTAS OT ===
+2025-06-25 11:27:32,809 - INFO - Archivo: \\WEBSERVER\migracion\ruta_ot.txt
+2025-06-25 11:27:32,813 - INFO - Encontradas 120 �rdenes de trabajo existentes
+2025-06-25 11:27:40,985 - INFO - Usando codificaci�n detectada: ascii
+2025-06-25 11:27:46,350 - INFO - === IMPORTACI�N DE RUTAS COMPLETADA ===
+2025-06-25 11:27:46,350 - INFO - Creadas: 520, Actualizadas: 0, Fallidas: 0
+2025-06-25 11:27:46,351 - INFO - === RESUMEN FINAL ===
+2025-06-25 11:27:46,351 - INFO - Datos eliminados:
+2025-06-25 11:27:46,351 - INFO -   - ejecuciones_tarea: 0
+2025-06-25 11:27:46,352 - INFO -   - tareas_fragmentadas: 0
+2025-06-25 11:27:46,352 - INFO -   - historial_planificacion: 0
+2025-06-25 11:27:46,352 - INFO -   - reportes_diarios: 0
+2025-06-25 11:27:46,352 - INFO -   - programa_orden_trabajo: 0
+2025-06-25 11:27:46,352 - INFO -   - item_ruta: 520
+2025-06-25 11:27:46,353 - INFO -   - ruta_ot: 119
+2025-06-25 11:27:46,354 - INFO -   - orden_trabajo: 120
+2025-06-25 11:27:46,354 - INFO - �rdenes de trabajo:
+2025-06-25 11:27:46,354 - INFO -   - Creadas: 120
+2025-06-25 11:27:46,354 - INFO -   - Actualizadas: 0
+2025-06-25 11:27:46,355 - INFO -   - Fallidas: 1
+2025-06-25 11:27:46,355 - INFO - Rutas de �rdenes:
+2025-06-25 11:27:46,355 - INFO -   - Creadas: 520
+2025-06-25 11:27:46,356 - INFO -   - Actualizadas: 0
+2025-06-25 11:27:46,356 - INFO -   - Fallidas: 0
+2025-06-25 11:27:46,357 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
+2025-06-25 11:27:46,357 - INFO - Log detallado guardado en: C:\Users\desar\Downloads\Nueva carpeta\copia_proyecto (para git)\proyecto_abasolo\reimportar_ot.log
+2025-08-26 16:14:20,822 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:14:20,823 - INFO - Timestamp: 2025-08-26 16:14:20
+2025-08-26 16:14:20,823 - INFO - Archivo OT: smb\\WEBSERVER\migracion\ot.txt
+2025-08-26 16:14:20,823 - INFO - Archivo Rutas OT: smb\\WEBSERVER\migracion\ruta_ot.txt
+2025-08-26 16:14:20,823 - ERROR - Archivo no encontrado: smb\\WEBSERVER\migracion\ot.txt
+2025-08-26 16:14:20,823 - ERROR - Archivo no encontrado: smb\\WEBSERVER\migracion\ruta_ot.txt
+2025-08-26 16:15:20,011 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:15:20,011 - INFO - Timestamp: 2025-08-26 16:15:20
+2025-08-26 16:15:20,011 - INFO - Archivo OT: smb://WEBSERVER/migracion/ot.txt
+2025-08-26 16:15:20,011 - INFO - Archivo Rutas OT: smb://WEBSERVER/migracion/ruta_ot.txt
+2025-08-26 16:15:20,011 - ERROR - Archivo no encontrado: smb://WEBSERVER/migracion/ot.txt
+2025-08-26 16:15:20,011 - ERROR - Archivo no encontrado: smb://WEBSERVER/migracion/ruta_ot.txt
+2025-08-26 16:15:32,020 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:15:32,020 - INFO - Timestamp: 2025-08-26 16:15:32
+2025-08-26 16:15:32,020 - INFO - Archivo OT: //WEBSERVER/migracion/ot.txt
+2025-08-26 16:15:32,020 - INFO - Archivo Rutas OT: //WEBSERVER/migracion/ruta_ot.txt
+2025-08-26 16:15:32,020 - ERROR - Archivo no encontrado: //WEBSERVER/migracion/ot.txt
+2025-08-26 16:15:32,020 - ERROR - Archivo no encontrado: //WEBSERVER/migracion/ruta_ot.txt
+2025-08-26 16:24:20,758 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:24:20,759 - INFO - Timestamp: 2025-08-26 16:24:20
+2025-08-26 16:24:20,762 - INFO - Archivo OT: /tmp/ot.txt
+2025-08-26 16:24:20,779 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:24:20,781 - ERROR - Archivo no encontrado: /tmp/ot.txt
+2025-08-26 16:32:58,003 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-08-26 16:32:58,012 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:32:58,012 - INFO - Timestamp: 2025-08-26 16:32:58
+2025-08-26 16:32:58,012 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:32:58,012 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:32:58,026 - WARNING - ADVERTENCIA: Esta operación eliminará TODOS los datos de órdenes de trabajo existentes.
+2025-08-26 16:32:58,026 - WARNING - Para confirmar la operación, ejecute nuevamente con --confirmar
+2025-08-26 16:32:58,026 - WARNING - Para ver qué se eliminaría sin realizar cambios, use --dry-run
+2025-08-26 16:33:10,246 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-08-26 16:33:10,246 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:33:10,246 - INFO - Timestamp: 2025-08-26 16:33:10
+2025-08-26 16:33:10,246 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:33:10,246 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:33:10,260 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-08-26 16:33:10,279 - INFO - Registros encontrados para eliminar:
+2025-08-26 16:33:10,279 - INFO -   - ejecuciones_tarea: 9
+2025-08-26 16:33:10,279 - INFO -   - tareas_fragmentadas: 104
+2025-08-26 16:33:10,279 - INFO -   - historial_planificacion: 0
+2025-08-26 16:33:10,279 - INFO -   - reportes_diarios: 0
+2025-08-26 16:33:10,279 - INFO -   - programa_orden_trabajo: 27
+2025-08-26 16:33:10,279 - INFO -   - item_ruta: 520
+2025-08-26 16:33:10,279 - INFO -   - ruta_ot: 119
+2025-08-26 16:33:10,279 - INFO -   - orden_trabajo: 120
+2025-08-26 16:33:10,279 - WARNING - MODO DRY-RUN: No se eliminarán registros
+2025-08-26 16:33:10,279 - INFO - MODO DRY-RUN: No se realizarán más operaciones
+2025-08-26 16:33:43,775 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-08-26 16:33:43,775 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:33:43,775 - INFO - Timestamp: 2025-08-26 16:33:43
+2025-08-26 16:33:43,775 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:33:43,775 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:33:43,789 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-08-26 16:33:43,797 - INFO - Registros encontrados para eliminar:
+2025-08-26 16:33:43,797 - INFO -   - ejecuciones_tarea: 9
+2025-08-26 16:33:43,797 - INFO -   - tareas_fragmentadas: 104
+2025-08-26 16:33:43,797 - INFO -   - historial_planificacion: 0
+2025-08-26 16:33:43,797 - INFO -   - reportes_diarios: 0
+2025-08-26 16:33:43,797 - INFO -   - programa_orden_trabajo: 27
+2025-08-26 16:33:43,797 - INFO -   - item_ruta: 520
+2025-08-26 16:33:43,797 - INFO -   - ruta_ot: 119
+2025-08-26 16:33:43,797 - INFO -   - orden_trabajo: 120
+2025-08-26 16:33:43,797 - INFO - Eliminando EjecucionTarea...
+2025-08-26 16:33:43,803 - INFO - Eliminando TareaFragmentada...
+2025-08-26 16:33:43,823 - INFO - Eliminando HistorialPlanificacion...
+2025-08-26 16:33:43,824 - INFO - Eliminando ReporteDiarioPrograma...
+2025-08-26 16:33:43,825 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-08-26 16:33:43,826 - INFO - Eliminando ItemRuta...
+2025-08-26 16:33:43,861 - INFO - Eliminando RutaOT...
+2025-08-26 16:33:43,867 - INFO - Eliminando OrdenTrabajo...
+2025-08-26 16:33:43,889 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-08-26 16:33:43,889 - INFO - === INICIANDO IMPORTACIÓN DE ÓRDENES DE TRABAJO ===
+2025-08-26 16:33:43,890 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:33:43,939 - INFO - Usando codificación detectada: ascii
+2025-08-26 16:33:43,962 - ERROR - Fila 2 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 3 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 4 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 5 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 6 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 7 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 8 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 9 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 10 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 11 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 12 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 13 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,962 - ERROR - Fila 14 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,963 - ERROR - Fila 15 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,963 - ERROR - Fila 16 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,963 - ERROR - Fila 17 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,963 - ERROR - Fila 18 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,963 - ERROR - Fila 19 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,963 - ERROR - Fila 20 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,963 - ERROR - Fila 21 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,963 - ERROR - Fila 22 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,968 - ERROR - Fila 23 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 24 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 25 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 26 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 27 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 28 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 29 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 30 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 31 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 32 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 33 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 34 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 35 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 36 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 37 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 38 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 39 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 40 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 41 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 42 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,969 - ERROR - Fila 43 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,979 - ERROR - Fila 44 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 45 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 46 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 47 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 48 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 49 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 50 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 51 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 52 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 53 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 54 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 55 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 56 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 57 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 58 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 59 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 60 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 61 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 62 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 63 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 64 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 65 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 66 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 67 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 68 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,980 - ERROR - Fila 69 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 70 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 71 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 72 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 73 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 74 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 75 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 76 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 77 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 78 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 79 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 80 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 81 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 82 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 83 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 84 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 85 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 86 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 87 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 88 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 89 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 90 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 91 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 92 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 93 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 94 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,981 - ERROR - Fila 95 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 96 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 97 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 98 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 99 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 100 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 101 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 102 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 103 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 104 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 105 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 106 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 107 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 108 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 109 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 110 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 111 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 112 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 113 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 114 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 115 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 116 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 117 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 118 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 119 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,982 - ERROR - Fila 120 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 121 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 122 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 123 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 124 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 125 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 126 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 127 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 128 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 129 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 130 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 131 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 132 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 133 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 134 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 135 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 136 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 137 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 138 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 139 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 140 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 141 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 142 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 143 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 144 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 145 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,983 - ERROR - Fila 146 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 147 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 148 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 149 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 150 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 151 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 152 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 153 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 154 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 155 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 156 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 157 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 158 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 159 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 160 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 161 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 162 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 163 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 164 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 165 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 166 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 167 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 168 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 169 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 170 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,984 - ERROR - Fila 171 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 172 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 173 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 174 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 175 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 176 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 177 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 178 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 179 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 180 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 181 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 182 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 183 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 184 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 185 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 186 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 187 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 188 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 189 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 190 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 191 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 192 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 193 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 194 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 195 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 196 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,985 - ERROR - Fila 197 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 198 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 199 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 200 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 201 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 202 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 203 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 204 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 205 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 206 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 207 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 208 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 209 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 210 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 211 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - ERROR - Fila 212 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:33:43,986 - INFO - === IMPORTACIÓN DE ÓRDENES COMPLETADA ===
+2025-08-26 16:33:43,986 - INFO - Creadas: 0, Actualizadas: 0, Fallidas: 211
+2025-08-26 16:33:43,986 - INFO - === INICIANDO IMPORTACIÓN DE RUTAS OT ===
+2025-08-26 16:33:43,986 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:33:43,988 - INFO - Encontradas 0 órdenes de trabajo existentes
+2025-08-26 16:33:49,856 - INFO - Usando codificación detectada: ascii
+2025-08-26 16:33:51,451 - INFO - === IMPORTACIÓN DE RUTAS COMPLETADA ===
+2025-08-26 16:33:51,451 - INFO - Creadas: 0, Actualizadas: 0, Fallidas: 0
+2025-08-26 16:33:51,452 - INFO - === RESUMEN FINAL ===
+2025-08-26 16:33:51,452 - INFO - Datos eliminados:
+2025-08-26 16:33:51,452 - INFO -   - ejecuciones_tarea: 9
+2025-08-26 16:33:51,452 - INFO -   - tareas_fragmentadas: 104
+2025-08-26 16:33:51,452 - INFO -   - historial_planificacion: 0
+2025-08-26 16:33:51,452 - INFO -   - reportes_diarios: 0
+2025-08-26 16:33:51,452 - INFO -   - programa_orden_trabajo: 27
+2025-08-26 16:33:51,452 - INFO -   - item_ruta: 520
+2025-08-26 16:33:51,452 - INFO -   - ruta_ot: 119
+2025-08-26 16:33:51,452 - INFO -   - orden_trabajo: 120
+2025-08-26 16:33:51,452 - INFO - Órdenes de trabajo:
+2025-08-26 16:33:51,452 - INFO -   - Creadas: 0
+2025-08-26 16:33:51,452 - INFO -   - Actualizadas: 0
+2025-08-26 16:33:51,452 - INFO -   - Fallidas: 211
+2025-08-26 16:33:51,452 - INFO - Rutas de órdenes:
+2025-08-26 16:33:51,452 - INFO -   - Creadas: 0
+2025-08-26 16:33:51,452 - INFO -   - Actualizadas: 0
+2025-08-26 16:33:51,453 - INFO -   - Fallidas: 0
+2025-08-26 16:33:51,453 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
+2025-08-26 16:33:51,453 - INFO - Log detallado guardado en: /home/faba/Escritorio/Nueva carpeta/proyecto_abasolo/proyecto_abasolo/reimportar_ot.log
+2025-08-26 16:37:09,774 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-08-26 16:37:09,774 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:37:09,774 - INFO - Timestamp: 2025-08-26 16:37:09
+2025-08-26 16:37:09,774 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:37:09,774 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:37:09,788 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-08-26 16:37:09,798 - INFO - Registros encontrados para eliminar:
+2025-08-26 16:37:09,798 - INFO -   - ejecuciones_tarea: 0
+2025-08-26 16:37:09,802 - INFO -   - tareas_fragmentadas: 0
+2025-08-26 16:37:09,802 - INFO -   - historial_planificacion: 0
+2025-08-26 16:37:09,802 - INFO -   - reportes_diarios: 0
+2025-08-26 16:37:09,802 - INFO -   - programa_orden_trabajo: 0
+2025-08-26 16:37:09,802 - INFO -   - item_ruta: 0
+2025-08-26 16:37:09,802 - INFO -   - ruta_ot: 0
+2025-08-26 16:37:09,802 - INFO -   - orden_trabajo: 0
+2025-08-26 16:37:09,803 - INFO - Eliminando EjecucionTarea...
+2025-08-26 16:37:09,803 - INFO - Eliminando TareaFragmentada...
+2025-08-26 16:37:09,805 - INFO - Eliminando HistorialPlanificacion...
+2025-08-26 16:37:09,806 - INFO - Eliminando ReporteDiarioPrograma...
+2025-08-26 16:37:09,806 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-08-26 16:37:09,806 - INFO - Eliminando ItemRuta...
+2025-08-26 16:37:09,807 - INFO - Eliminando RutaOT...
+2025-08-26 16:37:09,807 - INFO - Eliminando OrdenTrabajo...
+2025-08-26 16:37:09,808 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-08-26 16:37:09,808 - INFO - === INICIANDO IMPORTACIÓN DE ÓRDENES DE TRABAJO ===
+2025-08-26 16:37:09,808 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:37:09,852 - INFO - Usando codificación detectada: ascii
+2025-08-26 16:37:09,868 - ERROR - Fila 2 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,868 - ERROR - Fila 3 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,868 - ERROR - Fila 4 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,868 - ERROR - Fila 5 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,868 - ERROR - Fila 6 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,868 - ERROR - Fila 7 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,868 - ERROR - Fila 8 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,868 - ERROR - Fila 9 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 10 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 11 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 12 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 13 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 14 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 15 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 16 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 17 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 18 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 19 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 20 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 21 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,869 - ERROR - Fila 22 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 23 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 24 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 25 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 26 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 27 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 28 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 29 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 30 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 31 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 32 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 33 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 34 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 35 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 36 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 37 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 38 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 39 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 40 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 41 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 42 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,875 - ERROR - Fila 43 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,885 - ERROR - Fila 44 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 45 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 46 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 47 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 48 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 49 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 50 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 51 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 52 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 53 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 54 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 55 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 56 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 57 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 58 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 59 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 60 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 61 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,886 - ERROR - Fila 62 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 63 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 64 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 65 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 66 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 67 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 68 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 69 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 70 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 71 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 72 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 73 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 74 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 75 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 76 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 77 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 78 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 79 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 80 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 81 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 82 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 83 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 84 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,887 - ERROR - Fila 85 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 86 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 87 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 88 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 89 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 90 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 91 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 92 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 93 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 94 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 95 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 96 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 97 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 98 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 99 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 100 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 101 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,888 - ERROR - Fila 102 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 103 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 104 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 105 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 106 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 107 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 108 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 109 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 110 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 111 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 112 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 113 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 114 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 115 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 116 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 117 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 118 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 119 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 120 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 121 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 122 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 123 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 124 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 125 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 126 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,889 - ERROR - Fila 127 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 128 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 129 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 130 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 131 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 132 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 133 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 134 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 135 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 136 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 137 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 138 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 139 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 140 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 141 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 142 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 143 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 144 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 145 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 146 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 147 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 148 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 149 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 150 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 151 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,890 - ERROR - Fila 152 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 153 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 154 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 155 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 156 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 157 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 158 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 159 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 160 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 161 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 162 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 163 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 164 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 165 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 166 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 167 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 168 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 169 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 170 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 171 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 172 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 173 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 174 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 175 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 176 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 177 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,891 - ERROR - Fila 178 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 179 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 180 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 181 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 182 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 183 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 184 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 185 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 186 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 187 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 188 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 189 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 190 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 191 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 192 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 193 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 194 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 195 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 196 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 197 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 198 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 199 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 200 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 201 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 202 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 203 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,892 - ERROR - Fila 204 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - ERROR - Fila 205 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - ERROR - Fila 206 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - ERROR - Fila 207 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - ERROR - Fila 208 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - ERROR - Fila 209 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - ERROR - Fila 210 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - ERROR - Fila 211 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - ERROR - Fila 212 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:37:09,893 - INFO - === IMPORTACIÓN DE ÓRDENES COMPLETADA ===
+2025-08-26 16:37:09,893 - INFO - Creadas: 0, Actualizadas: 0, Fallidas: 211
+2025-08-26 16:37:09,893 - INFO - === INICIANDO IMPORTACIÓN DE RUTAS OT ===
+2025-08-26 16:37:09,893 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:37:09,894 - INFO - Encontradas 0 órdenes de trabajo existentes
+2025-08-26 16:37:15,680 - INFO - Usando codificación detectada: ascii
+2025-08-26 16:37:17,267 - INFO - === IMPORTACIÓN DE RUTAS COMPLETADA ===
+2025-08-26 16:37:17,268 - INFO - Creadas: 0, Actualizadas: 0, Fallidas: 0
+2025-08-26 16:37:17,268 - INFO - === RESUMEN FINAL ===
+2025-08-26 16:37:17,268 - INFO - Datos eliminados:
+2025-08-26 16:37:17,268 - INFO -   - ejecuciones_tarea: 0
+2025-08-26 16:37:17,268 - INFO -   - tareas_fragmentadas: 0
+2025-08-26 16:37:17,268 - INFO -   - historial_planificacion: 0
+2025-08-26 16:37:17,268 - INFO -   - reportes_diarios: 0
+2025-08-26 16:37:17,268 - INFO -   - programa_orden_trabajo: 0
+2025-08-26 16:37:17,268 - INFO -   - item_ruta: 0
+2025-08-26 16:37:17,268 - INFO -   - ruta_ot: 0
+2025-08-26 16:37:17,268 - INFO -   - orden_trabajo: 0
+2025-08-26 16:37:17,268 - INFO - Órdenes de trabajo:
+2025-08-26 16:37:17,268 - INFO -   - Creadas: 0
+2025-08-26 16:37:17,268 - INFO -   - Actualizadas: 0
+2025-08-26 16:37:17,268 - INFO -   - Fallidas: 211
+2025-08-26 16:37:17,268 - INFO - Rutas de órdenes:
+2025-08-26 16:37:17,269 - INFO -   - Creadas: 0
+2025-08-26 16:37:17,269 - INFO -   - Actualizadas: 0
+2025-08-26 16:37:17,269 - INFO -   - Fallidas: 0
+2025-08-26 16:37:17,269 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
+2025-08-26 16:37:17,269 - INFO - Log detallado guardado en: /home/faba/Escritorio/Nueva carpeta/proyecto_abasolo/proyecto_abasolo/reimportar_ot.log
+2025-08-26 16:39:22,285 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-08-26 16:39:22,285 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:39:22,286 - INFO - Timestamp: 2025-08-26 16:39:22
+2025-08-26 16:39:22,286 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:39:22,286 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:39:22,299 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-08-26 16:39:22,305 - INFO - Registros encontrados para eliminar:
+2025-08-26 16:39:22,305 - INFO -   - ejecuciones_tarea: 0
+2025-08-26 16:39:22,305 - INFO -   - tareas_fragmentadas: 0
+2025-08-26 16:39:22,306 - INFO -   - historial_planificacion: 0
+2025-08-26 16:39:22,306 - INFO -   - reportes_diarios: 0
+2025-08-26 16:39:22,306 - INFO -   - programa_orden_trabajo: 0
+2025-08-26 16:39:22,306 - INFO -   - item_ruta: 0
+2025-08-26 16:39:22,306 - INFO -   - ruta_ot: 0
+2025-08-26 16:39:22,306 - INFO -   - orden_trabajo: 0
+2025-08-26 16:39:22,306 - INFO - Eliminando EjecucionTarea...
+2025-08-26 16:39:22,306 - INFO - Eliminando TareaFragmentada...
+2025-08-26 16:39:22,307 - INFO - Eliminando HistorialPlanificacion...
+2025-08-26 16:39:22,308 - INFO - Eliminando ReporteDiarioPrograma...
+2025-08-26 16:39:22,308 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-08-26 16:39:22,309 - INFO - Eliminando ItemRuta...
+2025-08-26 16:39:22,310 - INFO - Eliminando RutaOT...
+2025-08-26 16:39:22,310 - INFO - Eliminando OrdenTrabajo...
+2025-08-26 16:39:22,311 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-08-26 16:39:22,311 - INFO - === INICIANDO IMPORTACIÓN DE ÓRDENES DE TRABAJO ===
+2025-08-26 16:39:22,311 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:39:22,359 - INFO - Usando codificación detectada: ascii
+2025-08-26 16:39:22,375 - ERROR - Fila 2 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,375 - ERROR - Fila 3 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,375 - ERROR - Fila 4 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,375 - ERROR - Fila 5 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,375 - ERROR - Fila 6 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,375 - ERROR - Fila 7 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 8 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 9 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 10 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 11 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 12 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 13 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 14 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 15 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 16 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 17 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 18 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 19 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,376 - ERROR - Fila 20 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,377 - ERROR - Fila 21 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,377 - ERROR - Fila 22 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 23 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 24 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 25 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 26 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 27 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 28 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 29 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 30 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 31 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 32 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 33 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,383 - ERROR - Fila 34 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 35 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 36 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 37 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 38 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 39 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 40 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 41 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 42 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,384 - ERROR - Fila 43 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,395 - ERROR - Fila 44 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,395 - ERROR - Fila 45 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 46 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 47 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 48 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 49 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 50 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 51 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 52 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 53 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 54 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 55 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 56 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 57 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 58 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 59 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 60 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 61 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 62 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 63 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 64 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 65 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 66 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 67 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 68 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 69 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 70 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 71 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,396 - ERROR - Fila 72 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 73 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 74 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 75 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 76 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 77 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 78 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 79 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 80 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 81 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 82 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 83 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 84 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 85 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 86 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 87 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 88 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 89 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 90 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 91 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 92 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 93 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 94 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 95 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,397 - ERROR - Fila 96 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 97 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 98 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 99 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 100 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 101 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 102 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 103 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 104 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 105 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 106 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 107 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 108 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 109 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 110 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 111 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 112 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 113 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 114 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,398 - ERROR - Fila 115 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 116 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 117 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 118 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 119 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 120 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 121 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 122 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 123 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 124 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 125 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 126 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 127 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 128 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 129 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 130 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 131 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 132 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 133 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 134 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 135 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 136 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 137 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 138 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 139 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 140 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 141 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,399 - ERROR - Fila 142 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 143 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 144 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 145 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 146 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 147 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 148 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 149 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 150 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 151 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 152 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 153 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 154 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 155 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 156 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 157 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 158 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 159 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 160 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,400 - ERROR - Fila 161 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 162 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 163 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 164 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 165 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 166 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 167 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 168 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 169 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 170 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 171 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 172 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 173 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 174 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 175 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 176 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 177 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 178 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 179 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,401 - ERROR - Fila 180 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 181 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 182 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 183 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 184 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 185 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 186 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 187 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 188 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 189 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 190 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 191 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 192 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 193 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 194 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 195 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 196 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 197 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 198 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,402 - ERROR - Fila 199 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 200 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 201 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 202 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 203 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 204 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 205 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 206 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 207 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 208 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 209 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 210 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 211 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,403 - ERROR - Fila 212 inválida: esperadas 24 columnas, obtenidas 25
+2025-08-26 16:39:22,404 - INFO - === IMPORTACIÓN DE ÓRDENES COMPLETADA ===
+2025-08-26 16:39:22,404 - INFO - Creadas: 0, Actualizadas: 0, Fallidas: 211
+2025-08-26 16:39:22,404 - INFO - === INICIANDO IMPORTACIÓN DE RUTAS OT ===
+2025-08-26 16:39:22,404 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:39:22,406 - INFO - Encontradas 0 órdenes de trabajo existentes
+2025-08-26 16:39:27,856 - INFO - Usando codificación detectada: ascii
+2025-08-26 16:39:29,838 - INFO - === IMPORTACIÓN DE RUTAS COMPLETADA ===
+2025-08-26 16:39:29,838 - INFO - Creadas: 0, Actualizadas: 0, Fallidas: 0
+2025-08-26 16:39:29,838 - INFO - === RESUMEN FINAL ===
+2025-08-26 16:39:29,838 - INFO - Datos eliminados:
+2025-08-26 16:39:29,838 - INFO -   - ejecuciones_tarea: 0
+2025-08-26 16:39:29,838 - INFO -   - tareas_fragmentadas: 0
+2025-08-26 16:39:29,838 - INFO -   - historial_planificacion: 0
+2025-08-26 16:39:29,838 - INFO -   - reportes_diarios: 0
+2025-08-26 16:39:29,839 - INFO -   - programa_orden_trabajo: 0
+2025-08-26 16:39:29,839 - INFO -   - item_ruta: 0
+2025-08-26 16:39:29,839 - INFO -   - ruta_ot: 0
+2025-08-26 16:39:29,839 - INFO -   - orden_trabajo: 0
+2025-08-26 16:39:29,839 - INFO - Órdenes de trabajo:
+2025-08-26 16:39:29,839 - INFO -   - Creadas: 0
+2025-08-26 16:39:29,839 - INFO -   - Actualizadas: 0
+2025-08-26 16:39:29,839 - INFO -   - Fallidas: 211
+2025-08-26 16:39:29,839 - INFO - Rutas de órdenes:
+2025-08-26 16:39:29,839 - INFO -   - Creadas: 0
+2025-08-26 16:39:29,839 - INFO -   - Actualizadas: 0
+2025-08-26 16:39:29,839 - INFO -   - Fallidas: 0
+2025-08-26 16:39:29,839 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
+2025-08-26 16:39:29,839 - INFO - Log detallado guardado en: /home/faba/Escritorio/Nueva carpeta/proyecto_abasolo/proyecto_abasolo/reimportar_ot.log
+2025-08-26 16:40:06,881 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-08-26 16:40:06,881 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-08-26 16:40:06,881 - INFO - Timestamp: 2025-08-26 16:40:06
+2025-08-26 16:40:06,881 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:40:06,881 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:40:06,895 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-08-26 16:40:06,902 - INFO - Registros encontrados para eliminar:
+2025-08-26 16:40:06,902 - INFO -   - ejecuciones_tarea: 0
+2025-08-26 16:40:06,902 - INFO -   - tareas_fragmentadas: 0
+2025-08-26 16:40:06,902 - INFO -   - historial_planificacion: 0
+2025-08-26 16:40:06,902 - INFO -   - reportes_diarios: 0
+2025-08-26 16:40:06,902 - INFO -   - programa_orden_trabajo: 0
+2025-08-26 16:40:06,902 - INFO -   - item_ruta: 0
+2025-08-26 16:40:06,902 - INFO -   - ruta_ot: 0
+2025-08-26 16:40:06,902 - INFO -   - orden_trabajo: 0
+2025-08-26 16:40:06,902 - INFO - Eliminando EjecucionTarea...
+2025-08-26 16:40:06,902 - INFO - Eliminando TareaFragmentada...
+2025-08-26 16:40:06,904 - INFO - Eliminando HistorialPlanificacion...
+2025-08-26 16:40:06,905 - INFO - Eliminando ReporteDiarioPrograma...
+2025-08-26 16:40:06,905 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-08-26 16:40:06,906 - INFO - Eliminando ItemRuta...
+2025-08-26 16:40:06,906 - INFO - Eliminando RutaOT...
+2025-08-26 16:40:06,907 - INFO - Eliminando OrdenTrabajo...
+2025-08-26 16:40:06,908 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-08-26 16:40:06,908 - INFO - === INICIANDO IMPORTACIÓN DE ÓRDENES DE TRABAJO ===
+2025-08-26 16:40:06,908 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-08-26 16:40:06,962 - INFO - Usando codificación detectada: ascii
+2025-08-26 16:40:07,001 - INFO - Orden de trabajo 43036 creada.
+2025-08-26 16:40:07,012 - INFO - Orden de trabajo 43777 creada.
+2025-08-26 16:40:07,025 - INFO - Orden de trabajo 44000 creada.
+2025-08-26 16:40:07,036 - INFO - Orden de trabajo 44001 creada.
+2025-08-26 16:40:07,044 - INFO - Orden de trabajo 44014 creada.
+2025-08-26 16:40:07,051 - INFO - Orden de trabajo 44015 creada.
+2025-08-26 16:40:07,057 - INFO - Orden de trabajo 44016 creada.
+2025-08-26 16:40:07,063 - INFO - Orden de trabajo 44017 creada.
+2025-08-26 16:40:07,072 - INFO - Orden de trabajo 44018 creada.
+2025-08-26 16:40:07,077 - INFO - Orden de trabajo 44019 creada.
+2025-08-26 16:40:07,084 - INFO - Orden de trabajo 44020 creada.
+2025-08-26 16:40:07,090 - INFO - Orden de trabajo 44021 creada.
+2025-08-26 16:40:07,096 - INFO - Orden de trabajo 44022 creada.
+2025-08-26 16:40:07,104 - INFO - Orden de trabajo 44023 creada.
+2025-08-26 16:40:07,109 - INFO - Orden de trabajo 44024 creada.
+2025-08-26 16:40:07,116 - INFO - Orden de trabajo 44025 creada.
+2025-08-26 16:40:07,124 - INFO - Orden de trabajo 44026 creada.
+2025-08-26 16:40:07,130 - INFO - Orden de trabajo 44027 creada.
+2025-08-26 16:40:07,139 - INFO - Orden de trabajo 44028 creada.
+2025-08-26 16:40:07,144 - INFO - Orden de trabajo 44029 creada.
+2025-08-26 16:40:07,152 - INFO - Orden de trabajo 44036 creada.
+2025-08-26 16:40:07,164 - INFO - Orden de trabajo 44037 creada.
+2025-08-26 16:40:07,174 - INFO - Orden de trabajo 44038 creada.
+2025-08-26 16:40:07,179 - INFO - Orden de trabajo 44070 creada.
+2025-08-26 16:40:07,187 - INFO - Orden de trabajo 44071 creada.
+2025-08-26 16:40:07,193 - INFO - Orden de trabajo 44072 creada.
+2025-08-26 16:40:07,200 - INFO - Orden de trabajo 44079 creada.
+2025-08-26 16:40:07,207 - INFO - Orden de trabajo 44108 creada.
+2025-08-26 16:40:07,213 - INFO - Orden de trabajo 44117 creada.
+2025-08-26 16:40:07,221 - INFO - Orden de trabajo 44146 creada.
+2025-08-26 16:40:07,227 - INFO - Orden de trabajo 44155 creada.
+2025-08-26 16:40:07,234 - INFO - Orden de trabajo 44177 creada.
+2025-08-26 16:40:07,240 - INFO - Orden de trabajo 44179 creada.
+2025-08-26 16:40:07,246 - INFO - Orden de trabajo 44192 creada.
+2025-08-26 16:40:07,255 - INFO - Orden de trabajo 44194 creada.
+2025-08-26 16:40:07,261 - INFO - Orden de trabajo 44198 creada.
+2025-08-26 16:40:07,268 - INFO - Orden de trabajo 44205 creada.
+2025-08-26 16:40:07,275 - INFO - Orden de trabajo 44207 creada.
+2025-08-26 16:40:07,280 - INFO - Orden de trabajo 44210 creada.
+2025-08-26 16:40:07,289 - INFO - Orden de trabajo 44211 creada.
+2025-08-26 16:40:07,294 - INFO - Orden de trabajo 44215 creada.
+2025-08-26 16:40:07,302 - INFO - Orden de trabajo 44216 creada.
+2025-08-26 16:40:07,317 - INFO - Orden de trabajo 44217 creada.
+2025-08-26 16:40:07,323 - INFO - Orden de trabajo 44224 creada.
+2025-08-26 16:40:07,329 - INFO - Orden de trabajo 44226 creada.
+2025-08-26 16:40:07,337 - INFO - Orden de trabajo 44228 creada.
+2025-08-26 16:40:07,342 - INFO - Orden de trabajo 44236 creada.
+2025-08-26 16:40:07,349 - INFO - Orden de trabajo 44237 creada.
+2025-08-26 16:40:07,357 - INFO - Orden de trabajo 44238 creada.
+2025-08-26 16:40:07,363 - INFO - Orden de trabajo 44239 creada.
+2025-08-26 16:40:07,372 - INFO - Orden de trabajo 44240 creada.
+2025-08-26 16:40:07,377 - INFO - Orden de trabajo 44244 creada.
+2025-08-26 16:40:07,383 - INFO - Orden de trabajo 44249 creada.
+2025-08-26 16:40:07,391 - INFO - Orden de trabajo 44252 creada.
+2025-08-26 16:40:07,397 - INFO - Orden de trabajo 44255 creada.
+2025-08-26 16:40:07,406 - INFO - Orden de trabajo 44256 creada.
+2025-08-26 16:40:07,411 - INFO - Orden de trabajo 44257 creada.
+2025-08-26 16:40:07,420 - INFO - Orden de trabajo 44264 creada.
+2025-08-26 16:40:07,425 - INFO - Orden de trabajo 44268 creada.
+2025-08-26 16:40:07,431 - INFO - Orden de trabajo 44269 creada.
+2025-08-26 16:40:07,439 - INFO - Orden de trabajo 44270 creada.
+2025-08-26 16:40:07,444 - INFO - Orden de trabajo 44272 creada.
+2025-08-26 16:40:07,452 - INFO - Orden de trabajo 44275 creada.
+2025-08-26 16:40:07,458 - INFO - Orden de trabajo 44276 creada.
+2025-08-26 16:40:07,464 - INFO - Orden de trabajo 44277 creada.
+2025-08-26 16:40:07,473 - INFO - Orden de trabajo 44278 creada.
+2025-08-26 16:40:07,479 - INFO - Orden de trabajo 44280 creada.
+2025-08-26 16:40:07,487 - INFO - Orden de trabajo 44281 creada.
+2025-08-26 16:40:07,492 - INFO - Orden de trabajo 44290 creada.
+2025-08-26 16:40:07,498 - INFO - Orden de trabajo 44296 creada.
+2025-08-26 16:40:07,506 - INFO - Orden de trabajo 44297 creada.
+2025-08-26 16:40:07,512 - INFO - Orden de trabajo 44298 creada.
+2025-08-26 16:40:07,520 - INFO - Orden de trabajo 44299 creada.
+2025-08-26 16:40:07,526 - INFO - Orden de trabajo 44300 creada.
+2025-08-26 16:40:07,531 - INFO - Orden de trabajo 44301 creada.
+2025-08-26 16:40:07,540 - INFO - Orden de trabajo 44304 creada.
+2025-08-26 16:40:07,547 - INFO - Orden de trabajo 44305 creada.
+2025-08-26 16:40:07,556 - INFO - Orden de trabajo 44309 creada.
+2025-08-26 16:40:07,562 - INFO - Orden de trabajo 44310 creada.
+2025-08-26 16:40:07,574 - INFO - Orden de trabajo 44311 creada.
+2025-08-26 16:40:07,581 - INFO - Orden de trabajo 44313 creada.
+2025-08-26 16:40:07,592 - INFO - Orden de trabajo 44314 creada.
+2025-08-26 16:40:07,598 - INFO - Orden de trabajo 44316 creada.
+2025-08-26 16:40:07,607 - INFO - Orden de trabajo 44317 creada.
+2025-08-26 16:40:07,615 - INFO - Orden de trabajo 44321 creada.
+2025-08-26 16:40:07,624 - INFO - Orden de trabajo 44322 creada.
+2025-08-26 16:40:07,630 - INFO - Orden de trabajo 44323 creada.
+2025-08-26 16:40:07,639 - INFO - Orden de trabajo 44324 creada.
+2025-08-26 16:40:07,645 - INFO - Orden de trabajo 44328 creada.
+2025-08-26 16:40:07,654 - INFO - Orden de trabajo 44329 creada.
+2025-08-26 16:40:07,660 - INFO - Orden de trabajo 44331 creada.
+2025-08-26 16:40:07,667 - INFO - Orden de trabajo 44332 creada.
+2025-08-26 16:40:07,673 - INFO - Orden de trabajo 44284 creada.
+2025-08-26 16:40:07,679 - INFO - Orden de trabajo 44333 creada.
+2025-08-26 16:40:07,688 - INFO - Orden de trabajo 44334 creada.
+2025-08-26 16:40:07,694 - INFO - Orden de trabajo 44335 creada.
+2025-08-26 16:40:07,700 - INFO - Orden de trabajo 44336 creada.
+2025-08-26 16:40:07,707 - INFO - Orden de trabajo 44338 creada.
+2025-08-26 16:40:07,713 - INFO - Orden de trabajo 44339 creada.
+2025-08-26 16:40:07,722 - INFO - Orden de trabajo 44340 creada.
+2025-08-26 16:40:07,728 - INFO - Orden de trabajo 44341 creada.
+2025-08-26 16:40:07,736 - INFO - Orden de trabajo 44343 creada.
+2025-08-26 16:40:07,742 - INFO - Orden de trabajo 44344 creada.
+2025-08-26 16:40:07,747 - INFO - Orden de trabajo 44345 creada.
+2025-08-26 16:40:07,756 - INFO - Orden de trabajo 44346 creada.
+2025-08-26 16:40:07,761 - INFO - Orden de trabajo 44347 creada.
+2025-08-26 16:40:07,769 - INFO - Orden de trabajo 44348 creada.
+2025-08-26 16:40:07,775 - INFO - Orden de trabajo 44349 creada.
+2025-08-26 16:40:07,784 - INFO - Orden de trabajo 44351 creada.
+2025-08-26 16:40:07,791 - INFO - Orden de trabajo 44352 creada.
+2025-08-26 16:40:07,796 - INFO - Orden de trabajo 44353 creada.
+2025-08-26 16:40:07,805 - INFO - Orden de trabajo 44354 creada.
+2025-08-26 16:40:07,811 - INFO - Orden de trabajo 44355 creada.
+2025-08-26 16:40:07,818 - INFO - Orden de trabajo 44356 creada.
+2025-08-26 16:40:07,824 - INFO - Orden de trabajo 44357 creada.
+2025-08-26 16:40:07,830 - INFO - Orden de trabajo 44358 creada.
+2025-08-26 16:40:07,839 - INFO - Orden de trabajo 44359 creada.
+2025-08-26 16:40:07,844 - INFO - Orden de trabajo 44360 creada.
+2025-08-26 16:40:07,851 - INFO - Orden de trabajo 44361 creada.
+2025-08-26 16:40:07,857 - INFO - Orden de trabajo 44362 creada.
+2025-08-26 16:40:07,863 - INFO - Orden de trabajo 44363 creada.
+2025-08-26 16:40:07,870 - INFO - Orden de trabajo 44365 creada.
+2025-08-26 16:40:07,876 - INFO - Orden de trabajo 44366 creada.
+2025-08-26 16:40:07,885 - INFO - Orden de trabajo 44367 creada.
+2025-08-26 16:40:07,891 - INFO - Orden de trabajo 44368 creada.
+2025-08-26 16:40:07,897 - INFO - Orden de trabajo 44369 creada.
+2025-08-26 16:40:07,903 - INFO - Orden de trabajo 44370 creada.
+2025-08-26 16:40:07,908 - INFO - Orden de trabajo 44371 creada.
+2025-08-26 16:40:07,914 - INFO - Orden de trabajo 44372 creada.
+2025-08-26 16:40:07,922 - INFO - Orden de trabajo 44373 creada.
+2025-08-26 16:40:07,928 - INFO - Orden de trabajo 44374 creada.
+2025-08-26 16:40:07,935 - INFO - Orden de trabajo 44375 creada.
+2025-08-26 16:40:07,941 - INFO - Orden de trabajo 44376 creada.
+2025-08-26 16:40:07,950 - INFO - Orden de trabajo 44377 creada.
+2025-08-26 16:40:07,957 - INFO - Orden de trabajo 44378 creada.
+2025-08-26 16:40:07,962 - INFO - Orden de trabajo 44379 creada.
+2025-08-26 16:40:07,972 - INFO - Orden de trabajo 44380 creada.
+2025-08-26 16:40:07,977 - INFO - Orden de trabajo 44381 creada.
+2025-08-26 16:40:07,985 - INFO - Orden de trabajo 44382 creada.
+2025-08-26 16:40:07,991 - INFO - Orden de trabajo 44384 creada.
+2025-08-26 16:40:07,996 - INFO - Orden de trabajo 44386 creada.
+2025-08-26 16:40:08,006 - INFO - Orden de trabajo 44388 creada.
+2025-08-26 16:40:08,012 - INFO - Orden de trabajo 44389 creada.
+2025-08-26 16:40:08,020 - INFO - Orden de trabajo 44390 creada.
+2025-08-26 16:40:08,025 - INFO - Orden de trabajo 44392 creada.
+2025-08-26 16:40:08,031 - INFO - Orden de trabajo 44393 creada.
+2025-08-26 16:40:08,040 - INFO - Orden de trabajo 44394 creada.
+2025-08-26 16:40:08,047 - INFO - Orden de trabajo 44395 creada.
+2025-08-26 16:40:08,059 - INFO - Orden de trabajo 44396 creada.
+2025-08-26 16:40:08,068 - INFO - Orden de trabajo 44397 creada.
+2025-08-26 16:40:08,075 - INFO - Orden de trabajo 44398 creada.
+2025-08-26 16:40:08,087 - INFO - Orden de trabajo 44399 creada.
+2025-08-26 16:40:08,093 - INFO - Orden de trabajo 44400 creada.
+2025-08-26 16:40:08,100 - INFO - Orden de trabajo 44402 creada.
+2025-08-26 16:40:08,109 - INFO - Orden de trabajo 44403 creada.
+2025-08-26 16:40:08,116 - INFO - Orden de trabajo 44404 creada.
+2025-08-26 16:40:08,126 - INFO - Orden de trabajo 44406 creada.
+2025-08-26 16:40:08,150 - INFO - Orden de trabajo 44407 creada.
+2025-08-26 16:40:08,162 - INFO - Orden de trabajo 44408 creada.
+2025-08-26 16:40:08,200 - INFO - Orden de trabajo 44409 creada.
+2025-08-26 16:40:08,218 - INFO - Orden de trabajo 44410 creada.
+2025-08-26 16:40:08,231 - INFO - Orden de trabajo 44411 creada.
+2025-08-26 16:40:08,239 - INFO - Orden de trabajo 44412 creada.
+2025-08-26 16:40:08,250 - INFO - Orden de trabajo 44413 creada.
+2025-08-26 16:40:08,262 - INFO - Orden de trabajo 44414 creada.
+2025-08-26 16:40:08,277 - INFO - Orden de trabajo 44415 creada.
+2025-08-26 16:40:08,288 - INFO - Orden de trabajo 44250 creada.
+2025-08-26 16:40:08,295 - INFO - Orden de trabajo 44330 creada.
+2025-08-26 16:40:08,304 - INFO - Orden de trabajo 44391 creada.
+2025-08-26 16:40:08,316 - INFO - Orden de trabajo 44405 creada.
+2025-08-26 16:40:08,330 - INFO - Orden de trabajo 44416 creada.
+2025-08-26 16:40:08,350 - INFO - Orden de trabajo 44417 creada.
+2025-08-26 16:40:08,361 - INFO - Orden de trabajo 44423 creada.
+2025-08-26 16:40:08,368 - INFO - Orden de trabajo 44425 creada.
+2025-08-26 16:40:08,374 - INFO - Orden de trabajo 44427 creada.
+2025-08-26 16:40:08,379 - INFO - Orden de trabajo 44428 creada.
+2025-08-26 16:40:08,388 - INFO - Orden de trabajo 44431 creada.
+2025-08-26 16:40:08,393 - INFO - Orden de trabajo 44433 creada.
+2025-08-26 16:40:08,399 - INFO - Orden de trabajo 44435 creada.
+2025-08-26 16:40:08,407 - INFO - Orden de trabajo 44437 creada.
+2025-08-26 16:40:08,412 - INFO - Orden de trabajo 44438 creada.
+2025-08-26 16:40:08,420 - INFO - Orden de trabajo 44439 creada.
+2025-08-26 16:40:08,425 - INFO - Orden de trabajo 44440 creada.
+2025-08-26 16:40:08,431 - INFO - Orden de trabajo 44441 creada.
+2025-08-26 16:40:08,439 - INFO - Orden de trabajo 44443 creada.
+2025-08-26 16:40:08,445 - INFO - Orden de trabajo 44444 creada.
+2025-08-26 16:40:08,453 - INFO - Orden de trabajo 44445 creada.
+2025-08-26 16:40:08,458 - INFO - Orden de trabajo 44446 creada.
+2025-08-26 16:40:08,463 - INFO - Orden de trabajo 44447 creada.
+2025-08-26 16:40:08,473 - INFO - Orden de trabajo 44448 creada.
+2025-08-26 16:40:08,478 - INFO - Orden de trabajo 44449 creada.
+2025-08-26 16:40:08,486 - INFO - Orden de trabajo 44450 creada.
+2025-08-26 16:40:08,492 - INFO - Orden de trabajo 44451 creada.
+2025-08-26 16:40:08,497 - INFO - Orden de trabajo 44452 creada.
+2025-08-26 16:40:08,506 - INFO - Orden de trabajo 44453 creada.
+2025-08-26 16:40:08,511 - INFO - Orden de trabajo 44454 creada.
+2025-08-26 16:40:08,520 - INFO - Orden de trabajo 44455 creada.
+2025-08-26 16:40:08,525 - INFO - Orden de trabajo 44456 creada.
+2025-08-26 16:40:08,530 - INFO - Orden de trabajo 44457 creada.
+2025-08-26 16:40:08,538 - INFO - Orden de trabajo 44458 creada.
+2025-08-26 16:40:08,545 - INFO - Orden de trabajo 44459 creada.
+2025-08-26 16:40:08,553 - INFO - Orden de trabajo 44460 creada.
+2025-08-26 16:40:08,558 - INFO - Orden de trabajo 44462 creada.
+2025-08-26 16:40:08,566 - INFO - Orden de trabajo 44463 creada.
+2025-08-26 16:40:08,573 - INFO - Orden de trabajo 44464 creada.
+2025-08-26 16:40:08,578 - INFO - Orden de trabajo 44465 creada.
+2025-08-26 16:40:08,586 - INFO - Orden de trabajo 44466 creada.
+2025-08-26 16:40:08,592 - INFO - Orden de trabajo 44467 creada.
+2025-08-26 16:40:08,598 - INFO - Orden de trabajo 44468 creada.
+2025-08-26 16:40:08,605 - INFO - Orden de trabajo 44469 creada.
+2025-08-26 16:40:08,611 - INFO - Orden de trabajo 44470 creada.
+2025-08-26 16:40:08,611 - INFO - === IMPORTACIÓN DE ÓRDENES COMPLETADA ===
+2025-08-26 16:40:08,611 - INFO - Creadas: 211, Actualizadas: 0, Fallidas: 0
+2025-08-26 16:40:08,611 - INFO - === INICIANDO IMPORTACIÓN DE RUTAS OT ===
+2025-08-26 16:40:08,611 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-08-26 16:40:08,618 - INFO - Encontradas 211 órdenes de trabajo existentes
+2025-08-26 16:40:14,449 - INFO - Usando codificación detectada: ascii
+2025-08-26 16:40:22,063 - INFO - === IMPORTACIÓN DE RUTAS COMPLETADA ===
+2025-08-26 16:40:22,063 - INFO - Creadas: 985, Actualizadas: 0, Fallidas: 0
+2025-08-26 16:40:22,063 - INFO - === RESUMEN FINAL ===
+2025-08-26 16:40:22,063 - INFO - Datos eliminados:
+2025-08-26 16:40:22,063 - INFO -   - ejecuciones_tarea: 0
+2025-08-26 16:40:22,063 - INFO -   - tareas_fragmentadas: 0
+2025-08-26 16:40:22,064 - INFO -   - historial_planificacion: 0
+2025-08-26 16:40:22,064 - INFO -   - reportes_diarios: 0
+2025-08-26 16:40:22,064 - INFO -   - programa_orden_trabajo: 0
+2025-08-26 16:40:22,064 - INFO -   - item_ruta: 0
+2025-08-26 16:40:22,064 - INFO -   - ruta_ot: 0
+2025-08-26 16:40:22,064 - INFO -   - orden_trabajo: 0
+2025-08-26 16:40:22,064 - INFO - Órdenes de trabajo:
+2025-08-26 16:40:22,064 - INFO -   - Creadas: 211
+2025-08-26 16:40:22,064 - INFO -   - Actualizadas: 0
+2025-08-26 16:40:22,064 - INFO -   - Fallidas: 0
+2025-08-26 16:40:22,064 - INFO - Rutas de órdenes:
+2025-08-26 16:40:22,064 - INFO -   - Creadas: 985
+2025-08-26 16:40:22,064 - INFO -   - Actualizadas: 0
+2025-08-26 16:40:22,064 - INFO -   - Fallidas: 0
+2025-08-26 16:40:22,064 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
+2025-08-26 16:40:22,064 - INFO - Log detallado guardado en: /home/faba/Escritorio/Nueva carpeta/proyecto_abasolo/proyecto_abasolo/reimportar_ot.log

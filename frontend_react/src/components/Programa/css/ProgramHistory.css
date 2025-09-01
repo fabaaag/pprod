@@ -1,0 +1,365 @@
+.program-history {
+    .cambios-table {
+        font-size: 0.9rem;
+    }
+
+    .resumen-dia {
+        background-color: #f8f9fa;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+    }
+
+    .badge {
+        font-size: 0.85rem;
+    }
+
+    .card-header {
+        background-color: #f8f9fa;
+    }
+
+    .timeline-item {
+        border-left: 3px solid #007bff;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        height: 100%;
+        padding: 4px;
+        border-radius: 4px;
+    }
+
+    .timeline-item.pendiente {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .timeline-item.en_proceso {
+        background-color: #ffc107;
+        color: black;
+    }
+
+    .timeline-item.completado {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .timeline-item.continuado {
+        background-color: #17a2b8;
+        color: white;
+    }
+
+    .cambio-detalle {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+.historial-list {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.historial-item {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.historial-item:hover {
+    background-color: #f8f9fa;
+}
+
+.historial-item.active {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.timeline-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin-top: 10px;
+
+    .timelines-comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .timeline-view {
+        &.original .timeline-item {
+            opacity: 0.7;
+            border: 2px dashed #666;
+        }
+
+        &.updated .timeline-item {
+            border: 2px solid #000;
+        }
+
+        &.combined {
+            .timeline-item {
+                &.original {
+                    opacity: 0.5;
+                    border: 2px dashed #666;
+                }
+                &.updated {
+                    border: 2px solid #000;
+                }
+            }
+        }
+    }
+}
+
+.cambios-container {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.cambios-table {
+    margin-top: 15px;
+}
+
+.cambio-row {
+    transition: background-color 0.2s ease;
+}
+
+.cambio-row:hover {
+    background-color: #f8f9fa;
+}
+
+.cambio-detalle {
+    padding: 8px 0;
+}
+
+.resumen-dia {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+/* Estilos para la barra lateral */
+.timeline-sidebar-item {
+    padding: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #e0e0e0;
+}
+
+.timeline-sidebar-item .ot-code {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 0.9em;
+}
+
+.timeline-sidebar-item .ot-description {
+    color: #666;
+    font-size: 0.8em;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+/* Estilos para los items de la timeline */
+.timeline-item {
+    height: 100%;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+}
+
+.timeline-item.pendiente {
+    background-color: #3498db;
+    color: white;
+    border-left: 4px solid #2980b9;
+}
+
+.timeline-item.en_proceso {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border-left: 4px solid #f39c12;
+}
+
+.timeline-item.completado {
+    background-color: #2ecc71;
+    color: white;
+    border-left: 4px solid #27ae60;
+}
+
+.timeline-item.continuado {
+    background-color: #9b59b6;
+    color: white;
+    border-left: 4px solid #8e44ad;
+}
+
+/* Estilos para el modal */
+.modal-xl .modal-content {
+    border-radius: 8px;
+}
+
+.modal-xl .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Personalización de la línea de tiempo */
+.react-calendar-timeline .rct-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 5px 0;
+}
+
+.react-calendar-timeline .rct-sidebar {
+    background-color: #f8f9fa;
+    border-right: 2px solid #dee2e6;
+}
+
+.react-calendar-timeline .rct-vertical-lines .rct-vl {
+    border-left: 1px solid #eee;
+}
+
+.react-calendar-timeline .rct-horizontal-lines .rct-hl {
+    border-bottom: 1px solid #eee;
+}
+
+.resumen-fabricacion {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 5px;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background-color: #28a745;
+    font-weight: bold;
+}
+
+/* Ajustes adicionales para la timeline */
+.timeline-view-container {
+    padding: 10px;
+}
+
+/* Ajuste para el espacio entre elementos */
+.historial-item {
+    padding: 8px;
+}
+
+.historial-content {
+    cursor: pointer;
+}
+
+.historial-item .btn-link {
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.historial-item:hover .btn-link {
+    opacity: 1;
+}
+
+.historial-item .btn-link:hover {
+    color: #dc3545 !important;
+}
+
+/* Añadir al archivo existente */
+.modal-90w {
+    max-width: 90% !important;
+    width: 90% !important;
+}
+
+.modal-tall .modal-body {
+    max-height: 80vh;
+    height: 80vh;
+}
+
+.program-history-modal .timeline-container {
+    height: 70vh;
+    overflow: auto;
+}
+
+.program-history-modal .timeline-view-container {
+    height: 80vh;
+    overflow: auto;
+}
+
+/* Mejorar la visualización de la línea de tiempo */
+.timeline-item {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.timeline-item:hover {
+    filter: brightness(1.1);
+    transform: scale(1.01);
+}
+
+/* Estilos para los registros históricos */
+.historial-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.historial-item:hover {
+    background-color: #f0f0f0;
+    border-color: #d0d0d0;
+}
+
+.historial-item.active {
+    background-color: #e3f2fd;
+    border-color: #2196F3;
+}
+
+/* Estilos para la parte donde se muestran los cambios */
+.cambios-container {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.cambios-table {
+    background-color: white;
+}
+
+.cambio-row {
+    transition: background-color 0.2s ease;
+}
+
+.cambio-row:hover {
+    background-color: #f0f0f0;
+}

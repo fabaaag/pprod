@@ -1,0 +1,436 @@
+.timeline-container {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden; /* ✅ CAMBIADO: De visible a hidden para evitar doble scroll */
+    height: auto; /* ✅ CAMBIADO: De 50vh a auto para que se ajuste al contenido */
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-header {
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom: 1px solid #ddd;
+    flex-shrink: 0; /* ✅ AÑADIDO: Evitar que el header se comprima */
+}
+
+.timeline-header h5 {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+}
+
+.timeline-header .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* ✅ NUEVO: Contenedor específico para el calendario */
+.timeline-calendar-container {
+    flex: 1;
+    height: 600px; /* ✅ ALTURA FIJA para el calendario */
+    overflow: hidden; /* ✅ IMPORTANTE: Sin scroll en el contenedor */
+    position: relative;
+}
+
+.timeline-empty-state {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px;
+    border: 2px dashed #dee2e6;
+}
+
+.timeline-empty-state p {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Estilos para los eventos del calendario */
+.rbc-event {
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+    transition: all 0.2s ease !important;
+    margin: 3px 2px !important; /* ✅ AUMENTADO: Más espacio entre eventos */
+    min-height: 25px !important; /* ✅ AUMENTADO: Altura mínima */
+    border: 2px solid !important; /* ✅ AÑADIDO: Borde más visible */
+}
+
+.rbc-event:hover {
+    transform: translateY(-2px) !important; /* ✅ AUMENTADO: Efecto hover más pronunciado */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
+    z-index: 10 !important;
+}
+
+/* ✅ MEJORAR ORGANIZACIÓN DE EVENTOS */
+.rbc-event-content {
+    font-size: 11px !important; /* ✅ AUMENTADO: Texto más legible */
+    line-height: 1.3 !important;
+    padding: 3px 6px !important; /* ✅ AUMENTADO: Más padding interno */
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: '' !important;
+    font-weight: 600 !important;
+    /* ✅ NUEVO: Mejor organización del contenido */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    min-height: 25px !important;
+}
+
+/* ✅ ESTILOS PARA INFORMACIÓN DE OT EN EVENTOS */
+.rbc-event .ot-info {
+    font-weight: bold !important;
+    font-size: 9px !important;
+    color: rgba(255, 255, 255, 1) !important;
+    margin-bottom: 1px !important;
+}
+
+.rbc-event .proceso-info {
+    font-size: 8px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-bottom: 1px !important;
+}
+
+.rbc-event .cantidad-info {
+    font-size: 8px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: normal !important;
+}
+
+/* ✅ ESTILOS PARA BLOQUES UNIFICADOS */
+.rbc-event.bloque-unificado {
+    background: linear-gradient(135deg, var(--event-color) 0%, var(--event-color-dark) 100%) !important;
+    border-width: 3px !important;
+    min-height: 30px !important;
+}
+
+.rbc-event.bloque-manana {
+    --event-color: #4CAF50;
+    --event-color-dark: #2E7D32;
+}
+
+.rbc-event.bloque-tarde {
+    --event-color: #2196F3;
+    --event-color-dark: #1565C0;
+}
+
+/* ✅ ESTILOS PARA DIFERENTES ESTADOS */
+.rbc-event.event-completado {
+    background-color: #4CAF50 !important;
+    border-color: #2E7D32 !important;
+    opacity: 0.9 !important;
+}
+
+.rbc-event.event-en-proceso {
+    background-color: #2196F3 !important;
+    border-color: #1565C0 !important;
+    animation: pulse 2s infinite !important;
+}
+
+.rbc-event.event-pendiente {
+    background-color: #FFA726 !important;
+    border-color: #E65100 !important;
+}
+
+.rbc-event.event-detenido {
+    background-color: #F44336 !important;
+    border-color: #C62828 !important;
+    opacity: 0.7 !important;
+}
+
+/* ✅ ANIMACIÓN PARA EVENTOS EN PROCESO */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* ✅ MEJORAR VISTA DE TIEMPO */
+.rbc-time-view {
+    border-radius: 0 0 8px 8px !important;
+    overflow: hidden !important; /* ✅ IMPORTANTE: Controlar el scroll */
+}
+
+.rbc-time-header {
+    border-bottom: 2px solid #dee2e6 !important;
+    overflow: hidden !important; /* ✅ IMPORTANTE: Sin scroll horizontal */
+}
+
+.rbc-time-content {
+    border-left: 1px solid #dee2e6 !important;
+    overflow-y: auto !important; /* ✅ IMPORTANTE: Solo scroll vertical */
+    overflow-x: hidden !important; /* ✅ IMPORTANTE: Sin scroll horizontal */
+}
+
+/* ✅ ESTILOS PARA SLOTS DE TIEMPO */
+.rbc-time-slot {
+    border-bottom: 1px solid #f0f0f0 !important;
+    min-height: 40px !important; /* ✅ AUMENTADO: Más altura para slots */
+}
+
+/* ✅ OCULTAR HORAS NO LABORALES */
+.rbc-time-slot[style*="display: none"],
+.rbc-time-slot[style*="display:none"] {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    border: none !important;
+}
+
+/* ✅ MEJORAR VISUALIZACIÓN DE HORAS LABORALES */
+.rbc-time-slot.rbc-today {
+    background-color: #e3f2fd !important;
+}
+
+.rbc-time-slot.rbc-today.rbc-working-hour {
+    background-color: #e8f5e8 !important;
+    border-left: 3px solid #4CAF50 !important;
+}
+
+/* ✅ ESTILOS PARA HORAS DE TRABAJO */
+.rbc-time-slot.rbc-working-hour {
+    background-color: #f8f9fa !important;
+    border-left: 2px solid #dee2e6 !important;
+}
+
+.rbc-time-slot.rbc-non-working-hour {
+    background-color: #f5f5f5 !important;
+    opacity: 0.5 !important;
+}
+
+/* ✅ MEJORAR HEADER DE TIEMPO */
+.rbc-time-header-content {
+    border-left: 1px solid #dee2e6 !important;
+    overflow: hidden !important; /* ✅ IMPORTANTE: Sin scroll */
+}
+
+.rbc-time-header-cell {
+    background: #f8f9fa !important;
+    font-weight: 600 !important;
+    color: #495057 !important;
+    padding: 10px 4px !important; /* ✅ AUMENTADO: Más padding */
+    border-bottom: 2px solid #dee2e6 !important;
+    min-height: 50px !important; /* ✅ AÑADIDO: Altura mínima */
+}
+
+/* ✅ OCULTAR CELDAS DE HORAS NO LABORALES EN EL HEADER */
+.rbc-time-header-cell[style*="display: none"],
+.rbc-time-header-cell[style*="display:none"] {
+    display: none !important;
+    width: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* ✅ MEJORAR EL GUTTER DE TIEMPO */
+.rbc-time-gutter {
+    background: #f8f9fa !important;
+    border-right: 2px solid #dee2e6 !important;
+}
+
+.rbc-time-gutter .rbc-timeslot-group {
+    border-bottom: 1px solid #e9ecef !important;
+}
+
+/* ✅ OCULTAR SLOTS DE TIEMPO NO LABORALES EN EL GUTTER */
+.rbc-time-gutter .rbc-timeslot-group[style*="display: none"],
+.rbc-time-gutter .rbc-timeslot-group[style*="display:none"] {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+}
+
+/* ✅ MEJORAR LA VISUALIZACIÓN DE EVENTOS EN HORAS LABORALES */
+.rbc-event.rbc-working-hour-event {
+    border-left: 3px solid #4CAF50 !important;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3) !important;
+}
+
+/* ✅ NUEVO: Estilos para mejorar la visualización de horas de trabajo */
+.rbc-time-gutter .rbc-timeslot-group.rbc-working-hour {
+    background-color: #e8f5e8 !important;
+    border-left: 2px solid #4CAF50 !important;
+}
+
+.rbc-time-gutter .rbc-timeslot-group.rbc-non-working-hour {
+    background-color: #f5f5f5 !important;
+    opacity: 0.5 !important;
+}
+
+/* ✅ NUEVO: Mejorar la visualización de las etiquetas de tiempo */
+.rbc-time-gutter .rbc-timeslot-group .rbc-label {
+    font-weight: 600 !important;
+    color: #495057 !important;
+    padding: 4px 8px !important;
+}
+
+.rbc-time-gutter .rbc-timeslot-group.rbc-working-hour .rbc-label {
+    color: #2E7D32 !important;
+    font-weight: 700 !important;
+}
+
+/* ✅ NUEVO: Estilos para el indicador de horario de trabajo */
+.timeline-header .badge.bg-success {
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%) !important;
+    border: 1px solid #2E7D32 !important;
+    font-weight: 600 !important;
+}
+
+/* ✅ ESTILOS PARA VISTA DE MES */
+.rbc-month-view {
+    border-radius: 0 0 8px 8px !important;
+    overflow: hidden !important; /* ✅ IMPORTANTE: Sin scroll */
+}
+
+.rbc-month-cell {
+    border-color: #e9ecef !important;
+    min-height: 100px !important; /* ✅ AUMENTADO: Más altura para celdas */
+}
+
+.rbc-month-cell.rbc-today {
+    background-color: #e3f2fd !important;
+}
+
+/* ✅ MEJORAR ORGANIZACIÓN EN VISTA DE MES */
+.rbc-month-row {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.rbc-month-row + .rbc-month-row {
+    border-top: 1px solid #dee2e6 !important;
+}
+
+/* ✅ ESTILOS PARA TOOLBAR */
+.rbc-toolbar {
+    background: #f8f9fa !important;
+    padding: 10px 15px !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    border-radius: 8px 8px 0 0 !important;
+    overflow: hidden !important; /* ✅ IMPORTANTE: Sin scroll */
+}
+
+.rbc-toolbar button {
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+    margin: 0 2px !important;
+}
+
+.rbc-toolbar button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.rbc-toolbar button.rbc-active {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    color: white !important;
+}
+
+/* ✅ NUEVO: Estilos específicos para evitar doble scroll */
+.rbc-calendar {
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+.rbc-month-view,
+.rbc-time-view,
+.rbc-agenda-view {
+    overflow: hidden !important;
+}
+
+/* ✅ NUEVO: Contenedor padre sin scroll */
+.timeline-container .card-body {
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.timeline-container .card {
+    overflow: hidden !important;
+}
+
+/* ✅ NUEVO: Contenedor específico para el timeline en el componente principal */
+.timeline-wrapper {
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+/* ✅ NUEVO: Mejorar el scroll interno del calendario */
+.rbc-time-content::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.rbc-time-content::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 4px !important;
+}
+
+.rbc-time-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1 !important;
+    border-radius: 4px !important;
+}
+
+.rbc-time-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8 !important;
+}
+
+/* ✅ RESPONSIVE MEJORADO */
+@media (max-width: 768px) {
+    .timeline-header {
+        padding: 10px 15px !important;
+    }
+    
+    .timeline-header .d-flex {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .timeline-header .btn-group {
+        width: 100% !important;
+    }
+    
+    .timeline-header .btn-group .btn {
+        flex: 1 !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .rbc-event-content {
+        font-size: 9px !important; /* ✅ AJUSTADO: Texto más pequeño en móvil */
+        padding: 2px 4px !important;
+    }
+    
+    .rbc-toolbar {
+        padding: 5px 10px !important;
+    }
+    
+    .rbc-toolbar button {
+        font-size: 0.8rem !important;
+        padding: 4px 8px !important;
+    }
+}
+
+/* Animaciones */
+.timeline-container {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

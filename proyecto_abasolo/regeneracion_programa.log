@@ -1,0 +1,1778 @@
+2025-06-03 17:55:52,893 - INFO - {
+  "timestamp": "2025-06-03T17:55:52.893791",
+  "tipo": "INICIO",
+  "mensaje": "Regenerando 13 programas"
+}
+2025-06-03 17:55:52,895 - INFO - {
+  "timestamp": "2025-06-03T17:55:52.895066",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 1 - Programa febrero-marzo"
+}
+2025-06-03 17:55:52,895 - INFO - {
+  "timestamp": "2025-06-03T17:55:52.895287",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 1"
+}
+2025-06-03 17:55:52,913 - INFO - {
+  "timestamp": "2025-06-03T17:55:52.913017",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 37,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:52,913 - INFO - {
+  "timestamp": "2025-06-03T17:55:52.913408",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 1"
+}
+2025-06-03 17:55:52,976 - INFO - {
+  "timestamp": "2025-06-03T17:55:52.976219",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 9,
+    "ordenes_codigos": [
+      43999,
+      44000,
+      44001,
+      44004,
+      44005,
+      44006,
+      44009,
+      44010,
+      44012
+    ]
+  }
+}
+2025-06-03 17:55:52,976 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:52.976405", "operacion": "CREAR_TAREAS", "detalles": "Programa 1: Iniciando creaci\u00f3n de 9 \u00f3rdenes"}
+2025-06-03 17:55:52,977 - INFO - [Timeline] Iniciando generación base para 9 órdenes
+2025-06-03 17:55:53,106 - INFO - [Timeline] Generación base completada: 9 grupos, 276 items totales
+2025-06-03 17:55:53,265 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.265261", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 43999, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4562, "fecha": "2025-02-24", "hora": "07:45"}}
+2025-06-03 17:55:53,294 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.294694", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 43999, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4563, "fecha": "2025-02-24", "hora": "11:30"}}
+2025-06-03 17:55:53,312 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.312132", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 43999, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4564, "fecha": "2025-02-24", "hora": "17:30"}}
+2025-06-03 17:55:53,328 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.328809", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44000, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4565, "fecha": "2025-02-24", "hora": "11:30"}}
+2025-06-03 17:55:53,343 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.343005", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44000, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4566, "fecha": "2025-02-24", "hora": "17:30"}}
+2025-06-03 17:55:53,358 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.358204", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44000, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4567, "fecha": "2025-02-25", "hora": "12:30"}}
+2025-06-03 17:55:53,375 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.375223", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44001, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4568, "fecha": "2025-02-24", "hora": "15:30"}}
+2025-06-03 17:55:53,383 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.383267", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44001, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4569, "fecha": "2025-02-25", "hora": "12:30"}}
+2025-06-03 17:55:53,398 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.398204", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44001, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4570, "fecha": "2025-02-26", "hora": "08:30"}}
+2025-06-03 17:55:53,410 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.410741", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44004, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 176, "tarea_id": 4571, "fecha": "2025-02-24", "hora": "07:45"}}
+2025-06-03 17:55:53,427 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.427641", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44004, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 181, "tarea_id": 4572, "fecha": "2025-02-24", "hora": "12:30"}}
+2025-06-03 17:55:53,444 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.444476", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44004, "proceso": "REBARBADO DE PERNOS", "cantidad": "400.00", "maquina_id": 207, "tarea_id": 4573, "fecha": "2025-02-25", "hora": "16:30"}}
+2025-06-03 17:55:53,644 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.644392", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44004, "proceso": "PUNTEADO DE PERNOS", "cantidad": "400.00", "maquina_id": 215, "tarea_id": 4574, "fecha": "2025-02-26", "hora": "16:30"}}
+2025-06-03 17:55:53,725 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.725125", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44004, "proceso": "TERRAJADO DE PERNOS", "cantidad": "400.00", "maquina_id": 227, "tarea_id": 4575, "fecha": "2025-02-27", "hora": "12:30"}}
+2025-06-03 17:55:53,737 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.737563", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44005, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 176, "tarea_id": 4576, "fecha": "2025-02-24", "hora": "12:30"}}
+2025-06-03 17:55:53,745 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.745557", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44005, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 181, "tarea_id": 4577, "fecha": "2025-02-25", "hora": "16:30"}}
+2025-06-03 17:55:53,798 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.797997", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44005, "proceso": "REBARBADO DE PERNOS", "cantidad": "400.00", "maquina_id": 207, "tarea_id": 4578, "fecha": "2025-02-27", "hora": "09:30"}}
+2025-06-03 17:55:53,809 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.809197", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44005, "proceso": "PUNTEADO DE PERNOS", "cantidad": "400.00", "maquina_id": 215, "tarea_id": 4579, "fecha": "2025-02-28", "hora": "09:30"}}
+2025-06-03 17:55:53,816 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.816230", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44005, "proceso": "TERRAJADO DE PERNOS", "cantidad": "400.00", "maquina_id": 227, "tarea_id": 4580, "fecha": "2025-02-28", "hora": "15:30"}}
+2025-06-03 17:55:53,832 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.832678", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44006, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 176, "tarea_id": 4581, "fecha": "2025-02-25", "hora": "09:30"}}
+2025-06-03 17:55:53,850 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.850046", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44006, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 181, "tarea_id": 4582, "fecha": "2025-02-27", "hora": "09:30"}}
+2025-06-03 17:55:53,862 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.862426", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44006, "proceso": "REBARBADO DE PERNOS", "cantidad": "400.00", "maquina_id": 207, "tarea_id": 4583, "fecha": "2025-02-28", "hora": "12:30"}}
+2025-06-03 17:55:53,874 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.874147", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44006, "proceso": "PUNTEADO DE PERNOS", "cantidad": "400.00", "maquina_id": 215, "tarea_id": 4584, "fecha": "2025-03-03", "hora": "14:00"}}
+2025-06-03 17:55:53,882 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.882142", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44006, "proceso": "TERRAJADO DE PERNOS", "cantidad": "400.00", "maquina_id": 227, "tarea_id": 4585, "fecha": "2025-03-04", "hora": "10:30"}}
+2025-06-03 17:55:53,893 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.893729", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44009, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 176, "tarea_id": 4586, "fecha": "2025-02-25", "hora": "15:30"}}
+2025-06-03 17:55:53,907 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.907322", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44009, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 181, "tarea_id": 4587, "fecha": "2025-02-28", "hora": "12:30"}}
+2025-06-03 17:55:53,915 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.915639", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44009, "proceso": "REBARBADO DE PERNOS", "cantidad": "400.00", "maquina_id": 207, "tarea_id": 4588, "fecha": "2025-03-03", "hora": "17:30"}}
+2025-06-03 17:55:53,927 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.927299", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44009, "proceso": "PUNTEADO DE PERNOS", "cantidad": "400.00", "maquina_id": 215, "tarea_id": 4589, "fecha": "2025-03-04", "hora": "17:30"}}
+2025-06-03 17:55:53,939 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.939847", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44009, "proceso": "TERRAJADO DE PERNOS", "cantidad": "400.00", "maquina_id": 227, "tarea_id": 4590, "fecha": "2025-03-05", "hora": "12:30"}}
+2025-06-03 17:55:53,947 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.947229", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44010, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 176, "tarea_id": 4591, "fecha": "2025-02-26", "hora": "10:30"}}
+2025-06-03 17:55:53,958 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.958467", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44010, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 181, "tarea_id": 4592, "fecha": "2025-03-03", "hora": "17:30"}}
+2025-06-03 17:55:53,966 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.966401", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44010, "proceso": "REBARBADO DE PERNOS", "cantidad": "400.00", "maquina_id": 207, "tarea_id": 4593, "fecha": "2025-03-05", "hora": "10:30"}}
+2025-06-03 17:55:53,980 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:53.980743", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44010, "proceso": "PUNTEADO DE PERNOS", "cantidad": "400.00", "maquina_id": 215, "tarea_id": 4594, "fecha": "2025-03-06", "hora": "10:30"}}
+2025-06-03 17:55:54,015 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.015697", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44010, "proceso": "TERRAJADO DE PERNOS", "cantidad": "400.00", "maquina_id": 227, "tarea_id": 4595, "fecha": "2025-03-06", "hora": "17:30"}}
+2025-06-03 17:55:54,025 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.025464", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44012, "proceso": "CORTADO", "cantidad": "800.00", "maquina_id": 197, "tarea_id": 4596, "fecha": "2025-02-25", "hora": "09:30"}}
+2025-06-03 17:55:54,032 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.032498", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44012, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "800.00", "maquina_id": 184, "tarea_id": 4597, "fecha": "2025-02-26", "hora": "08:30"}}
+2025-06-03 17:55:54,044 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.044814", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 1, "ot": 44012, "proceso": "PERFORACION REDONDA", "cantidad": "800.00", "maquina_id": 200, "tarea_id": 4598, "fecha": "2025-02-26", "hora": "15:30"}}
+2025-06-03 17:55:54,049 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.049173",
+  "tipo": "EXITO",
+  "mensaje": "Programa 1 regenerado",
+  "datos": {
+    "tareas": 37,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:54,058 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.058331",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 3 - Programa marzo"
+}
+2025-06-03 17:55:54,058 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.058496",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 3"
+}
+2025-06-03 17:55:54,070 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.069929",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 19,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:54,070 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.070257",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 3"
+}
+2025-06-03 17:55:54,098 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.098537",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 5,
+    "ordenes_codigos": [
+      44013,
+      44019,
+      44023,
+      44024,
+      44025
+    ]
+  }
+}
+2025-06-03 17:55:54,098 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.098734", "operacion": "CREAR_TAREAS", "detalles": "Programa 3: Iniciando creaci\u00f3n de 5 \u00f3rdenes"}
+2025-06-03 17:55:54,104 - INFO - [Timeline] Iniciando generación base para 5 órdenes
+2025-06-03 17:55:54,132 - INFO - [Timeline] Generación base completada: 5 grupos, 110 items totales
+2025-06-03 17:55:54,194 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.194273", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44013, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4599, "fecha": "2025-03-03", "hora": "07:45"}}
+2025-06-03 17:55:54,209 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.209205", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44013, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4600, "fecha": "2025-03-03", "hora": "10:30"}}
+2025-06-03 17:55:54,217 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.217582", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44013, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4601, "fecha": "2025-03-03", "hora": "15:30"}}
+2025-06-03 17:55:54,230 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.230138", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44019, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4602, "fecha": "2025-03-03", "hora": "10:30"}}
+2025-06-03 17:55:54,246 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.246221", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44019, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4603, "fecha": "2025-03-03", "hora": "15:30"}}
+2025-06-03 17:55:54,259 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.259594", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44019, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4604, "fecha": "2025-03-04", "hora": "08:30"}}
+2025-06-03 17:55:54,270 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.270202", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44023, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4605, "fecha": "2025-03-03", "hora": "14:00"}}
+2025-06-03 17:55:54,277 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.277923", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44023, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4606, "fecha": "2025-03-04", "hora": "08:30"}}
+2025-06-03 17:55:54,290 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.290798", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44023, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4607, "fecha": "2025-03-04", "hora": "11:30"}}
+2025-06-03 17:55:54,297 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.297473", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44024, "proceso": "CORTADO", "cantidad": "800.00", "maquina_id": 176, "tarea_id": 4608, "fecha": "2025-03-03", "hora": "07:45"}}
+2025-06-03 17:55:54,310 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.310091", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44024, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "800.00", "maquina_id": 181, "tarea_id": 4609, "fecha": "2025-03-03", "hora": "17:30"}}
+2025-06-03 17:55:54,316 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.316418", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44024, "proceso": "REBARBADO DE PERNOS", "cantidad": "800.00", "maquina_id": 207, "tarea_id": 4610, "fecha": "2025-03-05", "hora": "10:30"}}
+2025-06-03 17:55:54,328 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.328802", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44024, "proceso": "PUNTEADO DE PERNOS", "cantidad": "800.00", "maquina_id": 215, "tarea_id": 4611, "fecha": "2025-03-06", "hora": "10:30"}}
+2025-06-03 17:55:54,342 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.342834", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44024, "proceso": "TERRAJADO DE PERNOS", "cantidad": "800.00", "maquina_id": 227, "tarea_id": 4612, "fecha": "2025-03-06", "hora": "16:30"}}
+2025-06-03 17:55:54,350 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.349973", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44025, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 176, "tarea_id": 4613, "fecha": "2025-03-03", "hora": "17:30"}}
+2025-06-03 17:55:54,365 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.365391", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44025, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 181, "tarea_id": 4614, "fecha": "2025-03-05", "hora": "10:30"}}
+2025-06-03 17:55:54,383 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.383001", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44025, "proceso": "REBARBADO DE PERNOS", "cantidad": "400.00", "maquina_id": 207, "tarea_id": 4615, "fecha": "2025-03-06", "hora": "14:00"}}
+2025-06-03 17:55:54,405 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.405770", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44025, "proceso": "PUNTEADO DE PERNOS", "cantidad": "400.00", "maquina_id": 215, "tarea_id": 4616, "fecha": "2025-03-07", "hora": "12:30"}}
+2025-06-03 17:55:54,415 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.415043", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 3, "ot": 44025, "proceso": "TERRAJADO DE PERNOS", "cantidad": "400.00", "maquina_id": 227, "tarea_id": 4617, "fecha": "2025-03-10", "hora": "08:30"}}
+2025-06-03 17:55:54,428 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.428131",
+  "tipo": "EXITO",
+  "mensaje": "Programa 3 regenerado",
+  "datos": {
+    "tareas": 19,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:54,437 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.437176",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 4 - dfmdfg"
+}
+2025-06-03 17:55:54,437 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.437495",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 4"
+}
+2025-06-03 17:55:54,448 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.448052",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 9,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:54,448 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.448262",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 4"
+}
+2025-06-03 17:55:54,457 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.457858",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43036",
+  "datos": {
+    "item_id": 1,
+    "estandar": 0,
+    "cantidad": "500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:54,465 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.464942",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43777",
+  "datos": {
+    "item_id": 24,
+    "estandar": 0,
+    "cantidad": "500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:54,473 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.473857",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43777",
+  "datos": {
+    "item_id": 29,
+    "estandar": 0,
+    "cantidad": "500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:54,474 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.474099",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 3,
+    "ordenes_codigos": [
+      43036,
+      43515,
+      43777
+    ]
+  }
+}
+2025-06-03 17:55:54,474 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.474281", "operacion": "CREAR_TAREAS", "detalles": "Programa 4: Iniciando creaci\u00f3n de 3 \u00f3rdenes"}
+2025-06-03 17:55:54,479 - INFO - [Timeline] Iniciando generación base para 3 órdenes
+2025-06-03 17:55:54,480 - INFO - [Timeline] Generación base completada: 3 grupos, 44 items totales
+2025-06-03 17:55:54,515 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.514944", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43036, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "500.00", "maquina_id": 189, "tarea_id": 4618, "fecha": "2025-03-03", "hora": "07:45"}}
+2025-06-03 17:55:54,530 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.530135", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43036, "proceso": "REBARBADO EXTERIOR", "cantidad": "500.00", "maquina_id": 198, "tarea_id": 4619, "fecha": "2025-03-03", "hora": "09:30"}}
+2025-06-03 17:55:54,544 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.544167", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43036, "proceso": "DOBLAR EN CALIENTE", "cantidad": "500.00", "maquina_id": 184, "tarea_id": 4620, "fecha": "2025-03-03", "hora": "12:30"}}
+2025-06-03 17:55:54,557 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.557634", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43036, "proceso": "PERFORACION REDONDA", "cantidad": "500.00", "maquina_id": 201, "tarea_id": 4621, "fecha": "2025-03-03", "hora": "15:30"}}
+2025-06-03 17:55:54,565 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.565494", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43515, "proceso": "CORTE, PERFORADO Y LOGO", "cantidad": "10000.00", "maquina_id": 196, "tarea_id": 4622, "fecha": "2025-03-03", "hora": "07:45"}}
+2025-06-03 17:55:54,578 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.578939", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43777, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "500.00", "maquina_id": 180, "tarea_id": 4623, "fecha": "2025-03-03", "hora": "07:45"}}
+2025-06-03 17:55:54,594 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.594267", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43777, "proceso": "REBARBADO EXTERIOR", "cantidad": "500.00", "maquina_id": 200, "tarea_id": 4624, "fecha": "2025-03-03", "hora": "09:30"}}
+2025-06-03 17:55:54,607 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.607840", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43777, "proceso": "REBARBADO INTERIOR", "cantidad": "500.00", "maquina_id": 200, "tarea_id": 4625, "fecha": "2025-03-03", "hora": "12:30"}}
+2025-06-03 17:55:54,615 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.615114", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 4, "ot": 43777, "proceso": "PERFORADO", "cantidad": "500.00", "maquina_id": 264, "tarea_id": 4626, "fecha": "2025-03-03", "hora": "16:30"}}
+2025-06-03 17:55:54,627 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.627417",
+  "tipo": "EXITO",
+  "mensaje": "Programa 4 regenerado",
+  "datos": {
+    "tareas": 9,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:54,640 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.640873",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 5 - programa de prueba"
+}
+2025-06-03 17:55:54,641 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.641055",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 5"
+}
+2025-06-03 17:55:54,658 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.658857",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 9,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:54,659 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.659085",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 5"
+}
+2025-06-03 17:55:54,670 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.670160",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43467",
+  "datos": {
+    "item_id": 14,
+    "estandar": 0,
+    "cantidad": "1500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:54,675 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.675409",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43568",
+  "datos": {
+    "item_id": 16,
+    "estandar": 0,
+    "cantidad": "500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:54,683 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.683358",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43668",
+  "datos": {
+    "item_id": 22,
+    "estandar": 0,
+    "cantidad": "1.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:54,686 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.686101",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43668",
+  "datos": {
+    "item_id": 23,
+    "estandar": 0,
+    "cantidad": "1.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:54,688 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.688303",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43811",
+  "datos": {
+    "item_id": 30,
+    "estandar": 0,
+    "cantidad": "15000.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:54,691 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.691246",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 2,
+    "ordenes_codigos": [
+      43568,
+      43811
+    ]
+  }
+}
+2025-06-03 17:55:54,691 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.691421", "operacion": "CREAR_TAREAS", "detalles": "Programa 5: Iniciando creaci\u00f3n de 2 \u00f3rdenes"}
+2025-06-03 17:55:54,694 - INFO - [Timeline] Iniciando generación base para 2 órdenes
+2025-06-03 17:55:54,698 - INFO - [Timeline] Generación base completada: 2 grupos, 48 items totales
+2025-06-03 17:55:54,730 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.730384", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43568, "proceso": "ESTAMPAR EN CALIENTE PRIMER GOLPE", "cantidad": "500.00", "maquina_id": 183, "tarea_id": 4627, "fecha": "2025-03-17", "hora": "07:45"}}
+2025-06-03 17:55:54,741 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.741476", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43568, "proceso": "ESTAMPAR EN CALIENTE SEGUNDO GOLPE", "cantidad": "500.00", "maquina_id": 183, "tarea_id": 4628, "fecha": "2025-03-17", "hora": "10:30"}}
+2025-06-03 17:55:54,755 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.755083", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43568, "proceso": "REBARBADO EXTERIOR", "cantidad": "500.00", "maquina_id": 208, "tarea_id": 4629, "fecha": "2025-03-17", "hora": "14:00"}}
+2025-06-03 17:55:54,766 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.766206", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43568, "proceso": "PERFORADO", "cantidad": "500.00", "maquina_id": 198, "tarea_id": 4630, "fecha": "2025-03-18", "hora": "07:45"}}
+2025-06-03 17:55:54,780 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.779969", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43568, "proceso": "FORJAR", "cantidad": "500.00", "maquina_id": 190, "tarea_id": 4631, "fecha": "2025-03-18", "hora": "12:30"}}
+2025-06-03 17:55:54,795 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.795026", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43811, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "15000.00", "maquina_id": 191, "tarea_id": 4632, "fecha": "2025-03-17", "hora": "07:45"}}
+2025-06-03 17:55:54,810 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.810646", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43811, "proceso": "REBARBADO DE PERNOS", "cantidad": "15000.00", "maquina_id": 208, "tarea_id": 4633, "fecha": "2025-03-18", "hora": "07:45"}}
+2025-06-03 17:55:54,828 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.828845", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43811, "proceso": "PUNTEAR TIRAFONDOS", "cantidad": "15000.00", "maquina_id": 218, "tarea_id": 4634, "fecha": "2025-03-19", "hora": "07:45"}}
+2025-06-03 17:55:54,840 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.840675", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 5, "ot": 43811, "proceso": "LAMINAR TIRAFONDOS", "cantidad": "15000.00", "maquina_id": 220, "tarea_id": 4635, "fecha": "2025-03-19", "hora": "12:30"}}
+2025-06-03 17:55:54,845 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.845661",
+  "tipo": "EXITO",
+  "mensaje": "Programa 5 regenerado",
+  "datos": {
+    "tareas": 9,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:54,873 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.873906",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 6 - kjhkjjhk"
+}
+2025-06-03 17:55:54,874 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.874157",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 6"
+}
+2025-06-03 17:55:54,884 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.884282",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 24,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:54,884 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.884574",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 6"
+}
+2025-06-03 17:55:54,924 - INFO - {
+  "timestamp": "2025-06-03T17:55:54.923975",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 5,
+    "ordenes_codigos": [
+      43037,
+      43280,
+      43864,
+      43890,
+      43900
+    ]
+  }
+}
+2025-06-03 17:55:54,924 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:54.924194", "operacion": "CREAR_TAREAS", "detalles": "Programa 6: Iniciando creaci\u00f3n de 5 \u00f3rdenes"}
+2025-06-03 17:55:54,927 - INFO - [Timeline] Iniciando generación base para 5 órdenes
+2025-06-03 17:55:54,956 - INFO - [Timeline] Generación base completada: 5 grupos, 160 items totales
+2025-06-03 17:55:55,073 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.073539", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43037, "proceso": "CORTADO", "cantidad": "500.00", "maquina_id": 176, "tarea_id": 4636, "fecha": "2025-03-24", "hora": "07:45"}}
+2025-06-03 17:55:55,084 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.084262", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43037, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "500.00", "maquina_id": 189, "tarea_id": 4637, "fecha": "2025-03-25", "hora": "07:45"}}
+2025-06-03 17:55:55,097 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.097894", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43037, "proceso": "REBARBADO EXTERIOR", "cantidad": "500.00", "maquina_id": 198, "tarea_id": 4638, "fecha": "2025-03-25", "hora": "09:30"}}
+2025-06-03 17:55:55,114 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.114420", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43037, "proceso": "PERFORADO", "cantidad": "500.00", "maquina_id": 198, "tarea_id": 4639, "fecha": "2025-03-25", "hora": "12:30"}}
+2025-06-03 17:55:55,128 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.128767", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43280, "proceso": "CORTADO", "cantidad": "480.00", "maquina_id": 250, "tarea_id": 4640, "fecha": "2025-03-24", "hora": "07:45"}}
+2025-06-03 17:55:55,142 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.142756", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43280, "proceso": "AVELLANAR", "cantidad": "480.00", "maquina_id": 247, "tarea_id": 4641, "fecha": "2025-03-24", "hora": "09:30"}}
+2025-06-03 17:55:55,156 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.152553", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43280, "proceso": "REBARBADO DE TUERCAS", "cantidad": "480.00", "maquina_id": 237, "tarea_id": 4642, "fecha": "2025-03-24", "hora": "12:30"}}
+2025-06-03 17:55:55,166 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.166388", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43280, "proceso": "REPASADO DE TUERCAS", "cantidad": "480.00", "maquina_id": 232, "tarea_id": 4643, "fecha": "2025-03-24", "hora": "16:30"}}
+2025-06-03 17:55:55,182 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.182510", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43864, "proceso": "CORTADO", "cantidad": "60.00", "maquina_id": 176, "tarea_id": 4644, "fecha": "2025-03-25", "hora": "07:45"}}
+2025-06-03 17:55:55,206 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.206250", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43864, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "60.00", "maquina_id": 185, "tarea_id": 4645, "fecha": "2025-03-25", "hora": "09:30"}}
+2025-06-03 17:55:55,214 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.214812", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43864, "proceso": "REBARBADO DE PERNOS", "cantidad": "60.00", "maquina_id": 208, "tarea_id": 4646, "fecha": "2025-03-25", "hora": "12:30"}}
+2025-06-03 17:55:55,229 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.229327", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43864, "proceso": "REBAJE DE DIAMETRO", "cantidad": "60.00", "maquina_id": 214, "tarea_id": 4647, "fecha": "2025-03-26", "hora": "08:30"}}
+2025-06-03 17:55:55,242 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.242435", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43864, "proceso": "ESTRIAR", "cantidad": "60.00", "maquina_id": 184, "tarea_id": 4648, "fecha": "2025-03-26", "hora": "11:30"}}
+2025-06-03 17:55:55,256 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.256824", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43864, "proceso": "PUNTEADO DE PERNOS", "cantidad": "60.00", "maquina_id": 215, "tarea_id": 4649, "fecha": "2025-03-26", "hora": "17:30"}}
+2025-06-03 17:55:55,265 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.265620", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43864, "proceso": "TERRAJADO DE PERNOS", "cantidad": "60.00", "maquina_id": 226, "tarea_id": 4650, "fecha": "2025-03-27", "hora": "10:30"}}
+2025-06-03 17:55:55,278 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.278576", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43890, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "500.00", "maquina_id": 182, "tarea_id": 4651, "fecha": "2025-03-24", "hora": "07:45"}}
+2025-06-03 17:55:55,292 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.292470", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43890, "proceso": "REBARBADO EXTERIOR", "cantidad": "500.00", "maquina_id": 199, "tarea_id": 4652, "fecha": "2025-03-28", "hora": "15:30"}}
+2025-06-03 17:55:55,307 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.307277", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43890, "proceso": "TERRAJADO DE TUERCAS", "cantidad": "500.00", "maquina_id": 236, "tarea_id": 4653, "fecha": "2025-03-31", "hora": "16:30"}}
+2025-06-03 17:55:55,319 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.319845", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43890, "proceso": "TRATAMIENTO TERMICO", "cantidad": "500.00", "maquina_id": 276, "tarea_id": 4654, "fecha": "2025-04-01", "hora": "14:00"}}
+2025-06-03 17:55:55,332 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.332417", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43900, "proceso": "CORTADO", "cantidad": "15000.00", "maquina_id": 176, "tarea_id": 4655, "fecha": "2025-03-25", "hora": "09:30"}}
+2025-06-03 17:55:55,345 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.345793", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43900, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "15000.00", "maquina_id": 182, "tarea_id": 4656, "fecha": "2025-03-28", "hora": "15:30"}}
+2025-06-03 17:55:55,367 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.367732", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43900, "proceso": "REBARBADO DE PERNOS", "cantidad": "15000.00", "maquina_id": 208, "tarea_id": 4657, "fecha": "2025-03-31", "hora": "11:30"}}
+2025-06-03 17:55:55,413 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.413681", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43900, "proceso": "PUNTEAR TIRAFONDOS", "cantidad": "15000.00", "maquina_id": 218, "tarea_id": 4658, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:55,427 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.427108", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 6, "ot": 43900, "proceso": "LAMINAR TIRAFONDOS", "cantidad": "15000.00", "maquina_id": 220, "tarea_id": 4659, "fecha": "2025-04-01", "hora": "12:30"}}
+2025-06-03 17:55:55,432 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.432865",
+  "tipo": "EXITO",
+  "mensaje": "Programa 6 regenerado",
+  "datos": {
+    "tareas": 24,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:55,444 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.444419",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 7 - semana 1 abril"
+}
+2025-06-03 17:55:55,444 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.444648",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 7"
+}
+2025-06-03 17:55:55,462 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.461946",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 3,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:55,462 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.462119",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 7"
+}
+2025-06-03 17:55:55,470 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.470230",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43904",
+  "datos": {
+    "item_id": 51,
+    "estandar": 0,
+    "cantidad": "300.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,473 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.473669",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43904",
+  "datos": {
+    "item_id": 52,
+    "estandar": 0,
+    "cantidad": "300.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,475 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.475390",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43904",
+  "datos": {
+    "item_id": 53,
+    "estandar": 0,
+    "cantidad": "300.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,477 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.477623",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43906",
+  "datos": {
+    "item_id": 55,
+    "estandar": 0,
+    "cantidad": "865.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,479 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.479133",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43916",
+  "datos": {
+    "item_id": 56,
+    "estandar": 0,
+    "cantidad": "150.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,480 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.480001",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43916",
+  "datos": {
+    "item_id": 57,
+    "estandar": 0,
+    "cantidad": "150.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,481 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.481260",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43916",
+  "datos": {
+    "item_id": 58,
+    "estandar": 0,
+    "cantidad": "150.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,482 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.482280",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43916",
+  "datos": {
+    "item_id": 59,
+    "estandar": 0,
+    "cantidad": "150.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,483 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.483147",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43916",
+  "datos": {
+    "item_id": 60,
+    "estandar": 0,
+    "cantidad": "150.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,486 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.486703",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43920",
+  "datos": {
+    "item_id": 61,
+    "estandar": 0,
+    "cantidad": "1000.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,492 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.492681",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43920",
+  "datos": {
+    "item_id": 64,
+    "estandar": 0,
+    "cantidad": "1000.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,494 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.494065",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43920",
+  "datos": {
+    "item_id": 65,
+    "estandar": 0,
+    "cantidad": "1000.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,495 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.495337",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43920",
+  "datos": {
+    "item_id": 66,
+    "estandar": 0,
+    "cantidad": "1000.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,497 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.497219",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43925",
+  "datos": {
+    "item_id": 67,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,498 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.498271",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43925",
+  "datos": {
+    "item_id": 68,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,499 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.499225",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43925",
+  "datos": {
+    "item_id": 69,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,503 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.501558",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43925",
+  "datos": {
+    "item_id": 70,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,506 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.506822",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43925",
+  "datos": {
+    "item_id": 71,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,511 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.511571",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43925",
+  "datos": {
+    "item_id": 72,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:55,511 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.511769",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 2,
+    "ordenes_codigos": [
+      43904,
+      43920
+    ]
+  }
+}
+2025-06-03 17:55:55,511 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.511913", "operacion": "CREAR_TAREAS", "detalles": "Programa 7: Iniciando creaci\u00f3n de 2 \u00f3rdenes"}
+2025-06-03 17:55:55,515 - INFO - [Timeline] Iniciando generación base para 2 órdenes
+2025-06-03 17:55:55,516 - INFO - [Timeline] Generación base completada: 2 grupos, 8 items totales
+2025-06-03 17:55:55,532 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.532391", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 7, "ot": 43904, "proceso": "DOBLAR EN FRIO", "cantidad": "300.00", "maquina_id": 190, "tarea_id": 4660, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:55,546 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.546237", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 7, "ot": 43920, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "1000.00", "maquina_id": 180, "tarea_id": 4661, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:55,559 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.559516", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 7, "ot": 43920, "proceso": "REBARBADO EXTERIOR", "cantidad": "1000.00", "maquina_id": 200, "tarea_id": 4662, "fecha": "2025-04-01", "hora": "09:30"}}
+2025-06-03 17:55:55,567 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.567630",
+  "tipo": "EXITO",
+  "mensaje": "Programa 7 regenerado",
+  "datos": {
+    "tareas": 3,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:55,589 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.589397",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 8 - Programa Abril"
+}
+2025-06-03 17:55:55,589 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.589558",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 8"
+}
+2025-06-03 17:55:55,602 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.602684",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 38,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:55,603 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.603169",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 8"
+}
+2025-06-03 17:55:55,650 - INFO - {
+  "timestamp": "2025-06-03T17:55:55.650270",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 6,
+    "ordenes_codigos": [
+      43929,
+      43933,
+      43934,
+      43935,
+      43936,
+      43940
+    ]
+  }
+}
+2025-06-03 17:55:55,651 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.651143", "operacion": "CREAR_TAREAS", "detalles": "Programa 8: Iniciando creaci\u00f3n de 6 \u00f3rdenes"}
+2025-06-03 17:55:55,655 - INFO - [Timeline] Iniciando generación base para 6 órdenes
+2025-06-03 17:55:55,691 - INFO - [Timeline] Generación base completada: 6 grupos, 162 items totales
+2025-06-03 17:55:55,796 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.796077", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "CORTADO", "cantidad": "1200.00", "maquina_id": 178, "tarea_id": 4663, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:55,810 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.810113", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "ACANALADO", "cantidad": "1200.00", "maquina_id": 190, "tarea_id": 4664, "fecha": "2025-04-01", "hora": "10:30"}}
+2025-06-03 17:55:55,826 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.826022", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "PERFORACION REDONDA 14mm", "cantidad": "1200.00", "maquina_id": 201, "tarea_id": 4665, "fecha": "2025-04-01", "hora": "15:30"}}
+2025-06-03 17:55:55,842 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.842039", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "PERFORACION REDONDA 11mm", "cantidad": "1200.00", "maquina_id": 201, "tarea_id": 4666, "fecha": "2025-04-02", "hora": "09:30"}}
+2025-06-03 17:55:55,857 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.857003", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "CORTADO", "cantidad": "1200.00", "maquina_id": 176, "tarea_id": 4667, "fecha": "2025-04-02", "hora": "12:30"}}
+2025-06-03 17:55:55,873 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.873899", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "DOBLAR EN CALIENTE", "cantidad": "1200.00", "maquina_id": 184, "tarea_id": 4668, "fecha": "2025-04-02", "hora": "16:30"}}
+2025-06-03 17:55:55,889 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.889188", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "CORTADO", "cantidad": "1200.00", "maquina_id": 176, "tarea_id": 4669, "fecha": "2025-04-03", "hora": "11:30"}}
+2025-06-03 17:55:55,911 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.911249", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "DOBLAR EN FRIO", "cantidad": "1200.00", "maquina_id": 190, "tarea_id": 4670, "fecha": "2025-04-03", "hora": "17:30"}}
+2025-06-03 17:55:55,923 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.923879", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43929, "proceso": "SOLDADO", "cantidad": "1200.00", "maquina_id": 260, "tarea_id": 4671, "fecha": "2025-04-04", "hora": "09:30"}}
+2025-06-03 17:55:55,933 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.933225", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43933, "proceso": "CORTADO", "cantidad": "4000.00", "maquina_id": 176, "tarea_id": 4672, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:55,948 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.948082", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43933, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "4000.00", "maquina_id": 186, "tarea_id": 4673, "fecha": "2025-04-01", "hora": "17:30"}}
+2025-06-03 17:55:55,962 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.962410", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43933, "proceso": "REBARBADO DE PERNOS", "cantidad": "4000.00", "maquina_id": 212, "tarea_id": 4674, "fecha": "2025-04-03", "hora": "08:30"}}
+2025-06-03 17:55:55,976 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.976388", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43933, "proceso": "PUNTEADO DE PERNOS", "cantidad": "4000.00", "maquina_id": 215, "tarea_id": 4675, "fecha": "2025-04-03", "hora": "17:30"}}
+2025-06-03 17:55:55,992 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:55.992092", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43933, "proceso": "TERRAJADO DE PERNOS", "cantidad": "4000.00", "maquina_id": 229, "tarea_id": 4676, "fecha": "2025-04-04", "hora": "14:00"}}
+2025-06-03 17:55:56,005 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.005873", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43934, "proceso": "CORTE Y PERFORADO", "cantidad": "4000.00", "maquina_id": 199, "tarea_id": 4677, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:56,023 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.023898", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43934, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "4000.00", "maquina_id": 189, "tarea_id": 4678, "fecha": "2025-04-01", "hora": "12:30"}}
+2025-06-03 17:55:56,031 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.031653", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43935, "proceso": "CORTADO", "cantidad": "300.00", "maquina_id": 176, "tarea_id": 4679, "fecha": "2025-04-01", "hora": "17:30"}}
+2025-06-03 17:55:56,047 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.047804", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43935, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "300.00", "maquina_id": 185, "tarea_id": 4680, "fecha": "2025-04-02", "hora": "09:30"}}
+2025-06-03 17:55:56,063 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.063410", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43935, "proceso": "REBARBADO DE PERNOS", "cantidad": "300.00", "maquina_id": 207, "tarea_id": 4681, "fecha": "2025-04-02", "hora": "11:30"}}
+2025-06-03 17:55:56,092 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.092348", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43935, "proceso": "PERFORADO", "cantidad": "300.00", "maquina_id": 239, "tarea_id": 4682, "fecha": "2025-04-02", "hora": "15:30"}}
+2025-06-03 17:55:56,106 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.106231", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43935, "proceso": "PERFORADO", "cantidad": "300.00", "maquina_id": 239, "tarea_id": 4683, "fecha": "2025-04-02", "hora": "17:30"}}
+2025-06-03 17:55:56,115 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.115542", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43935, "proceso": "PERFORADO", "cantidad": "300.00", "maquina_id": 239, "tarea_id": 4684, "fecha": "2025-04-03", "hora": "10:30"}}
+2025-06-03 17:55:56,128 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.128664", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43935, "proceso": "PUNTEADO DE PERNOS", "cantidad": "300.00", "maquina_id": 215, "tarea_id": 4685, "fecha": "2025-04-03", "hora": "14:00"}}
+2025-06-03 17:55:56,143 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.143220", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43935, "proceso": "TERRAJADO DE PERNOS", "cantidad": "300.00", "maquina_id": 226, "tarea_id": 4686, "fecha": "2025-04-03", "hora": "16:30"}}
+2025-06-03 17:55:56,157 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.157136", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43936, "proceso": "CORTADO", "cantidad": "500.00", "maquina_id": 175, "tarea_id": 4687, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:56,166 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.166322", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43936, "proceso": "ESTAMPAR EN CALIENTE PRIMER GOLPE", "cantidad": "500.00", "maquina_id": 183, "tarea_id": 4688, "fecha": "2025-04-01", "hora": "12:30"}}
+2025-06-03 17:55:56,179 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.179644", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43936, "proceso": "ESTAMPAR EN CALIENTE SEGUNDO GOLPE", "cantidad": "500.00", "maquina_id": 183, "tarea_id": 4689, "fecha": "2025-04-01", "hora": "16:30"}}
+2025-06-03 17:55:56,192 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.192538", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43936, "proceso": "REBARBADO EXTERIOR", "cantidad": "500.00", "maquina_id": 207, "tarea_id": 4690, "fecha": "2025-04-02", "hora": "15:30"}}
+2025-06-03 17:55:56,207 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.207366", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43936, "proceso": "PERFORADO", "cantidad": "500.00", "maquina_id": 198, "tarea_id": 4691, "fecha": "2025-04-03", "hora": "09:30"}}
+2025-06-03 17:55:56,227 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.227796", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43936, "proceso": "FORJAR", "cantidad": "500.00", "maquina_id": 190, "tarea_id": 4692, "fecha": "2025-04-03", "hora": "15:30"}}
+2025-06-03 17:55:56,243 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.243541", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43940, "proceso": "CORTADO", "cantidad": "250.00", "maquina_id": 176, "tarea_id": 4693, "fecha": "2025-04-02", "hora": "09:30"}}
+2025-06-03 17:55:56,275 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.275904", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43940, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "250.00", "maquina_id": 185, "tarea_id": 4694, "fecha": "2025-04-02", "hora": "12:30"}}
+2025-06-03 17:55:56,286 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.286872", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43940, "proceso": "REBARBADO DE PERNOS", "cantidad": "250.00", "maquina_id": 208, "tarea_id": 4695, "fecha": "2025-04-02", "hora": "16:30"}}
+2025-06-03 17:55:56,298 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.298433", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43940, "proceso": "REBAJADO", "cantidad": "250.00", "maquina_id": 214, "tarea_id": 4696, "fecha": "2025-04-03", "hora": "11:30"}}
+2025-06-03 17:55:56,312 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.312121", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43940, "proceso": "ESTRIAR", "cantidad": "250.00", "maquina_id": 184, "tarea_id": 4697, "fecha": "2025-04-03", "hora": "15:30"}}
+2025-06-03 17:55:56,325 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.325562", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43940, "proceso": "PUNTEADO DE PERNOS", "cantidad": "250.00", "maquina_id": 215, "tarea_id": 4698, "fecha": "2025-04-04", "hora": "14:00"}}
+2025-06-03 17:55:56,340 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.340009", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43940, "proceso": "TERRAJADO DE PERNOS", "cantidad": "250.00", "maquina_id": 228, "tarea_id": 4699, "fecha": "2025-04-07", "hora": "07:45"}}
+2025-06-03 17:55:56,348 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.348891", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 8, "ot": 43940, "proceso": "INYECION DE POLIAMIDA", "cantidad": "250.00", "maquina_id": 300, "tarea_id": 4700, "fecha": "2025-04-07", "hora": "10:30"}}
+2025-06-03 17:55:56,360 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.360607",
+  "tipo": "EXITO",
+  "mensaje": "Programa 8 regenerado",
+  "datos": {
+    "tareas": 38,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:56,380 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.380636",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 9 - Programa abril "
+}
+2025-06-03 17:55:56,380 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.380866",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 9"
+}
+2025-06-03 17:55:56,398 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.398875",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 17,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:56,399 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.399045",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 9"
+}
+2025-06-03 17:55:56,410 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.410059",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43942",
+  "datos": {
+    "item_id": 111,
+    "estandar": 0,
+    "cantidad": "900.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,414 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.414609",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43942",
+  "datos": {
+    "item_id": 117,
+    "estandar": 0,
+    "cantidad": "900.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,424 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.424076",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43945",
+  "datos": {
+    "item_id": 124,
+    "estandar": 0,
+    "cantidad": "124.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,425 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.425160",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43945",
+  "datos": {
+    "item_id": 125,
+    "estandar": 0,
+    "cantidad": "124.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,426 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.426011",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43945",
+  "datos": {
+    "item_id": 126,
+    "estandar": 0,
+    "cantidad": "124.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,426 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.426832",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43945",
+  "datos": {
+    "item_id": 127,
+    "estandar": 0,
+    "cantidad": "124.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,427 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.427600",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43945",
+  "datos": {
+    "item_id": 128,
+    "estandar": 0,
+    "cantidad": "124.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,429 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.429036",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43946",
+  "datos": {
+    "item_id": 129,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,430 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.430440",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43946",
+  "datos": {
+    "item_id": 131,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,431 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.431432",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43946",
+  "datos": {
+    "item_id": 132,
+    "estandar": 0,
+    "cantidad": "100.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,436 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.436842",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43947",
+  "datos": {
+    "item_id": 133,
+    "estandar": 0,
+    "cantidad": "120.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,440 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.440390",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43947",
+  "datos": {
+    "item_id": 137,
+    "estandar": 0,
+    "cantidad": "120.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,443 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.443699",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43948",
+  "datos": {
+    "item_id": 140,
+    "estandar": 0,
+    "cantidad": "1500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,444 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.444523",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43948",
+  "datos": {
+    "item_id": 141,
+    "estandar": 0,
+    "cantidad": "1500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,445 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.445307",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43948",
+  "datos": {
+    "item_id": 142,
+    "estandar": 0,
+    "cantidad": "1500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,446 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.446074",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43948",
+  "datos": {
+    "item_id": 143,
+    "estandar": 0,
+    "cantidad": "1500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,447 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.446983",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43948",
+  "datos": {
+    "item_id": 144,
+    "estandar": 0,
+    "cantidad": "1500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:56,447 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.447540",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 4,
+    "ordenes_codigos": [
+      43942,
+      43944,
+      43946,
+      43947
+    ]
+  }
+}
+2025-06-03 17:55:56,447 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.447710", "operacion": "CREAR_TAREAS", "detalles": "Programa 9: Iniciando creaci\u00f3n de 4 \u00f3rdenes"}
+2025-06-03 17:55:56,453 - INFO - [Timeline] Iniciando generación base para 4 órdenes
+2025-06-03 17:55:56,455 - INFO - [Timeline] Generación base completada: 4 grupos, 70 items totales
+2025-06-03 17:55:56,497 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.497320", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43942, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "900.00", "maquina_id": 185, "tarea_id": 4701, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:56,509 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.509823", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43942, "proceso": "REBARBADO DE ESPIGAS", "cantidad": "900.00", "maquina_id": 208, "tarea_id": 4702, "fecha": "2025-04-01", "hora": "10:30"}}
+2025-06-03 17:55:56,523 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.523025", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43942, "proceso": "ESTRIAR", "cantidad": "900.00", "maquina_id": 184, "tarea_id": 4703, "fecha": "2025-04-01", "hora": "16:30"}}
+2025-06-03 17:55:56,532 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.532649", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43942, "proceso": "PUNTEADO DE PERNOS", "cantidad": "900.00", "maquina_id": 215, "tarea_id": 4704, "fecha": "2025-04-02", "hora": "11:30"}}
+2025-06-03 17:55:56,546 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.546622", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43942, "proceso": "TERRAJADO DE PERNOS", "cantidad": "900.00", "maquina_id": 228, "tarea_id": 4705, "fecha": "2025-04-03", "hora": "09:30"}}
+2025-06-03 17:55:56,561 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.561342", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43944, "proceso": "CORTADO", "cantidad": "300.00", "maquina_id": 176, "tarea_id": 4706, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:56,579 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.579716", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43944, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "300.00", "maquina_id": 189, "tarea_id": 4707, "fecha": "2025-04-01", "hora": "12:30"}}
+2025-06-03 17:55:56,593 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.593771", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43944, "proceso": "REBARBADO EXTERIOR", "cantidad": "300.00", "maquina_id": 198, "tarea_id": 4708, "fecha": "2025-04-01", "hora": "15:30"}}
+2025-06-03 17:55:56,609 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.608828", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43944, "proceso": "PERFORACION REDONDA 18mm", "cantidad": "300.00", "maquina_id": 198, "tarea_id": 4709, "fecha": "2025-04-02", "hora": "09:30"}}
+2025-06-03 17:55:56,624 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.624883", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43944, "proceso": "PERFORACION OVALADA", "cantidad": "300.00", "maquina_id": 198, "tarea_id": 4710, "fecha": "2025-04-02", "hora": "14:00"}}
+2025-06-03 17:55:56,632 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.632923", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43944, "proceso": "DOBLAR EN FRIO", "cantidad": "300.00", "maquina_id": 183, "tarea_id": 4711, "fecha": "2025-04-02", "hora": "17:30"}}
+2025-06-03 17:55:56,646 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.646334", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43946, "proceso": "DOBLAR EN CALIENTE", "cantidad": "100.00", "maquina_id": 190, "tarea_id": 4712, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:56,660 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.660027", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43947, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "120.00", "maquina_id": 180, "tarea_id": 4713, "fecha": "2025-04-01", "hora": "07:45"}}
+2025-06-03 17:55:56,672 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.672112", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43947, "proceso": "REBARBADO INTERIOR", "cantidad": "120.00", "maquina_id": 200, "tarea_id": 4714, "fecha": "2025-04-01", "hora": "09:30"}}
+2025-06-03 17:55:56,680 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.680375", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43947, "proceso": "REBARBADO EXTERIOR", "cantidad": "120.00", "maquina_id": 200, "tarea_id": 4715, "fecha": "2025-04-01", "hora": "14:00"}}
+2025-06-03 17:55:56,694 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.694830", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43947, "proceso": "PUNTEADO DE PERNOS", "cantidad": "120.00", "maquina_id": 215, "tarea_id": 4716, "fecha": "2025-04-02", "hora": "07:45"}}
+2025-06-03 17:55:56,710 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.710780", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 9, "ot": 43947, "proceso": "TERRAJADO DE PERNOS", "cantidad": "120.00", "maquina_id": 225, "tarea_id": 4717, "fecha": "2025-04-02", "hora": "09:30"}}
+2025-06-03 17:55:56,738 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.738231",
+  "tipo": "EXITO",
+  "mensaje": "Programa 9 regenerado",
+  "datos": {
+    "tareas": 17,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:56,751 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.751582",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 10 - Programa mayo"
+}
+2025-06-03 17:55:56,752 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.751984",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 10"
+}
+2025-06-03 17:55:56,769 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.769717",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 47,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:56,770 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.769970",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 10"
+}
+2025-06-03 17:55:56,838 - INFO - {
+  "timestamp": "2025-06-03T17:55:56.838236",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 9,
+    "ordenes_codigos": [
+      43949,
+      43951,
+      43952,
+      43953,
+      43954,
+      43955,
+      43956,
+      43957,
+      43970
+    ]
+  }
+}
+2025-06-03 17:55:56,838 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:56.838465", "operacion": "CREAR_TAREAS", "detalles": "Programa 10: Iniciando creaci\u00f3n de 9 \u00f3rdenes"}
+2025-06-03 17:55:56,844 - INFO - [Timeline] Iniciando generación base para 9 órdenes
+2025-06-03 17:55:56,930 - INFO - [Timeline] Generación base completada: 9 grupos, 182 items totales
+2025-06-03 17:55:57,062 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.062928", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43949, "proceso": "FORJAR", "cantidad": "600.00", "maquina_id": 184, "tarea_id": 4718, "fecha": "2025-05-02", "hora": "07:45"}}
+2025-06-03 17:55:57,083 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.082974", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43951, "proceso": "CORTADO", "cantidad": "1000.00", "maquina_id": 176, "tarea_id": 4719, "fecha": "2025-05-02", "hora": "07:45"}}
+2025-06-03 17:55:57,098 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.098484", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43951, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "1000.00", "maquina_id": 182, "tarea_id": 4720, "fecha": "2025-05-05", "hora": "09:30"}}
+2025-06-03 17:55:57,115 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.115777", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43951, "proceso": "REBARBADO DE PERNOS", "cantidad": "1000.00", "maquina_id": 201, "tarea_id": 4721, "fecha": "2025-05-06", "hora": "09:30"}}
+2025-06-03 17:55:57,131 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.131601", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43951, "proceso": "PERFORADO", "cantidad": "1000.00", "maquina_id": 239, "tarea_id": 4722, "fecha": "2025-05-07", "hora": "09:30"}}
+2025-06-03 17:55:57,149 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.149577", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43952, "proceso": "CORTADO", "cantidad": "1000.00", "maquina_id": 176, "tarea_id": 4723, "fecha": "2025-05-05", "hora": "09:30"}}
+2025-06-03 17:55:57,166 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.166045", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43952, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "1000.00", "maquina_id": 180, "tarea_id": 4724, "fecha": "2025-05-05", "hora": "14:00"}}
+2025-06-03 17:55:57,182 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.182094", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43952, "proceso": "REBARBADO EXTERIOR", "cantidad": "1000.00", "maquina_id": 199, "tarea_id": 4725, "fecha": "2025-05-05", "hora": "15:30"}}
+2025-06-03 17:55:57,198 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.198185", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43952, "proceso": "PERFORACION REDONDA 18mm", "cantidad": "1000.00", "maquina_id": 202, "tarea_id": 4726, "fecha": "2025-05-06", "hora": "09:30"}}
+2025-06-03 17:55:57,229 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.229379", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43952, "proceso": "PERFORACION OVALADA", "cantidad": "1000.00", "maquina_id": 202, "tarea_id": 4727, "fecha": "2025-05-06", "hora": "14:00"}}
+2025-06-03 17:55:57,244 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.244812", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43952, "proceso": "DOBLAR EN FRIO", "cantidad": "1000.00", "maquina_id": 183, "tarea_id": 4728, "fecha": "2025-05-06", "hora": "17:30"}}
+2025-06-03 17:55:57,260 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.260087", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43953, "proceso": "CORTADO", "cantidad": "10.00", "maquina_id": 176, "tarea_id": 4729, "fecha": "2025-05-05", "hora": "14:00"}}
+2025-06-03 17:55:57,275 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.275302", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43953, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "10.00", "maquina_id": 182, "tarea_id": 4730, "fecha": "2025-05-06", "hora": "09:30"}}
+2025-06-03 17:55:57,292 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.292163", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43953, "proceso": "REBARBADO DE PERNOS", "cantidad": "10.00", "maquina_id": 212, "tarea_id": 4731, "fecha": "2025-05-06", "hora": "10:30"}}
+2025-06-03 17:55:57,309 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.309552", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43953, "proceso": "PUNTEADO DE PERNOS", "cantidad": "10.00", "maquina_id": 215, "tarea_id": 4732, "fecha": "2025-05-06", "hora": "11:30"}}
+2025-06-03 17:55:57,327 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.327176", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43953, "proceso": "TERRAJADO DE PERNOS", "cantidad": "10.00", "maquina_id": 225, "tarea_id": 4733, "fecha": "2025-05-06", "hora": "12:30"}}
+2025-06-03 17:55:57,343 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.343588", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43954, "proceso": "CORTADO", "cantidad": "10.00", "maquina_id": 176, "tarea_id": 4734, "fecha": "2025-05-05", "hora": "15:30"}}
+2025-06-03 17:55:57,361 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.361589", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43954, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "10.00", "maquina_id": 182, "tarea_id": 4735, "fecha": "2025-05-06", "hora": "10:30"}}
+2025-06-03 17:55:57,377 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.377556", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43954, "proceso": "REBARBADO DE PERNOS", "cantidad": "10.00", "maquina_id": 212, "tarea_id": 4736, "fecha": "2025-05-06", "hora": "11:30"}}
+2025-06-03 17:55:57,409 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.409125", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43954, "proceso": "PUNTEADO DE PERNOS", "cantidad": "10.00", "maquina_id": 215, "tarea_id": 4737, "fecha": "2025-05-06", "hora": "12:30"}}
+2025-06-03 17:55:57,426 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.426559", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43954, "proceso": "TERRAJADO DE PERNOS", "cantidad": "10.00", "maquina_id": 225, "tarea_id": 4738, "fecha": "2025-05-06", "hora": "14:00"}}
+2025-06-03 17:55:57,443 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.443035", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43955, "proceso": "CORTADO", "cantidad": "10.00", "maquina_id": 176, "tarea_id": 4739, "fecha": "2025-05-05", "hora": "16:30"}}
+2025-06-03 17:55:57,458 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.458690", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43955, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "10.00", "maquina_id": 182, "tarea_id": 4740, "fecha": "2025-05-06", "hora": "11:30"}}
+2025-06-03 17:55:57,474 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.474783", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43955, "proceso": "REBARBADO DE PERNOS", "cantidad": "10.00", "maquina_id": 212, "tarea_id": 4741, "fecha": "2025-05-06", "hora": "12:30"}}
+2025-06-03 17:55:57,494 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.494109", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43955, "proceso": "PUNTEADO DE PERNOS", "cantidad": "10.00", "maquina_id": 215, "tarea_id": 4742, "fecha": "2025-05-06", "hora": "14:00"}}
+2025-06-03 17:55:57,509 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.509726", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43955, "proceso": "TERRAJADO DE PERNOS", "cantidad": "10.00", "maquina_id": 225, "tarea_id": 4743, "fecha": "2025-05-06", "hora": "15:30"}}
+2025-06-03 17:55:57,527 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.527106", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43956, "proceso": "CORTADO", "cantidad": "150.00", "maquina_id": 176, "tarea_id": 4744, "fecha": "2025-05-05", "hora": "17:30"}}
+2025-06-03 17:55:57,549 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.549265", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43956, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "150.00", "maquina_id": 182, "tarea_id": 4745, "fecha": "2025-05-06", "hora": "12:30"}}
+2025-06-03 17:55:57,566 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.566421", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43956, "proceso": "REBARBADO DE PERNOS", "cantidad": "150.00", "maquina_id": 212, "tarea_id": 4746, "fecha": "2025-05-06", "hora": "17:30"}}
+2025-06-03 17:55:57,581 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.581917", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43956, "proceso": "PUNTEADO DE PERNOS", "cantidad": "150.00", "maquina_id": 215, "tarea_id": 4747, "fecha": "2025-05-07", "hora": "11:30"}}
+2025-06-03 17:55:57,597 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.597825", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43956, "proceso": "TERRAJADO DE PERNOS", "cantidad": "150.00", "maquina_id": 225, "tarea_id": 4748, "fecha": "2025-05-07", "hora": "16:30"}}
+2025-06-03 17:55:57,613 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.613591", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43957, "proceso": "CORTADO", "cantidad": "1000.00", "maquina_id": 177, "tarea_id": 4749, "fecha": "2025-05-02", "hora": "07:45"}}
+2025-06-03 17:55:57,629 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.629576", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43957, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "1000.00", "maquina_id": 180, "tarea_id": 4750, "fecha": "2025-05-05", "hora": "15:30"}}
+2025-06-03 17:55:57,643 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.643643", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43957, "proceso": "REBARBADO EXTERIOR", "cantidad": "1000.00", "maquina_id": 200, "tarea_id": 4751, "fecha": "2025-05-05", "hora": "17:30"}}
+2025-06-03 17:55:57,658 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.658472", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43957, "proceso": "REBARBADO INTERIOR", "cantidad": "1000.00", "maquina_id": 200, "tarea_id": 4752, "fecha": "2025-05-06", "hora": "10:30"}}
+2025-06-03 17:55:57,675 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.675320", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43957, "proceso": "PUNTEADO DE PERNOS", "cantidad": "1000.00", "maquina_id": 215, "tarea_id": 4753, "fecha": "2025-05-07", "hora": "16:30"}}
+2025-06-03 17:55:57,695 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.695764", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43957, "proceso": "TERRAJADO DE PERNOS", "cantidad": "1000.00", "maquina_id": 229, "tarea_id": 4754, "fecha": "2025-05-08", "hora": "09:30"}}
+2025-06-03 17:55:57,715 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.715689", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "CORTADO", "cantidad": "727.00", "maquina_id": 176, "tarea_id": 4755, "fecha": "2025-05-06", "hora": "11:30"}}
+2025-06-03 17:55:57,732 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.732142", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "CORTADO", "cantidad": "727.00", "maquina_id": 178, "tarea_id": 4756, "fecha": "2025-05-06", "hora": "17:30"}}
+2025-06-03 17:55:57,747 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.747137", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "PERFORADO", "cantidad": "727.00", "maquina_id": 202, "tarea_id": 4757, "fecha": "2025-05-07", "hora": "12:30"}}
+2025-06-03 17:55:57,764 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.764123", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "DOBLAR EN FRIO", "cantidad": "727.00", "maquina_id": 202, "tarea_id": 4758, "fecha": "2025-05-08", "hora": "07:45"}}
+2025-06-03 17:55:57,781 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.781882", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "CORTADO", "cantidad": "727.00", "maquina_id": 175, "tarea_id": 4759, "fecha": "2025-05-08", "hora": "12:30"}}
+2025-06-03 17:55:57,796 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.796101", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "ESMERILAR", "cantidad": "727.00", "maquina_id": 268, "tarea_id": 4760, "fecha": "2025-05-09", "hora": "07:45"}}
+2025-06-03 17:55:57,989 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:57.989017", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "CORTADO", "cantidad": "727.00", "maquina_id": 175, "tarea_id": 4761, "fecha": "2025-05-09", "hora": "12:30"}}
+2025-06-03 17:55:58,080 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.080132", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "ESMERILAR", "cantidad": "727.00", "maquina_id": 268, "tarea_id": 4762, "fecha": "2025-05-12", "hora": "09:30"}}
+2025-06-03 17:55:58,110 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.110013", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "DOBLAR EN FRIO", "cantidad": "727.00", "maquina_id": 184, "tarea_id": 4763, "fecha": "2025-05-12", "hora": "15:30"}}
+2025-06-03 17:55:58,131 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.131035", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 10, "ot": 43970, "proceso": "SOLDADO", "cantidad": "727.00", "maquina_id": 260, "tarea_id": 4764, "fecha": "2025-05-13", "hora": "10:30"}}
+2025-06-03 17:55:58,144 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.144878",
+  "tipo": "EXITO",
+  "mensaje": "Programa 10 regenerado",
+  "datos": {
+    "tareas": 47,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:58,373 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.373700",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 11 - programa 45"
+}
+2025-06-03 17:55:58,374 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.373991",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 11"
+}
+2025-06-03 17:55:58,397 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.397773",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 3,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:58,398 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.398040",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 11"
+}
+2025-06-03 17:55:58,412 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.412679",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43959",
+  "datos": {
+    "item_id": 185,
+    "estandar": 0,
+    "cantidad": "500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,413 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.413685",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43959",
+  "datos": {
+    "item_id": 186,
+    "estandar": 0,
+    "cantidad": "500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,414 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.414609",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43959",
+  "datos": {
+    "item_id": 187,
+    "estandar": 0,
+    "cantidad": "500.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,416 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.416376",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43960",
+  "datos": {
+    "item_id": 188,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,419 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.419478",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43960",
+  "datos": {
+    "item_id": 189,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,424 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.424814",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43960",
+  "datos": {
+    "item_id": 190,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,427 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.427671",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43960",
+  "datos": {
+    "item_id": 191,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,429 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.429264",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43960",
+  "datos": {
+    "item_id": 192,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,431 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.431802",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43961",
+  "datos": {
+    "item_id": 193,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,432 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.432892",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43961",
+  "datos": {
+    "item_id": 194,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,434 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.434168",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43961",
+  "datos": {
+    "item_id": 195,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,437 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.437101",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43961",
+  "datos": {
+    "item_id": 196,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,439 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.439148",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43961",
+  "datos": {
+    "item_id": 197,
+    "estandar": 0,
+    "cantidad": "350.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,441 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.441590",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43963",
+  "datos": {
+    "item_id": 198,
+    "estandar": 0,
+    "cantidad": "50.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,443 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.443652",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43963",
+  "datos": {
+    "item_id": 199,
+    "estandar": 0,
+    "cantidad": "50.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,445 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.445090",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43963",
+  "datos": {
+    "item_id": 200,
+    "estandar": 0,
+    "cantidad": "50.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,446 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.446255",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43963",
+  "datos": {
+    "item_id": 201,
+    "estandar": 0,
+    "cantidad": "50.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,448 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.448172",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43965",
+  "datos": {
+    "item_id": 206,
+    "estandar": 0,
+    "cantidad": "250.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,449 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.449219",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43965",
+  "datos": {
+    "item_id": 207,
+    "estandar": 0,
+    "cantidad": "250.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,450 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.450224",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43965",
+  "datos": {
+    "item_id": 208,
+    "estandar": 0,
+    "cantidad": "250.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,452 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.452796",
+  "tipo": "ADVERTENCIA",
+  "mensaje": "Proceso inv\u00e1lido en OT 43965",
+  "datos": {
+    "item_id": 209,
+    "estandar": 0,
+    "cantidad": "250.00",
+    "tiene_proceso": true,
+    "tiene_maquina": true
+  }
+}
+2025-06-03 17:55:58,453 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.453044",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 1,
+    "ordenes_codigos": [
+      43959
+    ]
+  }
+}
+2025-06-03 17:55:58,453 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.453203", "operacion": "CREAR_TAREAS", "detalles": "Programa 11: Iniciando creaci\u00f3n de 1 \u00f3rdenes"}
+2025-06-03 17:55:58,461 - INFO - [Timeline] Iniciando generación base para 1 órdenes
+2025-06-03 17:55:58,461 - INFO - [Timeline] Generación base completada: 1 grupos, 8 items totales
+2025-06-03 17:55:58,478 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.478543", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 11, "ot": 43959, "proceso": "CORTADO", "cantidad": "500.00", "maquina_id": 177, "tarea_id": 4765, "fecha": "2025-05-12", "hora": "07:45"}}
+2025-06-03 17:55:58,500 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.499967", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 11, "ot": 43959, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "500.00", "maquina_id": 180, "tarea_id": 4766, "fecha": "2025-05-12", "hora": "10:30"}}
+2025-06-03 17:55:58,521 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.521907", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 11, "ot": 43959, "proceso": "REBARBADO EXTERIOR", "cantidad": "500.00", "maquina_id": 200, "tarea_id": 4767, "fecha": "2025-05-12", "hora": "12:30"}}
+2025-06-03 17:55:58,531 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.531810",
+  "tipo": "EXITO",
+  "mensaje": "Programa 11 regenerado",
+  "datos": {
+    "tareas": 3,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:58,547 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.547863",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 12 - Test4"
+}
+2025-06-03 17:55:58,548 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.548034",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 12"
+}
+2025-06-03 17:55:58,567 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.566963",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 49,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:58,567 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.567546",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 12"
+}
+2025-06-03 17:55:58,637 - INFO - {
+  "timestamp": "2025-06-03T17:55:58.637866",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 8,
+    "ordenes_codigos": [
+      43964,
+      43966,
+      43969,
+      43971,
+      43973,
+      43974,
+      43975,
+      43976
+    ]
+  }
+}
+2025-06-03 17:55:58,638 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.638087", "operacion": "CREAR_TAREAS", "detalles": "Programa 12: Iniciando creaci\u00f3n de 8 \u00f3rdenes"}
+2025-06-03 17:55:58,646 - INFO - [Timeline] Iniciando generación base para 8 órdenes
+2025-06-03 17:55:58,727 - INFO - [Timeline] Generación base completada: 8 grupos, 251 items totales
+2025-06-03 17:55:58,876 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.876736", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43964, "proceso": "CORTADO", "cantidad": "50.00", "maquina_id": 197, "tarea_id": 4768, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:55:58,896 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.896034", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43964, "proceso": "PERFORADO", "cantidad": "50.00", "maquina_id": 196, "tarea_id": 4769, "fecha": "2025-05-26", "hora": "10:30"}}
+2025-06-03 17:55:58,914 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.914049", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43964, "proceso": "LOGOTIPO", "cantidad": "50.00", "maquina_id": 209, "tarea_id": 4770, "fecha": "2025-05-26", "hora": "14:00"}}
+2025-06-03 17:55:58,945 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.944535", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43964, "proceso": "DOBLAR EN CALIENTE", "cantidad": "50.00", "maquina_id": 190, "tarea_id": 4771, "fecha": "2025-05-26", "hora": "17:30"}}
+2025-06-03 17:55:58,962 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.962466", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43966, "proceso": "CORTADO", "cantidad": "1000.00", "maquina_id": 175, "tarea_id": 4772, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:55:58,981 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:58.981484", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43966, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "1000.00", "maquina_id": 186, "tarea_id": 4773, "fecha": "2025-05-26", "hora": "17:30"}}
+2025-06-03 17:55:59,014 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.014270", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43966, "proceso": "REBARBADO EXTERIOR", "cantidad": "1000.00", "maquina_id": 211, "tarea_id": 4774, "fecha": "2025-05-28", "hora": "09:30"}}
+2025-06-03 17:55:59,041 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.041834", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43966, "proceso": "PUNTEADO DE PERNOS", "cantidad": "1000.00", "maquina_id": 215, "tarea_id": 4775, "fecha": "2025-05-28", "hora": "14:00"}}
+2025-06-03 17:55:59,061 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.061637", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43966, "proceso": "TERRAJADO DE PERNOS", "cantidad": "1000.00", "maquina_id": 225, "tarea_id": 4776, "fecha": "2025-05-29", "hora": "14:00"}}
+2025-06-03 17:55:59,080 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.080812", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "CORTADO", "cantidad": "867.00", "maquina_id": 178, "tarea_id": 4777, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:55:59,107 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.107767", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "CORTADO", "cantidad": "867.00", "maquina_id": 178, "tarea_id": 4778, "fecha": "2025-05-26", "hora": "10:30"}}
+2025-06-03 17:55:59,132 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.132552", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "PERFORADO", "cantidad": "867.00", "maquina_id": 202, "tarea_id": 4779, "fecha": "2025-05-26", "hora": "14:00"}}
+2025-06-03 17:55:59,149 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.149066", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "DOBLAR EN FRIO", "cantidad": "867.00", "maquina_id": 202, "tarea_id": 4780, "fecha": "2025-05-27", "hora": "09:30"}}
+2025-06-03 17:55:59,177 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.177514", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "CORTADO", "cantidad": "867.00", "maquina_id": 175, "tarea_id": 4781, "fecha": "2025-05-28", "hora": "12:30"}}
+2025-06-03 17:55:59,195 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.195586", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "ESMERILAR", "cantidad": "867.00", "maquina_id": 268, "tarea_id": 4782, "fecha": "2025-05-28", "hora": "17:30"}}
+2025-06-03 17:55:59,215 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.215635", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "CORTADO", "cantidad": "867.00", "maquina_id": 175, "tarea_id": 4783, "fecha": "2025-05-29", "hora": "11:30"}}
+2025-06-03 17:55:59,233 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.233358", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "ESMERILAR", "cantidad": "867.00", "maquina_id": 268, "tarea_id": 4784, "fecha": "2025-05-30", "hora": "09:30"}}
+2025-06-03 17:55:59,255 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.255356", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "DOBLAR EN FRIO", "cantidad": "867.00", "maquina_id": 184, "tarea_id": 4785, "fecha": "2025-05-30", "hora": "14:00"}}
+2025-06-03 17:55:59,278 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.278030", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43969, "proceso": "SOLDADO", "cantidad": "867.00", "maquina_id": 260, "tarea_id": 4786, "fecha": "2025-05-30", "hora": "15:30"}}
+2025-06-03 17:55:59,308 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.308443", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43971, "proceso": "CORTADO", "cantidad": "1000.00", "maquina_id": 175, "tarea_id": 4787, "fecha": "2025-05-26", "hora": "17:30"}}
+2025-06-03 17:55:59,327 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.327934", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43971, "proceso": "ESTAMPAR EN CALIENTE PRIMER GOLPE", "cantidad": "1000.00", "maquina_id": 183, "tarea_id": 4788, "fecha": "2025-05-27", "hora": "12:30"}}
+2025-06-03 17:55:59,346 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.346775", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43971, "proceso": "ESTAMPAR EN CALIENTE SEGUNDO GOLPE", "cantidad": "1000.00", "maquina_id": 183, "tarea_id": 4789, "fecha": "2025-05-27", "hora": "16:30"}}
+2025-06-03 17:55:59,365 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.365235", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43971, "proceso": "REBARBADO EXTERIOR", "cantidad": "1000.00", "maquina_id": 207, "tarea_id": 4790, "fecha": "2025-05-28", "hora": "10:30"}}
+2025-06-03 17:55:59,383 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.383150", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43971, "proceso": "PERFORADO", "cantidad": "1000.00", "maquina_id": 198, "tarea_id": 4791, "fecha": "2025-05-28", "hora": "15:30"}}
+2025-06-03 17:55:59,406 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.406536", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43971, "proceso": "FORJAR", "cantidad": "1000.00", "maquina_id": 190, "tarea_id": 4792, "fecha": "2025-05-29", "hora": "10:30"}}
+2025-06-03 17:55:59,427 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.427279", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43973, "proceso": "CORTADO", "cantidad": "300.00", "maquina_id": 175, "tarea_id": 4793, "fecha": "2025-05-27", "hora": "12:30"}}
+2025-06-03 17:55:59,448 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.448183", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43973, "proceso": "ESTAMPAR EN CALIENTE PRIMER GOLPE", "cantidad": "300.00", "maquina_id": 183, "tarea_id": 4794, "fecha": "2025-05-28", "hora": "10:30"}}
+2025-06-03 17:55:59,465 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.465406", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43973, "proceso": "ESTAMPAR EN CALIENTE SEGUNDO GOLPE", "cantidad": "300.00", "maquina_id": 183, "tarea_id": 4795, "fecha": "2025-05-28", "hora": "14:00"}}
+2025-06-03 17:55:59,489 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.489421", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43973, "proceso": "REBARBADO EXTERIOR", "cantidad": "300.00", "maquina_id": 207, "tarea_id": 4796, "fecha": "2025-05-28", "hora": "17:30"}}
+2025-06-03 17:55:59,507 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.507607", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43973, "proceso": "PERFORADO", "cantidad": "300.00", "maquina_id": 198, "tarea_id": 4797, "fecha": "2025-05-29", "hora": "11:30"}}
+2025-06-03 17:55:59,528 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.528614", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43973, "proceso": "FORJAR", "cantidad": "300.00", "maquina_id": 190, "tarea_id": 4798, "fecha": "2025-05-29", "hora": "17:30"}}
+2025-06-03 17:55:59,550 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.550077", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43974, "proceso": "CORTADO", "cantidad": "5000.00", "maquina_id": 175, "tarea_id": 4799, "fecha": "2025-05-28", "hora": "07:45"}}
+2025-06-03 17:55:59,569 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.568988", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43974, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "5000.00", "maquina_id": 186, "tarea_id": 4800, "fecha": "2025-05-28", "hora": "12:30"}}
+2025-06-03 17:55:59,599 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.599016", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43974, "proceso": "REBARBADO DE PERNOS", "cantidad": "5000.00", "maquina_id": 212, "tarea_id": 4801, "fecha": "2025-05-28", "hora": "16:30"}}
+2025-06-03 17:55:59,628 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.628258", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43974, "proceso": "PUNTEADO DE PERNOS", "cantidad": "5000.00", "maquina_id": 215, "tarea_id": 4802, "fecha": "2025-05-29", "hora": "14:00"}}
+2025-06-03 17:55:59,644 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.644627", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43974, "proceso": "TERRAJADO DE PERNOS", "cantidad": "5000.00", "maquina_id": 226, "tarea_id": 4803, "fecha": "2025-05-30", "hora": "11:30"}}
+2025-06-03 17:55:59,662 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.662209", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43975, "proceso": "CORTADO", "cantidad": "500.00", "maquina_id": 176, "tarea_id": 4804, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:55:59,683 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.683220", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43975, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "500.00", "maquina_id": 185, "tarea_id": 4805, "fecha": "2025-05-26", "hora": "11:30"}}
+2025-06-03 17:55:59,705 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.705833", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43975, "proceso": "REBARBADO DE PERNOS", "cantidad": "500.00", "maquina_id": 207, "tarea_id": 4806, "fecha": "2025-05-29", "hora": "11:30"}}
+2025-06-03 17:55:59,725 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.725382", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43975, "proceso": "PERFORADO", "cantidad": "500.00", "maquina_id": 239, "tarea_id": 4807, "fecha": "2025-05-29", "hora": "15:30"}}
+2025-06-03 17:55:59,749 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.749594", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43975, "proceso": "PERFORADO", "cantidad": "500.00", "maquina_id": 239, "tarea_id": 4808, "fecha": "2025-05-30", "hora": "10:30"}}
+2025-06-03 17:55:59,775 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.775593", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43975, "proceso": "PERFORADO", "cantidad": "500.00", "maquina_id": 239, "tarea_id": 4809, "fecha": "2025-05-30", "hora": "12:30"}}
+2025-06-03 17:55:59,793 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.792958", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43975, "proceso": "PUNTEADO DE PERNOS", "cantidad": "500.00", "maquina_id": 215, "tarea_id": 4810, "fecha": "2025-06-02", "hora": "08:30"}}
+2025-06-03 17:55:59,811 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.811599", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43975, "proceso": "TERRAJADO DE PERNOS", "cantidad": "500.00", "maquina_id": 226, "tarea_id": 4811, "fecha": "2025-06-02", "hora": "11:30"}}
+2025-06-03 17:55:59,831 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.831794", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43976, "proceso": "CORTADO", "cantidad": "2000.00", "maquina_id": 176, "tarea_id": 4812, "fecha": "2025-05-26", "hora": "11:30"}}
+2025-06-03 17:55:59,847 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.847906", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43976, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "2000.00", "maquina_id": 186, "tarea_id": 4813, "fecha": "2025-05-28", "hora": "16:30"}}
+2025-06-03 17:55:59,864 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.864685", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43976, "proceso": "REBARBADO DE PERNOS", "cantidad": "2000.00", "maquina_id": 211, "tarea_id": 4814, "fecha": "2025-05-29", "hora": "17:30"}}
+2025-06-03 17:55:59,882 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.882828", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43976, "proceso": "PUNTEADO DE PERNOS", "cantidad": "2000.00", "maquina_id": 215, "tarea_id": 4815, "fecha": "2025-06-02", "hora": "11:30"}}
+2025-06-03 17:55:59,910 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.910343", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 12, "ot": 43976, "proceso": "TERRAJADO DE PERNOS", "cantidad": "2000.00", "maquina_id": 228, "tarea_id": 4816, "fecha": "2025-06-03", "hora": "12:30"}}
+2025-06-03 17:55:59,931 - INFO - {
+  "timestamp": "2025-06-03T17:55:59.931091",
+  "tipo": "EXITO",
+  "mensaje": "Programa 12 regenerado",
+  "datos": {
+    "tareas": 49,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:55:59,940 - INFO - {
+  "timestamp": "2025-06-03T17:55:59.940402",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 13 - 1Test2"
+}
+2025-06-03 17:55:59,940 - INFO - {
+  "timestamp": "2025-06-03T17:55:59.940925",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 13"
+}
+2025-06-03 17:55:59,951 - INFO - {
+  "timestamp": "2025-06-03T17:55:59.951222",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 17,
+    "reportes": 0
+  }
+}
+2025-06-03 17:55:59,951 - INFO - {
+  "timestamp": "2025-06-03T17:55:59.951451",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 13"
+}
+2025-06-03 17:55:59,979 - INFO - {
+  "timestamp": "2025-06-03T17:55:59.979530",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 4,
+    "ordenes_codigos": [
+      43977,
+      43978,
+      43981,
+      43982
+    ]
+  }
+}
+2025-06-03 17:55:59,979 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:55:59.979730", "operacion": "CREAR_TAREAS", "detalles": "Programa 13: Iniciando creaci\u00f3n de 4 \u00f3rdenes"}
+2025-06-03 17:55:59,991 - INFO - [Timeline] Iniciando generación base para 4 órdenes
+2025-06-03 17:55:59,993 - INFO - [Timeline] Generación base completada: 4 grupos, 79 items totales
+2025-06-03 17:56:00,063 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.063691", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43977, "proceso": "CORTADO", "cantidad": "1000.00", "maquina_id": 175, "tarea_id": 4817, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:56:00,081 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.081074", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43977, "proceso": "ESTAMPAR EN CALIENTE PRIMER GOLPE", "cantidad": "1000.00", "maquina_id": 183, "tarea_id": 4818, "fecha": "2025-05-26", "hora": "12:30"}}
+2025-06-03 17:56:00,111 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.111349", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43977, "proceso": "ESTAMPAR EN CALIENTE SEGUNDO GOLPE", "cantidad": "1000.00", "maquina_id": 183, "tarea_id": 4819, "fecha": "2025-05-26", "hora": "16:30"}}
+2025-06-03 17:56:00,139 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.139070", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43977, "proceso": "REBARBADO EXTERIOR", "cantidad": "1000.00", "maquina_id": 207, "tarea_id": 4820, "fecha": "2025-05-27", "hora": "10:30"}}
+2025-06-03 17:56:00,157 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.157296", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43977, "proceso": "PERFORADO", "cantidad": "1000.00", "maquina_id": 198, "tarea_id": 4821, "fecha": "2025-05-27", "hora": "15:30"}}
+2025-06-03 17:56:00,174 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.174504", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43977, "proceso": "FORJAR", "cantidad": "1000.00", "maquina_id": 190, "tarea_id": 4822, "fecha": "2025-05-28", "hora": "10:30"}}
+2025-06-03 17:56:00,196 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.196889", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43978, "proceso": "CORTADO", "cantidad": "700.00", "maquina_id": 176, "tarea_id": 4823, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:56:00,212 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.212563", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43978, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "700.00", "maquina_id": 182, "tarea_id": 4824, "fecha": "2025-05-26", "hora": "10:30"}}
+2025-06-03 17:56:00,228 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.228723", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43978, "proceso": "REBARBADO DE PERNOS", "cantidad": "700.00", "maquina_id": 201, "tarea_id": 4825, "fecha": "2025-05-27", "hora": "10:30"}}
+2025-06-03 17:56:00,246 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.246200", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43978, "proceso": "PUNTEADO DE PERNOS", "cantidad": "700.00", "maquina_id": 215, "tarea_id": 4826, "fecha": "2025-05-27", "hora": "16:30"}}
+2025-06-03 17:56:00,266 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.266868", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43978, "proceso": "TERRAJADO DE PERNOS", "cantidad": "700.00", "maquina_id": 227, "tarea_id": 4827, "fecha": "2025-05-28", "hora": "12:30"}}
+2025-06-03 17:56:00,290 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.287824", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43981, "proceso": "CORTADO", "cantidad": "540.00", "maquina_id": 271, "tarea_id": 4828, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:56:00,308 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.307954", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43981, "proceso": "PUNTEADO DE BARRAS", "cantidad": "540.00", "maquina_id": 219, "tarea_id": 4829, "fecha": "2025-05-26", "hora": "11:30"}}
+2025-06-03 17:56:00,326 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.326861", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43981, "proceso": "TERRAJADO DE PERNOS", "cantidad": "540.00", "maquina_id": 225, "tarea_id": 4830, "fecha": "2025-05-26", "hora": "15:30"}}
+2025-06-03 17:56:00,343 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.343955", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43982, "proceso": "CORTADO", "cantidad": "800.00", "maquina_id": 197, "tarea_id": 4831, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:56:00,362 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.362725", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43982, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "800.00", "maquina_id": 184, "tarea_id": 4832, "fecha": "2025-05-26", "hora": "12:30"}}
+2025-06-03 17:56:00,380 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.380287", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 13, "ot": 43982, "proceso": "PERFORACION REDONDA", "cantidad": "800.00", "maquina_id": 200, "tarea_id": 4833, "fecha": "2025-05-27", "hora": "08:30"}}
+2025-06-03 17:56:00,400 - INFO - {
+  "timestamp": "2025-06-03T17:56:00.400038",
+  "tipo": "EXITO",
+  "mensaje": "Programa 13 regenerado",
+  "datos": {
+    "tareas": 17,
+    "reportes": 0,
+    "historial": 0
+  }
+}
+2025-06-03 17:56:00,412 - INFO - {
+  "timestamp": "2025-06-03T17:56:00.412236",
+  "tipo": "PROGRAMA",
+  "mensaje": "Procesando programa 14 - Programa 22 mayo"
+}
+2025-06-03 17:56:00,412 - INFO - {
+  "timestamp": "2025-06-03T17:56:00.412417",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Iniciando limpieza del programa 14"
+}
+2025-06-03 17:56:00,425 - INFO - {
+  "timestamp": "2025-06-03T17:56:00.425568",
+  "tipo": "LIMPIEZA",
+  "mensaje": "Limpieza completada",
+  "datos": {
+    "ejecuciones": 0,
+    "historial": 0,
+    "tareas": 20,
+    "reportes": 0
+  }
+}
+2025-06-03 17:56:00,425 - INFO - {
+  "timestamp": "2025-06-03T17:56:00.425722",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparando \u00f3rdenes de trabajo para programa 14"
+}
+2025-06-03 17:56:00,455 - INFO - {
+  "timestamp": "2025-06-03T17:56:00.455716",
+  "tipo": "PREPARACION",
+  "mensaje": "Preparaci\u00f3n completada",
+  "datos": {
+    "total_ordenes": 6,
+    "ordenes_codigos": [
+      43983,
+      43988,
+      43992,
+      43996,
+      43997,
+      44002
+    ]
+  }
+}
+2025-06-03 17:56:00,456 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.456019", "operacion": "CREAR_TAREAS", "detalles": "Programa 14: Iniciando creaci\u00f3n de 6 \u00f3rdenes"}
+2025-06-03 17:56:00,465 - INFO - [Timeline] Iniciando generación base para 6 órdenes
+2025-06-03 17:56:00,496 - INFO - [Timeline] Generación base completada: 6 grupos, 117 items totales
+2025-06-03 17:56:00,545 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.545579", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43983, "proceso": "CORTADO", "cantidad": "800.00", "maquina_id": 197, "tarea_id": 4834, "fecha": "2025-05-22", "hora": "07:45"}}
+2025-06-03 17:56:00,565 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.565694", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43983, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "800.00", "maquina_id": 184, "tarea_id": 4835, "fecha": "2025-05-22", "hora": "15:30"}}
+2025-06-03 17:56:00,596 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.596377", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43983, "proceso": "PERFORACION REDONDA", "cantidad": "800.00", "maquina_id": 200, "tarea_id": 4836, "fecha": "2025-05-23", "hora": "11:30"}}
+2025-06-03 17:56:00,614 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.614135", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43988, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4837, "fecha": "2025-05-22", "hora": "15:30"}}
+2025-06-03 17:56:00,632 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.631801", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43988, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4838, "fecha": "2025-05-23", "hora": "11:30"}}
+2025-06-03 17:56:00,648 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.648634", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43988, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4839, "fecha": "2025-05-26", "hora": "09:30"}}
+2025-06-03 17:56:00,667 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.666953", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43992, "proceso": "CORTADO", "cantidad": "800.00", "maquina_id": 197, "tarea_id": 4840, "fecha": "2025-05-23", "hora": "09:30"}}
+2025-06-03 17:56:00,691 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.690980", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43992, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "800.00", "maquina_id": 184, "tarea_id": 4841, "fecha": "2025-05-23", "hora": "16:30"}}
+2025-06-03 17:56:00,716 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.716822", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43992, "proceso": "PERFORACION REDONDA", "cantidad": "800.00", "maquina_id": 200, "tarea_id": 4842, "fecha": "2025-05-26", "hora": "14:00"}}
+2025-06-03 17:56:00,745 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.745412", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43996, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4843, "fecha": "2025-05-23", "hora": "14:00"}}
+2025-06-03 17:56:00,762 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.762440", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43996, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4844, "fecha": "2025-05-26", "hora": "11:30"}}
+2025-06-03 17:56:00,783 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.783028", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43996, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4845, "fecha": "2025-05-26", "hora": "17:30"}}
+2025-06-03 17:56:00,806 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.806888", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43997, "proceso": "CORTADO", "cantidad": "400.00", "maquina_id": 197, "tarea_id": 4846, "fecha": "2025-05-26", "hora": "07:45"}}
+2025-06-03 17:56:00,824 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.824762", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43997, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "400.00", "maquina_id": 184, "tarea_id": 4847, "fecha": "2025-05-26", "hora": "16:30"}}
+2025-06-03 17:56:00,843 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.843663", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 43997, "proceso": "PERFORACION REDONDA", "cantidad": "400.00", "maquina_id": 200, "tarea_id": 4848, "fecha": "2025-05-27", "hora": "11:30"}}
+2025-06-03 17:56:00,865 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.865159", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 44002, "proceso": "CORTADO", "cantidad": "800.00", "maquina_id": 176, "tarea_id": 4849, "fecha": "2025-05-22", "hora": "07:45"}}
+2025-06-03 17:56:00,895 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.895670", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 44002, "proceso": "ESTAMPAR EN CALIENTE", "cantidad": "800.00", "maquina_id": 181, "tarea_id": 4850, "fecha": "2025-05-22", "hora": "17:30"}}
+2025-06-03 17:56:00,913 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.913746", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 44002, "proceso": "REBARBADO DE PERNOS", "cantidad": "800.00", "maquina_id": 207, "tarea_id": 4851, "fecha": "2025-05-26", "hora": "11:30"}}
+2025-06-03 17:56:00,929 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.929906", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 44002, "proceso": "PUNTEADO DE PERNOS", "cantidad": "800.00", "maquina_id": 215, "tarea_id": 4852, "fecha": "2025-05-27", "hora": "11:30"}}
+2025-06-03 17:56:00,946 - INFO - [SCHEDULER] {"timestamp": "2025-06-03T17:56:00.946324", "operacion": "TAREA_CREADA", "detalles": {"programa_id": 14, "ot": 44002, "proceso": "TERRAJADO DE PERNOS", "cantidad": "800.00", "maquina_id": 227, "tarea_id": 4853, "fecha": "2025-05-28", "hora": "08:30"}}
+2025-06-03 17:56:00,962 - INFO - {
+  "timestamp": "2025-06-03T17:56:00.962154",
+  "tipo": "EXITO",
+  "mensaje": "Programa 14 regenerado",
+  "datos": {
+    "tareas": 20,
+    "reportes": 0,
+    "historial": 0
+  }
+}
