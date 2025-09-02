@@ -237,7 +237,7 @@ class ItemRuta(models.Model):
         unique_together = ('ruta', 'item', 'maquina', 'proceso')
 
     def __str__(self):
-        return f'Item {self.item} de Ruta de Orden: {self.ruta.orden_trabajo}'
+        return f'Item {self.item} de Ruta de Orden:'
     
     # ============= NUEVOS MÉTODOS PARA PROGRESO DIRECTO =============
     @property

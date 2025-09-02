@@ -130,7 +130,12 @@ export const getAsignacionesPrograma = async (programId) => {
 // Asignar operador a un programa
 export const assignOperatorToProgram = async(programId, assignmentData) => {
     try{
-        const response = await axios.post(`/operator/api/v1/operadores/${programId}/asignaciones/`, assignmentData);
+        const response = await axios.post(`/operator/api/v1/operadores/${programId}/asignaciones/`, assignmentData, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Token ${localStorage.getItem('token')}`
+            }
+        });
         return response.data;
     } catch (error){
         console.error('Error al asignar operador al programa:', error);
@@ -142,6 +147,7 @@ export const assignOperatorToProgram = async(programId, assignmentData) => {
 export const removeOperatorAssignment = async(programId, assignmentId) => {
     try{
         await axios.delete(`/operator/api/v1/operadores/${programId}/asignaciones/${assignmentId}`);
+        
     } catch (error) {
         console.error('Eror al eliminar asignación:', error);
         throw error;
@@ -174,6 +180,21 @@ export const getOperadoresPorMaquina = async (maquinaId) => {
         return response.data;
     } catch (error){
         console.error("Error obteniendo operadores por máquina:", error);
+        throw error;
+    }
+};
+
+export const getAsignacionPorItemRuta = async (programaId, itemRutaId) => {
+    try {
+        const response = await axios.get(`/operator/api/v1/asignaciones/`, {
+            params: {
+                programa: programaId,
+                item_ruta: itemRutaId
+            }
+        });
+        return response.data;
+    } catch (error) {
+        console.error('Error al obtener asignación por ItemRuta:', error);
         throw error;
     }
 };

@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import { Form, Button, Badge } from 'react-bootstrap';
+import { Form, Button, Badge, Spinner } from 'react-bootstrap';
+import { FaUser, FaEdit, FaUserPlus } from 'react-icons/fa';
 import toast from 'react-hot-toast';
-import { getMaquinas } from '../../../../api/programs.api';
+import { getMaquinas, getProgram } from '../../../../api/programs.api';
+import { getAsignacionPorItemRuta } from '../../../../api/operator.api';
 import { AsignarOperadorModal } from '../Modals/AsignarOperadorModal';
 
 export const ProcessRow = ({
@@ -23,6 +25,57 @@ export const ProcessRow = ({
     const porcentajeCompletado = cantidadTotal > 0 ? (cantidadTerminada / cantidadTotal) * 100 : 0;
     const [maquinasPorProceso, setMaquinasPorProceso] = useState({});
     const [maquinas, setMaquinas] = useState([]);
+    const [timelineItems, setTimelineItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [asignacionExistente, setAsignacionExistente] = useState(null);
+    const [loadingAsignacion, setLoadingAsignacion] = useState(false);
+
+    const cargarItems = async () => {
+        if (!programId) { return; }
+        if (routesData?.items) {
+            setTimelineItems(routesData.items);
+            return;
+        }
+
+        try {
+            console.log(`cargando items para el proposito inicial`);
+            setIsLoading(true);
+            const program = await getProgram(programId);
+            const items = program.routes_data?.items || [];
+            setTimelineItems(items);
+            console.log(`items cargados: ${items.length} elementos`);
+        } catch (error) {
+            console.error("error al cargar elementos", error)
+            setTimelineItems([]);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const verificarAsignacionExistente = async () => {
+        if (!programId || !proceso.id) return;
+
+        try{
+            setLoadingAsignacion(true);
+            const asignaciones = await getAsignacionPorItemRuta(programId, proceso.id);
+            if (asignaciones && asignaciones.length > 0){
+                setAsignacionExistente(asignaciones[0]);
+            } else {
+                setAsignacionExistente(null);
+            }
+        } catch (error) {
+            console.error("Error al verificar asignación existente:", error);
+            setAsignacionExistente(null);
+        } finally {
+            setLoadingAsignacion(false);
+        }
+    };
+
+    useEffect(() => {
+        cargarItems();
+        verificarAsignacionExistente();
+    }, [programId, routesData, proceso.id]);
 
     const cargarMaquinasPorProceso = async (itemRuta) => {
         try {
@@ -74,9 +127,65 @@ export const ProcessRow = ({
         setShowAsignarOperadorModal(true);
     };
     const handleOperadorAsignado = () => {
+        setShowAsignarOperadorModal(false);
+        verificarAsignacionExistente();
         // Recargar datos del proceso si es necesario
         // Esto depende de cómo manejes la actualización de datos
         toast.success("Operador asignado correctamente");
+    };
+
+    const renderAsignacionOperador = () => {
+        if (loadingAsignacion) {
+            return (
+                <div className="d-flex align-items-center justify-content-center">
+                    <Spinner className="me-2" size="sm" animation="border">
+                        <small className="text-muted">Verificando...</small>
+                    </Spinner>
+                </div>
+            );
+        }
+
+        if (asignacionExistente){
+            return (
+                <div className="d-flex flex-column gap-1">
+                    <div className="p-2 bg-light rounded border text-center">
+                        <div className="fw-bold text-success small">
+                            <FaUser className="me-1" />
+                            {asignacionExistente.operador?.nombre || 'Operador asignado'}
+                        </div>
+                        <div className="text-muted" style={{ fontSize: '0.75rem' }}>
+                        {asignacionExistente.operador?.rut}
+                        </div>
+                        <div className="text-muted" style={{ fontSize: '0.7rem' }}>
+                            {new Date(asignacionExistente.fecha_inicio).toLocaleDateString()} -
+                            {new Date(asignacionExistente.fecha_fin).toLocaleDateString()}
+                        </div>
+                    </div>
+                    <Button
+                        variant="outline-primary"
+                        size="sm"
+                        onClick={handleAsignarOperador}
+                        style={{ fontSize: '0.75rem' }}
+                    >
+                        <FaEdit className="me-1" />
+                        Editar
+                    </Button>
+                </div>
+            );
+        } else {
+            // Mostrar botón para asignar
+            return (
+                <Button
+                    variant="outline-success"
+                    size="sm"
+                    onClick={handleAsignarOperador}
+                    style={{ fontSize: '0.75rem' }}
+                >
+                    <FaUserPlus className="me-1" />
+                    Asignar Operador
+                </Button>
+            );
+        }
     };
 
   return (
@@ -178,11 +287,7 @@ export const ProcessRow = ({
         </td>
         <td className="text-center">
             <div className="d-flex flex-column gap-1 align-items-center">
-                <Button size ="sm"
-                    onClick={() => handleAsignarOperador(proceso.id, programId, ot.id)}
-                >
-                    Asignar Operador
-                </Button>
+                {renderAsignacionOperador()}
                 {/*<Button
                     variant={tieneInconsistencias ? "warning" : incluyeEnPlanificacion ? "primary" : "secondary"}
                     size="sm"
@@ -221,7 +326,8 @@ export const ProcessRow = ({
         itemRuta={proceso}
         ot={ot || {}}
         onOperadorAsignado={handleOperadorAsignado}
-        // Ya no pasamos itemsTimeline={routesData}
+        itemsTimeline={timelineItems}
+        isLoading={isLoading}
     />
     
     

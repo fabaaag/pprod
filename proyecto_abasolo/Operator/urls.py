@@ -15,5 +15,5 @@ urlpatterns = [
     #Gestión de Asignaciones
     path('api/v1/asignaciones/', views.AsignacionOperadorView.as_view(), name='asignacion-list'),
     path('api/v1/asignaciones/<int:pk>/', views.AsignacionOperadorDetailView.as_view(), name='asignacion-detail'),
-    path('operator/api/v1/operadores/<int:program_id>/asignaciones/', views.AsignacionOperadorView.as_view(), name='asignacion-operador'),
+    path('api/v1/operadores/<int:program_id>/asignaciones/', views.AsignacionOperadorView.as_view(), name='asignacion-operador'),
 ]

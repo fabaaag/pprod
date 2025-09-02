@@ -141,6 +141,7 @@ export const useTimelineState = (programId) => {
 
             setTimelineGroups(processedGroups);
             setTimelineItems(processedItems);
+            console.log('Items del timeline desde timelineSlice: ', processedItems);
 
         } catch (error) {
             console.error('❌ Error cargando timeline:', error);
@@ -187,4 +188,6 @@ export const useTimelineState = (programId) => {
         toggleTimeline,
         validateTimelineDisplay
     };
+
+    console.log(timelineItems, 'programslicer timelineItems');
 };

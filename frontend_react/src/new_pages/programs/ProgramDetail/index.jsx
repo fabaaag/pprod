@@ -92,6 +92,7 @@ export default function ProgramDetail() {
         setTimelineMode,
         validateTimelineDisplay
     } = useTimelineState(programId);
+    
 
     // Gestión de órdenes usando hook personalizado
     const {
@@ -150,6 +151,7 @@ export default function ProgramDetail() {
             loadMaquinas();
             cargarOTsConInconsistencias();
         }
+        console.log(timelineItems, 'items del timeline')
     }, [programId]);
 
     // Sincronizar órdenes con otList
@@ -606,9 +608,7 @@ export default function ProgramDetail() {
                                             isLoading={timelineLoading}
                                             key={`timeline-${timelineGroups?.length || 0}-${timelineItems?.length || 0}`} // Forzar re-render cuando cambian los datos
                                         />
-                                        {console.log(timelineItems.map((item)=> {
-                                            if(item.id==='item_1058_11') return item;
-                                        }), 'lololo')}
+                                        
                                     </div>
                                 )}
                             </Card.Body>

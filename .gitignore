@@ -1,0 +1,9 @@
+# Node.js dependencies
+node_modules/
+
+# Python virtual environment
+venv/
+env/
+
+# Custom logs
+logs_jm/

@@ -116,6 +116,7 @@ class AsignacionOperadorView(APIView):
         #Filtros
         programa_id = request.query_params.get('programa')
         operador_id = request.query_params.get('operador')
+        item_ruta_id = request.query_params.get('item_ruta')
         fecha_inicio = request.query_params.get('fecha_inicio')
         fecha_fin = request.query_params.get('fecha_fin')
 
@@ -123,19 +124,28 @@ class AsignacionOperadorView(APIView):
             queryset = queryset.filter(programa_id=programa_id)
         if operador_id:
             queryset = queryset.filter(operador_id=operador_id)
+        if item_ruta_id:
+            queryset = queryset.filter(item_ruta_id=item_ruta_id)
         if fecha_inicio and fecha_fin:
             queryset = queryset.filter(
                 Q(fecha_inicio__range=[fecha_inicio, fecha_fin]) |
                 Q(fecha_fin__range=[fecha_inicio, fecha_fin])
             )
 
+        queryset = queryset.select_related(
+            'operador',
+            'programa',
+            'item_ruta__proceso',
+            'item_ruta__maquina'
+        )
+
         serializer = AsignacionOperadorSerializer(queryset, many=True)
         return Response(serializer.data)
     
 
-    def post(self, request):
+    def post(self, request, program_id=None):
         try:
-            programa_id = request.data.get('programa_id')
+            programa_id = program_id or request.data.get('programa_id')
             item_ruta_id = request.data.get('item_ruta_id')
             operador_id = request.data.get('operador_id')
             fecha_inicio = request.data.get('fecha_inicio')

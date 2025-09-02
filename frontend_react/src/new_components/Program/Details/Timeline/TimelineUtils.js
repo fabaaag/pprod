@@ -12,7 +12,7 @@ export const timelineUtils = {
             //Grupo principal (OT)
             const mainGroup = {
                 id: ot.id,
-                title: ot.orde_trabajo_codigo_ot || 'OT Sin código',
+                title: ot.orden_trabajo_codigo_ot || 'OT Sin código',
                 stackItems: true,
                 height: 70
             };
