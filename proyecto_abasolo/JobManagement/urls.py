@@ -54,6 +54,13 @@ urlpatterns = [
     # En urls.py
     path('api/v1/programas/<int:programa_id>/regenerar-tareas/', supervisor_views.regenerar_tareas_programa, name='regenerar-tareas'),
 
+    # ========================================================================
+     #Nuevas URLs para JSON
+    path('api/v1/programas/<int:programa_id>/generar-json-base/', program_views.GenerarJsonBaseView.as_view(), name='generar-json-base'),
+    path('api/v1/programas/<int:programa_id>/guardar-cambios/', program_views.GuardarCambiosPlanificacionView.as_view(), name='guardar-cambios'),
+    path('api/v1/programas/<int:programa_id>/finalizar-dia/', program_views.FinalizarDiaView.as_view(), name='finalizar-dia'),
+    path('api/v1/programas/<int:programa_id>/verificar-planificacion/', program_views.VerificarPlanificacionListaView.as_view(), name='verificar-planificacion'),
+    path('api/v1/programas/<int:programa_id>/json-base/', program_views.CargarJsonBaseView.as_view(), name='cargar-json-base'),
      # ========================================================================
     # URLS PARA PROGRESO DIRECTO DE ITEMRUTA
     # ========================================================================

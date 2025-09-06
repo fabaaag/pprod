@@ -2167,329 +2167,221 @@ class FinalizarDiaView(APIView):
     permission_classes = [IsAuthenticated]
     
     def post(self, request, programa_id):
-        programa = get_object_or_404(ProgramaProduccion, id=programa_id)
-        fecha_finalizacion = request.data.get('fecha', timezone.now().date())
-        
-        # CORRECCIÓN: Asegurar que fecha_finalizacion sea un objeto date
-        if isinstance(fecha_finalizacion, str):
-            try:
-                fecha_finalizacion = datetime.strptime(fecha_finalizacion, '%Y-%m-%d').date()
-            except ValueError:
-                return Response({
-                    "success": False,
-                    "error": "Formato de fecha inválido. Use YYYY-MM-DD"
-                }, status=400)
-        
         try:
-            #print(f"[DEBUG] Iniciando finalización de día {fecha_finalizacion} para programa {programa_id}")
+            fecha_finalizacion = request.data.get('fecha', timezone.now().date())
+            if isinstance(fecha_finalizacion, str):
+                fecha_finalizacion = datetime.strptime(fecha_finalizacion, '%Y-%m-%d').date()
+
+            importar_avances = request.data.get('importar_avances', False)
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
             
-            # 1. Obtener timeline actual ANTES de guardar snapshot
-            #print("[DEBUG] Obteniendo timeline actual...")
-            timeline_actual = self.get_timeline_actual(programa)
-            #print(f"[DEBUG] Timeline obtenida: {len(timeline_actual.get('groups', []))} grupos, {len(timeline_actual.get('items', []))} items")
-            
-            # 2. Recopilar progresos reales del día
-            #print("[DEBUG] Recopilando progresos del día...")
-            progresos_dia = self.recopilar_progresos_dia(programa, fecha_finalizacion)
-            #print(f"[DEBUG] Progresos encontrados: {len(progresos_dia)}")
-            
-            # 3. Guardar snapshot de la timeline actual CON DATOS
-            #print("[DEBUG] Creando snapshot...")
-            snapshot = self.crear_snapshot_dia(programa, fecha_finalizacion, timeline_actual, request.user)
-            #print(f"[DEBUG] Snapshot creado: {snapshot.id if snapshot else 'ERROR'}")
-            
-            # 4. Regenerar planificación para mañana
-            nueva_timeline = None
+            # 1. Capturar estado antes de cualquier cambio
+            estado_antes = self.capturar_estado_actual(programa)
+
+            # 2. NUEVO: Importar avances si se solicita
+            cambios_importados = []
+            if importar_avances:
+                cambios_importados = self.importar_avances_dia(programa, fecha_finalizacion)
+
+
+            # 3. Capturar estado después de importar
+            estado_despues = self.capturar_estado_actual(programa)
+
+            # 4. Generar comparativa
+            comparativa = self.generar_comparativa_simple(estado_antes, estado_despues, cambios_importados)
+
+            # 5. Actualizar fecha de inicio del programa
             nueva_fecha_inicio = self.calcular_siguiente_dia_laboral(fecha_finalizacion)
-            
-            if progresos_dia:  # Solo si hay progresos
-                #print("[DEBUG] Regenerando planificación...")
-                nueva_timeline = self.regenerar_planificacion(programa, progresos_dia)
-                # Actualizar fecha de inicio del programa
-                programa.fecha_inicio = nueva_fecha_inicio
-                programa.save(update_fields=['fecha_inicio'])
-                #print(f"[DEBUG] Nueva fecha inicio: {nueva_fecha_inicio}")
-            
-            # CORRECCIÓN: Formatear correctamente la fecha para el response
-            fecha_siguiente_str = nueva_fecha_inicio.strftime('%Y-%m-%d') if nueva_fecha_inicio else None
-            
+            programa.fecha_inicio = nueva_fecha_inicio
+            programa.save(update_fields=['fecha_inicio'])
+
+            # 6. Guardar registro del día finalizado
+            self.guardar_registro_dia_finalizado(programa, fecha_finalizacion, comparativa, request.user)
+
             return Response({
                 "success": True,
-                "mensaje": f"Día {fecha_finalizacion} finalizado exitosamente",
-                "progresos_registrados": len(progresos_dia),
-                "fecha_siguiente_inicio": fecha_siguiente_str,
-                "snapshot_id": snapshot.id if snapshot else None,
-                "regeneracion_realizada": bool(progresos_dia),
-                # NUEVO: Información de debug
-                "debug_info": {
-                    "timeline_groups": len(timeline_actual.get('groups', [])),
-                    "timeline_items": len(timeline_actual.get('items', [])),
-                    "progresos_detalle": progresos_dia[:3] if progresos_dia else []  # Primeros 3 para debug
-                }
+                "fecha_finalizada": fecha_finalizacion.isoformat(),
+                "nueva_fecha_inicio": nueva_fecha_inicio.isoformat(),
+                "cambios_importados": len(cambios_importados),
+                "comparativa": comparativa,
+                "timeline_regenerada": True
             })
-            
         except Exception as e:
-            print(f"Error en FinalizarDiaView: {str(e)}")
-            import traceback
-            traceback.print_exc()
             return Response({
                 "success": False,
-                "error": f"Error finalizando día: {str(e)}"
+                "error": str(e)
             }, status=500)
     
-    def get_timeline_actual(self, programa):
-        """Obtiene la timeline actual del programa usando ProgramaTimelineRealtimeView"""
+    def capturar_estado_actual(self, programa):
+        """Captura el estado actual simple del programa"""
         try:
-            #print(f"[DEBUG] Obteniendo timeline tiempo real para programa {programa.id}")
-            
-            # Usar directamente el método que sabemos funciona
-            timeline_view = ProgramaTimelineRealtimeView()
-            timeline_data = timeline_view.generar_timeline_tiempo_real(programa)
-            
-            #print(f"[DEBUG] Timeline generada: tipo={timeline_data.get('tipo')}")
-            #print(f"[DEBUG] Grupos: {len(timeline_data.get('groups', []))}")
-            #print(f"[DEBUG] Items: {len(timeline_data.get('items', []))}")
-            #print(f"[DEBUG] OTs: {len(timeline_data.get('ots', []))}")
-            
-            return timeline_data
-            
-        except Exception as e:
-            print(f"[ERROR] Error obteniendo timeline actual: {str(e)}")
-            import traceback
-            traceback.print_exc()
-            
-            # Fallback: usar método básico
-            try:
-                #print("[DEBUG] Intentando método fallback...")
-                ordenes_trabajo = self._get_ordenes_trabajo_basico(programa)
-                
-                return {
-                    "tipo": "FALLBACK_FINALIZACION",
-                    "groups": [],
-                    "items": [],
-                    "ots": ordenes_trabajo,
-                    "metadata": {
-                        "fecha_generacion": timezone.now().isoformat(),
-                        "metodo": "fallback",
-                        "total_ots": len(ordenes_trabajo)
-                    }
-                }
-            except Exception as e2:
-                print(f"[ERROR] Error en fallback: {str(e2)}")
-                return {
-                    "tipo": "ERROR_TIMELINE", 
-                    "groups": [], 
-                    "items": [],
-                    "ots": [],
-                    "error": str(e),
-                    "error_fallback": str(e2)
-                }
-    
-    def _get_ordenes_trabajo_basico(self, programa):
-        """Versión básica para obtener órdenes de trabajo sin depender de scheduler"""
-        try:
-            program_ots = ProgramaOrdenTrabajo.objects.filter(
-            programa=programa
-        ).select_related(
-                'orden_trabajo',
-                'orden_trabajo__ruta_ot'
-            ).prefetch_related(
-                'orden_trabajo__ruta_ot__items',
-                'orden_trabajo__ruta_ot__items__proceso',
-                'orden_trabajo__ruta_ot__items__maquina'
-            ).order_by('prioridad')
-
             ordenes_trabajo = []
-            for prog_ot in program_ots:
-                if hasattr(prog_ot.orden_trabajo, 'ruta_ot') and prog_ot.orden_trabajo.ruta_ot:
-                    ot_data = {
-                        'id': prog_ot.orden_trabajo.id,
-                        'orden_trabajo_codigo_ot': prog_ot.orden_trabajo.codigo_ot,
-                        'orden_trabajo_descripcion_producto_ot': prog_ot.orden_trabajo.descripcion_producto_ot,
-                        'cantidad_total': float(prog_ot.orden_trabajo.cantidad),
-                        'cantidad_avance': float(prog_ot.orden_trabajo.cantidad_avance),
-                        'prioridad': prog_ot.prioridad,
-                        'procesos': []
-                    }
-                    
-                    # Procesos de la OT
-                    for item in prog_ot.orden_trabajo.ruta_ot.items.all().order_by('item'):
+
+            for prog_ot in ProgramaOrdenTrabajo.objects.filter(programa=programa).select_related('orden_trabajo'):
+                ot = prog_ot.orden_trabajo
+                ot_data = {
+                    'codigo_ot': ot.codigo_ot,
+                    'descripcion': ot.descripcion_producto_ot,
+                    'cantidad_total': float(ot.cantidad),
+                    'cantidad_avance': float(ot.cantidad_avance),
+                    'porcentaje_avance': (float(ot.cantidad_avance) / float(ot.cantidad) * 100) if ot.cantidad > 0 else 0,
+                    'prioridad': prog_ot.prioridad,
+                    'procesos': []
+                }
+
+                #Obtener procesos si tiene ruta
+                if hasattr(ot, 'ruta_ot') and ot.ruta_ot:
+                    for item in ot.ruta_ot.items.all().order_by('item'):
                         proceso_data = {
-                            'id': item.id,
                             'item': item.item,
-                            'proceso': {
-                                'id': item.proceso.id,
-                                'codigo': item.proceso.codigo_proceso,
-                                'descripcion': item.proceso.descripcion
-                            },
-                            'maquina': {
-                                'id': item.maquina.id if item.maquina else None,
-                                'codigo': item.maquina.codigo_maquina if item.maquina else "Sin asignar",
-                                'descripcion': item.maquina.descripcion if item.maquina else "Sin máquina"
-                            },
-                            'cantidad_total': float(item.cantidad_pedido),
-                            'cantidad_completada': float(item.cantidad_terminado_proceso),
-                            'porcentaje_completado': float(item.porcentaje_completado),
+                            'codigo_proceso': item.proceso.codigo_proceso,
+                            'descripcion_proceso': item.proceso.descripcion,
+                            'cantidad_pedido': float(item.cantidad_pedido),
+                            'cantidad_terminado': float(item.cantidad_terminado_proceso),
+                            'cantidad_perdida': float(item.cantidad_perdida_proceso),
                             'estado_proceso': item.estado_proceso,
-                            'estandar': float(item.estandar) if item.estandar else 0,
-                            'operador_actual': {
-                                'id': item.operador_actual.id,
-                                'nombre': f"{item.operador_actual.nombre} {item.operador_actual.apellido}"
-                            } if item.operador_actual else None
+                            'porcentaje_completado': float(item.porcentaje_completado),
                         }
                         ot_data['procesos'].append(proceso_data)
-                    
-                    ordenes_trabajo.append(ot_data)
-            
-            return ordenes_trabajo
-            
+                
+                ordenes_trabajo.append(ot_data)
+
+            return  {
+                'programa_id': programa.id,
+                'fecha_captura': timezone.now().isoformat(),
+                'fecha_inicio_programa': programa.fecha_inicio.isoformat(),
+                'ordenes_trabajo': ordenes_trabajo,
+                'total_ots': len(ordenes_trabajo)
+            }
+        
         except Exception as e:
-            print(f"[ERROR] Error en _get_ordenes_trabajo_basico: {str(e)}")
-            return []
-    
-    def crear_snapshot_dia(self, programa, fecha, timeline_data, usuario):
-        """Crea un snapshot JSON del día CON VALIDACIÓN"""
+            print(f"Error capturando estado: {str(e)}")
+            return {'error': str(e)}
+        
+    def importar_avances_dia(self, programa, fecha):
+        """Importa avances del día usando la función de import_views"""
         try:
-            #print(f"[DEBUG] Creando snapshot para fecha {fecha}")
-            #print(f"[DEBUG] Timeline data tipo: {type(timeline_data)}")
-            #print(f"[DEBUG] Timeline keys: {timeline_data.keys() if isinstance(timeline_data, dict) else 'NO ES DICT'}")
-            
-            # VALIDAR que timeline_data no esté vacío
-            if not timeline_data or not isinstance(timeline_data, dict):
-                print("[WARNING] Timeline data está vacío o no es dict, usando estructura mínima")
-                timeline_data = {
-                    "tipo": "SNAPSHOT_VACIO",
-                    "groups": [],
-                    "items": [],
-                    "ots": [],
-                    "metadata": {
-                        "fecha_snapshot": timezone.now().isoformat(),
-                        "advertencia": "Timeline vacío al momento del snapshot"
+            from .import_views import importar_avances_produccion
+            resultado = importar_avances_produccion(fecha, programa.id)
+            return resultado.get('cambios_detectados', [])
+        except Exception as e:
+            print(f"Error importando avances: {str(e)}")
+            return []
+       
+    def generar_comparativa_simple(self, estado_antes, estado_despues, cambios_importados):
+        """Genera una comparativa simple entre antes y después"""
+        try:
+            comparativa = {
+                'fecha_comparativa': timezone.now().isoformat(),
+                'resumen': {
+                    'ots_modificadas': 0,
+                    'procesos_avanzados': 0,
+                    'procesos_completados': 0,
+                    'cantidad_total_avanzada': 0
+                },
+                'cambios_por_ot': [],
+                'cambios_importados': cambios_importados
+            }
+        
+            #Crear diccionarios para comparación rápida
+            ots_antes = {ot['codigo_ot']: ot for ot in estado_antes.get('ordenes_trabajo', [])}
+            ots_despues = {ot['codigo_ot']: ot for ot in estado_despues.get('ordenes_trabajo', [])}
+
+            #Comparar cada OT
+            for codigo_ot, ot_despues in ots_despues.items():
+                ot_antes = ots_antes.get(codigo_ot)
+                if not ot_antes:
+                    continue
+
+                #Verificar cambios en la OT
+                cambio_avance = ot_despues['cantidad_avance'] - ot_antes['cantidad_avance']
+
+                if abs(cambio_avance) > 0.01: #Hay cambio significativo
+                    comparativa['resumen']['ots_modificadas'] += 1
+                    comparativa['resumen']['cantidad_total_avanzada'] += cambio_avance
+
+                    cambio_ot = {
+                        'codigo_ot': codigo_ot,
+                        'descripcion': ot_despues['descripcion'],
+                        'cantidad_avance_antes': ot_antes['cantidad_avance'],
+                        'cantidad_avance_despues': ot_despues['cantidad_avance'],
+                        'diferencia_avance': cambio_avance,
+                        'procesos_modificados': []
                     }
-                }
-            
-            # Asegurar estructura mínima
-            timeline_snapshot = {
-                "tipo": timeline_data.get("tipo", "SNAPSHOT_FINALIZACION"),
-                "groups": timeline_data.get("groups", []),
-                "items": timeline_data.get("items", []),
-                "ots": timeline_data.get("ots", []),
-                "metadata": {
-                    **timeline_data.get("metadata", {}),
-                    "fecha_snapshot": timezone.now().isoformat(),
-                    "programa_id": programa.id,
-                    "fecha_finalizacion": fecha.isoformat() if hasattr(fecha, 'isoformat') else str(fecha),
-                    "usuario_finalizacion": usuario.id if usuario else None
+
+                    #Comparar procesos
+                    procesos_antes = {p['codigo_proceso']: p for p in ot_antes.get('procesos', [])}
+                    procesos_despues = {p['codigo_proceso']: p for p in ot_despues.get('procesos', [])}
+
+                    for codigo_proceso, proceso_despues in procesos_despues.items():
+                        proceso_antes = procesos_antes.get(codigo_proceso)
+                        if not proceso_antes:
+                            continue
+
+                        cambio_terminado = proceso_despues['cantidad_terminado'] - proceso_antes['cantidad_terminado']
+                        cambio_estado = proceso_antes['estado_proceos'] != proceso_despues['estado_proceso']
+
+                        if abs(cambio_terminado) > 0.01 or cambio_estado:
+                            comparativa['resumen']['procesos_avanzados'] += 1
+
+                        cambio_proceso = {
+                            'codigo_proceso': codigo_proceso,
+                            'descripcion': proceso_despues['descripcion_proceso'],
+                            'cantidad_terminado_antes': proceso_antes['cantidad_terminado'],
+                            'diferencia_terminado': cambio_terminado,
+                            'estado_antes': proceso_antes['estado_proceso'],
+                            'estado_despues': proceso_despues['estado_proceso']
+                        }
+                        cambio_ot['procesos_modificados'].append(cambio_proceso)
+
+                    comparativa['cambios_por_ot'].append(cambio_ot)
+            return comparativa
+        except Exception as e:
+            print(f'Error generando comparativa: {str(e)}')                
+            return {'error': str(e)}
+        
+    def calcular_siguiente_dia_laboral(self, fecha_actual):
+        """Calcular el siguiente día laboral (lunes a viernes)"""
+        if isinstance(fecha_actual, datetime):
+            fecha_actual = fecha_actual.date()
+
+        siguiente_dia = fecha_actual + timedelta(days=1)
+
+        #Saltar fines de semana
+        while siguiente_dia.weekday() >= 5: #5 sab, 6 dom
+            siguiente_dia += timedelta(days=1)
+        
+        return siguiente_dia
+    
+    def guardar_registro_dia_finalizado(self, programa, fecha, comparativa, usuario):
+        """Guarda un registro simple del día finalizado"""
+        try:
+            #Estructura de datos más clara
+            datos_finalizacion = {
+                'tipo': 'FINALIZACION_DIA',
+                'fecha': fecha.isoformat() if hasattr(fecha, 'isoformat') else str(fecha),
+                'comparativa': comparativa,
+                'resumen': {
+                    'ots_modificadas': comparativa.get('resumen', {}).get('ots_modificadas', 0),
+                    'procesos_avanzados': comparativa.get('resumen', {}).get('proceso_avanzados', 0),
+                    'cantidad_total_avanzada': comparativa.get('resumen', {}).get('cantidad_total_avanzada', 0)
                 }
             }
-            
-            #print(f"[DEBUG] Snapshot final: grupos={len(timeline_snapshot['groups'])}, items={len(timeline_snapshot['items'])}, ots={len(timeline_snapshot['ots'])}")
-            
-            snapshot = HistorialPlanificacion.objects.create(
+
+            registro = HistorialPlanificacion.objects.create(
                 programa=programa,
                 fecha_referencia=fecha,
-                tipo_reajuste='FINALIZACION_DIA',
-                timeline_data=timeline_snapshot,  # Usar la estructura validada
+                tipo_reajuste='FINALIZACION_DIA_SIMPLE',
+                timeline_data=datos_finalizacion,
                 creado_por=usuario,
-                observaciones=f"Finalización automática del día {fecha}"
+                observaciones=f"Día {fecha} finalizado - {comparativa.get('resumen', {}).get('ots_modificadas', 0)} OTs modificadas"                
             )
-            
-            print(f"[DEBUG] Snapshot creado exitosamente con ID: {snapshot.id}")
-            return snapshot
-            
+            print(f"Registro creado: {registro.id}")
+            return registro
         except Exception as e:
-            print(f"[ERROR] Error creando snapshot: {str(e)}")
-            import traceback
-            traceback.print_exc()
+            print(f"Error guarando registro: {str(e)}")
             return None
-    
-    def recopilar_progresos_dia(self, programa, fecha):
-        """Recopila todos los progresos reales del día"""
-        try:
-            print(f"[DEBUG] Buscando ItemRuta con progreso en fecha {fecha}")
-            
-            # Obtener todos los ItemRuta del programa que tuvieron actividad hoy
-            items_con_progreso = ItemRuta.objects.filter(
-                ruta__orden_trabajo__programaordentrabajo__programa=programa,
-                ultima_actualizacion_progreso__date=fecha
-            ).select_related(
-                'proceso',
-                'maquina', 
-                'operador_actual',
-                'ruta__orden_trabajo'
-            )
-            
-            print(f"[DEBUG] Encontrados {items_con_progreso.count()} ItemRuta con progreso")
-            
-            progresos = []
-            for item in items_con_progreso:
-                # Obtener cantidad anterior (del historial si existe)
-                cantidad_anterior = self.get_cantidad_anterior(item, fecha)
-                
-                progreso = {
-                    "item_ruta_id": item.id,
-                    "proceso": item.proceso.descripcion,
-                    "maquina": item.maquina.descripcion if item.maquina else "Sin máquina",
-                    "orden_trabajo": item.ruta.orden_trabajo.codigo_ot,
-                    "cantidad_anterior": cantidad_anterior,
-                    "cantidad_actual": float(item.cantidad_terminado_proceso),
-                    "avance_dia": float(item.cantidad_terminado_proceso) - cantidad_anterior,
-                    "porcentaje_completado": float(item.porcentaje_completado),
-                    "estado": item.estado_proceso,
-                    "operador": item.operador_actual.nombre if item.operador_actual else "Sin asignar",
-                    "operador_id": item.operador_actual.id if item.operador_actual else None,
-                    "ultima_actualizacion": item.ultima_actualizacion_progreso.isoformat() if item.ultima_actualizacion_progreso else None
-                }
-                progresos.append(progreso)
-                print(f"[DEBUG] Progreso: OT {progreso['orden_trabajo']}, Item {item.item}, avance: {progreso['avance_dia']}")
-            
-            print(f"[DEBUG] Total progresos recopilados: {len(progresos)}")
-            return progresos
-            
-        except Exception as e:
-            print(f"[ERROR] Error recopilando progresos: {str(e)}")
-            return []
-    
-    def get_cantidad_anterior(self, item_ruta, fecha):
-        """Obtiene la cantidad anterior al día especificado"""
-        try:
-            # Buscar en el historial de progreso
-            historial = item_ruta.historial_progreso or []
-            
-            # Buscar el último registro antes de la fecha especificada
-            cantidad_anterior = 0
-            for registro in reversed(historial):  # Empezar por el más reciente
-                try:
-                    fecha_registro = datetime.fromisoformat(registro['fecha']).date()
-                    if fecha_registro < fecha:
-                        if registro['tipo'] == 'ACTUALIZACION_PROGRESO':
-                            cantidad_anterior = registro['datos'].get('cantidad_nueva', 0)
-                            break
-                except (KeyError, ValueError):
-                    continue
-            
-            return float(cantidad_anterior)
-            
-        except Exception as e:
-            print(f"[ERROR] Error obteniendo cantidad anterior: {str(e)}")
-            return 0.0
-    
-    def regenerar_planificacion(self, programa, progresos_dia):
-        """Regenera la planificación basada en el progreso real"""
-        try:
-            print("[DEBUG] Iniciando regeneración de planificación...")
-            
-            # Por ahora, solo retornamos la timeline actual actualizada
-            # En el futuro aquí iría la lógica de replanificación inteligente
-            timeline_actualizada = self.get_timeline_actual(programa)
-            
-            print("[DEBUG] Regeneración completada (usando timeline actual)")
-            return timeline_actualizada
-            
-        except Exception as e:
-            print(f"[ERROR] Error regenerando planificación: {str(e)}")
-            return None
-    
+
     def calcular_siguiente_dia_laboral(self, fecha_actual):
         """Calcula el siguiente día laboral"""
         try:
@@ -2511,6 +2403,355 @@ class FinalizarDiaView(APIView):
             print(f"[ERROR] Error calculando siguiente día laboral: {str(e)}")
             return fecha_actual + timedelta(days=1)  # Fallback
 
+
+class GenerarJsonBaseView(APIView):
+    """Vista para generar JSON base del día (planificación inicial)"""
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, programa_id):
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            fecha_base = request.data.get('fecha', timezone.now().date())
+
+            if isinstance(fecha_base, str):
+                fecha_base = datetime.strptime(fecha_base, '%Y-%m-%d').date()
+            
+            #Generar JSON base completo
+            json_base = self.generar_json_base_dia(programa, fecha_base, request.user)
+
+            #Guardar archivo
+            archivo_guardado = self.guardar_json_base(programa, fecha_base, json_base)
+
+            return Response({
+                "success": True,
+                "archivo_generado": archivo_guardado,
+                "fecha_base": fecha_base.isoformat(),
+                "datos_generados":{
+                    "total_ots": len(json_base.get('ordenes_trabajo', [])),
+                    "total_procesos": sum(len(ot.get('procesos', [])) for ot in json_base.get('ordenes_trabajo', [])),
+                    "fecha_generacion": json_base.get('metadata', {}).get('fecha_generacion')
+                }
+            })
+        except Exception as e:
+            return Response({
+                "success": False,
+                "error": str(e)
+            }, status=500)
+
+    def generar_json_base_dia(self, programa, fecha, usuario):
+        """Genera el JSON base completo para un día en específico"""
+
+        #Capturar el estado actual completo
+        estado_actual = self.capturar_estado_completo(programa)
+
+        json_base = {
+            "tipo": "JSON_BASE_DIA",
+            "programa_id": programa.id,
+            "programa_nombre": programa.nombre,
+            "fecha_base": fecha.isoformat(),
+            "fecha_inicio_programa": programa.fecha_inicio.isoformat(),
+            "metadata": {
+                "fecha_generacion": timezone.now().isoformat(),
+                "generado_por": usuario.username if usuario else "sistema",
+                "version": "1.0",
+                "descripcion": f"JSON base para el día {fecha}"
+            },
+            #"estado_planificacion": estado_actual,
+            "ordenes_trabajo": estado_actual.get('ordenes_trabajo', []),
+            "resumen": {
+                "total_ots": len(estado_actual.get('ordenes_trabajo', [])),
+                "total_procesos": sum(len(ot.get('procesos', [])) for ot in estado_actual.get('ordenes_trabajo', [])),
+                "valor_planificado": self.calcular_valor_planificado(estado_actual),
+                "kilos_planificados": self.calcular_kilos_planificados(estado_actual)   
+            }
+        }
+
+        return json_base
+
+
+    def capturar_estado_completo(self, programa):
+        """Version extendida de capturar_estado_actual con más detalles"""
+        try:
+            ordenes_trabajo = []
+
+            for prog_ot in ProgramaOrdenTrabajo.objects.filter(programa=programa).select_related('orden_trabajo'):
+                ot = prog_ot.orden_trabajo
+                ot_data = {
+                    'id': ot.id,
+                    'codigo_ot': ot.codigo_ot,
+                    'descripcion': ot.descripcion_producto_ot,
+                    'cantidad_total': float(ot.cantidad),
+                    'cantidad_avance': float(ot.cantidad_avance),
+                    'porcentaje_avance': (float(ot.cantidad_avance) / float(ot.cantidad) * 100) if ot.cantidad > 0 else 0,
+                    'prioridad': prog_ot.prioridad,
+                    'fecha_emision': ot.fecha_emision.isoformat() if ot.fecha_emision else None,
+                    'fecha_termino': ot.fecha_termino.isoformat() if ot.fecha_termino else None,
+                    'peso_unitario': float(ot.peso_unitario) if ot.peso_unitario else 0,
+                    'cliente': ot.cliente.codigo_cliente if ot.cliente else None,
+                    'procesos': [],
+                    'valor_unitario': float(ot.valor) if ot.valor else 0,
+                }
+
+                #Obtener procesos con mas detalle
+                if hasattr(ot, 'ruta_ot') and ot.ruta_ot:
+                    for item in ot.ruta_ot.items.all().order_by('item'):
+                        proceso_data = {
+                            'id': item.id,
+                            'item': item.item,
+                            'codigo_proceso': item.proceso.codigo_proceso,
+                            'descripcion_proceso': item.proceso.descripcion,
+                            'maquina_codigo': item.maquina.codigo_maquina if item.maquina else None,
+                            'maquina_descripcion': item.maquina.descripcion if item.maquina else None,
+                            'cantidad_pedido': float(item.cantidad_pedido),
+                            'cantidad_terminado': float(item.cantidad_terminado_proceso),
+                            'cantidad_perdida': float(item.cantidad_perdida_proceso),
+                            'estado_proceso': item.estado_proceso,
+                            'porcentaje_completado': float(item.porcentaje_completado),
+                            'estandar': float(item.estandar) if item.estandar else 0,
+                            'operador_actual': {
+                                'id': item.operador_actual.id,
+                                'nombre': item.operador_actual.nombre
+                            } if item.operador_actual else None,
+                            'fecha_inicio_real': item.fecha_inicio_real.isoformat() if item.fecha_inicio_real else None,
+                            'fecha_fin_real': item.fecha_fin_real.isoformat() if item.fecha_fin_real else None,
+                        }
+                        ot_data['procesos'].append(proceso_data)
+                
+                ordenes_trabajo.append(ot_data)
+            
+            return {
+                'programa_id': programa.id,
+                'fecha_captura': timezone.now().isoformat(),
+                'fecha_inicio_programa': programa.fecha_inicio.isoformat(),
+                'ordenes_trabajo': ordenes_trabajo,
+                'total_ots': len(ordenes_trabajo)
+            }
+        except Exception as e:
+            print(f"Error capturando estado completo: {str(e)}")
+            return {'error': str(e)}
+
+    def guardar_json_base(self, programa, fecha, json_data):
+        """Guarda el JSON base en el directorio del programa"""
+        import os
+        import json
+        from django.conf import settings
+
+        #Crear directiorio si no existe
+        base_dir = os.path.join(settings.BASE_DIR, 'planificacion_data', f'programa_{programa.id}')
+        os.makedirs(base_dir, exist_ok=True)
+
+        #Nombre del archivo
+        archivo_nombre = f"dia_{fecha.strftime('%Y%m%d')}_base.json"
+        archivo_path = os.path.join(base_dir, archivo_nombre)
+
+        #Guardar archivo
+        with open(archivo_path, 'w', encoding='utf-8') as f:
+            json.dump(json_data, f, ensure_ascii=False, indent=2, default=str)
+
+        return archivo_path
+
+    def calcular_valor_planificado(self, estado):
+        """Calcular valor total planificado"""
+        valor_total = 0.0
+        for ot in estado.get('ordenes_trabajo', []):
+            cantidad_total = float(ot.get('cantidad_total', 0))
+            valor_unitario = float(ot.get('valor_unitario', 0)) 
+            valor_ot = cantidad_total * valor_unitario
+        
+            valor_total += valor_ot
+        return valor_total
+
+    def calcular_kilos_planificados(self, estado):
+        """Calcula los kilos totales planificados"""
+        total_kilos = 0.0
+        for ot in estado.get('ordenes_trabajo', []):
+            peso_unitario = float(ot.get('peso_unitario', 0))
+            cantidad_total = float(ot.get('cantidad_total', 0))
+            total_kilos += peso_unitario * cantidad_total
+
+        return total_kilos
+
+
+class GuardarCambiosPlanificacionView(APIView):
+    """Vista para guardar cambios de planificación durante el día"""
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, programa_id):
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            fecha_actual = request.data.get('fecha', timezone.now().date())
+            cambios = request.data.get('cambios', [])
+
+            if isinstance(fecha_actual, str):
+                fecha_actual = datetime.strptime(fecha_actual, '%Y-%m-%d').date()
+
+            #Guardar cambios en el log
+            archivo_cambios = self.guardar_log_cambios(programa, fecha_actual, cambios, request.user)
+
+            #Actualizar JSON base del día
+            archivo_base = self.actualizar_json_base_dia(programa, fecha_actual, request.user)
+
+            return Response({
+                "success": True,
+                "cambios_guardados": len(cambios),
+                "archivo_cambios": archivo_cambios,
+                "archivo_base_actualizado": archivo_base,
+                "fecha": fecha_actual.isoformat()
+            })
+        
+        except Exception as e:
+            return Response({
+                "success": False,
+                "error": str(e)
+            }, status=500)
+        
+    def guardar_log_cambios(self, programa, fecha, cambios, usuario):
+        """Guarda los cambios en el archivo de log"""
+        import os, json
+        from django.conf import settings
+        
+        base_dir = os.path.join(settings.BASE_DIR, 'planificacion_data', f'programa_{programa.id}')
+        os.makedirs(base_dir, exist_ok=True)
+
+        archivo_nombre = f"dia_{fecha.strftime('%Y%m%d')}_cambios.json"
+        archivo_path = os.path.join(base_dir, archivo_nombre)
+
+        #Cargar cambios existentes
+        try:
+            with open(archivo_path, 'r', encoding='utf-8') as f:
+                data_cambios = json.load(f)
+        except FileNotFoundError:
+            data_cambios = {
+                "tipo": "LOG_CAMBIOS_DIA",
+                "programa_id": programa.id,
+                "fecha": fecha.isoformat(),
+                "cambios": []
+            }
+
+        #Agregar nuevos cambios
+        for cambio in cambios:
+            nuevo_cambio = {
+                "timestamp": timezone.now().isoformat(),
+                "usuario": usuario.username if usuario else "sistema",
+                **cambio
+            }
+            data_cambios["cambios"].append(nuevo_cambio)
+
+        #Guardar archivo actualizado
+        with open(archivo_path, 'w', encoding='utf-8') as f:
+            json.dump(data_cambios, f, indent=2, ensure_ascii=False, default=str)
+        
+        return archivo_path
+    
+    def actualizar_json_base_dia(self, programa, fecha, usuario):
+        """Actualizar el JSON base del día con el estado actual"""
+        #Reutilizar la función de generarjsonbaseview
+        generador = GenerarJsonBaseView()
+        json_actualizado = generador.generar_json_base_dia(programa, fecha, usuario)
+        archivo_path = generador.guardar_json_base(programa, fecha, json_actualizado)
+        return archivo_path
+    
+class VerificarPlanificacionListaView(APIView):
+    """Verifica si la planificación está lista para generar JSON base"""
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request, programa_id):
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            requisitos = self.verificar_requisitos_planificacion(programa)
+            
+            return Response({
+                "planificacion_lista": requisitos['todas_completas'],
+                "requisitos": requisitos['detalle'],
+                "puede_generar_json": requisitos['todas_completas'],
+                "programa_nombre": programa.nombre,
+                "total_ots": len(programa.programaordentrabajo_set.all())
+            })
+            
+        except Exception as e:
+            return Response({"error": str(e)}, status=500)
+    
+    def verificar_requisitos_planificacion(self, programa):
+        """Verifica requisitos básicos para generar JSON base"""
+        programa_ots = programa.programaordentrabajo_set.all()
+        
+        requisitos = {
+            'tiene_ots': len(programa_ots) > 0,
+            'ots_con_rutas': 0,
+            'procesos_con_maquinas': 0,
+            'estandares_definidos': 0,
+            'total_procesos': 0
+        }
+        
+        # ✅ CAMBIAR: Iterar sobre programa_ots y acceder a la OT a través de prog_ot.orden_trabajo
+        for prog_ot in programa_ots:
+            ot = prog_ot.orden_trabajo  # ← AGREGAR esta línea
+            
+            if hasattr(ot, 'ruta_ot') and ot.ruta_ot:
+                requisitos['ots_con_rutas'] += 1
+                
+                for item in ot.ruta_ot.items.all():
+                    requisitos['total_procesos'] += 1
+                    if item.maquina:
+                        requisitos['procesos_con_maquinas'] += 1
+                    if item.estandar and item.estandar > 0:
+                        requisitos['estandares_definidos'] += 1
+        
+        # ✅ CAMBIAR: Usar programa_ots en lugar de ots_programa
+        todas_completas = (
+            requisitos['tiene_ots'] and
+            requisitos['ots_con_rutas'] == len(programa_ots) and  # ← CAMBIAR aquí
+            requisitos['total_procesos'] > 0 and
+            requisitos['procesos_con_maquinas'] == requisitos['total_procesos'] and
+            requisitos['estandares_definidos'] == requisitos['total_procesos']
+        )
+        
+        return {
+            'todas_completas': todas_completas,
+            'detalle': requisitos
+        }
+
+class CargarJsonBaseView(APIView):
+    """Vista para cargar JSON base existente"""
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request, programa_id):
+        try:
+            import os
+            import json
+            from django.conf import settings
+            
+            # ✅ NUEVA RUTA: dentro de proyecto_abasolo
+            base_dir = os.path.join(settings.BASE_DIR, 'planificacion_data', f'programa_{programa_id}')
+            
+            print(f"[DEBUG] settings.BASE_DIR: {settings.BASE_DIR}")
+            print(f"[DEBUG] Buscando en: {base_dir}")
+            print(f"[DEBUG] Directorio existe: {os.path.exists(base_dir)}")
+            
+            if not os.path.exists(base_dir):
+                return Response({"error": "No se encontró directorio de planificación"}, status=404)
+            
+            archivos = [f for f in os.listdir(base_dir) if f.endswith('_base.json')]
+            print(f"[DEBUG] Archivos encontrados: {archivos}")
+            
+            if not archivos:
+                return Response({"error": "No se encontró JSON base. Genere primero la planificación base."}, status=404)
+            
+            # Tomar el archivo más reciente
+            archivo_mas_reciente = max(archivos, key=lambda f: os.path.getmtime(os.path.join(base_dir, f)))
+            archivo_path = os.path.join(base_dir, archivo_mas_reciente)
+            
+            print(f"[DEBUG] Archivo seleccionado: {archivo_mas_reciente}")
+            
+            with open(archivo_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            print(f"[DEBUG] ✅ JSON cargado exitosamente")
+            return Response(data)
+            
+        except Exception as e:
+            print(f"[ERROR] Error: {str(e)}")
+            return Response({"error": str(e)}, status=500)
 
 class ItemRutaEstadoView(APIView):
     """Vista para actualizar solo el estado de un ItemRuta"""

@@ -1715,3 +1715,39 @@ class PrecioProducto(models.Model):
         ).first()
         
         return precio_general
+    
+class CambioPlanificacion(models.Model):
+    from django.conf import settings
+    """Modelo parwa trackear cambios en la planificación durante el día"""
+    programa = models.ForeignKey(ProgramaProduccion, on_delete=models.CASCADE)
+    fecha = models.DateField()
+
+    #Datos del cambio
+    tipo_cambio = models.CharField(max_length=20, choices=[
+        ('PRIORIDAD', 'Cambio de Prioridad'),
+        ('ESTANDAR', 'Cambio de Estándar'),
+        ('MAQUINA', 'Cambio de Máquina'),
+        ('OPERADOR', 'Asignación de Operador'),
+        ('NUEVA_OT', 'Nueva OT Agregada'),
+        ('ELIMINAR_OT', 'OT Eliminada'),
+    ])
+
+    #Identificación del objeto cambiado
+    orden_trabajo_id = models.IntegerField(null=True, blank=True)
+    item_ruta_id = models.IntegerField(null=True, blank=True)
+
+    #Datos del cambio
+    campo_modificado = models.CharField(max_length=50)
+    valor_anterior = models.TextField()
+    valor_nuevo = models.TextField()
+
+    #Metadata
+    timestamp = models.DateTimeField(auto_now_add=True)
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
+    motivo = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ['-timestamp']
+        
+    def __str__(self):
+        return f"{self.tipo_cambio} - {self.programa.nombre} - {self.fecha}"

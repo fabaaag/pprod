@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 import { ReactSortable } from 'react-sortablejs';
 import { toast } from 'react-hot-toast';
-import { FaArrowLeft, FaHistory, FaExclamationTriangle, FaSave } from 'react-icons/fa';
+import { FaArrowLeft, FaHistory, FaExclamationTriangle, FaSave, FaFileCode, FaCalendarCheck, FaChartLine, FaChartBar } from 'react-icons/fa';
 
 // Imports de componentes base
 import CompNavbar from '../../../components/Navbar/CompNavbar';
@@ -52,6 +52,12 @@ import { ProgramHistory } from '../../../components/Programa/ProgramHistory';
 import { TimelineTimeReal } from '../../../components/Programa/TimelineTimeReal';
 import { AnalisisAvancesModal } from '../../../components/Programa/AnalisisAvancesModal';
 import InconsistenciasModal from '../../../components/Programa/InconsistenciasModal';
+
+import { FinalizarDiaModal } from '../../../new_components/Program/Details/Modals/FinalizarDiaModal';
+import { GenerarJsonBaseModal } from '../../../new_components/Program/Details/Modals/GenerarJsonBaseModal';
+import { ComparativaAvancesModal } from '../../../new_components/Program/Details/Modals/ComparativaAvancesModal';
+import { verificarPlanificacionLista, guardarCambiosPlanificacion } from '../../../api/planificacion.api';
+
 
 // Styles
 import '../../../pages/programs/ProgramDetail.css';
@@ -135,6 +141,203 @@ export default function ProgramDetail() {
     const [savingChanges, setSavingChanges] = useState(false);
     const [pendingChanges, setPendingChanges] = useState({});
     const [showPendingChangesAlert, setShowPendingChangesAlert] = useState(false);
+
+    const [showFinalizarDiaModal, setShowFinalizarDiaModal] = useState(false);
+    const [showGenerarJsonModal, setShowGenerarJsonModal] = useState(false);
+    const [showComparativaModal, setShowComparativaModal] = useState(false);
+    const [planificacionLista, setPlanificacionLista] = useState(false);
+    const [verificandoPlanificacion, setVerificandoPlanificacion] = useState(false);
+    const [cambiosPendientes, setCambiosPendientes] = useState([]);
+    const [ultimaComparativa, setUltimaComparativa] = useState(null);
+    const [fechaUltimaFinalizacion, setFechaUltimaFinalizacion] = useState(null);
+
+
+     // ✅ VERIFICAR PLANIFICACIÓN al cargar y cuando cambien los datos
+     useEffect(() => {
+        if (programId && otList?.length > 0) {
+            verificarEstadoPlanificacion();
+        }
+    }, [programId, otList, metricas]);
+
+    // ✅ DETECTAR CAMBIOS en la planificación
+    useEffect(() => {
+        // Detectar si hay cambios pendientes (ejemplo: estándares en 0, máquinas sin asignar)
+        const cambiosDetectados = [];
+        
+        otList?.forEach(ot => {
+            ot.procesos?.forEach(proceso => {
+                if (!proceso.estandar || proceso.estandar === 0) {
+                    cambiosDetectados.push({
+                        tipo: 'ESTANDAR',
+                        ot: ot.orden_trabajo,
+                        proceso: proceso.id,
+                        descripcion: `Estándar faltante en ${proceso.descripcion}`
+                    });
+                }
+                if (!proceso.maquina_id) {
+                    cambiosDetectados.push({
+                        tipo: 'MAQUINA',
+                        ot: ot.orden_trabajo,
+                        proceso: proceso.id,
+                        descripcion: `Máquina sin asignar en ${proceso.descripcion}`
+                    });
+                }
+            });
+        });
+        
+        setCambiosPendientes(cambiosDetectados);
+    }, [otList]);
+
+    // ✅ FUNCIÓN para verificar estado de planificación
+    const verificarEstadoPlanificacion = async () => {
+        try {
+            setVerificandoPlanificacion(true);
+            const resultado = await verificarPlanificacionLista(programId);
+            setPlanificacionLista(resultado.planificacion_lista);
+        } catch (error) {
+            console.error('Error verificando planificación:', error);
+        } finally {
+            setVerificandoPlanificacion(false);
+        }
+    };
+
+    // ✅ FUNCIÓN para guardar cambios pendientes
+    const handleGuardarCambios = async () => {
+        if (cambiosPendientes.length === 0) {
+            toast.info('No hay cambios pendientes para guardar');
+            return;
+        }
+
+        try {
+            await guardarCambiosPlanificacion(programId, cambiosPendientes);
+            toast.success('✅ Cambios guardados correctamente');
+            setCambiosPendientes([]);
+            verificarEstadoPlanificacion(); // Re-verificar después de guardar
+        } catch (error) {
+            console.error('Error guardando cambios:', error);
+            toast.error('❌ Error al guardar cambios');
+        }
+    };
+
+    // ✅ HANDLERS para los modales
+    const handleJsonGenerado = (resultado) => {
+        toast.success(`📄 JSON base generado: ${resultado.datosGenerados.total_ots} OTs, ${resultado.datosGenerados.total_procesos} procesos`);
+        // La planificación ya tiene JSON base, actualizar estado
+        verificarEstadoPlanificacion();
+    };
+
+    const handleDiaFinalizado = (resultado) => {
+        setUltimaComparativa(resultado.comparativa);
+        setFechaUltimaFinalizacion(resultado.fechaFinalizada);
+        
+        // Mostrar modal de comparativa si hay cambios
+        if (resultado.comparativa && resultado.cambiosImportados > 0) {
+            setShowComparativaModal(true);
+        }
+        
+        // Recargar datos del programa
+        loadProgramData();
+        
+        toast.success(`📅 Día ${resultado.fechaFinalizada} finalizado. Nueva fecha inicio: ${resultado.nuevaFechaInicio}`);
+    };
+
+    // ✅ RENDER de botones de planificación (agregar después de los controles existentes)
+    const renderBotonesPlanificacion = () => {
+        return (
+            <div className="card mb-4">
+                <div className="card-header d-flex justify-content-between align-items-center">
+                    <h6 className="mb-0">🎯 Gestión de Planificación</h6>
+                    {verificandoPlanificacion && <LoadingSpinner message="verificando planificacion" />}
+                </div>
+                <div className="card-body">
+                    <div className="d-flex flex-wrap gap-2 align-items-center">
+                        
+                        {/* Botón Generar JSON Base */}
+                        {planificacionLista ? (
+                            <Button 
+                                variant="success" 
+                                size="sm"
+                                onClick={() => setShowGenerarJsonModal(true)}
+                            >
+                                <FaFileCode className="me-1" />
+                                Generar Planificación Base
+                            </Button>
+                        ) : (
+                            <Button 
+                                variant="outline-secondary" 
+                                size="sm"
+                                disabled
+                                title="Completar requisitos primero"
+                            >
+                                <FaFileCode className="me-1" />
+                                Planificación Incompleta
+                            </Button>
+                        )}
+
+                        {/* Botón Guardar Cambios */}
+                        {cambiosPendientes.length > 0 && (
+                            <Button 
+                                variant="warning" 
+                                size="sm"
+                                onClick={handleGuardarCambios}
+                            >
+                                <FaSave className="me-1" />
+                                Guardar Cambios ({cambiosPendientes.length})
+                            </Button>
+                        )}
+
+                        {/* Botón Finalizar Día */}
+                        <Button 
+                            variant="primary" 
+                            size="sm"
+                            onClick={() => setShowFinalizarDiaModal(true)}
+                        >
+                            <FaCalendarCheck className="me-1" />
+                            Finalizar Día
+                        </Button>
+
+                        {/* Botón Ver Última Comparativa */}
+                        {ultimaComparativa && (
+                            <Button 
+                                variant="outline-info" 
+                                size="sm"
+                                onClick={() => setShowComparativaModal(true)}
+                            >
+                                <FaChartLine className="me-1" />
+                                Ver Última Comparativa
+                            </Button>
+                        )}
+                        <Button 
+                            variant="info" 
+                            size="sm"
+                            onClick={() => navigate(`/programs/${programId}/dashboard`)}
+                        >
+                            <FaChartBar className="me-1" />
+                            Ver Dashboard Completo
+                        </Button>
+                    </div>
+
+                    {/* Indicadores de estado */}
+                    <div className="mt-2">
+                        {planificacionLista ? (
+                            <Alert variant="success" className="py-2 mb-0">
+                                <small>
+                                    ✅ Planificación lista para generar JSON base
+                                </small>
+                            </Alert>
+                        ) : (
+                            <Alert variant="warning" className="py-2 mb-0">
+                                <small>
+                                    ⚠️ Completar asignaciones de máquinas y estándares antes de generar JSON base
+                                </small>
+                            </Alert>
+                        )}
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
 
     // Verificar autenticación al cargar
     useEffect(() => {
@@ -341,15 +544,92 @@ export default function ProgramDetail() {
                 p.porcentaje_completado < 100
             ).length || 0);
         }, 0);
-
+    
         const inconsistencias = checkInconsistencias();
         const estandaresCero = checkEstandaresCero();
+    
+        // ✅ VERIFICAR que otList existe y tiene datos
+        if (!otList || otList.length === 0) {
+            return {
+                procesosPorPlanificar: 0,
+                inconsistencias: inconsistencias.length,
+                estandaresCero: estandaresCero.length,
+                // Valores de kilos
+                kilosTotalPlanificados: 0,
+                kilosTotalFabricados: 0,
+                totalKilosFabricados: 0,
+                totalKilosPlanificados: 0,
+                // Valores de dinero
+                valorTotalPrograma: 0,
+                valorTotalFabricado: 0,
+                ...metricas
+            };
+        }
 
+        console.log('=== DEBUGGING CALCULAR RESUMEN ===');
+        console.log('otList.length:', otList.length);
+        console.log('otList data:', otList);
+    
+        // ✅ CÁLCULOS con validación de datos
+        const totales = otList.reduce((acc, ot, index) => {
+            // Extraer y validar datos de cada OT
+            const cantidadPedido = parseFloat(ot.orden_trabajo_cantidad_pedido || 0);
+            const cantidadAvance = parseFloat(ot.orden_trabajo_cantidad_avance || 0);
+            const pesoUnitario = parseFloat(ot.orden_trabajo_peso || 0);
+            const valorUnitario = parseFloat(ot.orden_trabajo_valor || 0);
+            
+            // Calcular valores para esta OT (solo si los datos son válidos)
+            const valorPlanificado = cantidadPedido * valorUnitario;
+            const valorFabricado = cantidadAvance * valorUnitario;
+            const kilosPlanificados = cantidadPedido * pesoUnitario;
+            const kilosFabricados = cantidadAvance * pesoUnitario;
+
+            console.log(`OT ${index + 1}:`, {
+                codigo: ot.orden_trabajo_codigo_ot,
+                cantidadPedido,
+                cantidadAvance,
+                valorUnitario,
+                valorPlanificado,
+                valorFabricado
+            });
+            
+            // Retornar acumulador actualizado
+            return {
+                valorTotalPrograma: acc.valorTotalPrograma + valorPlanificado,
+                valorTotalFabricado: acc.valorTotalFabricado + valorFabricado,
+                kilosTotalPlanificados: acc.kilosTotalPlanificados + kilosPlanificados,
+                kilosTotalFabricados: acc.kilosTotalFabricados + kilosFabricados
+            };
+        }, {
+            // Valores iniciales del acumulador
+            valorTotalPrograma: 0,
+            valorTotalFabricado: 0,
+            kilosTotalPlanificados: 0,
+            kilosTotalFabricados: 0
+        });
+
+        // ✅ LOG RESULTADO FINAL
+        console.log('Totales calculados:', totales);
+        console.log('Metricas desde useProgramState:', metricas);
+    
+        // ✅ RETORNAR todos los valores necesarios
         return {
             procesosPorPlanificar,
             inconsistencias: inconsistencias.length,
             estandaresCero: estandaresCero.length,
-            ...metricas
+            
+            // Valores de kilos (con nombres consistentes)
+            kilosTotalPlanificados: totales.kilosTotalPlanificados || 0,
+            kilosTotalFabricados: totales.kilosTotalFabricados || 0,
+            totalKilosFabricados: totales.kilosTotalFabricados || 0,    // Para ProgressBar
+            totalKilosPlanificados: totales.kilosTotalPlanificados || 0, // Para ProgressBar
+            
+            // Valores de dinero
+            valorTotalPrograma: totales.valorTotalPrograma || 0,
+            valorTotalFabricado: totales.valorTotalFabricado || 0,
+            
+            // Mantener métricas originales
+            //...metricas
         };
     };
 
@@ -466,6 +746,8 @@ export default function ProgramDetail() {
                                         Inconsistencias
                                     </Button>
                                 )}
+
+                                
                             </div>
                         </div>
                     </Col>
@@ -473,7 +755,7 @@ export default function ProgramDetail() {
 
                 {/* Resumen del programa */}
                 <Row className="mb-4">
-                    <Col md={6}>
+                    <Col md={4}>
                         <Card>
                             <Card.Body>
                                 <h5>Resumen del Programa</h5>
@@ -527,45 +809,45 @@ export default function ProgramDetail() {
                         </Card>
                     </Col>
                     
-                    <Col md={3}>
+                    <Col md={2}>
                         <Card>
                             <Card.Body>
                                 <h6>Producción</h6>
                                 <div className="mb-2">
                                     <div className="d-flex justify-content-between">
                                         <small>Kilos Planificados:</small>
-                                        <strong>{resumen.totalKilosPlanificados.toLocaleString()}</strong>
+                                        <strong>{resumen.kilosTotalPlanificados.toLocaleString()}</strong>
                                     </div>
                                 </div>
                                 <div className="mb-2">
                                     <div className="d-flex justify-content-between">
                                         <small>Kilos Fabricados:</small>
                                         <strong className="text-success">
-                                            {resumen.totalKilosFabricados.toLocaleString()}
+                                            {resumen.kilosTotalFabricados.toLocaleString()}
                                         </strong>
                                     </div>
                                 </div>
                                 <ProgressBar 
-                                    current={resumen.totalKilosFabricados}
-                                    total={resumen.totalKilosPlanificados}
+                                    current={resumen.kilosTotalFabricados}
+                                    total={resumen.kilosTotalPlanificados}
                                     showValues={false}
                                 />
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={3}>
+                    <Col md={2}> 
                         <Card>
                             <Card.Body>
                                 <h6>Valor</h6>
                                 <div className="mb-2">
                                     <div className="d-flex justify-content-between">
-                                        <small>$$ Planificados:</small>
+                                        <small>Valor <br></br>Total Planificado:</small>
                                         <strong>{resumen.valorTotalPrograma.toLocaleString()}</strong>
                                     </div>
                                 </div>
                                 <div className="mb-2">
                                     <div className="d-flex justify-content-between">
-                                        <small>$$ Fabricados:</small>
+                                        <small>Valor Total Fabricado:</small>
                                         <strong className="text-success">
                                             {resumen.valorTotalFabricado.toLocaleString()}
                                         </strong>
@@ -578,6 +860,9 @@ export default function ProgramDetail() {
                                 />
                             </Card.Body>
                         </Card>
+                    </Col>
+                    <Col md={4}>
+                        {renderBotonesPlanificacion()}
                     </Col>
                     
                 </Row>
@@ -797,6 +1082,32 @@ export default function ProgramDetail() {
                 programaId={programId}
                 isOpen={showInconsistencias}
                 onClose={() => setShowInconsistencias(false)}
+            />
+
+            {/* Modal Generar JSON Base */}
+            <GenerarJsonBaseModal
+                show={showGenerarJsonModal}
+                onHide={() => setShowGenerarJsonModal(false)}
+                programId={programId}
+                programData={programData}
+                onJsonGenerado={handleJsonGenerado}
+            />
+
+            {/* Modal Finalizar Día */}
+            <FinalizarDiaModal
+                show={showFinalizarDiaModal}
+                onHide={() => setShowFinalizarDiaModal(false)}
+                programId={programId}
+                programData={programData}
+                onDiaFinalizado={handleDiaFinalizado}
+            />
+
+            {/* Modal Comparativa */}
+            <ComparativaAvancesModal
+                show={showComparativaModal}
+                onHide={() => setShowComparativaModal(false)}
+                comparativa={ultimaComparativa}
+                fechaFinalizada={fechaUltimaFinalizacion}
             />
 
             {/* COMENTAR TEMPORALMENTE PARA TESTING */}

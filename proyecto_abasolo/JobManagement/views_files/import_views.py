@@ -412,3 +412,227 @@ def importar_rutaot_file(request):
         }, status=200)
     else:
         return JsonResponse({'error': result['errors']}, status=500)
+
+def importar_avances_produccion(fecha_referencia, programa_id=None):
+    """
+    Importa solo los avances de producción sin eliminar datos existentes
+    Similar a las funciones existentes pero solo actualiza cantidades
+    """
+
+    path_ot = 'W:\\ot.txt'
+    path_ruta = 'W:\\ruta_ot.txt'
+
+    resultado = {
+        'fecha_referencia': fecha_referencia,
+        'programa_id': programa_id,
+        'ots_procesadas': 0,
+        'items_actualizados': 0,
+        'cambios_detectados': [],
+        'errores': []
+    }
+
+    try:
+        # 1. Procesar avances de OTs
+        avances_ots = procesar_avances_ots(path_ot, programa_id)
+        resultado['ots_procesadas'] = len(avances_ots)
+
+        # 2. Procesar avances de ItemRutas
+        cambios_items = procesar_avances_items_ruta(path_ruta, programa_id)
+        resultado['items_actualizados'] = len(cambios_items)
+        resultado['cambios_detectados'] = cambios_items
+
+        return resultado
+    
+    except Exception as e:
+        resultado['errores'].append(str(e))
+        return resultado
+    
+def procesar_avances_ots(path_file, programa_id=None):
+    """Procesa solo los cambios en cantidad_avance de las OTs"""
+
+    avances_procesados = []
+
+    # Obtener OTs del programa si se especifica
+    if programa_id:
+        ots_programa = OrdenTrabajo.objects.filter(
+            programaordentrabajo__programa_id=programa_id
+        ).values_list('codigo_ot', flat=True)
+    else:
+        ots_programa = None
+
+    #Detectar encoding como en la función original
+    with open(path_file, 'rb') as f:
+        result = chardet.detect(f.read())
+        encoding = result['encoding']
+
+    with open(path_file, 'r', encoding=encoding) as file:
+        reader = csv.reader(file, delimiter='$')
+        next(reader) #saltar header
+
+        for row in reader:
+            try:
+                if len(row) != 24:
+                    continue
+
+                codigo_ot = int(row[0].strip())
+
+                #Solo procesar OTs del programa si se especifica
+                if ots_programa and codigo_ot not in ots_programa:
+                    continue
+
+                #Leer cantidad_avance del archivo
+                try:
+                    cantidad_avance_str = row[16].strip()
+                    puntos = ['', ' ', '.', '. ', ' .']
+                    if cantidad_avance_str in puntos:
+                        cantidad_avance_nueva = 0.0
+                    else:
+                        cantidad_avance_nueva = float(cantidad_avance_str)
+                except (ValueError, IndexError):
+                    continue
+
+                # Buscar OT existente
+                try:
+                    ot = OrdenTrabajo.objects.get(codigo_ot=codigo_ot)
+                    cantidad_anterior = float(ot.cantidad_avance)
+
+                    #Solo actualizar si hay diferencia
+                    if abs(cantidad_avance_nueva - cantidad_anterior) > 0.01:
+                        ot.cantidad_avance = cantidad_avance_nueva
+                        ot.save(update_fields=['cantidad_avance'])
+
+                        avances_procesados.append({
+                            'codigo_ot': codigo_ot,
+                            'cantidad_anterior': cantidad_anterior,
+                            'cantidad_nueva': cantidad_avance_nueva,
+                            'diferencia': cantidad_avance_nueva - cantidad_anterior
+                        })
+
+                except OrdenTrabajo.DoesNotExist:
+                    continue
+
+            except Exception as e:
+                print(f"Error procesando OT {codigo_ot}: {str(e)}")
+                continue
+            
+        return avances_procesados
+    
+def procesar_avances_items_ruta(path_file, programa_id=None):
+    """Procesa solo los cambios en cantidades de ItemRuta"""
+
+    cambios_procesados = []
+
+    #Obtener códigos de OT del programa si se especifica
+    if programa_id:
+        ots_programa = OrdenTrabajo.objects.filter(
+            programaordentrabajo__programa_id=programa_id
+        ).values_list('codigo_ot', flat=True)
+    else:
+        ots_programa = None
+
+    #Detectar encoding
+    with open(path_file, 'rb') as f:
+        resultado = chardet.detect(f.read())
+        encoding = resultado['encoding']
+
+    with open(path_file, 'r', encoding=encoding) as file:
+        reader = csv.reader(file, delimiter='@')
+        next(reader) #Saltar header
+
+        for idx, row in enumerate(reader):
+            try:
+                if len(row) != 9:
+                    continue
+
+                codigo_ot = int(row[0].strip())
+
+                #Solo procesar OTs del programa
+                if ots_programa and codigo_ot not in ots_programa:
+                    continue
+
+                item = int(row[1].strip())
+                codigo_proceso = row[2].strip()
+
+                #Leer cantidades del archivo
+                try:
+                    #Cantidad terminado
+                    cantidad_terminado_str = row[6].strip()
+                    puntos = ['', ' ', '.', '. ', ' .']
+                    if cantidad_terminado_str in puntos:
+                        cantidad_terminado_nueva = 0.0
+                    else:
+                        cantidad_terminado_nueva = float(cantidad_terminado_str)
+                    
+                    #Cantidad perdida
+                    cantidad_perdida_str = row[7].strip()
+                    if cantidad_perdida_str in puntos:
+                        cantidad_perdida_nueva = 0.0
+                    else:
+                        cantidad_perdida_nueva = float(cantidad_perdida_str)
+
+                except (ValueError,  IndexError):
+                    continue
+
+                #Buscar ItemRuta existente
+                try:
+                    item_ruta = ItemRuta.objects.select_related('ruta__orden_trabajo', 'proceso').get(
+                        ruta__orden_trabajo__codigo_ot=codigo_ot,
+                        item=item,
+                        proceso__codigo_proceso=codigo_proceso
+                    )
+
+                    #Guardar valores anteriores
+                    cantidad_terminado_anterior = float(item_ruta.cantidad_terminado_proceso)
+                    cantidad_perdida_anterior = float(item_ruta.cantidad_perdida_proceso)
+                    estado_anterior = item_ruta.estado_proceso
+
+                    #Verificar si hay cambios significativos
+                    cambio_terminado = abs(cantidad_terminado_nueva - cantidad_terminado_anterior) > 0.01
+                    cambio_perdida = abs(cantidad_perdida_nueva - cantidad_perdida_anterior) > 0.01
+
+                    if cambio_terminado or cambio_perdida:
+                        #Aplicar cambios usando el método del modelo
+                        if cambio_terminado:
+                            item_ruta.actualizar_progreso(
+                                cantidad_completada_nueva=cantidad_terminado_nueva,
+                                observaciones="Importado de sistema externo"
+                            )
+
+                        if cambio_perdida:
+                            item_ruta.cantidad_perdida_proceso = cantidad_perdida_nueva
+                            item_ruta.save(update_fields=['cantidad_perdida_proceso'])
+
+                        #Registrar el cambio
+                        cambio = {
+                            'codigo_ot': codigo_ot,
+                            'item': item,
+                            'codigo_proceso': codigo_proceso,
+                            'proceso_descripcion': item_ruta.proceso.descripcion,
+                            'cambios': {
+                                'cantidad_terminado': {
+                                    'anterior': cantidad_terminado_anterior,
+                                    'nueva': cantidad_terminado_nueva,
+                                    'diferencia': cantidad_terminado_nueva -cantidad_terminado_anterior
+                                } if cambio_terminado else None,
+                                'cantidad_perdida': {
+                                    'anterior': cantidad_perdida_anterior,
+                                    'nueva': cantidad_perdida_nueva,
+                                    'diferencia': cantidad_perdida_nueva - cantidad_perdida_anterior
+                                } if cambio_perdida else None,
+                                'estado': {
+                                    'anterior': estado_anterior,
+                                    'nuevo': item_ruta.estado_proceso
+                                }
+                            }
+                        }
+
+                        cambios_procesados.append(cambio)
+
+                except ItemRuta.DoesNotExist:
+                    continue
+
+            except Exception as e:
+                print(f"Error procesando ItemRuta fila {idx}: {str(e)}")
+                continue
+
+        return cambios_procesados

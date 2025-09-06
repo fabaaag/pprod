@@ -26,10 +26,13 @@ import { PiezasList } from './components/Productos/Piezas/PiezasList';
 import ProgramDetailNew from './new_pages/programs/ProgramDetail';
 import { ProduccionForm } from './pages/ProduccionForm';
 import  DashboardEjecutivoPage  from './pages/executive/DashboardEjecutivoPage';
+import ProgramDashboard from './new_pages/programs/ProgramDashboard/';
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='/programs/:programId/dashboard' element={<ProgramDashboard />}/>
         {/* Rutas públicas */}
         <Route path='login/' element={<Login/>} />
 
