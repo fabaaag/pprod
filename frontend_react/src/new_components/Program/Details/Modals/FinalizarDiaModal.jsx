@@ -117,7 +117,7 @@ export const FinalizarDiaModal = ({
                                     disabled={loading}
                                 />
                                 <Form.Text className="text-muted">
-                                    Actualiza las cantidades producidas desde el sistema ERP
+                                    Actualiza las cantidades producidas desde el sistema AVSA
                                 </Form.Text>
                             </Form.Group>
                         </Col>

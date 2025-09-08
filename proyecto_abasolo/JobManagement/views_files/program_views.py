@@ -2259,13 +2259,34 @@ class FinalizarDiaView(APIView):
             return {'error': str(e)}
         
     def importar_avances_dia(self, programa, fecha):
-        """Importa avances del día usando la función de import_views"""
+        """Importa avances del día usando la función de import_views con manejo mejorado"""
         try:
             from .import_views import importar_avances_produccion
             resultado = importar_avances_produccion(fecha, programa.id)
-            return resultado.get('cambios_detectados', [])
+            
+            # ✅ LOGGING DETALLADO para debugging
+            print(f"[DEBUG] Resultado importación:")
+            print(f"  - Archivos encontrados: {resultado.get('archivos_encontrados', {})}")
+            print(f"  - Rutas utilizadas: {resultado.get('rutas_utilizadas', {})}")
+            print(f"  - OTs procesadas: {resultado.get('ots_procesadas', 0)}")
+            print(f"  - Items actualizados: {resultado.get('items_actualizados', 0)}")
+            print(f"  - Errores: {len(resultado.get('errores', []))}")
+            
+            if resultado.get('errores'):
+                for error in resultado['errores']:
+                    print(f"[WARNING] Error importación: {error}")
+            
+            cambios_detectados = resultado.get('cambios_detectados', [])
+            print(f"[INFO] Importación completada. Cambios detectados: {len(cambios_detectados)}")
+            
+            # ✅ RETORNAR: Tanto cambios como información completa
+            return cambios_detectados
+            
+        except ImportError as e:
+            print(f"[WARNING] No se pudo importar módulo de importación: {str(e)}")
+            return []
         except Exception as e:
-            print(f"Error importando avances: {str(e)}")
+            print(f"[WARNING] Error importando avances (no crítico): {str(e)}")
             return []
        
     def generar_comparativa_simple(self, estado_antes, estado_despues, cambios_importados):

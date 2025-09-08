@@ -7,8 +7,8 @@ export const PlanificacionBaseDashboard = ({ programId, jsonBaseData }) => {
 
     const { metadata, resumen, ordenes_trabajo } = jsonBaseData;
 
-    console.log("ordenes: ", ordenes_trabajo);
-    console.log("resumen: ", resumen);
+    //console.log("ordenes: ", ordenes_trabajo);
+    //console.log("resumen: ", resumen);
 
     // Calcular estadísticas de la planificación base
     const estadisticas = {

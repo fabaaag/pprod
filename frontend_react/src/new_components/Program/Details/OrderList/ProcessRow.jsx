@@ -74,8 +74,11 @@ export const ProcessRow = ({
 
     useEffect(() => {
         cargarItems();
+    }, [programId, routesData]);
+
+    useEffect(() => {
         verificarAsignacionExistente();
-    }, [programId, routesData, proceso.id]);
+    }, [programId, proceso.id]);
 
     const cargarMaquinasPorProceso = async (itemRuta) => {
         try {

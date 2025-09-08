@@ -412,6 +412,47 @@ def importar_rutaot_file(request):
         }, status=200)
     else:
         return JsonResponse({'error': result['errors']}, status=500)
+    
+import os
+import platform
+
+def obtener_ruta_archivos():
+    """Determina la ruta de los archivos según el sistema operativo"""
+    ARCHIVO_OT = None
+    ARCHIVO_RUTA_OT = None
+    
+    if platform.system() == 'Windows':
+        ARCHIVO_OT = 'W:\\ot.txt'
+        ARCHIVO_RUTA_OT = 'W:\\ruta_ot.txt'
+        return ARCHIVO_OT, ARCHIVO_RUTA_OT
+        
+    # En Linux, intentar encontrar automáticamente
+    posibles_rutas_base = [
+        "/home/faba/Escritorio/archivos de import",  # Ruta de desarrollo en Linux
+        # ✅ AGREGAR: Ruta SMB específica que quieres probar
+        f"/run/user/{os.getuid()}/gvfs/smb-share:server=webserver,share=migracion",
+        f"{os.path.expanduser('~')}/.gvfs/smb-share:server=webserver,share=migracion",
+        "/media/migracion",  # Si está montado como media
+        "/mnt/webserver/migracion",  # Si está montado manualmente
+        "/media/smb-share/migracion",
+        f"{os.path.expanduser('~')}/.gvfs/smb-share on webserver/migracion",
+        # Rutas de desarrollo/testing en Linux
+        "/tmp/migracion",
+        f"{os.path.expanduser('~')}/temp_migracion",
+        f"{os.path.expanduser('~')}/Escritorio/migracion_test"  # Para testing
+    ]
+    
+    for ruta_base in posibles_rutas_base:
+        if os.path.exists(ruta_base):
+            ARCHIVO_OT = os.path.join(ruta_base, "ot.txt")
+            ARCHIVO_RUTA_OT = os.path.join(ruta_base, "ruta_ot.txt")
+            print(f"[INFO] Se encontró la ruta de importación: {ruta_base}")
+            return ARCHIVO_OT, ARCHIVO_RUTA_OT
+            
+    # Si no se encuentra, devolver None para indicar que no hay archivos
+    print(f"[WARNING] No se encontraron archivos de importación en las rutas habituales")
+    return None, None
+
 
 def importar_avances_produccion(fecha_referencia, programa_id=None):
     """
@@ -419,8 +460,8 @@ def importar_avances_produccion(fecha_referencia, programa_id=None):
     Similar a las funciones existentes pero solo actualiza cantidades
     """
 
-    path_ot = 'W:\\ot.txt'
-    path_ruta = 'W:\\ruta_ot.txt'
+    # ✅ USAR: La lógica de rutas dinámicas
+    path_ot, path_ruta = obtener_ruta_archivos()
 
     resultado = {
         'fecha_referencia': fecha_referencia,
@@ -428,23 +469,57 @@ def importar_avances_produccion(fecha_referencia, programa_id=None):
         'ots_procesadas': 0,
         'items_actualizados': 0,
         'cambios_detectados': [],
-        'errores': []
+        'errores': [],
+        'archivos_encontrados': {
+            'ot': path_ot and os.path.exists(path_ot),
+            'ruta': path_ruta and os.path.exists(path_ruta)
+        },
+        'rutas_utilizadas': {
+            'ot': path_ot,
+            'ruta': path_ruta
+        }
     }
 
     try:
-        # 1. Procesar avances de OTs
-        avances_ots = procesar_avances_ots(path_ot, programa_id)
-        resultado['ots_procesadas'] = len(avances_ots)
+        # ✅ VERIFICAR: Si los archivos existen antes de procesar
+        if not path_ot or not os.path.exists(path_ot):
+            mensaje = f"Archivo OT no encontrado: {path_ot or 'ruta no determinada'}"
+            resultado['errores'].append(mensaje)
+            print(f"[WARNING] {mensaje}")
+        else:
+            # 1. Procesar avances de OTs
+            try:
+                avances_ots = procesar_avances_ots(path_ot, programa_id)
+                resultado['ots_procesadas'] = len(avances_ots)
+                print(f"[INFO] OTs procesadas: {len(avances_ots)}")
+            except Exception as e:
+                error_msg = f"Error procesando OTs: {str(e)}"
+                resultado['errores'].append(error_msg)
+                print(f"[ERROR] {error_msg}")
 
-        # 2. Procesar avances de ItemRutas
-        cambios_items = procesar_avances_items_ruta(path_ruta, programa_id)
-        resultado['items_actualizados'] = len(cambios_items)
-        resultado['cambios_detectados'] = cambios_items
+        if not path_ruta or not os.path.exists(path_ruta):
+            mensaje = f"Archivo RUTA no encontrado: {path_ruta or 'ruta no determinada'}"
+            resultado['errores'].append(mensaje)
+            print(f"[WARNING] {mensaje}")
+        else:
+            # 2. Procesar avances de ItemRutas
+            try:
+                cambios_items = procesar_avances_items_ruta(path_ruta, programa_id)
+                resultado['items_actualizados'] = len(cambios_items)
+                resultado['cambios_detectados'] = cambios_items
+                print(f"[INFO] Items actualizados: {len(cambios_items)}")
+            except Exception as e:
+                error_msg = f"Error procesando rutas: {str(e)}"
+                resultado['errores'].append(error_msg)
+                print(f"[ERROR] {error_msg}")
 
+        # ✅ SIEMPRE RETORNAR: Resultado, incluso si hay errores
         return resultado
     
     except Exception as e:
-        resultado['errores'].append(str(e))
+        error_msg = f"Error general en importación: {str(e)}"
+        resultado['errores'].append(error_msg)
+        print(f"[ERROR] {error_msg}")
         return resultado
     
 def procesar_avances_ots(path_file, programa_id=None):
@@ -460,27 +535,52 @@ def procesar_avances_ots(path_file, programa_id=None):
     else:
         ots_programa = None
 
-    #Detectar encoding como en la función original
+    # ✅ ARREGLAR: Detectar encoding igual que try_imports.py
+    import chardet
     with open(path_file, 'rb') as f:
         result = chardet.detect(f.read())
         encoding = result['encoding']
 
+    print(f"[INFO] Separador FORZADO para ot.txt: '$'")
+    print(f"[INFO] Codificación detectada para ot.txt: {encoding}")
+    
     with open(path_file, 'r', encoding=encoding) as file:
+        # ✅ FORZAR: Separador $ para ot.txt
         reader = csv.reader(file, delimiter='$')
-        next(reader) #saltar header
+        next(reader)  # ✅ AGREGAR: Saltar header como en try_imports.py
 
         for row in reader:
             try:
-                if len(row) != 24:
+                # ✅ CAMBIAR: Validación más flexible como en try_imports.py
+                if len(row) == 0:  # Línea vacía
+                    continue
+                    
+                if len(row) < 17:  # Necesitamos al menos campo 16
+                    print(f"[DEBUG] Línea con {len(row)} campos (necesita 17+)")
+                    continue
+                    
+                if len(row) != 24:  # Log pero continúa
+                    print(f"[DEBUG] Línea con {len(row)} campos (esperaba 24)")
+
+                # ✅ VERIFICAR: Campo 0 no vacío
+                if not row[0].strip():
                     continue
 
-                codigo_ot = int(row[0].strip())
+                # ✅ LIMPIAR: Código OT (quitar ceros iniciales automáticamente)
+                try:
+                    codigo_ot = int(row[0].strip())
+                except ValueError:
+                    continue
 
-                #Solo procesar OTs del programa si se especifica
+                # Solo procesar OTs del programa si se especifica
                 if ots_programa and codigo_ot not in ots_programa:
                     continue
 
-                #Leer cantidad_avance del archivo
+                # ✅ VERIFICAR: Campo 16 existe
+                if len(row) <= 16:
+                    continue
+
+                # Leer cantidad_avance del archivo
                 try:
                     cantidad_avance_str = row[16].strip()
                     puntos = ['', ' ', '.', '. ', ' .']
@@ -496,7 +596,7 @@ def procesar_avances_ots(path_file, programa_id=None):
                     ot = OrdenTrabajo.objects.get(codigo_ot=codigo_ot)
                     cantidad_anterior = float(ot.cantidad_avance)
 
-                    #Solo actualizar si hay diferencia
+                    # Solo actualizar si hay diferencia
                     if abs(cantidad_avance_nueva - cantidad_anterior) > 0.01:
                         ot.cantidad_avance = cantidad_avance_nueva
                         ot.save(update_fields=['cantidad_avance'])
@@ -507,6 +607,7 @@ def procesar_avances_ots(path_file, programa_id=None):
                             'cantidad_nueva': cantidad_avance_nueva,
                             'diferencia': cantidad_avance_nueva - cantidad_anterior
                         })
+                        print(f"[DEBUG] OT {codigo_ot}: Avance {cantidad_anterior} → {cantidad_avance_nueva}")
 
                 except OrdenTrabajo.DoesNotExist:
                     continue
@@ -522,7 +623,7 @@ def procesar_avances_items_ruta(path_file, programa_id=None):
 
     cambios_procesados = []
 
-    #Obtener códigos de OT del programa si se especifica
+    # Obtener códigos de OT del programa si se especifica
     if programa_id:
         ots_programa = OrdenTrabajo.objects.filter(
             programaordentrabajo__programa_id=programa_id
@@ -530,32 +631,57 @@ def procesar_avances_items_ruta(path_file, programa_id=None):
     else:
         ots_programa = None
 
-    #Detectar encoding
+    # ✅ ARREGLAR: Detectar encoding igual que try_imports.py
+    import chardet
     with open(path_file, 'rb') as f:
         resultado = chardet.detect(f.read())
         encoding = resultado['encoding']
 
+    print(f"[INFO] Separador FORZADO para ruta_ot.txt: '@'")
+    print(f"[INFO] Codificación detectada para ruta_ot.txt: {encoding}")
+    
     with open(path_file, 'r', encoding=encoding) as file:
+        # ✅ FORZAR: Separador @ para ruta_ot.txt
         reader = csv.reader(file, delimiter='@')
-        next(reader) #Saltar header
+        # ✅ NOTA: NO usar next(reader) para ruta_ot.txt (no tiene header según try_imports.py)
 
         for idx, row in enumerate(reader):
             try:
-                if len(row) != 9:
+                # ✅ CAMBIAR: Validación más flexible
+                if len(row) == 0:  # Línea vacía
+                    continue
+                    
+                if len(row) < 8:  # Necesitamos campos 6 y 7
+                    continue
+                    
+                if len(row) != 9:  # Log pero continúa
+                    if idx < 5:  # Solo primeras líneas
+                        print(f"[DEBUG] Línea {idx} con {len(row)} campos (esperaba 9)")
+
+                # ✅ VERIFICAR: Campos esenciales no vacíos
+                if not row[0].strip() or not row[1].strip() or not row[2].strip():
                     continue
 
-                codigo_ot = int(row[0].strip())
+                # ✅ LIMPIAR: Código OT y Item
+                try:
+                    codigo_ot = int(row[0].strip())
+                    item_secuencial = int(row[1].strip())
+                except ValueError:
+                    continue
 
-                #Solo procesar OTs del programa
+                codigo_proceso = row[2].strip()
+
+                # Solo procesar OTs del programa
                 if ots_programa and codigo_ot not in ots_programa:
                     continue
 
-                item = int(row[1].strip())
-                codigo_proceso = row[2].strip()
+                # ✅ VERIFICAR: Campos 6 y 7 existen
+                if len(row) <= 7:
+                    continue
 
-                #Leer cantidades del archivo
+                # Leer cantidades del archivo
                 try:
-                    #Cantidad terminado
+                    # Cantidad terminado (campo 6)
                     cantidad_terminado_str = row[6].strip()
                     puntos = ['', ' ', '.', '. ', ' .']
                     if cantidad_terminado_str in puntos:
@@ -563,35 +689,35 @@ def procesar_avances_items_ruta(path_file, programa_id=None):
                     else:
                         cantidad_terminado_nueva = float(cantidad_terminado_str)
                     
-                    #Cantidad perdida
+                    # Cantidad perdida (campo 7)
                     cantidad_perdida_str = row[7].strip()
                     if cantidad_perdida_str in puntos:
                         cantidad_perdida_nueva = 0.0
                     else:
                         cantidad_perdida_nueva = float(cantidad_perdida_str)
 
-                except (ValueError,  IndexError):
+                except (ValueError, IndexError):
                     continue
 
-                #Buscar ItemRuta existente
+                # ✅ BUSCAR POR ITEM SECUENCIAL Y CÓDIGO DE PROCESO
                 try:
                     item_ruta = ItemRuta.objects.select_related('ruta__orden_trabajo', 'proceso').get(
                         ruta__orden_trabajo__codigo_ot=codigo_ot,
-                        item=item,
+                        item=item_secuencial,
                         proceso__codigo_proceso=codigo_proceso
                     )
 
-                    #Guardar valores anteriores
+                    # Guardar valores anteriores
                     cantidad_terminado_anterior = float(item_ruta.cantidad_terminado_proceso)
                     cantidad_perdida_anterior = float(item_ruta.cantidad_perdida_proceso)
                     estado_anterior = item_ruta.estado_proceso
 
-                    #Verificar si hay cambios significativos
+                    # Verificar si hay cambios significativos
                     cambio_terminado = abs(cantidad_terminado_nueva - cantidad_terminado_anterior) > 0.01
                     cambio_perdida = abs(cantidad_perdida_nueva - cantidad_perdida_anterior) > 0.01
 
                     if cambio_terminado or cambio_perdida:
-                        #Aplicar cambios usando el método del modelo
+                        # Aplicar cambios usando el método del modelo
                         if cambio_terminado:
                             item_ruta.actualizar_progreso(
                                 cantidad_completada_nueva=cantidad_terminado_nueva,
@@ -602,17 +728,17 @@ def procesar_avances_items_ruta(path_file, programa_id=None):
                             item_ruta.cantidad_perdida_proceso = cantidad_perdida_nueva
                             item_ruta.save(update_fields=['cantidad_perdida_proceso'])
 
-                        #Registrar el cambio
+                        # Registrar el cambio
                         cambio = {
                             'codigo_ot': codigo_ot,
-                            'item': item,
+                            'item': item_secuencial,
                             'codigo_proceso': codigo_proceso,
                             'proceso_descripcion': item_ruta.proceso.descripcion,
                             'cambios': {
                                 'cantidad_terminado': {
                                     'anterior': cantidad_terminado_anterior,
                                     'nueva': cantidad_terminado_nueva,
-                                    'diferencia': cantidad_terminado_nueva -cantidad_terminado_anterior
+                                    'diferencia': cantidad_terminado_nueva - cantidad_terminado_anterior
                                 } if cambio_terminado else None,
                                 'cantidad_perdida': {
                                     'anterior': cantidad_perdida_anterior,
@@ -627,8 +753,10 @@ def procesar_avances_items_ruta(path_file, programa_id=None):
                         }
 
                         cambios_procesados.append(cambio)
+                        print(f"[DEBUG] OT {codigo_ot} Item {item_secuencial}: Cambio aplicado")
 
                 except ItemRuta.DoesNotExist:
+                    print(f"[DEBUG] No encontrado: OT {codigo_ot}, Item {item_secuencial}, Proceso {codigo_proceso}")
                     continue
 
             except Exception as e:

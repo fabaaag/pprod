@@ -349,12 +349,12 @@ export default function ProgramDetail() {
     useEffect(() => {
         if (programId) {
             loadProgramData();
-            console.log('dssddsdsss'+
-                timelineItems.values());
+            /*console.log('dssddsdsss'+
+                timelineItems.values());*/
             loadMaquinas();
             cargarOTsConInconsistencias();
         }
-        console.log(timelineItems, 'items del timeline')
+        /*console.log(timelineItems, 'items del timeline')*/
     }, [programId]);
 
     // Sincronizar órdenes con otList
@@ -566,9 +566,9 @@ export default function ProgramDetail() {
             };
         }
 
-        console.log('=== DEBUGGING CALCULAR RESUMEN ===');
+        /*console.log('=== DEBUGGING CALCULAR RESUMEN ===');
         console.log('otList.length:', otList.length);
-        console.log('otList data:', otList);
+        console.log('otList data:', otList);*/
     
         // ✅ CÁLCULOS con validación de datos
         const totales = otList.reduce((acc, ot, index) => {
@@ -584,14 +584,14 @@ export default function ProgramDetail() {
             const kilosPlanificados = cantidadPedido * pesoUnitario;
             const kilosFabricados = cantidadAvance * pesoUnitario;
 
-            console.log(`OT ${index + 1}:`, {
+            /* console.log(`OT ${index + 1}:`, {
                 codigo: ot.orden_trabajo_codigo_ot,
                 cantidadPedido,
                 cantidadAvance,
                 valorUnitario,
                 valorPlanificado,
                 valorFabricado
-            });
+            });*/
             
             // Retornar acumulador actualizado
             return {
@@ -609,8 +609,8 @@ export default function ProgramDetail() {
         });
 
         // ✅ LOG RESULTADO FINAL
-        console.log('Totales calculados:', totales);
-        console.log('Metricas desde useProgramState:', metricas);
+        //console.log('Totales calculados:', totales);
+        //console.log('Metricas desde useProgramState:', metricas);
     
         // ✅ RETORNAR todos los valores necesarios
         return {
