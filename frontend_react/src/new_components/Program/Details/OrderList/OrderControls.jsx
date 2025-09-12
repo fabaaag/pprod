@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
-import { FaPlus, FaFilePdf, FaHistory, FaExclamationTriangle } from 'react-icons/fa';
+import { FaPlus, FaFilePdf, FaHistory, FaExclamationTriangle, FaSave } from 'react-icons/fa';
 
 export const OrderControls = ({
     onAddOrder, 
@@ -9,7 +9,10 @@ export const OrderControls = ({
     onCheckAdjustments,
     onShowTimelineReal,
     hasInconsistencies,
-    isAdmin
+    isAdmin,
+    onSaveAllProcessChanges,
+    savingChanges,
+    pendingChangesCount
 }) => {
   return (
     <div className="action-buttons d-flex gap-2 align-items-center">
@@ -23,31 +26,18 @@ export const OrderControls = ({
             Generar PDF
         </Button>
 
-        <ButtonGroup>
-                <Button 
-                    variant="outline-info"
-                    onClick={onShowHistory}
-                >
-                    <FaHistory className="me-2" />
-                    Historial
-                </Button>
+        <Button
+          variant="success"
+          size="sm"
+          onClick={onSaveAllProcessChanges}
+          disabled={savingChanges || pendingChangesCount === 0}
+          className="me-2"
+        >
+          <FaSave className="me-1" />
+          {savingChanges ? "Guardando..." : `Guardar Cambios (${pendingChangesCount})`}
+        </Button>
 
-                {isAdmin && (
-                    <Button 
-                        variant="outline-warning"
-                        onClick={onCheckAdjustments}
-                    >
-                        <FaExclamationTriangle className="me-2" />
-                        Verificar Ajustes
-                    </Button>
-                )}
-            </ButtonGroup>
-            {hasInconsistencies && (
-                <Button variant="warning" onClick={() => onShowTimelineReal()} className='ms-2'>
-                    <FaExclamationTriangle className="me-2" />
-                    Ver Inconsistencias
-                </Button>
-            )}
+        
     </div>
   );
 };

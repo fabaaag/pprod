@@ -199,3 +199,53 @@ urlpatterns += [
     path('api/produccion/fallas/', FallasDisponiblesAPIView.as_view(), name='api_fallas_disponibles'),
 
 ]
+
+urlpatterns += [
+    # ========================================================================
+    # URLS PARA SISTEMA DE SNAPSHOTS DIARIOS
+    # ========================================================================
+    
+    # Finalizar día con snapshot
+    path('api/v1/programas/<int:programa_id>/finalizar-dia-snapshot/', 
+         program_views.FinalizarDiaSnapshotView.as_view(), 
+         name='finalizar-dia-snapshot'),
+    
+    # Historial de snapshots
+    path('api/v1/programas/<int:programa_id>/snapshots/historial/', 
+         program_views.SnapshotHistorialView.as_view(), 
+         name='snapshot-historial'),
+    
+    # Comparación entre snapshots
+    path('api/v1/programas/<int:programa_id>/snapshots/comparacion/', 
+         program_views.SnapshotComparacionView.as_view(), 
+         name='snapshot-comparacion'),
+    
+    # Detalle de snapshot específico
+    path('api/v1/snapshots/<int:snapshot_id>/detalle/', 
+         program_views.SnapshotDetalleView.as_view(), 
+         name='snapshot-detalle'),
+    
+    # ========================================================================
+    # URLS MEJORADAS PARA JSON BASE Y PLANIFICACIÓN
+    # ========================================================================
+    
+    # Verificar si planificación está lista
+    path('api/v1/programas/<int:programa_id>/verificar-planificacion/', 
+         program_views.VerificarPlanificacionListaView.as_view(), 
+         name='verificar-planificacion-lista'),
+    
+    # Generar JSON base mejorado
+    path('api/v1/programas/<int:programa_id>/generar-json-base/', 
+         program_views.GenerarJsonBaseView.as_view(), 
+         name='generar-json-base'),
+    
+    # Cargar JSON base existente
+    path('api/v1/programas/<int:programa_id>/json-base/', 
+         program_views.CargarJsonBaseView.as_view(), 
+         name='cargar-json-base'),
+    
+    # Guardar cambios durante el día
+    path('api/v1/programas/<int:programa_id>/guardar-cambios/', 
+         program_views.GuardarCambiosPlanificacionView.as_view(), 
+         name='guardar-cambios-planificacion'),
+]

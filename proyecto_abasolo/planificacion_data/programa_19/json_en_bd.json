@@ -1,0 +1,1197 @@
+{
+    "ordenes": [
+        {
+            "cantidades": {
+                "avance": 0.0,
+                "porcentaje": 0.0,
+                "total": 400.0
+            },
+            "cliente": "111384",
+            "codigo_ot": 44022,
+            "descripcion": "MORDAZA SUP BRIDA MULT. 4MM  1 PER 5/8",
+            "estado_general": "PENDIENTE",
+            "fechas": {
+                "emision": "2025-03-04",
+                "termino": "2025-10-25"
+            },
+            "peso_unitario": 0.077,
+            "prioridad": 2,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "1020",
+                    "descripcion": "CORTADO",
+                    "estado": "PENDIENTE",
+                    "estandar": 200.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1306",
+                        "descripcion": "PRENSA EXCENTRICA #6"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2150",
+                    "descripcion": "ESTAMPAR EN CALIENTE",
+                    "estado": "PENDIENTE",
+                    "estandar": 200.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1205",
+                        "descripcion": "PRENSA FRICCION #5"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2254",
+                    "descripcion": "PERFORACION REDONDA",
+                    "estado": "PENDIENTE",
+                    "estandar": 150.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1313",
+                        "descripcion": "PRENSA EXCENTRICA #13"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 0.0,
+                "total": 82748.0,
+                "unitario": 206.87
+            }
+        },
+        {
+            "cantidades": {
+                "avance": 0.0,
+                "porcentaje": 0.0,
+                "total": 400.0
+            },
+            "cliente": "111384",
+            "codigo_ot": 44023,
+            "descripcion": "MORDAZA SUP BRIDA MULT. 4MM  1 PER 5/8",
+            "estado_general": "PENDIENTE",
+            "fechas": {
+                "emision": "2025-03-04",
+                "termino": "2025-11-25"
+            },
+            "peso_unitario": 0.077,
+            "prioridad": 1,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "1020",
+                    "descripcion": "CORTADO",
+                    "estado": "PENDIENTE",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1306",
+                        "descripcion": "PRENSA EXCENTRICA #6"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2150",
+                    "descripcion": "ESTAMPAR EN CALIENTE",
+                    "estado": "PENDIENTE",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1205",
+                        "descripcion": "PRENSA FRICCION #5"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2254",
+                    "descripcion": "PERFORACION REDONDA",
+                    "estado": "PENDIENTE",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1313",
+                        "descripcion": "PRENSA EXCENTRICA #13"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 0.0,
+                "total": 82748.0,
+                "unitario": 206.87
+            }
+        },
+        {
+            "cantidades": {
+                "avance": 271.0,
+                "porcentaje": 33.88,
+                "total": 800.0
+            },
+            "cliente": "111384",
+            "codigo_ot": 44024,
+            "descripcion": "PER CAB CUA ESP G2 UNC GV5/8 x 2.1/2 x 1/2A",
+            "estado_general": "EN_PROCESO",
+            "fechas": {
+                "emision": "2025-03-04",
+                "termino": "2025-06-25"
+            },
+            "peso_unitario": 0.148,
+            "prioridad": 3,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 800.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 800.0
+                    },
+                    "codigo_proceso": "1020",
+                    "descripcion": "CORTADO",
+                    "estado": "COMPLETADO",
+                    "estandar": 150.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1002",
+                        "descripcion": "TIJERA #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 800.0,
+                        "perdida": 69.0,
+                        "porcentaje": 0.0,
+                        "terminado": 598.0
+                    },
+                    "codigo_proceso": "2150",
+                    "descripcion": "ESTAMPAR EN CALIENTE",
+                    "estado": "EN PROCESO",
+                    "estandar": 74.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1202",
+                        "descripcion": "PRENSA FRICCION #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 800.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 353.0
+                    },
+                    "codigo_proceso": "2395",
+                    "descripcion": "REBARBADO DE PERNOS",
+                    "estado": "EN PROCESO",
+                    "estandar": 105.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1402",
+                        "descripcion": "REBARBADORA FAMAE #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 800.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 800.0
+                    },
+                    "codigo_proceso": "2320",
+                    "descripcion": "PUNTEADO DE PERNOS",
+                    "estado": "COMPLETADO",
+                    "estandar": 200.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 4,
+                    "maquina": {
+                        "codigo": "1601",
+                        "descripcion": "PUNTEADORA DE PERNOS #1"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 800.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 271.0
+                    },
+                    "codigo_proceso": "3060",
+                    "descripcion": "TERRAJADO DE PERNOS",
+                    "estado": "EN PROCESO",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 5,
+                    "maquina": {
+                        "codigo": "2004",
+                        "descripcion": "TERRAJADORA DE PERNOS #4"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 107757.73,
+                "total": 318104.0,
+                "unitario": 397.63
+            }
+        },
+        {
+            "cantidades": {
+                "avance": 0.0,
+                "porcentaje": 0.0,
+                "total": 400.0
+            },
+            "cliente": "111384",
+            "codigo_ot": 44025,
+            "descripcion": "PER CAB CUA ESP G2 UNC GV5/8 x 2.1/2 x 1/2A",
+            "estado_general": "PENDIENTE",
+            "fechas": {
+                "emision": "2025-03-04",
+                "termino": "2025-07-25"
+            },
+            "peso_unitario": 0.148,
+            "prioridad": 4,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 100.0
+                    },
+                    "codigo_proceso": "1020",
+                    "descripcion": "CORTADO",
+                    "estado": "EN PROCESO",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1002",
+                        "descripcion": "TIJERA #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2150",
+                    "descripcion": "ESTAMPAR EN CALIENTE",
+                    "estado": "PENDIENTE",
+                    "estandar": 37.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1202",
+                        "descripcion": "PRENSA FRICCION #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2395",
+                    "descripcion": "REBARBADO DE PERNOS",
+                    "estado": "PENDIENTE",
+                    "estandar": 52.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1402",
+                        "descripcion": "REBARBADORA FAMAE #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 238.0
+                    },
+                    "codigo_proceso": "2320",
+                    "descripcion": "PUNTEADO DE PERNOS",
+                    "estado": "EN PROCESO",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 4,
+                    "maquina": {
+                        "codigo": "1601",
+                        "descripcion": "PUNTEADORA DE PERNOS #1"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "3060",
+                    "descripcion": "TERRAJADO DE PERNOS",
+                    "estado": "PENDIENTE",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 5,
+                    "maquina": {
+                        "codigo": "2004",
+                        "descripcion": "TERRAJADORA DE PERNOS #4"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 0.0,
+                "total": 159052.0,
+                "unitario": 397.63
+            }
+        },
+        {
+            "cantidades": {
+                "avance": 0.0,
+                "porcentaje": 0.0,
+                "total": 400.0
+            },
+            "cliente": "111384",
+            "codigo_ot": 44038,
+            "descripcion": "PER CAB CUA ESP G2 UNC GV5/8 x 2.1/2 x 1/2A",
+            "estado_general": "PENDIENTE",
+            "fechas": {
+                "emision": "2025-03-04",
+                "termino": "2025-12-19"
+            },
+            "peso_unitario": 0.148,
+            "prioridad": 6,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "1020",
+                    "descripcion": "CORTADO",
+                    "estado": "PENDIENTE",
+                    "estandar": 111.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1002",
+                        "descripcion": "TIJERA #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2150",
+                    "descripcion": "ESTAMPAR EN CALIENTE",
+                    "estado": "PENDIENTE",
+                    "estandar": 37.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1202",
+                        "descripcion": "PRENSA FRICCION #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2395",
+                    "descripcion": "REBARBADO DE PERNOS",
+                    "estado": "PENDIENTE",
+                    "estandar": 52.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1402",
+                        "descripcion": "REBARBADORA FAMAE #2"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2320",
+                    "descripcion": "PUNTEADO DE PERNOS",
+                    "estado": "PENDIENTE",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 4,
+                    "maquina": {
+                        "codigo": "1601",
+                        "descripcion": "PUNTEADORA DE PERNOS #1"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "3060",
+                    "descripcion": "TERRAJADO DE PERNOS",
+                    "estado": "PENDIENTE",
+                    "estandar": 200.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 5,
+                    "maquina": {
+                        "codigo": "2004",
+                        "descripcion": "TERRAJADORA DE PERNOS #4"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 0.0,
+                "total": 159052.0,
+                "unitario": 397.63
+            }
+        },
+        {
+            "cantidades": {
+                "avance": 0.0,
+                "porcentaje": 0.0,
+                "total": 400.0
+            },
+            "cliente": "111384",
+            "codigo_ot": 44070,
+            "descripcion": "CRUC.PASO GV TREBOL   50x50x4x500-14 AZ/RO",
+            "estado_general": "PENDIENTE",
+            "fechas": {
+                "emision": "2025-03-26",
+                "termino": "2025-10-15"
+            },
+            "peso_unitario": 1.23,
+            "prioridad": 5,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "1020",
+                    "descripcion": "CORTADO",
+                    "estado": "PENDIENTE",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1003",
+                        "descripcion": "TIJERA UNIVERSAL"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2070",
+                    "descripcion": "DESTAJE",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1312",
+                        "descripcion": "PRENSA EXCENTRICA #12"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2251",
+                    "descripcion": "PERFORACION TREBOL",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1311",
+                        "descripcion": "PRENSA EXCENTRICA #11"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2253",
+                    "descripcion": "PERFORACION OVALADA",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 4,
+                    "maquina": {
+                        "codigo": "1311",
+                        "descripcion": "PRENSA EXCENTRICA #11"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "7025",
+                    "descripcion": "LOGOTIPO",
+                    "estado": "PENDIENTE",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 5,
+                    "maquina": {
+                        "codigo": "1318",
+                        "descripcion": "PRENSA EXCENTRICA #18"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 0.0,
+                "total": 1082400.0,
+                "unitario": 2706.0
+            }
+        },
+        {
+            "cantidades": {
+                "avance": 0.0,
+                "porcentaje": 0.0,
+                "total": 400.0
+            },
+            "cliente": "111384",
+            "codigo_ot": 44071,
+            "descripcion": "CRUC.PASO GV TREBOL   50x50x4x500-14 AZ/RO",
+            "estado_general": "PENDIENTE",
+            "fechas": {
+                "emision": "2025-03-26",
+                "termino": "2025-11-17"
+            },
+            "peso_unitario": 1.23,
+            "prioridad": 7,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "1020",
+                    "descripcion": "CORTADO",
+                    "estado": "PENDIENTE",
+                    "estandar": 110.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1003",
+                        "descripcion": "TIJERA UNIVERSAL"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2070",
+                    "descripcion": "DESTAJE",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1312",
+                        "descripcion": "PRENSA EXCENTRICA #12"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2251",
+                    "descripcion": "PERFORACION TREBOL",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1311",
+                        "descripcion": "PRENSA EXCENTRICA #11"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2253",
+                    "descripcion": "PERFORACION OVALADA",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 4,
+                    "maquina": {
+                        "codigo": "1311",
+                        "descripcion": "PRENSA EXCENTRICA #11"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "7025",
+                    "descripcion": "LOGOTIPO",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 5,
+                    "maquina": {
+                        "codigo": "1318",
+                        "descripcion": "PRENSA EXCENTRICA #18"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 0.0,
+                "total": 1082400.0,
+                "unitario": 2706.0
+            }
+        },
+        {
+            "cantidades": {
+                "avance": 0.0,
+                "porcentaje": 0.0,
+                "total": 400.0
+            },
+            "cliente": "111384",
+            "codigo_ot": 44072,
+            "descripcion": "CRUC.PASO GV TREBOL   50x50x4x500-14 AZ/RO",
+            "estado_general": "PENDIENTE",
+            "fechas": {
+                "emision": "2025-03-26",
+                "termino": "2025-12-15"
+            },
+            "peso_unitario": 1.23,
+            "prioridad": 8,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "1020",
+                    "descripcion": "CORTADO",
+                    "estado": "PENDIENTE",
+                    "estandar": 120.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1003",
+                        "descripcion": "TIJERA UNIVERSAL"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2070",
+                    "descripcion": "DESTAJE",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1312",
+                        "descripcion": "PRENSA EXCENTRICA #12"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2251",
+                    "descripcion": "PERFORACION TREBOL",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1311",
+                        "descripcion": "PRENSA EXCENTRICA #11"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2253",
+                    "descripcion": "PERFORACION OVALADA",
+                    "estado": "PENDIENTE",
+                    "estandar": 160.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 4,
+                    "maquina": {
+                        "codigo": "1311",
+                        "descripcion": "PRENSA EXCENTRICA #11"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 400.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "7025",
+                    "descripcion": "LOGOTIPO",
+                    "estado": "PENDIENTE",
+                    "estandar": 120.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 5,
+                    "maquina": {
+                        "codigo": "1318",
+                        "descripcion": "PRENSA EXCENTRICA #18"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 0.0,
+                "total": 1082400.0,
+                "unitario": 2706.0
+            }
+        },
+        {
+            "cantidades": {
+                "avance": 3603.0,
+                "porcentaje": 57.65,
+                "total": 6250.0
+            },
+            "cliente": "113581",
+            "codigo_ot": 44079,
+            "descripcion": "SOPORTE EXTENSION ADSS GV 240X50X8MM",
+            "estado_general": "EN_PROCESO",
+            "fechas": {
+                "emision": "2025-03-26",
+                "termino": "2025-04-22"
+            },
+            "peso_unitario": 0.58,
+            "prioridad": 9,
+            "procesos": [
+                {
+                    "cantidades": {
+                        "pedido": 6250.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 3658.0
+                    },
+                    "codigo_proceso": "1025",
+                    "descripcion": "CORTE Y PERFORADO",
+                    "estado": "EN PROCESO",
+                    "estandar": 120.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 1,
+                    "maquina": {
+                        "codigo": "1312",
+                        "descripcion": "PRENSA EXCENTRICA #12"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 6250.0,
+                        "perdida": 10.0,
+                        "porcentaje": 0.0,
+                        "terminado": 3603.0
+                    },
+                    "codigo_proceso": "2150",
+                    "descripcion": "ESTAMPAR EN CALIENTE",
+                    "estado": "EN PROCESO",
+                    "estandar": 120.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 2,
+                    "maquina": {
+                        "codigo": "1210",
+                        "descripcion": "PRENSA FRICCION #10"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                },
+                {
+                    "cantidades": {
+                        "pedido": 6250.0,
+                        "perdida": 0.0,
+                        "porcentaje": 0.0,
+                        "terminado": 0.0
+                    },
+                    "codigo_proceso": "2370",
+                    "descripcion": "REBARBADO EXTERIOR",
+                    "estado": "PENDIENTE",
+                    "estandar": 120.0,
+                    "fechas": {
+                        "fin_real": null,
+                        "inicio_real": null
+                    },
+                    "item": 3,
+                    "maquina": {
+                        "codigo": "1312",
+                        "descripcion": "PRENSA EXCENTRICA #12"
+                    },
+                    "operador": {
+                        "id": null,
+                        "nombre": "Sin operador"
+                    }
+                }
+            ],
+            "valores": {
+                "producido": 7228302.57,
+                "total": 12538687.5,
+                "unitario": 2006.19
+            }
+        }
+    ],
+    "timestamp": "2025-09-10T19:41:02.167614+00:00",
+    "total_ordenes": 9
+}

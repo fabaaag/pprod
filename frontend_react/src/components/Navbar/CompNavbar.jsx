@@ -70,29 +70,36 @@ const CompNavbar = () => {
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/operators">Gestión de Operarios</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="/supervisor-reports">Reportes</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="/dashboard-ejecutivo">📊 Dashboard Ejecutivo</NavDropdown.Item>
-                            <NavDropdown.Item href="/produccion-form">📈 Formulario de Producción</NavDropdown.Item>
+                            
+                            {user?.rol === 'ADMIN' && (
+                                <>  
+                                    <NavDropdown.Divider /> 
+                                    <NavDropdown.Item href="/dashboard-ejecutivo">📊 Dashboard Ejecutivo</NavDropdown.Item>
+                                    <NavDropdown.Divider /> 
+                                    <NavDropdown.Item href="/produccion-form">📈 Formulario de Producción</NavDropdown.Item>
+                                </>)}
                         </NavDropdown>
 
                         {/* Menú experimental eliminado */}
-
-                        <NavDropdown
-                            title={
-                                <span className="nav-dropdown-title">
-                                    <FaCogs className="nav-icon" />
-                                    <span>Gestión de Máquinas</span>
-                                </span>
-                            }
-                            menuVariant='dark'
-                            className="custom-dropdown"
-                        >
-                            <NavDropdown.Item href="/machines">Listado de Máquinas</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="">Evento Mantención</NavDropdown.Item> 
-                        </NavDropdown>
+                        {user?.rol === 'ADMIN' && (
+                            <>
+                                <NavDropdown
+                                    title={
+                                        <span className="nav-dropdown-title">
+                                            <FaCogs className="nav-icon" />
+                                            <span>Gestión de Máquinas</span>
+                                        </span>
+                                    }
+                                    menuVariant='dark'
+                                    className="custom-dropdown"
+                                >
+                                    <NavDropdown.Item href="/machines">Listado de Máquinas</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="">Evento Mantención</NavDropdown.Item> 
+                                </NavDropdown>
+                            </>
+                        )}
+                        
                     </Nav>
 
                     <Nav>

@@ -291,31 +291,6 @@ export const ProcessRow = ({
         <td className="text-center">
             <div className="d-flex flex-column gap-1 align-items-center">
                 {renderAsignacionOperador()}
-                {/*<Button
-                    variant={tieneInconsistencias ? "warning" : incluyeEnPlanificacion ? "primary" : "secondary"}
-                    size="sm"
-                    onClick={() => onProcessClick(proceso, ot)}
-                    title={
-                        tieneInconsistencias ? "Resolver inconsistencias" : 
-                        incluyeEnPlanificacion ? "Actualizar progreso" : 
-                        "Proceso completado"
-                    }
-                >
-                    {tieneInconsistencias ? '⚠️ Revisar' : 
-                    incluyeEnPlanificacion ? '📊 Progreso' : 
-                    '✅ OK'} 
-                </Button>
-                {/*tieneAvance && !tieneInconsistencias && (
-                    <Button
-                        variant="outline-warning"
-                        size="sm"
-                        onClick={() => onResetProgress(proceso.id)}
-                        title="Resetear avance a 0"
-                        style={{ fontSize: '0.7rem', padding: '0.2rem 0.4rem'}}
-                    >
-                        🔄
-                    </Button>
-                )*/}
             </div>
         </td>
 
@@ -332,8 +307,6 @@ export const ProcessRow = ({
         itemsTimeline={timelineItems}
         isLoading={isLoading}
     />
-    
-    
     </>
   );
 };

@@ -23,26 +23,7 @@ export const TimelineControls = ({
                 {showTimeline ? "Ocultar Timeline" : "Mostrar Timeline"}
             </Button>
             
-            {showTimeline && (
-                <ButtonGroup>
-                    <Button
-                        variant={timelineMode === 'planning' ? "info" : "outline-info"}
-                        onClick={() => onModeChange('planning')}
-                        disabled={timelineLoading || timelineMode === 'planning'}
-                    >
-                        <FaCalendarAlt className="me-2" />
-                        Planificación
-                    </Button>
-                    <Button
-                        variant={timelineMode === 'execution' ? "info" : "outline-info"}
-                        onClick={() => onModeChange('execution')}
-                        disabled={timelineLoading || timelineMode === 'execution'}
-                    >
-                        <FaChartLine className="me-2" />
-                        Ejecución
-                    </Button>
-                </ButtonGroup>
-            )}
+            
             
             {timelineLoading && (
                 <span className="ms-2 text-muted">

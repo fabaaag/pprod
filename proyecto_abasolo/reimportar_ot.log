@@ -1488,3 +1488,1505 @@
 2025-08-26 16:40:22,064 - INFO -   - Fallidas: 0
 2025-08-26 16:40:22,064 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
 2025-08-26 16:40:22,064 - INFO - Log detallado guardado en: /home/faba/Escritorio/Nueva carpeta/proyecto_abasolo/proyecto_abasolo/reimportar_ot.log
+2025-09-11 16:57:27,158 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-09-11 16:57:27,158 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-09-11 16:57:27,158 - INFO - Timestamp: 2025-09-11 16:57:27
+2025-09-11 16:57:27,159 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-09-11 16:57:27,159 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-09-11 16:57:27,189 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-09-11 16:57:27,196 - INFO - Registros encontrados para eliminar:
+2025-09-11 16:57:27,196 - INFO -   - programa_orden_trabajo: 9
+2025-09-11 16:57:27,196 - INFO -   - item_ruta: 985
+2025-09-11 16:57:27,196 - INFO -   - ruta_ot: 209
+2025-09-11 16:57:27,196 - INFO -   - orden_trabajo: 211
+2025-09-11 16:57:27,196 - WARNING - MODO DRY-RUN: No se eliminarán registros
+2025-09-11 16:57:27,196 - INFO - MODO DRY-RUN: No se realizarán más operaciones
+2025-09-11 17:55:06,318 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-09-11 17:55:06,318 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-09-11 17:55:06,319 - INFO - Timestamp: 2025-09-11 17:55:06
+2025-09-11 17:55:06,319 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-09-11 17:55:06,319 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-09-11 17:55:06,332 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-09-11 17:55:06,338 - INFO - Registros encontrados para eliminar:
+2025-09-11 17:55:06,338 - INFO -   - programa_orden_trabajo: 9
+2025-09-11 17:55:06,338 - INFO -   - item_ruta: 985
+2025-09-11 17:55:06,338 - INFO -   - ruta_ot: 209
+2025-09-11 17:55:06,339 - INFO -   - orden_trabajo: 211
+2025-09-11 17:55:06,339 - WARNING - MODO DRY-RUN: No se eliminarán registros
+2025-09-11 17:55:06,339 - INFO - MODO DRY-RUN: No se realizarán más operaciones
+2025-09-11 17:58:47,226 - INFO - Se encontró la ruta de la compartición: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion
+2025-09-11 17:58:47,226 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-09-11 17:58:47,227 - INFO - Timestamp: 2025-09-11 17:58:47
+2025-09-11 17:58:47,227 - INFO - Archivo OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-09-11 17:58:47,227 - INFO - Archivo Rutas OT: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ruta_ot.txt
+2025-09-11 17:58:47,241 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-09-11 17:58:47,247 - INFO - Registros encontrados para eliminar:
+2025-09-11 17:58:47,247 - INFO -   - programa_orden_trabajo: 9
+2025-09-11 17:58:47,247 - INFO -   - item_ruta: 985
+2025-09-11 17:58:47,247 - INFO -   - ruta_ot: 209
+2025-09-11 17:58:47,247 - INFO -   - orden_trabajo: 211
+2025-09-11 17:58:47,248 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-09-11 17:58:47,248 - INFO - Eliminando ItemRuta...
+2025-09-11 17:58:47,310 - INFO - Eliminando RutaOT...
+2025-09-11 17:58:47,315 - INFO - Eliminando OrdenTrabajo...
+2025-09-11 17:58:47,338 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-09-11 17:58:47,338 - INFO - === INICIANDO IMPORTACIÓN DE ÓRDENES DE TRABAJO ===
+2025-09-11 17:58:47,338 - INFO - Archivo: /run/user/1000/gvfs/smb-share:server=webserver,share=migracion/ot.txt
+2025-09-11 17:58:48,080 - INFO - Usando codificación detectada: ISO-8859-1
+2025-09-11 17:58:48,305 - INFO - Orden de trabajo 44000 creada.
+2025-09-11 17:58:48,310 - INFO - Orden de trabajo 44001 creada.
+2025-09-11 17:58:48,344 - INFO - Orden de trabajo 44014 creada.
+2025-09-11 17:58:48,352 - INFO - Orden de trabajo 44016 creada.
+2025-09-11 17:58:48,359 - INFO - Orden de trabajo 44017 creada.
+2025-09-11 17:58:48,371 - INFO - Orden de trabajo 44018 creada.
+2025-09-11 17:58:48,379 - INFO - Orden de trabajo 44019 creada.
+2025-09-11 17:58:48,389 - INFO - Orden de trabajo 44020 creada.
+2025-09-11 17:58:48,405 - INFO - Orden de trabajo 44021 creada.
+2025-09-11 17:58:48,414 - INFO - Orden de trabajo 44022 creada.
+2025-09-11 17:58:48,421 - INFO - Orden de trabajo 44023 creada.
+2025-09-11 17:58:48,433 - INFO - Orden de trabajo 44026 creada.
+2025-09-11 17:58:48,441 - INFO - Orden de trabajo 44027 creada.
+2025-09-11 17:58:48,447 - INFO - Orden de trabajo 44028 creada.
+2025-09-11 17:58:48,456 - INFO - Orden de trabajo 44029 creada.
+2025-09-11 17:58:48,475 - INFO - Orden de trabajo 44036 creada.
+2025-09-11 17:58:48,483 - INFO - Orden de trabajo 44037 creada.
+2025-09-11 17:58:48,489 - INFO - Orden de trabajo 44038 creada.
+2025-09-11 17:58:48,554 - INFO - Orden de trabajo 44070 creada.
+2025-09-11 17:58:48,560 - INFO - Orden de trabajo 44071 creada.
+2025-09-11 17:58:48,566 - INFO - Orden de trabajo 44072 creada.
+2025-09-11 17:58:48,630 - INFO - Orden de trabajo 44108 creada.
+2025-09-11 17:58:48,646 - INFO - Orden de trabajo 44117 creada.
+2025-09-11 17:58:48,713 - INFO - Orden de trabajo 44146 creada.
+2025-09-11 17:58:48,759 - INFO - Orden de trabajo 44177 creada.
+2025-09-11 17:58:48,767 - INFO - Orden de trabajo 44179 creada.
+2025-09-11 17:58:48,800 - INFO - Orden de trabajo 44194 creada.
+2025-09-11 17:58:48,826 - INFO - Orden de trabajo 44207 creada.
+2025-09-11 17:58:48,835 - INFO - Orden de trabajo 44211 creada.
+2025-09-11 17:58:48,847 - INFO - Orden de trabajo 44215 creada.
+2025-09-11 17:58:48,853 - INFO - Orden de trabajo 44216 creada.
+2025-09-11 17:58:48,859 - INFO - Orden de trabajo 44217 creada.
+2025-09-11 17:58:48,877 - INFO - Orden de trabajo 44226 creada.
+2025-09-11 17:58:48,901 - INFO - Orden de trabajo 44236 creada.
+2025-09-11 17:58:48,908 - INFO - Orden de trabajo 44237 creada.
+2025-09-11 17:58:48,913 - INFO - Orden de trabajo 44238 creada.
+2025-09-11 17:58:48,921 - INFO - Orden de trabajo 44239 creada.
+2025-09-11 17:58:48,926 - INFO - Orden de trabajo 44240 creada.
+2025-09-11 17:58:48,943 - INFO - Orden de trabajo 44244 creada.
+2025-09-11 17:58:48,962 - INFO - Orden de trabajo 44250 creada.
+2025-09-11 17:58:48,971 - INFO - Orden de trabajo 44252 creada.
+2025-09-11 17:58:48,976 - INFO - Orden de trabajo 44255 creada.
+2025-09-11 17:58:48,987 - INFO - Orden de trabajo 44257 creada.
+2025-09-11 17:58:49,013 - INFO - Orden de trabajo 44269 creada.
+2025-09-11 17:58:49,023 - INFO - Orden de trabajo 44270 creada.
+2025-09-11 17:58:49,044 - INFO - Orden de trabajo 44275 creada.
+2025-09-11 17:58:49,050 - INFO - Orden de trabajo 44276 creada.
+2025-09-11 17:58:49,059 - INFO - Orden de trabajo 44277 creada.
+2025-09-11 17:58:49,064 - INFO - Orden de trabajo 44278 creada.
+2025-09-11 17:58:49,074 - INFO - Orden de trabajo 44280 creada.
+2025-09-11 17:58:49,079 - INFO - Orden de trabajo 44281 creada.
+2025-09-11 17:58:49,100 - INFO - Orden de trabajo 44290 creada.
+2025-09-11 17:58:49,120 - INFO - Orden de trabajo 44297 creada.
+2025-09-11 17:58:49,126 - INFO - Orden de trabajo 44298 creada.
+2025-09-11 17:58:49,132 - INFO - Orden de trabajo 44299 creada.
+2025-09-11 17:58:49,140 - INFO - Orden de trabajo 44300 creada.
+2025-09-11 17:58:49,145 - INFO - Orden de trabajo 44301 creada.
+2025-09-11 17:58:49,158 - INFO - Orden de trabajo 44305 creada.
+2025-09-11 17:58:49,163 - ERROR - Error general en el comando: [Errno 22] Invalid argument
+2025-09-11 18:05:11,344 - INFO - Se encontró la ruta de la compartición: /home/faba/Escritorio/archivos de import
+2025-09-11 18:05:11,344 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-09-11 18:05:11,344 - INFO - Timestamp: 2025-09-11 18:05:11
+2025-09-11 18:05:11,344 - INFO - Archivo OT: /home/faba/Escritorio/archivos de import/ot.txt
+2025-09-11 18:05:11,344 - INFO - Archivo Rutas OT: /home/faba/Escritorio/archivos de import/ruta_ot.txt
+2025-09-11 18:05:11,344 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-09-11 18:05:11,349 - INFO - Registros encontrados para eliminar:
+2025-09-11 18:05:11,349 - INFO -   - programa_orden_trabajo: 0
+2025-09-11 18:05:11,349 - INFO -   - item_ruta: 0
+2025-09-11 18:05:11,349 - INFO -   - ruta_ot: 0
+2025-09-11 18:05:11,349 - INFO -   - orden_trabajo: 58
+2025-09-11 18:05:11,349 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-09-11 18:05:11,349 - INFO - Eliminando ItemRuta...
+2025-09-11 18:05:11,350 - INFO - Eliminando RutaOT...
+2025-09-11 18:05:11,351 - INFO - Eliminando OrdenTrabajo...
+2025-09-11 18:05:11,366 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-09-11 18:05:11,366 - INFO - === INICIANDO IMPORTACIÓN DE ÓRDENES DE TRABAJO ===
+2025-09-11 18:05:11,366 - INFO - Archivo: /home/faba/Escritorio/archivos de import/ot.txt
+2025-09-11 18:05:12,076 - INFO - Usando codificación detectada: ISO-8859-1
+2025-09-11 18:05:12,270 - INFO - Orden de trabajo 44000 creada.
+2025-09-11 18:05:12,275 - INFO - Orden de trabajo 44001 creada.
+2025-09-11 18:05:12,308 - INFO - Orden de trabajo 44014 creada.
+2025-09-11 18:05:12,315 - INFO - Orden de trabajo 44016 creada.
+2025-09-11 18:05:12,325 - INFO - Orden de trabajo 44017 creada.
+2025-09-11 18:05:12,331 - INFO - Orden de trabajo 44018 creada.
+2025-09-11 18:05:12,337 - INFO - Orden de trabajo 44019 creada.
+2025-09-11 18:05:12,347 - INFO - Orden de trabajo 44020 creada.
+2025-09-11 18:05:12,354 - INFO - Orden de trabajo 44021 creada.
+2025-09-11 18:05:12,361 - INFO - Orden de trabajo 44022 creada.
+2025-09-11 18:05:12,369 - INFO - Orden de trabajo 44023 creada.
+2025-09-11 18:05:12,382 - INFO - Orden de trabajo 44026 creada.
+2025-09-11 18:05:12,389 - INFO - Orden de trabajo 44027 creada.
+2025-09-11 18:05:12,397 - INFO - Orden de trabajo 44028 creada.
+2025-09-11 18:05:12,409 - INFO - Orden de trabajo 44029 creada.
+2025-09-11 18:05:12,426 - INFO - Orden de trabajo 44036 creada.
+2025-09-11 18:05:12,434 - INFO - Orden de trabajo 44037 creada.
+2025-09-11 18:05:12,442 - INFO - Orden de trabajo 44038 creada.
+2025-09-11 18:05:12,509 - INFO - Orden de trabajo 44070 creada.
+2025-09-11 18:05:12,515 - INFO - Orden de trabajo 44071 creada.
+2025-09-11 18:05:12,521 - INFO - Orden de trabajo 44072 creada.
+2025-09-11 18:05:12,591 - INFO - Orden de trabajo 44108 creada.
+2025-09-11 18:05:12,607 - INFO - Orden de trabajo 44117 creada.
+2025-09-11 18:05:12,671 - INFO - Orden de trabajo 44146 creada.
+2025-09-11 18:05:12,721 - INFO - Orden de trabajo 44177 creada.
+2025-09-11 18:05:12,729 - INFO - Orden de trabajo 44179 creada.
+2025-09-11 18:05:12,763 - INFO - Orden de trabajo 44194 creada.
+2025-09-11 18:05:12,788 - INFO - Orden de trabajo 44207 creada.
+2025-09-11 18:05:12,798 - INFO - Orden de trabajo 44211 creada.
+2025-09-11 18:05:12,810 - INFO - Orden de trabajo 44215 creada.
+2025-09-11 18:05:12,815 - INFO - Orden de trabajo 44216 creada.
+2025-09-11 18:05:12,821 - INFO - Orden de trabajo 44217 creada.
+2025-09-11 18:05:12,840 - INFO - Orden de trabajo 44226 creada.
+2025-09-11 18:05:12,863 - INFO - Orden de trabajo 44236 creada.
+2025-09-11 18:05:12,869 - INFO - Orden de trabajo 44237 creada.
+2025-09-11 18:05:12,877 - INFO - Orden de trabajo 44238 creada.
+2025-09-11 18:05:12,882 - INFO - Orden de trabajo 44239 creada.
+2025-09-11 18:05:12,889 - INFO - Orden de trabajo 44240 creada.
+2025-09-11 18:05:12,901 - INFO - Orden de trabajo 44244 creada.
+2025-09-11 18:05:12,917 - INFO - Orden de trabajo 44250 creada.
+2025-09-11 18:05:12,928 - INFO - Orden de trabajo 44252 creada.
+2025-09-11 18:05:12,934 - INFO - Orden de trabajo 44255 creada.
+2025-09-11 18:05:12,946 - INFO - Orden de trabajo 44257 creada.
+2025-09-11 18:05:12,966 - INFO - Orden de trabajo 44269 creada.
+2025-09-11 18:05:12,976 - INFO - Orden de trabajo 44270 creada.
+2025-09-11 18:05:13,000 - INFO - Orden de trabajo 44275 creada.
+2025-09-11 18:05:13,010 - INFO - Orden de trabajo 44276 creada.
+2025-09-11 18:05:13,018 - INFO - Orden de trabajo 44277 creada.
+2025-09-11 18:05:13,027 - INFO - Orden de trabajo 44278 creada.
+2025-09-11 18:05:13,038 - INFO - Orden de trabajo 44280 creada.
+2025-09-11 18:05:13,046 - INFO - Orden de trabajo 44281 creada.
+2025-09-11 18:05:13,080 - INFO - Orden de trabajo 44290 creada.
+2025-09-11 18:05:13,100 - INFO - Orden de trabajo 44297 creada.
+2025-09-11 18:05:13,107 - INFO - Orden de trabajo 44298 creada.
+2025-09-11 18:05:13,112 - INFO - Orden de trabajo 44299 creada.
+2025-09-11 18:05:13,118 - INFO - Orden de trabajo 44300 creada.
+2025-09-11 18:05:13,126 - INFO - Orden de trabajo 44301 creada.
+2025-09-11 18:05:13,137 - INFO - Orden de trabajo 44305 creada.
+2025-09-11 18:05:13,148 - INFO - Orden de trabajo 44309 creada.
+2025-09-11 18:05:13,156 - INFO - Orden de trabajo 44311 creada.
+2025-09-11 18:05:13,164 - INFO - Orden de trabajo 44313 creada.
+2025-09-11 18:05:13,170 - INFO - Orden de trabajo 44314 creada.
+2025-09-11 18:05:13,180 - INFO - Orden de trabajo 44316 creada.
+2025-09-11 18:05:13,194 - INFO - Orden de trabajo 44321 creada.
+2025-09-11 18:05:13,202 - INFO - Orden de trabajo 44323 creada.
+2025-09-11 18:05:13,216 - INFO - Orden de trabajo 44328 creada.
+2025-09-11 18:05:13,223 - INFO - Orden de trabajo 44329 creada.
+2025-09-11 18:05:13,229 - INFO - Orden de trabajo 44330 creada.
+2025-09-11 18:05:13,235 - INFO - Orden de trabajo 44331 creada.
+2025-09-11 18:05:13,245 - INFO - Orden de trabajo 44332 creada.
+2025-09-11 18:05:13,251 - INFO - Orden de trabajo 44333 creada.
+2025-09-11 18:05:13,260 - INFO - Orden de trabajo 44334 creada.
+2025-09-11 18:05:13,266 - INFO - Orden de trabajo 44335 creada.
+2025-09-11 18:05:13,282 - INFO - Orden de trabajo 44339 creada.
+2025-09-11 18:05:13,292 - INFO - Orden de trabajo 44341 creada.
+2025-09-11 18:05:13,300 - INFO - Orden de trabajo 44343 creada.
+2025-09-11 18:05:13,308 - INFO - Orden de trabajo 44344 creada.
+2025-09-11 18:05:13,316 - INFO - Orden de trabajo 44346 creada.
+2025-09-11 18:05:13,324 - INFO - Orden de trabajo 44347 creada.
+2025-09-11 18:05:13,330 - INFO - Orden de trabajo 44348 creada.
+2025-09-11 18:05:13,336 - INFO - Orden de trabajo 44349 creada.
+2025-09-11 18:05:13,346 - INFO - Orden de trabajo 44351 creada.
+2025-09-11 18:05:13,352 - INFO - Orden de trabajo 44352 creada.
+2025-09-11 18:05:13,359 - INFO - Orden de trabajo 44353 creada.
+2025-09-11 18:05:13,366 - INFO - Orden de trabajo 44354 creada.
+2025-09-11 18:05:13,375 - INFO - Orden de trabajo 44355 creada.
+2025-09-11 18:05:13,385 - INFO - Orden de trabajo 44356 creada.
+2025-09-11 18:05:13,391 - INFO - Orden de trabajo 44357 creada.
+2025-09-11 18:05:13,397 - INFO - Orden de trabajo 44358 creada.
+2025-09-11 18:05:13,403 - INFO - Orden de trabajo 44359 creada.
+2025-09-11 18:05:13,410 - INFO - Orden de trabajo 44360 creada.
+2025-09-11 18:05:13,415 - INFO - Orden de trabajo 44361 creada.
+2025-09-11 18:05:13,422 - INFO - Orden de trabajo 44362 creada.
+2025-09-11 18:05:13,429 - INFO - Orden de trabajo 44363 creada.
+2025-09-11 18:05:13,434 - INFO - Orden de trabajo 44365 creada.
+2025-09-11 18:05:13,442 - INFO - Orden de trabajo 44366 creada.
+2025-09-11 18:05:13,448 - INFO - Orden de trabajo 44367 creada.
+2025-09-11 18:05:13,454 - INFO - Orden de trabajo 44368 creada.
+2025-09-11 18:05:13,461 - INFO - Orden de trabajo 44369 creada.
+2025-09-11 18:05:13,467 - INFO - Orden de trabajo 44370 creada.
+2025-09-11 18:05:13,474 - INFO - Orden de trabajo 44371 creada.
+2025-09-11 18:05:13,480 - INFO - Orden de trabajo 44372 creada.
+2025-09-11 18:05:13,486 - INFO - Orden de trabajo 44373 creada.
+2025-09-11 18:05:13,494 - INFO - Orden de trabajo 44374 creada.
+2025-09-11 18:05:13,499 - INFO - Orden de trabajo 44375 creada.
+2025-09-11 18:05:13,506 - INFO - Orden de trabajo 44376 creada.
+2025-09-11 18:05:13,513 - INFO - Orden de trabajo 44377 creada.
+2025-09-11 18:05:13,518 - INFO - Orden de trabajo 44378 creada.
+2025-09-11 18:05:13,526 - INFO - Orden de trabajo 44379 creada.
+2025-09-11 18:05:13,532 - INFO - Orden de trabajo 44380 creada.
+2025-09-11 18:05:13,538 - INFO - Orden de trabajo 44381 creada.
+2025-09-11 18:05:13,546 - INFO - Orden de trabajo 44382 creada.
+2025-09-11 18:05:13,554 - INFO - Orden de trabajo 44384 creada.
+2025-09-11 18:05:13,566 - INFO - Orden de trabajo 44386 creada.
+2025-09-11 18:05:13,575 - INFO - Orden de trabajo 44388 creada.
+2025-09-11 18:05:13,581 - INFO - Orden de trabajo 44389 creada.
+2025-09-11 18:05:13,589 - INFO - Orden de trabajo 44390 creada.
+2025-09-11 18:05:13,598 - INFO - Orden de trabajo 44391 creada.
+2025-09-11 18:05:13,604 - INFO - Orden de trabajo 44392 creada.
+2025-09-11 18:05:13,613 - INFO - Orden de trabajo 44393 creada.
+2025-09-11 18:05:13,620 - INFO - Orden de trabajo 44394 creada.
+2025-09-11 18:05:13,629 - INFO - Orden de trabajo 44395 creada.
+2025-09-11 18:05:13,637 - INFO - Orden de trabajo 44396 creada.
+2025-09-11 18:05:13,646 - INFO - Orden de trabajo 44397 creada.
+2025-09-11 18:05:13,656 - INFO - Orden de trabajo 44398 creada.
+2025-09-11 18:05:13,663 - INFO - Orden de trabajo 44399 creada.
+2025-09-11 18:05:13,671 - INFO - Orden de trabajo 44400 creada.
+2025-09-11 18:05:13,680 - INFO - Orden de trabajo 44402 creada.
+2025-09-11 18:05:13,690 - INFO - Orden de trabajo 44403 creada.
+2025-09-11 18:05:13,699 - INFO - Orden de trabajo 44405 creada.
+2025-09-11 18:05:13,712 - INFO - Orden de trabajo 44406 creada.
+2025-09-11 18:05:13,721 - INFO - Orden de trabajo 44407 creada.
+2025-09-11 18:05:13,733 - INFO - Orden de trabajo 44409 creada.
+2025-09-11 18:05:13,747 - INFO - Orden de trabajo 44410 creada.
+2025-09-11 18:05:13,760 - INFO - Orden de trabajo 44411 creada.
+2025-09-11 18:05:13,779 - INFO - Orden de trabajo 44413 creada.
+2025-09-11 18:05:13,795 - INFO - Orden de trabajo 44414 creada.
+2025-09-11 18:05:13,816 - INFO - Orden de trabajo 44415 creada.
+2025-09-11 18:05:13,831 - INFO - Orden de trabajo 44416 creada.
+2025-09-11 18:05:13,840 - INFO - Orden de trabajo 44417 creada.
+2025-09-11 18:05:13,861 - INFO - Orden de trabajo 44423 creada.
+2025-09-11 18:05:13,882 - INFO - Orden de trabajo 44425 creada.
+2025-09-11 18:05:13,894 - INFO - Orden de trabajo 44428 creada.
+2025-09-11 18:05:13,904 - INFO - Orden de trabajo 44431 creada.
+2025-09-11 18:05:13,910 - INFO - Orden de trabajo 44433 creada.
+2025-09-11 18:05:13,924 - INFO - Orden de trabajo 44435 creada.
+2025-09-11 18:05:13,947 - INFO - Orden de trabajo 44437 creada.
+2025-09-11 18:05:13,952 - INFO - Orden de trabajo 44438 creada.
+2025-09-11 18:05:13,961 - INFO - Orden de trabajo 44439 creada.
+2025-09-11 18:05:13,966 - INFO - Orden de trabajo 44440 creada.
+2025-09-11 18:05:13,972 - INFO - Orden de trabajo 44441 creada.
+2025-09-11 18:05:13,982 - INFO - Orden de trabajo 44444 creada.
+2025-09-11 18:05:13,991 - INFO - Orden de trabajo 44445 creada.
+2025-09-11 18:05:13,998 - INFO - Orden de trabajo 44446 creada.
+2025-09-11 18:05:14,004 - INFO - Orden de trabajo 44447 creada.
+2025-09-11 18:05:14,014 - INFO - Orden de trabajo 44449 creada.
+2025-09-11 18:05:14,024 - INFO - Orden de trabajo 44451 creada.
+2025-09-11 18:05:14,030 - INFO - Orden de trabajo 44452 creada.
+2025-09-11 18:05:14,035 - INFO - Orden de trabajo 44453 creada.
+2025-09-11 18:05:14,044 - INFO - Orden de trabajo 44454 creada.
+2025-09-11 18:05:14,049 - INFO - Orden de trabajo 44455 creada.
+2025-09-11 18:05:14,058 - INFO - Orden de trabajo 44456 creada.
+2025-09-11 18:05:14,063 - INFO - Orden de trabajo 44457 creada.
+2025-09-11 18:05:14,069 - INFO - Orden de trabajo 44458 creada.
+2025-09-11 18:05:14,078 - INFO - Orden de trabajo 44459 creada.
+2025-09-11 18:05:14,085 - INFO - Orden de trabajo 44462 creada.
+2025-09-11 18:05:14,096 - INFO - Orden de trabajo 44464 creada.
+2025-09-11 18:05:14,101 - INFO - Orden de trabajo 44465 creada.
+2025-09-11 18:05:14,110 - INFO - Orden de trabajo 44466 creada.
+2025-09-11 18:05:14,115 - INFO - Orden de trabajo 44467 creada.
+2025-09-11 18:05:14,121 - INFO - Orden de trabajo 44468 creada.
+2025-09-11 18:05:14,130 - INFO - Orden de trabajo 44470 creada.
+2025-09-11 18:05:14,135 - INFO - Orden de trabajo 44471 creada.
+2025-09-11 18:05:14,143 - INFO - Orden de trabajo 44476 creada.
+2025-09-11 18:05:14,148 - INFO - Orden de trabajo 44477 creada.
+2025-09-11 18:05:14,156 - INFO - Orden de trabajo 44478 creada.
+2025-09-11 18:05:14,163 - INFO - Orden de trabajo 44479 creada.
+2025-09-11 18:05:14,174 - INFO - Orden de trabajo 44480 creada.
+2025-09-11 18:05:14,183 - INFO - Orden de trabajo 44481 creada.
+2025-09-11 18:05:14,190 - INFO - Orden de trabajo 44482 creada.
+2025-09-11 18:05:14,198 - INFO - Orden de trabajo 44484 creada.
+2025-09-11 18:05:14,208 - INFO - Orden de trabajo 44485 creada.
+2025-09-11 18:05:14,214 - INFO - Orden de trabajo 44486 creada.
+2025-09-11 18:05:14,223 - INFO - Orden de trabajo 44487 creada.
+2025-09-11 18:05:14,231 - INFO - Orden de trabajo 44488 creada.
+2025-09-11 18:05:14,241 - INFO - Orden de trabajo 44489 creada.
+2025-09-11 18:05:14,251 - INFO - Orden de trabajo 44490 creada.
+2025-09-11 18:05:14,261 - INFO - Orden de trabajo 44491 creada.
+2025-09-11 18:05:14,267 - INFO - Orden de trabajo 44492 creada.
+2025-09-11 18:05:14,273 - INFO - Orden de trabajo 44493 creada.
+2025-09-11 18:05:14,280 - INFO - Orden de trabajo 44494 creada.
+2025-09-11 18:05:14,289 - INFO - Orden de trabajo 44495 creada.
+2025-09-11 18:05:14,296 - INFO - Orden de trabajo 44496 creada.
+2025-09-11 18:05:14,305 - INFO - Orden de trabajo 44497 creada.
+2025-09-11 18:05:14,314 - INFO - Orden de trabajo 44498 creada.
+2025-09-11 18:05:14,323 - INFO - Orden de trabajo 44499 creada.
+2025-09-11 18:05:14,323 - INFO - === IMPORTACIÓN DE ÓRDENES COMPLETADA ===
+2025-09-11 18:05:14,323 - INFO - Creadas: 196, Actualizadas: 0, Fallidas: 0
+2025-09-11 18:05:14,323 - INFO - === INICIANDO IMPORTACIÓN DE RUTAS OT ===
+2025-09-11 18:05:14,323 - INFO - Archivo: /home/faba/Escritorio/archivos de import/ruta_ot.txt
+2025-09-11 18:05:14,329 - INFO - Encontradas 196 órdenes de trabajo existentes
+2025-09-11 18:05:18,264 - INFO - Usando codificación detectada: ascii
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 160986: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 160987: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 160988: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 160989: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 160990: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 160991: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 161048: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 161049: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 161050: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 161054: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 161055: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 161056: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,446 - ERROR - Error inesperado en fila 161057: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161058: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161059: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161060: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161061: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161062: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161063: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161064: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161065: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161066: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161067: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161068: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161069: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161070: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161071: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161072: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161073: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161074: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161075: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161076: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161077: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161088: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161089: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161090: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161091: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161092: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161093: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,447 - ERROR - Error inesperado en fila 161094: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161095: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161096: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161097: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161098: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161099: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161100: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161101: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161102: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161103: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161104: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161105: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161106: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161107: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161122: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161123: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161124: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161125: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161126: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161127: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161128: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161129: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161130: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161131: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,448 - ERROR - Error inesperado en fila 161132: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161293: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161294: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161295: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161296: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161297: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161298: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161299: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161300: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161301: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161302: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161303: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161304: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161305: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161306: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161307: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,449 - ERROR - Error inesperado en fila 161505: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161555: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161706: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161845: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161846: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161849: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161917: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161977: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161993: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161994: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161995: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161996: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161997: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,450 - ERROR - Error inesperado en fila 161998: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162019: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162020: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162021: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162059: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162060: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162061: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162062: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162107: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162108: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162109: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162110: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162111: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162112: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162113: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162114: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162115: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162116: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162117: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162118: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162119: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162120: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,451 - ERROR - Error inesperado en fila 162121: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162122: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162123: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162124: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162125: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162126: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162127: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162142: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162143: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162144: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162145: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162146: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162147: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162170: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162171: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162172: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162179: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162180: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162181: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162182: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162183: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162184: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162195: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,452 - ERROR - Error inesperado en fila 162196: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162197: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162200: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162246: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162247: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162248: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162249: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162250: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162251: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162252: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162253: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162254: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162269: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162270: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162271: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162272: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162273: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162274: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162275: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162276: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162277: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162278: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162279: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162280: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,453 - ERROR - Error inesperado en fila 162281: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162282: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162283: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162284: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162285: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162286: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162287: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162288: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162289: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162290: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162291: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162297: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162298: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162299: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162300: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162301: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162302: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162303: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162304: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162305: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162306: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162307: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162308: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162349: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162350: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,454 - ERROR - Error inesperado en fila 162351: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162352: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162353: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162384: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162385: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162386: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162387: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162388: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162389: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162390: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162391: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162392: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162393: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162394: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162395: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162396: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162397: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162398: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162399: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162400: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162401: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162402: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162403: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162404: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162405: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,455 - ERROR - Error inesperado en fila 162406: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162407: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162408: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162409: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162410: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162411: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162412: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162413: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162414: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162415: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162416: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162429: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162430: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162431: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162432: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162433: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162448: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162456: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162457: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162458: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162459: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162460: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162461: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162467: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162468: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,456 - ERROR - Error inesperado en fila 162469: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162470: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162471: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162472: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162473: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162474: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162475: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162476: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162478: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162479: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162480: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162481: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162482: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162504: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162505: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162506: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162507: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162508: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162509: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162512: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162513: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162514: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162515: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162516: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162517: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,457 - ERROR - Error inesperado en fila 162535: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162536: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162537: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162538: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162539: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162540: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162541: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162542: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162543: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162544: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162545: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162546: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162547: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162548: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162549: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162550: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162551: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162552: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162553: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162554: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162555: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162556: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162557: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162558: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162559: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162560: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,458 - ERROR - Error inesperado en fila 162561: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162562: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162563: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162564: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162565: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162566: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162567: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162568: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162569: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162582: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162589: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162590: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162591: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162592: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162593: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162594: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162595: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162603: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162604: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162605: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162606: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162607: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162608: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162609: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162610: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,459 - ERROR - Error inesperado en fila 162611: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162612: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162613: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162614: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162621: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162622: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162623: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162624: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162625: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162626: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162627: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162628: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162629: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162630: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162631: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162632: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162633: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162634: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162635: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162636: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162637: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162638: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162639: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162640: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162641: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162642: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,460 - ERROR - Error inesperado en fila 162643: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162651: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162652: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162653: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162654: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162655: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162656: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162657: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162658: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162659: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162660: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162661: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162662: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162663: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162664: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162665: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162666: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162667: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162668: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162669: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162670: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162671: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162672: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162673: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162674: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,461 - ERROR - Error inesperado en fila 162675: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162676: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162677: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162678: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162679: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162680: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162681: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162682: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162683: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162684: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162685: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162686: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162687: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162688: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162689: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162690: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162691: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162692: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162693: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162694: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162695: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162696: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162697: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162698: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162699: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162700: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162701: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,462 - ERROR - Error inesperado en fila 162702: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162703: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162704: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162705: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162706: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162707: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162708: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162709: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162710: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162711: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162712: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162713: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162714: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162715: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162716: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162717: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162718: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162719: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162720: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162721: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162722: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162723: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162724: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162725: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162726: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162727: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,463 - ERROR - Error inesperado en fila 162728: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162729: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162730: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162731: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162732: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162733: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162734: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162737: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162738: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162739: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162740: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162741: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162742: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162743: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162744: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162745: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162746: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162747: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162748: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162749: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162750: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162751: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162752: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162753: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162754: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162755: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,464 - ERROR - Error inesperado en fila 162756: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162757: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162758: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162759: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162760: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162761: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162762: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162763: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162764: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162765: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162766: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162767: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162768: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162769: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162770: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162771: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162772: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162773: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162774: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162775: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162776: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162777: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162778: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162779: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162780: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,465 - ERROR - Error inesperado en fila 162781: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162782: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162783: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162784: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162785: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162786: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162787: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162788: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162789: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162790: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162791: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162792: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162793: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162794: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162795: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162796: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162797: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162798: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162799: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162800: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162801: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162802: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162803: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162804: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162805: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162806: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,466 - ERROR - Error inesperado en fila 162807: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162808: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162809: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162810: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162811: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162812: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162813: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162814: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162815: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162816: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162817: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162818: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162819: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162820: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162821: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162822: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162823: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162829: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162830: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162831: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162832: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162833: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162834: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162835: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162841: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162842: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,467 - ERROR - Error inesperado en fila 162843: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162844: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162847: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162848: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162849: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162850: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162851: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162852: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162853: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162854: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162855: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162856: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162857: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162858: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162859: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162860: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162861: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162862: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162863: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162864: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162865: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162866: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162867: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162868: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162869: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162870: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,468 - ERROR - Error inesperado en fila 162871: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162872: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162873: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162874: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162875: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162876: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162877: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162878: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162879: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162880: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162881: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162882: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162883: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162884: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162885: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162886: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162887: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162888: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162889: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162890: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162891: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162892: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162893: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162894: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162895: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162896: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,469 - ERROR - Error inesperado en fila 162897: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162898: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162899: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162900: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162901: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162902: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162903: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162904: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162905: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162906: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162909: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162910: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162911: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162912: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162913: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162914: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162915: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162916: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162917: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162921: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162922: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162923: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162924: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162925: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162926: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162927: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,470 - ERROR - Error inesperado en fila 162928: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162929: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162930: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162931: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162932: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162933: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162934: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162935: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162940: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162941: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162942: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162943: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162944: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162945: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162946: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162947: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162948: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162949: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162950: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162951: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162952: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162953: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162954: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162955: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162956: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,471 - ERROR - Error inesperado en fila 162957: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162960: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162961: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162962: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162963: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162964: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162965: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162966: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162967: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162968: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162969: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162970: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162971: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162972: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162973: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162974: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162975: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162976: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162977: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162978: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162993: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162994: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162995: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162996: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162997: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 162998: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,472 - ERROR - Error inesperado en fila 163005: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163006: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163007: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163008: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163009: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163010: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163015: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163016: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163025: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163026: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163031: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163036: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163037: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163038: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163039: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163040: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163041: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163042: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163043: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163044: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163045: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163046: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163052: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163053: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,473 - ERROR - Error inesperado en fila 163054: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163055: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163056: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163057: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163058: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163059: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163060: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163061: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163062: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163063: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163064: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163065: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163066: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163067: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163068: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163069: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163070: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163071: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163072: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163073: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163074: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163075: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163076: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163090: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163091: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163092: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,474 - ERROR - Error inesperado en fila 163093: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163094: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163095: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163096: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163097: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163098: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163099: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163100: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163101: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163102: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163103: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163104: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163105: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163106: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163107: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163108: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163109: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163110: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163111: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163112: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163113: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163114: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163115: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163116: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163117: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163118: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,475 - ERROR - Error inesperado en fila 163119: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163127: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163128: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163129: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163130: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163131: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163132: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163133: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163141: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163142: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163143: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163144: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163145: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163146: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163147: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163148: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163149: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163150: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163151: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163152: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163153: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163154: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163155: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163156: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163157: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,476 - ERROR - Error inesperado en fila 163158: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163159: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163160: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163161: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163162: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163163: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163164: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163165: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163166: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163167: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163168: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163169: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163170: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163171: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163172: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163173: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163174: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163175: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163176: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163177: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163178: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163179: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163180: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163181: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163182: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163183: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163184: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,477 - ERROR - Error inesperado en fila 163185: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163186: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163195: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163196: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163203: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163204: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163205: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163206: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163207: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163208: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163209: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163210: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163211: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163212: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163213: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163214: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163215: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163216: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163217: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163218: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163219: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163220: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163221: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163222: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163223: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163224: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,478 - ERROR - Error inesperado en fila 163225: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163226: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163227: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163228: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163229: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163230: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163231: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163232: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163239: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163240: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163241: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163242: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163243: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163244: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163245: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163246: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163247: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163248: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163257: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163258: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163259: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163260: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163261: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163262: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,479 - ERROR - Error inesperado en fila 163263: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163264: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163265: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163266: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163267: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163268: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163269: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163270: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163271: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163272: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163273: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163274: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163275: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163276: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163277: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163278: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163279: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163280: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163281: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163282: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163283: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163284: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163285: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163286: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163287: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163288: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,480 - ERROR - Error inesperado en fila 163289: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163290: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163291: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163292: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163294: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163295: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163296: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163297: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163298: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163299: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163300: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163301: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163302: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163303: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163304: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163305: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,481 - ERROR - Error inesperado en fila 163306: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,567 - ERROR - Error inesperado en fila 163307: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,567 - ERROR - Error inesperado en fila 163308: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,567 - ERROR - Error inesperado en fila 163309: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,567 - ERROR - Error inesperado en fila 163310: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163311: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163312: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163313: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163314: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163315: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163316: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163317: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163318: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163319: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163320: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163321: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163322: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163323: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163324: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163325: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163326: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163327: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163328: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163329: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163330: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,568 - ERROR - Error inesperado en fila 163331: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163332: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163333: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163334: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163335: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163336: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163337: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163338: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163339: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163340: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163341: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163342: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163343: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163344: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163345: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163346: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163347: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163348: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163349: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163350: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163351: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163352: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163353: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163354: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - ERROR - Error inesperado en fila 163355: cannot access local variable 'orden_trabajo' where it is not associated with a value
+2025-09-11 18:05:18,569 - INFO - Estandares corregidos desde producto/pieza: 0
+2025-09-11 18:05:18,570 - INFO - === IMPORTACIÓN DE RUTAS COMPLETADA ===
+2025-09-11 18:05:18,570 - INFO - Creadas: 0, Actualizadas: 0, Fallidas: 918
+2025-09-11 18:05:18,570 - INFO - === RESUMEN FINAL ===
+2025-09-11 18:05:18,570 - INFO - Datos eliminados:
+2025-09-11 18:05:18,570 - INFO -   - programa_orden_trabajo: 0
+2025-09-11 18:05:18,570 - INFO -   - item_ruta: 0
+2025-09-11 18:05:18,570 - INFO -   - ruta_ot: 0
+2025-09-11 18:05:18,570 - INFO -   - orden_trabajo: 58
+2025-09-11 18:05:18,570 - INFO - Órdenes de trabajo:
+2025-09-11 18:05:18,570 - INFO -   - Creadas: 196
+2025-09-11 18:05:18,570 - INFO -   - Actualizadas: 0
+2025-09-11 18:05:18,570 - INFO -   - Fallidas: 0
+2025-09-11 18:05:18,570 - INFO - Rutas de órdenes:
+2025-09-11 18:05:18,570 - INFO -   - Creadas: 0
+2025-09-11 18:05:18,570 - INFO -   - Actualizadas: 0
+2025-09-11 18:05:18,570 - INFO -   - Fallidas: 918
+2025-09-11 18:05:18,570 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
+2025-09-11 18:05:18,570 - INFO - Log detallado guardado en: /home/faba/Escritorio/sistemaprod/proyecto_abasolo/reimportar_ot.log
+2025-09-11 18:08:20,991 - INFO - Se encontró la ruta de la compartición: /home/faba/Escritorio/archivos de import
+2025-09-11 18:08:20,991 - INFO - === INICIANDO COMANDO REIMPORTAR ÓRDENES DE TRABAJO ===
+2025-09-11 18:08:20,991 - INFO - Timestamp: 2025-09-11 18:08:20
+2025-09-11 18:08:20,991 - INFO - Archivo OT: /home/faba/Escritorio/archivos de import/ot.txt
+2025-09-11 18:08:20,991 - INFO - Archivo Rutas OT: /home/faba/Escritorio/archivos de import/ruta_ot.txt
+2025-09-11 18:08:20,991 - INFO - === INICIANDO LIMPIEZA DE DATOS EXISTENTES ===
+2025-09-11 18:08:20,997 - INFO - Registros encontrados para eliminar:
+2025-09-11 18:08:20,997 - INFO -   - programa_orden_trabajo: 0
+2025-09-11 18:08:20,997 - INFO -   - item_ruta: 0
+2025-09-11 18:08:20,997 - INFO -   - ruta_ot: 0
+2025-09-11 18:08:20,997 - INFO -   - orden_trabajo: 196
+2025-09-11 18:08:20,997 - INFO - Eliminando ProgramaOrdenTrabajo...
+2025-09-11 18:08:20,997 - INFO - Eliminando ItemRuta...
+2025-09-11 18:08:20,998 - INFO - Eliminando RutaOT...
+2025-09-11 18:08:20,999 - INFO - Eliminando OrdenTrabajo...
+2025-09-11 18:08:21,024 - INFO - === LIMPIEZA COMPLETADA EXITOSAMENTE ===
+2025-09-11 18:08:21,025 - INFO - === INICIANDO IMPORTACIÓN DE ÓRDENES DE TRABAJO ===
+2025-09-11 18:08:21,025 - INFO - Archivo: /home/faba/Escritorio/archivos de import/ot.txt
+2025-09-11 18:08:21,751 - INFO - Usando codificación detectada: ISO-8859-1
+2025-09-11 18:08:21,945 - INFO - Orden de trabajo 44000 creada.
+2025-09-11 18:08:21,950 - INFO - Orden de trabajo 44001 creada.
+2025-09-11 18:08:21,982 - INFO - Orden de trabajo 44014 creada.
+2025-09-11 18:08:21,989 - INFO - Orden de trabajo 44016 creada.
+2025-09-11 18:08:21,996 - INFO - Orden de trabajo 44017 creada.
+2025-09-11 18:08:22,001 - INFO - Orden de trabajo 44018 creada.
+2025-09-11 18:08:22,009 - INFO - Orden de trabajo 44019 creada.
+2025-09-11 18:08:22,017 - INFO - Orden de trabajo 44020 creada.
+2025-09-11 18:08:22,024 - INFO - Orden de trabajo 44021 creada.
+2025-09-11 18:08:22,031 - INFO - Orden de trabajo 44022 creada.
+2025-09-11 18:08:22,037 - INFO - Orden de trabajo 44023 creada.
+2025-09-11 18:08:22,051 - INFO - Orden de trabajo 44026 creada.
+2025-09-11 18:08:22,057 - INFO - Orden de trabajo 44027 creada.
+2025-09-11 18:08:22,064 - INFO - Orden de trabajo 44028 creada.
+2025-09-11 18:08:22,072 - INFO - Orden de trabajo 44029 creada.
+2025-09-11 18:08:22,090 - INFO - Orden de trabajo 44036 creada.
+2025-09-11 18:08:22,097 - INFO - Orden de trabajo 44037 creada.
+2025-09-11 18:08:22,107 - INFO - Orden de trabajo 44038 creada.
+2025-09-11 18:08:22,176 - INFO - Orden de trabajo 44070 creada.
+2025-09-11 18:08:22,182 - INFO - Orden de trabajo 44071 creada.
+2025-09-11 18:08:22,188 - INFO - Orden de trabajo 44072 creada.
+2025-09-11 18:08:22,258 - INFO - Orden de trabajo 44108 creada.
+2025-09-11 18:08:22,278 - INFO - Orden de trabajo 44117 creada.
+2025-09-11 18:08:22,348 - INFO - Orden de trabajo 44146 creada.
+2025-09-11 18:08:22,413 - INFO - Orden de trabajo 44177 creada.
+2025-09-11 18:08:22,420 - INFO - Orden de trabajo 44179 creada.
+2025-09-11 18:08:22,454 - INFO - Orden de trabajo 44194 creada.
+2025-09-11 18:08:22,482 - INFO - Orden de trabajo 44207 creada.
+2025-09-11 18:08:22,494 - INFO - Orden de trabajo 44211 creada.
+2025-09-11 18:08:22,507 - INFO - Orden de trabajo 44215 creada.
+2025-09-11 18:08:22,513 - INFO - Orden de trabajo 44216 creada.
+2025-09-11 18:08:22,519 - INFO - Orden de trabajo 44217 creada.
+2025-09-11 18:08:22,545 - INFO - Orden de trabajo 44226 creada.
+2025-09-11 18:08:22,571 - INFO - Orden de trabajo 44236 creada.
+2025-09-11 18:08:22,578 - INFO - Orden de trabajo 44237 creada.
+2025-09-11 18:08:22,583 - INFO - Orden de trabajo 44238 creada.
+2025-09-11 18:08:22,592 - INFO - Orden de trabajo 44239 creada.
+2025-09-11 18:08:22,597 - INFO - Orden de trabajo 44240 creada.
+2025-09-11 18:08:22,610 - INFO - Orden de trabajo 44244 creada.
+2025-09-11 18:08:22,628 - INFO - Orden de trabajo 44250 creada.
+2025-09-11 18:08:22,636 - INFO - Orden de trabajo 44252 creada.
+2025-09-11 18:08:22,644 - INFO - Orden de trabajo 44255 creada.
+2025-09-11 18:08:22,652 - INFO - Orden de trabajo 44257 creada.
+2025-09-11 18:08:22,679 - INFO - Orden de trabajo 44269 creada.
+2025-09-11 18:08:22,686 - INFO - Orden de trabajo 44270 creada.
+2025-09-11 18:08:22,706 - INFO - Orden de trabajo 44275 creada.
+2025-09-11 18:08:22,712 - INFO - Orden de trabajo 44276 creada.
+2025-09-11 18:08:22,717 - INFO - Orden de trabajo 44277 creada.
+2025-09-11 18:08:22,726 - INFO - Orden de trabajo 44278 creada.
+2025-09-11 18:08:22,733 - INFO - Orden de trabajo 44280 creada.
+2025-09-11 18:08:22,741 - INFO - Orden de trabajo 44281 creada.
+2025-09-11 18:08:22,763 - INFO - Orden de trabajo 44290 creada.
+2025-09-11 18:08:22,781 - INFO - Orden de trabajo 44297 creada.
+2025-09-11 18:08:22,789 - INFO - Orden de trabajo 44298 creada.
+2025-09-11 18:08:22,795 - INFO - Orden de trabajo 44299 creada.
+2025-09-11 18:08:22,803 - INFO - Orden de trabajo 44300 creada.
+2025-09-11 18:08:22,810 - INFO - Orden de trabajo 44301 creada.
+2025-09-11 18:08:22,824 - INFO - Orden de trabajo 44305 creada.
+2025-09-11 18:08:22,833 - INFO - Orden de trabajo 44309 creada.
+2025-09-11 18:08:22,843 - INFO - Orden de trabajo 44311 creada.
+2025-09-11 18:08:22,851 - INFO - Orden de trabajo 44313 creada.
+2025-09-11 18:08:22,862 - INFO - Orden de trabajo 44314 creada.
+2025-09-11 18:08:22,870 - INFO - Orden de trabajo 44316 creada.
+2025-09-11 18:08:22,884 - INFO - Orden de trabajo 44321 creada.
+2025-09-11 18:08:22,904 - INFO - Orden de trabajo 44323 creada.
+2025-09-11 18:08:22,934 - INFO - Orden de trabajo 44328 creada.
+2025-09-11 18:08:22,950 - INFO - Orden de trabajo 44329 creada.
+2025-09-11 18:08:22,965 - INFO - Orden de trabajo 44330 creada.
+2025-09-11 18:08:22,981 - INFO - Orden de trabajo 44331 creada.
+2025-09-11 18:08:22,994 - INFO - Orden de trabajo 44332 creada.
+2025-09-11 18:08:23,007 - INFO - Orden de trabajo 44333 creada.
+2025-09-11 18:08:23,015 - INFO - Orden de trabajo 44334 creada.
+2025-09-11 18:08:23,026 - INFO - Orden de trabajo 44335 creada.
+2025-09-11 18:08:23,042 - INFO - Orden de trabajo 44339 creada.
+2025-09-11 18:08:23,062 - INFO - Orden de trabajo 44341 creada.
+2025-09-11 18:08:23,071 - INFO - Orden de trabajo 44343 creada.
+2025-09-11 18:08:23,079 - INFO - Orden de trabajo 44344 creada.
+2025-09-11 18:08:23,096 - INFO - Orden de trabajo 44346 creada.
+2025-09-11 18:08:23,107 - INFO - Orden de trabajo 44347 creada.
+2025-09-11 18:08:23,113 - INFO - Orden de trabajo 44348 creada.
+2025-09-11 18:08:23,121 - INFO - Orden de trabajo 44349 creada.
+2025-09-11 18:08:23,133 - INFO - Orden de trabajo 44351 creada.
+2025-09-11 18:08:23,142 - INFO - Orden de trabajo 44352 creada.
+2025-09-11 18:08:23,147 - INFO - Orden de trabajo 44353 creada.
+2025-09-11 18:08:23,160 - INFO - Orden de trabajo 44354 creada.
+2025-09-11 18:08:23,165 - INFO - Orden de trabajo 44355 creada.
+2025-09-11 18:08:23,174 - INFO - Orden de trabajo 44356 creada.
+2025-09-11 18:08:23,182 - INFO - Orden de trabajo 44357 creada.
+2025-09-11 18:08:23,190 - INFO - Orden de trabajo 44358 creada.
+2025-09-11 18:08:23,196 - INFO - Orden de trabajo 44359 creada.
+2025-09-11 18:08:23,201 - INFO - Orden de trabajo 44360 creada.
+2025-09-11 18:08:23,211 - INFO - Orden de trabajo 44361 creada.
+2025-09-11 18:08:23,218 - INFO - Orden de trabajo 44362 creada.
+2025-09-11 18:08:23,228 - INFO - Orden de trabajo 44363 creada.
+2025-09-11 18:08:23,236 - INFO - Orden de trabajo 44365 creada.
+2025-09-11 18:08:23,246 - INFO - Orden de trabajo 44366 creada.
+2025-09-11 18:08:23,256 - INFO - Orden de trabajo 44367 creada.
+2025-09-11 18:08:23,264 - INFO - Orden de trabajo 44368 creada.
+2025-09-11 18:08:23,271 - INFO - Orden de trabajo 44369 creada.
+2025-09-11 18:08:23,278 - INFO - Orden de trabajo 44370 creada.
+2025-09-11 18:08:23,283 - INFO - Orden de trabajo 44371 creada.
+2025-09-11 18:08:23,293 - INFO - Orden de trabajo 44372 creada.
+2025-09-11 18:08:23,298 - INFO - Orden de trabajo 44373 creada.
+2025-09-11 18:08:23,306 - INFO - Orden de trabajo 44374 creada.
+2025-09-11 18:08:23,311 - INFO - Orden de trabajo 44375 creada.
+2025-09-11 18:08:23,317 - INFO - Orden de trabajo 44376 creada.
+2025-09-11 18:08:23,325 - INFO - Orden de trabajo 44377 creada.
+2025-09-11 18:08:23,330 - INFO - Orden de trabajo 44378 creada.
+2025-09-11 18:08:23,338 - INFO - Orden de trabajo 44379 creada.
+2025-09-11 18:08:23,344 - INFO - Orden de trabajo 44380 creada.
+2025-09-11 18:08:23,351 - INFO - Orden de trabajo 44381 creada.
+2025-09-11 18:08:23,360 - INFO - Orden de trabajo 44382 creada.
+2025-09-11 18:08:23,369 - INFO - Orden de trabajo 44384 creada.
+2025-09-11 18:08:23,381 - INFO - Orden de trabajo 44386 creada.
+2025-09-11 18:08:23,393 - INFO - Orden de trabajo 44388 creada.
+2025-09-11 18:08:23,399 - INFO - Orden de trabajo 44389 creada.
+2025-09-11 18:08:23,409 - INFO - Orden de trabajo 44390 creada.
+2025-09-11 18:08:23,415 - INFO - Orden de trabajo 44391 creada.
+2025-09-11 18:08:23,424 - INFO - Orden de trabajo 44392 creada.
+2025-09-11 18:08:23,430 - INFO - Orden de trabajo 44393 creada.
+2025-09-11 18:08:23,438 - INFO - Orden de trabajo 44394 creada.
+2025-09-11 18:08:23,445 - INFO - Orden de trabajo 44395 creada.
+2025-09-11 18:08:23,453 - INFO - Orden de trabajo 44396 creada.
+2025-09-11 18:08:23,461 - INFO - Orden de trabajo 44397 creada.
+2025-09-11 18:08:23,466 - INFO - Orden de trabajo 44398 creada.
+2025-09-11 18:08:23,475 - INFO - Orden de trabajo 44399 creada.
+2025-09-11 18:08:23,486 - INFO - Orden de trabajo 44400 creada.
+2025-09-11 18:08:23,502 - INFO - Orden de trabajo 44402 creada.
+2025-09-11 18:08:23,512 - INFO - Orden de trabajo 44403 creada.
+2025-09-11 18:08:23,528 - INFO - Orden de trabajo 44405 creada.
+2025-09-11 18:08:23,536 - INFO - Orden de trabajo 44406 creada.
+2025-09-11 18:08:23,543 - INFO - Orden de trabajo 44407 creada.
+2025-09-11 18:08:23,552 - INFO - Orden de trabajo 44409 creada.
+2025-09-11 18:08:23,558 - INFO - Orden de trabajo 44410 creada.
+2025-09-11 18:08:23,566 - INFO - Orden de trabajo 44411 creada.
+2025-09-11 18:08:23,575 - INFO - Orden de trabajo 44413 creada.
+2025-09-11 18:08:23,582 - INFO - Orden de trabajo 44414 creada.
+2025-09-11 18:08:23,590 - INFO - Orden de trabajo 44415 creada.
+2025-09-11 18:08:23,596 - INFO - Orden de trabajo 44416 creada.
+2025-09-11 18:08:23,601 - INFO - Orden de trabajo 44417 creada.
+2025-09-11 18:08:23,612 - INFO - Orden de trabajo 44423 creada.
+2025-09-11 18:08:23,622 - INFO - Orden de trabajo 44425 creada.
+2025-09-11 18:08:23,629 - INFO - Orden de trabajo 44428 creada.
+2025-09-11 18:08:23,635 - INFO - Orden de trabajo 44431 creada.
+2025-09-11 18:08:23,643 - INFO - Orden de trabajo 44433 creada.
+2025-09-11 18:08:23,649 - INFO - Orden de trabajo 44435 creada.
+2025-09-11 18:08:23,660 - INFO - Orden de trabajo 44437 creada.
+2025-09-11 18:08:23,665 - INFO - Orden de trabajo 44438 creada.
+2025-09-11 18:08:23,674 - INFO - Orden de trabajo 44439 creada.
+2025-09-11 18:08:23,679 - INFO - Orden de trabajo 44440 creada.
+2025-09-11 18:08:23,685 - INFO - Orden de trabajo 44441 creada.
+2025-09-11 18:08:23,698 - INFO - Orden de trabajo 44444 creada.
+2025-09-11 18:08:23,708 - INFO - Orden de trabajo 44445 creada.
+2025-09-11 18:08:23,714 - INFO - Orden de trabajo 44446 creada.
+2025-09-11 18:08:23,721 - INFO - Orden de trabajo 44447 creada.
+2025-09-11 18:08:23,733 - INFO - Orden de trabajo 44449 creada.
+2025-09-11 18:08:23,746 - INFO - Orden de trabajo 44451 creada.
+2025-09-11 18:08:23,753 - INFO - Orden de trabajo 44452 creada.
+2025-09-11 18:08:23,762 - INFO - Orden de trabajo 44453 creada.
+2025-09-11 18:08:23,775 - INFO - Orden de trabajo 44454 creada.
+2025-09-11 18:08:23,782 - INFO - Orden de trabajo 44455 creada.
+2025-09-11 18:08:23,792 - INFO - Orden de trabajo 44456 creada.
+2025-09-11 18:08:23,799 - INFO - Orden de trabajo 44457 creada.
+2025-09-11 18:08:23,808 - INFO - Orden de trabajo 44458 creada.
+2025-09-11 18:08:23,813 - INFO - Orden de trabajo 44459 creada.
+2025-09-11 18:08:23,825 - INFO - Orden de trabajo 44462 creada.
+2025-09-11 18:08:23,836 - INFO - Orden de trabajo 44464 creada.
+2025-09-11 18:08:23,844 - INFO - Orden de trabajo 44465 creada.
+2025-09-11 18:08:23,852 - INFO - Orden de trabajo 44466 creada.
+2025-09-11 18:08:23,862 - INFO - Orden de trabajo 44467 creada.
+2025-09-11 18:08:23,869 - INFO - Orden de trabajo 44468 creada.
+2025-09-11 18:08:23,881 - INFO - Orden de trabajo 44470 creada.
+2025-09-11 18:08:23,889 - INFO - Orden de trabajo 44471 creada.
+2025-09-11 18:08:23,895 - INFO - Orden de trabajo 44476 creada.
+2025-09-11 18:08:23,901 - INFO - Orden de trabajo 44477 creada.
+2025-09-11 18:08:23,910 - INFO - Orden de trabajo 44478 creada.
+2025-09-11 18:08:23,915 - INFO - Orden de trabajo 44479 creada.
+2025-09-11 18:08:23,923 - INFO - Orden de trabajo 44480 creada.
+2025-09-11 18:08:23,930 - INFO - Orden de trabajo 44481 creada.
+2025-09-11 18:08:23,937 - INFO - Orden de trabajo 44482 creada.
+2025-09-11 18:08:23,951 - INFO - Orden de trabajo 44484 creada.
+2025-09-11 18:08:23,965 - INFO - Orden de trabajo 44485 creada.
+2025-09-11 18:08:23,981 - INFO - Orden de trabajo 44486 creada.
+2025-09-11 18:08:23,999 - INFO - Orden de trabajo 44487 creada.
+2025-09-11 18:08:24,017 - INFO - Orden de trabajo 44488 creada.
+2025-09-11 18:08:24,029 - INFO - Orden de trabajo 44489 creada.
+2025-09-11 18:08:24,043 - INFO - Orden de trabajo 44490 creada.
+2025-09-11 18:08:24,062 - INFO - Orden de trabajo 44491 creada.
+2025-09-11 18:08:24,076 - INFO - Orden de trabajo 44492 creada.
+2025-09-11 18:08:24,088 - INFO - Orden de trabajo 44493 creada.
+2025-09-11 18:08:24,095 - INFO - Orden de trabajo 44494 creada.
+2025-09-11 18:08:24,110 - INFO - Orden de trabajo 44495 creada.
+2025-09-11 18:08:24,127 - INFO - Orden de trabajo 44496 creada.
+2025-09-11 18:08:24,133 - INFO - Orden de trabajo 44497 creada.
+2025-09-11 18:08:24,142 - INFO - Orden de trabajo 44498 creada.
+2025-09-11 18:08:24,147 - INFO - Orden de trabajo 44499 creada.
+2025-09-11 18:08:24,147 - INFO - === IMPORTACIÓN DE ÓRDENES COMPLETADA ===
+2025-09-11 18:08:24,147 - INFO - Creadas: 196, Actualizadas: 0, Fallidas: 0
+2025-09-11 18:08:24,147 - INFO - === INICIANDO IMPORTACIÓN DE RUTAS OT ===
+2025-09-11 18:08:24,147 - INFO - Archivo: /home/faba/Escritorio/archivos de import/ruta_ot.txt
+2025-09-11 18:08:24,154 - INFO - Encontradas 196 órdenes de trabajo existentes
+2025-09-11 18:08:28,098 - INFO - Usando codificación detectada: ascii
+2025-09-11 18:08:34,723 - INFO - Estandares corregidos desde producto/pieza: 0
+2025-09-11 18:08:34,723 - INFO - === IMPORTACIÓN DE RUTAS COMPLETADA ===
+2025-09-11 18:08:34,723 - INFO - Creadas: 918, Actualizadas: 0, Fallidas: 0
+2025-09-11 18:08:34,723 - INFO - === RESUMEN FINAL ===
+2025-09-11 18:08:34,723 - INFO - Datos eliminados:
+2025-09-11 18:08:34,723 - INFO -   - programa_orden_trabajo: 0
+2025-09-11 18:08:34,723 - INFO -   - item_ruta: 0
+2025-09-11 18:08:34,723 - INFO -   - ruta_ot: 0
+2025-09-11 18:08:34,723 - INFO -   - orden_trabajo: 196
+2025-09-11 18:08:34,723 - INFO - Órdenes de trabajo:
+2025-09-11 18:08:34,723 - INFO -   - Creadas: 196
+2025-09-11 18:08:34,723 - INFO -   - Actualizadas: 0
+2025-09-11 18:08:34,723 - INFO -   - Fallidas: 0
+2025-09-11 18:08:34,723 - INFO - Rutas de órdenes:
+2025-09-11 18:08:34,723 - INFO -   - Creadas: 918
+2025-09-11 18:08:34,723 - INFO -   - Actualizadas: 0
+2025-09-11 18:08:34,724 - INFO -   - Fallidas: 0
+2025-09-11 18:08:34,724 - INFO - === PROCESO COMPLETADO EXITOSAMENTE ===
+2025-09-11 18:08:34,724 - INFO - Log detallado guardado en: /home/faba/Escritorio/sistemaprod/proyecto_abasolo/reimportar_ot.log

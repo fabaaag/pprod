@@ -1,0 +1,319 @@
+{
+  "tipo": "LOG_CAMBIOS_DIA",
+  "programa_id": 20,
+  "fecha": "2025-09-11",
+  "cambios": [
+    {
+      "timestamp": "2025-09-11T21:17:52.128774+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 466,
+      "proceso": 2480,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128798+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 466,
+      "proceso": 2481,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128810+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 466,
+      "proceso": 2482,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128821+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 469,
+      "proceso": 2489,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128830+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 469,
+      "proceso": 2490,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128840+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 469,
+      "proceso": 2491,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128849+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 475,
+      "proceso": 2507,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128857+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 475,
+      "proceso": 2508,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128866+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 475,
+      "proceso": 2509,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128874+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 476,
+      "proceso": 2510,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128883+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 476,
+      "proceso": 2511,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128891+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 476,
+      "proceso": 2512,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128900+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 477,
+      "proceso": 2513,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128909+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 477,
+      "proceso": 2516,
+      "descripcion": "Estándar faltante en PUNTEADO DE PERNOS"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128918+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 477,
+      "proceso": 2517,
+      "descripcion": "Estándar faltante en TERRAJADO DE PERNOS"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128927+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 468,
+      "proceso": 2486,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128935+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 468,
+      "proceso": 2487,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128944+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 468,
+      "proceso": 2488,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128952+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 485,
+      "proceso": 2549,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128961+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 485,
+      "proceso": 2553,
+      "descripcion": "Estándar faltante en LOGOTIPO"
+    },
+    {
+      "timestamp": "2025-09-11T21:17:52.128969+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 493,
+      "proceso": 2566,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877856+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 469,
+      "proceso": 2489,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877873+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 469,
+      "proceso": 2490,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877878+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 469,
+      "proceso": 2491,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877882+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 475,
+      "proceso": 2507,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877887+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 475,
+      "proceso": 2508,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877891+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 475,
+      "proceso": 2509,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877895+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 476,
+      "proceso": 2510,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877899+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 476,
+      "proceso": 2511,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877902+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 476,
+      "proceso": 2512,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877906+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 477,
+      "proceso": 2513,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877911+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 477,
+      "proceso": 2516,
+      "descripcion": "Estándar faltante en PUNTEADO DE PERNOS"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877915+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 477,
+      "proceso": 2517,
+      "descripcion": "Estándar faltante en TERRAJADO DE PERNOS"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877919+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 468,
+      "proceso": 2486,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877922+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 468,
+      "proceso": 2487,
+      "descripcion": "Estándar faltante en ESTAMPAR EN CALIENTE"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877926+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 468,
+      "proceso": 2488,
+      "descripcion": "Estándar faltante en PERFORACION REDONDA"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877929+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 485,
+      "proceso": 2549,
+      "descripcion": "Estándar faltante en CORTADO"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877933+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 485,
+      "proceso": 2553,
+      "descripcion": "Estándar faltante en LOGOTIPO"
+    },
+    {
+      "timestamp": "2025-09-11T21:24:46.877937+00:00",
+      "usuario": "admin",
+      "tipo": "ESTANDAR",
+      "ot": 493,
+      "proceso": 2566,
+      "descripcion": "Estándar faltante en CORTADO"
+    }
+  ]
+}

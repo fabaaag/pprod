@@ -35,8 +35,7 @@ function App() {
         <Route path='/programs/:programId/dashboard' element={<ProgramDashboard />}/>
         {/* Rutas públicas */}
         <Route path='login/' element={<Login/>} />
-
-        <Route path='/produccion-form' element={<ProduccionForm/>} />
+       
 
         {/*Ruta por defecto -  redirige a login si no está autenticado */}      
         <Route path='/' element={<Navigate to="/home"/>}/>
@@ -58,7 +57,7 @@ function App() {
           </ProtectedRoute>}
         />
         <Route path='clients-create' element={
-          <ProtectedRoute allowedRoles={['ADMIN', 'SUPERVISOR']}>
+          <ProtectedRoute allowedRoles={['ADMIN']}>
             <ClientFormPage/>
           </ProtectedRoute>
         }
@@ -95,7 +94,7 @@ function App() {
           </ProtectedRoute>
         }/>
         <Route path='/programs/:programId' element={
-          <ProtectedRoute allowedRoles={['ADMIN', 'SUPERVISOR']}>
+          <ProtectedRoute allowedRoles={['ADMIN',]}>
             <ProgramDetail/>
           </ProtectedRoute>
         }/>
@@ -133,12 +132,12 @@ function App() {
           </ProtectedRoute>
         }/>
         <Route path="/machines" element={
-          <ProtectedRoute allowedRoles={['ADMIN', 'SUPERVISOR']}>
+          <ProtectedRoute allowedRoles={['ADMIN', ]}>
             <MachineList/>
           </ProtectedRoute>
         }/>
         <Route path="/machines-diagnostico" element={
-          <ProtectedRoute allowedRoles={['ADMIN', 'SUPERVISOR']}>
+          <ProtectedRoute allowedRoles={['ADMIN', ]}>
             <DiagnosticoMaquinas/>
           </ProtectedRoute>
         }/>
@@ -158,7 +157,7 @@ function App() {
           </ProtectedRoute>
         } /> */}
         <Route path="/dashboard-ejecutivo" element={
-          <ProtectedRoute allowedRoles={['ADMIN', 'SUPERVISOR']}>
+          <ProtectedRoute allowedRoles={['ADMIN', ]}>
             <DashboardEjecutivoPage />
           </ProtectedRoute>
         } /> 

@@ -1,0 +1,368 @@
+class FinalizarDiaCompletoView(APIView):
+    """Vista completa para finalizar día con sistema de archivos JSON"""
+    permission_classes = [IsAuthenticated]
+    
+    def post(self, request, programa_id):
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            fecha_finalizacion = request.data.get('fecha', timezone.now().date())
+            importar_avances = request.data.get('importar_avances', False)
+            
+            if isinstance(fecha_finalizacion, str):
+                fecha_finalizacion = datetime.strptime(fecha_finalizacion, '%Y-%m-%d').date()
+
+            resultado = self.ejecutar_finalizacion_completa(
+                programa, fecha_finalizacion, importar_avances, request.user
+            )
+            
+            return Response(resultado)
+            
+        except Exception as e:
+            return Response({
+                "success": False,
+                "error": str(e)
+            }, status=500)
+    
+    def ejecutar_finalizacion_completa(self, programa, fecha, importar_avances, usuario):
+        """Ejecuta la finalización completa con todos los JSONs"""
+        
+        print(f"[FINALIZAR DÍA] Iniciando finalización para {fecha}")
+        
+        # 📁 PASO 1: Configurar directorio y nombres de archivos
+        archivos = self._configurar_archivos(programa, fecha)
+        
+        # 📄 PASO 2: Cargar o generar JSON base del día
+        json_base = self._cargar_o_generar_json_base(programa, fecha, archivos['base'])
+        
+        # 🔧 PASO 3: Generar JSON de cambios realizados durante el día
+        json_cambios = self._generar_json_cambios(programa, fecha, archivos['cambios'])
+        
+        # 📊 PASO 4: Importar avances y generar JSON (opcional)
+        json_avances = None
+        if importar_avances:
+            json_avances = self._importar_y_generar_json_avances(
+                programa, fecha, archivos['avances']
+            )
+        
+        # 🔍 PASO 5: Generar JSON comparativo
+        json_comparativa = self._generar_json_comparativo(
+            json_base, json_avances, json_cambios, archivos['comparativa']
+        )
+        
+        # 🗓️ PASO 6: Actualizar programa al siguiente día
+        nueva_fecha = self._calcular_siguiente_dia_laboral(fecha)
+        programa.fecha_inicio = nueva_fecha
+        programa.save()
+        
+        # 📄 PASO 7: Generar JSON base para el siguiente día
+        nuevo_json_base = self._generar_json_base_siguiente_dia(
+            programa, nueva_fecha, archivos['siguiente_base']
+        )
+        
+        # 💾 PASO 8: Guardar registro en HistorialPlanificacion (referencia)
+        historial = self._guardar_registro_referencia(
+            programa, fecha, archivos, json_comparativa, usuario
+        )
+        
+        return {
+            "success": True,
+            "fecha_finalizada": fecha.isoformat(),
+            "nueva_fecha_inicio": nueva_fecha.isoformat(),
+            "archivos_generados": {
+                "json_base": archivos['base'],
+                "json_cambios": archivos['cambios'],
+                "json_avances": archivos['avances'] if json_avances else None,
+                "json_comparativa": archivos['comparativa'],
+                "json_siguiente_base": archivos['siguiente_base']
+            },
+            "resumen_comparativa": self._extraer_resumen_comparativa(json_comparativa),
+            "historial_id": historial.id if historial else None
+        }
+    
+    def _configurar_archivos(self, programa, fecha):
+        """Configura directorio y nombres de archivos"""
+        import os
+        from django.conf import settings
+        
+        base_dir = os.path.join(settings.BASE_DIR, 'planificacion_data', f'programa_{programa.id}')
+        os.makedirs(base_dir, exist_ok=True)
+        
+        fecha_str = fecha.strftime('%Y%m%d')
+        siguiente_fecha_str = self._calcular_siguiente_dia_laboral(fecha).strftime('%Y%m%d')
+        
+        return {
+            'base_dir': base_dir,
+            'base': os.path.join(base_dir, f"dia_{fecha_str}_base.json"),
+            'cambios': os.path.join(base_dir, f"dia_{fecha_str}_cambios.json"),
+            'avances': os.path.join(base_dir, f"dia_{fecha_str}_avances.json"),
+            'comparativa': os.path.join(base_dir, f"dia_{fecha_str}_comparativa.json"),
+            'siguiente_base': os.path.join(base_dir, f"dia_{siguiente_fecha_str}_base.json")
+        }
+    
+    def _generar_json_avances(self, programa, fecha, archivo_path):
+        """Genera JSON de avances desde importación con el formato especificado"""
+        try:
+            # Importar datos de archivos txt sin escribir a BD
+            from .import_views import leer_archivos_avance_sin_escribir
+            
+            datos_importados = leer_archivos_avance_sin_escribir(fecha)
+            
+            # Convertir a formato especificado
+            json_avances = {
+                "tipo": "AVANCES_DIA",
+                "fecha": fecha.isoformat(),
+                "programa_id": programa.id,
+                "metadata": {
+                    "fecha_importacion": timezone.now().isoformat(),
+                    "archivos_procesados": datos_importados.get('archivos_utilizados', {}),
+                    "version": "1.0"
+                },
+                "ordenes_trabajo": []
+            }
+            
+            # Procesar cada OT encontrada en los archivos
+            for ot_data in datos_importados.get('ots_encontradas', []):
+                # Verificar si la OT existe en el programa
+                existe_en_programa = ProgramaOrdenTrabajo.objects.filter(
+                    programa=programa,
+                    orden_trabajo__codigo_ot=ot_data['codigo_ot']
+                ).exists()
+                
+                if existe_en_programa:
+                    # Obtener información completa de la OT
+                    programa_ot = ProgramaOrdenTrabajo.objects.select_related(
+                        'orden_trabajo'
+                    ).get(
+                        programa=programa,
+                        orden_trabajo__codigo_ot=ot_data['codigo_ot']
+                    )
+                    
+                    ot = programa_ot.orden_trabajo
+                    
+                    # Formatear OT según especificación
+                    ot_formateada = {
+                        "codigo_ot": ot.codigo_ot,
+                        "producto": ot.descripcion_producto_ot,
+                        "cantidad_pedida": float(ot.cantidad),
+                        "cantidad_avance_archivo": ot_data.get('cantidad_avance', 0),
+                        "cantidad_avance_actual": float(ot.cantidad_avance),
+                        "procesos": []
+                    }
+                    
+                    # Procesar procesos de la OT
+                    if hasattr(ot, 'ruta_ot') and ot.ruta_ot:
+                        for item_data in ot_data.get('procesos', []):
+                            # Buscar ItemRuta correspondiente
+                            try:
+                                item_ruta = ot.ruta_ot.items.get(
+                                    proceso__codigo_proceso=item_data['codigo_proceso']
+                                )
+                                
+                                # Determinar nuevo estado basado en cantidades
+                                cantidad_avance_archivo = item_data.get('cantidad_terminada', 0)
+                                cantidad_total = float(item_ruta.cantidad_pedido)
+                                
+                                if cantidad_avance_archivo >= cantidad_total:
+                                    nuevo_estado = 'COMPLETADO'
+                                elif cantidad_avance_archivo > 0:
+                                    nuevo_estado = 'EN_PROCESO'
+                                else:
+                                    nuevo_estado = 'PENDIENTE'
+                                
+                                proceso_formateado = {
+                                    "item": item_ruta.item,
+                                    "proceso": item_ruta.proceso.descripcion,
+                                    "maquina": item_ruta.maquina.descripcion if item_ruta.maquina else "Sin máquina",
+                                    "operador": item_data.get('operador', 'Sin operador'),
+                                    "cantidades": {
+                                        "avance_archivo": cantidad_avance_archivo,
+                                        "avance_actual": float(item_ruta.cantidad_terminado_proceso),
+                                        "total": cantidad_total,
+                                        "perdida_archivo": item_data.get('cantidad_perdida', 0),
+                                        "perdida_actual": float(item_ruta.cantidad_perdida_proceso)
+                                    },
+                                    "estado_actual": item_ruta.estado_proceso,
+                                    "estado_sugerido": nuevo_estado,
+                                    "diferencia_avance": cantidad_avance_archivo - float(item_ruta.cantidad_terminado_proceso)
+                                }
+                                
+                                ot_formateada["procesos"].append(proceso_formateado)
+                                
+                            except Exception as e:
+                                print(f"[ERROR] Error procesando proceso {item_data}: {str(e)}")
+                                continue
+                    
+                    json_avances["ordenes_trabajo"].append(ot_formateada)
+            
+            # Guardar archivo
+            self._guardar_json(json_avances, archivo_path)
+            
+            print(f"[INFO] JSON de avances generado: {archivo_path}")
+            return json_avances
+            
+        except Exception as e:
+            print(f"[ERROR] Error generando JSON de avances: {str(e)}")
+            return None
+    
+    def _generar_json_comparativo(self, json_base, json_avances, json_cambios, archivo_path):
+        """Genera JSON comparativo: Base vs Avances"""
+        try:
+            comparativa = {
+                "tipo": "COMPARATIVA_DIA",
+                "fecha_generacion": timezone.now().isoformat(),
+                "metadata": {
+                    "tiene_json_base": json_base is not None,
+                    "tiene_json_avances": json_avances is not None,
+                    "tiene_json_cambios": json_cambios is not None,
+                    "version": "1.0"
+                },
+                "resumen_comparacion": {
+                    "ots_base": len(json_base.get('ordenes_trabajo', [])) if json_base else 0,
+                    "ots_avances": len(json_avances.get('ordenes_trabajo', [])) if json_avances else 0,
+                    "ots_nuevas": 0,
+                    "ots_modificadas": 0,
+                    "ots_sin_cambios": 0,
+                    "total_diferencias": 0
+                },
+                "diferencias_detalladas": [],
+                "cambios_configuracion": json_cambios.get('cambios', []) if json_cambios else []
+            }
+            
+            if json_base and json_avances:
+                # Crear diccionarios para comparación
+                ots_base = {ot['codigo_ot']: ot for ot in json_base['ordenes_trabajo']}
+                ots_avances = {ot['codigo_ot']: ot for ot in json_avances['ordenes_trabajo']}
+                
+                # Comparar cada OT
+                for codigo_ot, ot_avance in ots_avances.items():
+                    ot_base = ots_base.get(codigo_ot)
+                    
+                    if not ot_base:
+                        # OT nueva (no estaba en base)
+                        comparativa["resumen_comparacion"]["ots_nuevas"] += 1
+                        comparativa["diferencias_detalladas"].append({
+                            "tipo": "OT_NUEVA",
+                            "codigo_ot": codigo_ot,
+                            "descripcion": f"OT {codigo_ot} aparece en avances pero no en base",
+                            "datos_avance": ot_avance
+                        })
+                        continue
+                    
+                    # Comparar avances de la OT
+                    diferencia_ot = ot_avance['cantidad_avance_archivo'] - ot_base['cantidad_avance']
+                    
+                    if abs(diferencia_ot) > 0.01:
+                        comparativa["resumen_comparacion"]["ots_modificadas"] += 1
+                        
+                        diferencia_detalle = {
+                            "tipo": "OT_MODIFICADA",
+                            "codigo_ot": codigo_ot,
+                            "descripcion": ot_base['descripcion'],
+                            "avance_base": ot_base['cantidad_avance'],
+                            "avance_archivo": ot_avance['cantidad_avance_archivo'],
+                            "diferencia": diferencia_ot,
+                            "procesos_modificados": []
+                        }
+                        
+                        # Comparar procesos
+                        procesos_base = {p['item']: p for p in ot_base.get('procesos', [])}
+                        procesos_avances = {p['item']: p for p in ot_avance.get('procesos', [])}
+                        
+                        for item, proceso_avance in procesos_avances.items():
+                            proceso_base = procesos_base.get(item)
+                            if proceso_base:
+                                diff_proceso = (proceso_avance['cantidades']['avance_archivo'] - 
+                                              proceso_base['cantidad_terminado'])
+                                
+                                if abs(diff_proceso) > 0.01:
+                                    diferencia_detalle["procesos_modificados"].append({
+                                        "item": item,
+                                        "proceso": proceso_avance['proceso'],
+                                        "avance_base": proceso_base['cantidad_terminado'],
+                                        "avance_archivo": proceso_avance['cantidades']['avance_archivo'],
+                                        "diferencia": diff_proceso,
+                                        "estado_base": proceso_base.get('estado_proceso', 'PENDIENTE'),
+                                        "estado_sugerido": proceso_avance['estado_sugerido']
+                                    })
+                        
+                        comparativa["diferencias_detalladas"].append(diferencia_detalle)
+                        comparativa["resumen_comparacion"]["total_diferencias"] += len(diferencia_detalle["procesos_modificados"])
+                    else:
+                        comparativa["resumen_comparacion"]["ots_sin_cambios"] += 1
+            
+            # Guardar archivo
+            self._guardar_json(comparativa, archivo_path)
+            
+            print(f"[INFO] JSON comparativo generado: {archivo_path}")
+            return comparativa
+            
+        except Exception as e:
+            print(f"[ERROR] Error generando JSON comparativo: {str(e)}")
+            return None
+    
+    def _guardar_json(self, data, archivo_path):
+        """Guarda datos en archivo JSON"""
+        import json
+        with open(archivo_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2, default=str)
+    
+    def _extraer_resumen_comparativa(self, json_comparativa):
+        """Extrae resumen ejecutivo de la comparativa"""
+        if not json_comparativa:
+            return {"sin_comparativa": True}
+        
+        resumen = json_comparativa.get('resumen_comparacion', {})
+        return {
+            "ots_modificadas": resumen.get('ots_modificadas', 0),
+            "ots_nuevas": resumen.get('ots_nuevas', 0),
+            "total_diferencias": resumen.get('total_diferencias', 0),
+            "cambios_configuracion": len(json_comparativa.get('cambios_configuracion', [])),
+            "requiere_atencion": resumen.get('ots_modificadas', 0) > 0 or resumen.get('ots_nuevas', 0) > 0
+        }
+
+//--------------------------------------
+# En import_views.py
+def leer_archivos_avance_sin_escribir(fecha):
+    """Lee archivos de avance pero NO escribe a la BD"""
+    try:
+        import os
+        from django.conf import settings
+        
+        # Buscar archivos para la fecha
+        fecha_str = fecha.strftime('%Y%m%d')
+        rutas_archivos = [
+            f"/path/to/exports/AVANCEOT_{fecha_str}.txt",
+            f"/path/to/exports/AVANCEPROCESO_{fecha_str}.txt"
+        ]
+        
+        ots_encontradas = []
+        archivos_utilizados = {}
+        
+        # Procesar cada archivo
+        for ruta in rutas_archivos:
+            if os.path.exists(ruta):
+                with open(ruta, 'r', encoding='utf-8') as f:
+                    datos = f.read()
+                
+                # Procesar datos según formato específico
+                if 'AVANCEOT' in ruta:
+                    ots_parseadas = procesar_archivo_avance_ot(datos)
+                elif 'AVANCEPROCESO' in ruta:
+                    ots_parseadas = procesar_archivo_avance_proceso(datos)
+                
+                ots_encontradas.extend(ots_parseadas)
+                archivos_utilizados[os.path.basename(ruta)] = {
+                    'path': ruta,
+                    'size': os.path.getsize(ruta),
+                    'ots_encontradas': len(ots_parseadas)
+                }
+        
+        return {
+            'ots_encontradas': ots_encontradas,
+            'archivos_utilizados': archivos_utilizados,
+            'total_ots': len(ots_encontradas)
+        }
+        
+    except Exception as e:
+        print(f"Error leyendo archivos: {str(e)}")
+        return {'ots_encontradas': [], 'archivos_utilizados': {}, 'error': str(e)}

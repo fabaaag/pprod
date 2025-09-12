@@ -26,7 +26,7 @@ from JobManagement.models import (
 from Client.models import Cliente
 from Utils.models import MeasurementUnit, MateriaPrima
 
-
+from Product.models import Producto, Pieza
 
 
 import os
@@ -51,6 +51,7 @@ class Command(BaseCommand):
             
         # En Linux, intentar encontrar automáticamente
         posibles_rutas_base = [
+            "/home/faba/Escritorio/archivos de import",  # <-- tu ruta local primero
             f"/run/user/{os.getuid()}/gvfs/smb-share:server=webserver,share=migracion",
             f"{os.path.expanduser('~')}/.gvfs/smb-share on webserver/migracion",
             "/media/smb-share/migracion"
@@ -148,10 +149,6 @@ class Command(BaseCommand):
         
         # Contar registros antes de eliminar
         conteos = {
-            'ejecuciones_tarea': EjecucionTarea.objects.count(),
-            'tareas_fragmentadas': TareaFragmentada.objects.count(),
-            'historial_planificacion': HistorialPlanificacion.objects.count(),
-            'reportes_diarios': ReporteDiarioPrograma.objects.count(),
             'programa_orden_trabajo': ProgramaOrdenTrabajo.objects.count(),
             'item_ruta': ItemRuta.objects.count(),
             'ruta_ot': RutaOT.objects.count(),
@@ -169,18 +166,6 @@ class Command(BaseCommand):
         try:
             with transaction.atomic():
                 # Eliminar en orden de dependencias (desde las hojas hacia la raíz)
-                self.log_info("Eliminando EjecucionTarea...")
-                EjecucionTarea.objects.all().delete()
-
-                self.log_info("Eliminando TareaFragmentada...")
-                TareaFragmentada.objects.all().delete()
-
-                self.log_info("Eliminando HistorialPlanificacion...")
-                HistorialPlanificacion.objects.all().delete()
-
-                self.log_info("Eliminando ReporteDiarioPrograma...")
-                ReporteDiarioPrograma.objects.all().delete()
-
                 self.log_info("Eliminando ProgramaOrdenTrabajo...")
                 ProgramaOrdenTrabajo.objects.all().delete()
 
@@ -379,6 +364,7 @@ class Command(BaseCommand):
         updated_count = 0
         failed_count = 0
         errors = []
+        estandares_corregidos = 0
 
         # Obtener códigos de OT existentes
         ordenes = OrdenTrabajo.objects.all()
@@ -415,6 +401,7 @@ class Command(BaseCommand):
                         codigo_maquina = row[3].strip()
                         estandar = int(row[4].strip()) if row[4].strip() else 0
 
+                        
                         # Parsear cantidades
                         cantidad_pedido = self._parse_decimal(row[5].strip())
                         cantidad_terminado = self._parse_decimal(row[6].strip())
@@ -426,6 +413,39 @@ class Command(BaseCommand):
                         orden_trabajo = ordenes.get(codigo_ot=codigo_ot)
                         situacion_ot = orden_trabajo.situacion_ot.codigo_situacion_ot
                         fecha_termino = orden_trabajo.fecha_termino
+
+                        # Obtener el código de producto o pieza desde la OT
+                        codigo_prod_pieza = orden_trabajo.codigo_producto_salida
+
+                        # Buscar primero como Producto
+                        objeto = Producto.objects.filter(codigo_producto=codigo_prod_pieza).first()
+                        ruta_objeto = None
+
+                        if objeto:
+                            # Si es producto, buscar la ruta asociada
+                            ruta_objeto = getattr(objeto, 'ruta', None)
+                        else:
+                            # Si no es producto, buscar como Pieza
+                            objeto = Pieza.objects.filter(codigo_pieza=codigo_prod_pieza).first()
+                            if objeto:
+                                ruta_objeto = getattr(objeto, 'ruta_pieza', None)
+
+                        # Si encontramos la ruta, buscar el estándar correspondiente
+                        estandar_ruta = 0
+                        if ruta_objeto:
+                            # Buscar el item de ruta que coincida con el proceso y máquina
+                            item_ruta_obj = ruta_objeto.items.filter(
+                                proceso__codigo_proceso=codigo_proceso,
+                                maquina__codigo_maquina=codigo_maquina
+                            ).first()
+                            if item_ruta_obj:
+                                estandar_ruta = item_ruta_obj.estandar
+
+                        # Si el estándar del archivo es 0, usar el de la ruta
+                        if estandar == 0 and estandar_ruta:
+                            estandar = estandar_ruta
+                            estandares_corregidos += 1
+
 
                         # Crear RutaOT si no existe
                         ruta_ot, created_ruta = RutaOT.objects.get_or_create(orden_trabajo=orden_trabajo)
@@ -494,6 +514,8 @@ class Command(BaseCommand):
                         self.log_error(error_msg)
                         failed_count += 1
                         errors.append(error_msg)
+
+                self.log_info(f"Estandares corregidos desde producto/pieza: {estandares_corregidos}")
 
         except UnicodeDecodeError as e:
             error_msg = f'Error de codificación con {encoding}: {str(e)}'

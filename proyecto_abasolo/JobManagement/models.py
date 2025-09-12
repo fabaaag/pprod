@@ -393,6 +393,57 @@ class ItemRuta(models.Model):
         help_text="Justificación cuando se permite salto de proceso"
     )
 
+    # ============= CAMPOS EXISTENTES =============
+    fecha_inicio_real = models.DateTimeField(null=True, blank=True)
+    fecha_fin_real = models.DateTimeField(null=True, blank=True)
+    ultima_actualizacion_progreso = models.DateTimeField(null=True, blank=True)
+    
+    # ============= NUEVOS CAMPOS PARA FECHAS PLANIFICADAS =============
+    fecha_inicio_planificada = models.DateTimeField(
+        null=True, 
+        blank=True,
+        help_text="Fecha y hora planificada de inicio del proceso"
+    )
+    fecha_fin_planificada = models.DateTimeField(
+        null=True, 
+        blank=True,
+        help_text="Fecha y hora planificada de fin del proceso"
+    )
+    fecha_ultima_planificacion = models.DateTimeField(
+        null=True, 
+        blank=True,
+        help_text="Cuándo se calculó por última vez la planificación"
+    )
+    
+    # ============= CAMPOS PARA TRACKING DE TIMELINE =============
+    timeline_items_generados = JSONField(
+        default=list,
+        help_text="Items del timeline generados para este ItemRuta"
+    )
+    duracion_planificada_horas = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2, 
+        null=True, 
+        blank=True,
+        help_text="Duración planificada en horas"
+    )
+    secuencia_en_ot = models.PositiveIntegerField(
+        null=True, 
+        blank=True,
+        help_text="Posición en la secuencia de procesos de la OT"
+    )
+    
+    # ============= CAMPOS PARA COORDINACIÓN CON JSON BASE =============
+    incluido_en_json_base = models.BooleanField(
+        default=False,
+        help_text="Si este ItemRuta está incluido en el JSON base actual"
+    )
+    fecha_json_base = models.DateField(
+        null=True, 
+        blank=True,
+        help_text="Fecha del JSON base que incluye este ItemRuta"
+    )
+
 class RutaOT(models.Model):
     
     orden_trabajo = models.OneToOneField('OrdenTrabajo', on_delete=models.CASCADE, related_name='ruta_ot', null=True, blank=True)
@@ -1751,3 +1802,84 @@ class CambioPlanificacion(models.Model):
         
     def __str__(self):
         return f"{self.tipo_cambio} - {self.programa.nombre} - {self.fecha}"
+    
+
+class SnapshotDiario(models.Model):
+    """Snapshot diario del estado de un programa de producción"""
+    
+    programa = models.ForeignKey(ProgramaProduccion, on_delete=models.CASCADE, related_name='snapshots')
+    fecha = models.DateField()
+    
+    # Métricas directas para queries rápidas
+    total_ots = models.IntegerField(default=0)
+    total_procesos = models.IntegerField(default=0)
+    avance_total = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+    produccion_planificada = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+    porcentaje_avance = models.DecimalField(max_digits=5, decimal_places=2, default=0)
+    valor_producido = models.DecimalField(max_digits=15, decimal_places=2, default=0)
+    kilos_producidos = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+    
+    # Estado general del día
+    ots_completadas = models.IntegerField(default=0)
+    ots_en_proceso = models.IntegerField(default=0)
+    ots_pendientes = models.IntegerField(default=0)
+    
+    # Datos detallados en JSON
+    datos_ordenes = models.JSONField(default=dict, help_text="Datos detallados de todas las OTs del día")
+    metricas_adicionales = models.JSONField(default=dict, help_text="Métricas calculadas adicionales")
+    
+    # Metadatos
+    creado_por = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
+    creado_en = models.DateTimeField(auto_now_add=True)
+    notas = models.TextField(blank=True)
+    importacion_realizada = models.BooleanField(default=False, help_text="Si se importaron avances externos")
+    
+    class Meta:
+        unique_together = ['programa', 'fecha']
+        ordering = ['-fecha']
+        verbose_name = "Snapshot Diario"
+        verbose_name_plural = "Snapshots Diarios"
+    
+    def __str__(self):
+        return f"{self.programa.nombre} - {self.fecha} ({self.porcentaje_avance}% - {self.total_ots} OTs)"
+    
+    @property
+    def avance_diario(self):
+        """Calcula el avance del día comparando con el día anterior"""
+        snapshot_anterior = SnapshotDiario.objects.filter(
+            programa=self.programa,
+            fecha__lt=self.fecha
+        ).order_by('-fecha').first()
+        
+        if snapshot_anterior:
+            return float(self.avance_total - snapshot_anterior.avance_total)
+        return float(self.avance_total)
+
+    @property
+    def eficiencia_dia(self):
+        """Calcula eficiencia del día (avance real vs planificado)"""
+        if self.produccion_planificada > 0:
+            return float((self.avance_total / self.produccion_planificada) * 100)
+        return 0.0
+    
+    def get_comparacion_dia_anterior(self):
+        """Obtiene comparación detallada con el día anterior"""
+        snapshot_anterior = SnapshotDiario.objects.filter(
+            programa=self.programa,
+            fecha__lt=self.fecha
+        ).order_by('-fecha').first()
+        
+        if not snapshot_anterior:
+            return {"primer_dia": True}
+        
+        return {
+            "fecha_anterior": snapshot_anterior.fecha,
+            "diferencias": {
+                "avance_total": float(self.avance_total - snapshot_anterior.avance_total),
+                "porcentaje": float(self.porcentaje_avance - snapshot_anterior.porcentaje_avance),
+                "ots_completadas": self.ots_completadas - snapshot_anterior.ots_completadas,
+                "valor_producido": float(self.valor_producido - snapshot_anterior.valor_producido),
+                "kilos_producidos": float(self.kilos_producidos - snapshot_anterior.kilos_producidos)
+            },
+            "tendencia": "positiva" if self.avance_total > snapshot_anterior.avance_total else "negativa"
+        }

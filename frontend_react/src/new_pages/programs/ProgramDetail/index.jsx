@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { 
     Button, Card, Alert, Row, Col, Badge, Modal, Table, Collapse 
@@ -6,6 +6,7 @@ import {
 import { ReactSortable } from 'react-sortablejs';
 import { toast } from 'react-hot-toast';
 import { FaArrowLeft, FaHistory, FaExclamationTriangle, FaSave, FaFileCode, FaCalendarCheck, FaChartLine, FaChartBar } from 'react-icons/fa';
+import debounce from 'lodash.debounce';
 
 // Imports de componentes base
 import CompNavbar from '../../../components/Navbar/CompNavbar';
@@ -57,7 +58,7 @@ import { FinalizarDiaModal } from '../../../new_components/Program/Details/Modal
 import { GenerarJsonBaseModal } from '../../../new_components/Program/Details/Modals/GenerarJsonBaseModal';
 import { ComparativaAvancesModal } from '../../../new_components/Program/Details/Modals/ComparativaAvancesModal';
 import { verificarPlanificacionLista, guardarCambiosPlanificacion } from '../../../api/planificacion.api';
-
+import { HistorialSnapshotsModal } from '../../../new_components/Program/Details/Modals/HistorialSnapshotModal';
 
 // Styles
 import '../../../pages/programs/ProgramDetail.css';
@@ -152,14 +153,9 @@ export default function ProgramDetail() {
     const [fechaUltimaFinalizacion, setFechaUltimaFinalizacion] = useState(null);
 
 
-     // ✅ VERIFICAR PLANIFICACIÓN al cargar y cuando cambien los datos
-     useEffect(() => {
-        if (programId && otList?.length > 0) {
-            verificarEstadoPlanificacion();
-        }
-    }, [programId, otList, metricas]);
 
-    // ✅ DETECTAR CAMBIOS en la planificación
+
+    /* ✅ DETECTAR CAMBIOS en la planificación
     useEffect(() => {
         // Detectar si hay cambios pendientes (ejemplo: estándares en 0, máquinas sin asignar)
         const cambiosDetectados = [];
@@ -186,7 +182,40 @@ export default function ProgramDetail() {
         });
         
         setCambiosPendientes(cambiosDetectados);
+    }, [otList]);*/
+
+    const cambiosDetectadosMemo = useMemo(() => {
+        if (!otList || otList.length === 0) return [];
+
+        const cambiosDetectados = [];
+
+        otList.forEach(ot => {
+            ot.procesos?.forEach(proceso => {
+                if (!proceso.estandar || proceso.estandar === 0){
+                    cambiosDetectados.push({
+                        tipo: 'ESTANDAR',
+                        ot: ot.orden_trabajo,
+                        proceso: proceso.id,
+                        descripcion: `Estándar faltante en ${proceso.descripcion}`
+                    });
+                }
+                if (!proceso.maquina_id) {
+                    cambiosDetectados.push({
+                        tipo: 'MAQUINA',
+                        ot: ot.orden_trabajo,
+                        proceso: proceso.id,
+                        descripcion: `Máquina sin asignar en ${proceso.descripcion}`
+                    });
+                }
+            });
+        });
+
+        return cambiosDetectados;
     }, [otList]);
+
+    useEffect(() => {
+        setCambiosPendientes(cambiosDetectadosMemo);
+    }, [cambiosDetectadosMemo]);
 
     // ✅ FUNCIÓN para verificar estado de planificación
     const verificarEstadoPlanificacion = async () => {
@@ -200,6 +229,23 @@ export default function ProgramDetail() {
             setVerificandoPlanificacion(false);
         }
     };
+
+    const debouncedVerificarPlanificacion = useMemo(
+        () => debounce(verificarEstadoPlanificacion, 1000),
+        []
+    );
+
+
+    // ✅ VERIFICAR PLANIFICACIÓN al cargar y cuando cambien los datos
+    useEffect(() => {
+        if (programId && otList?.length > 0) {
+            debouncedVerificarPlanificacion();
+        }
+        return  () => {
+            debouncedVerificarPlanificacion.cancel();
+        };
+    }, [programId, otList?.length]); //Solo a cambio de cantidad, no contenido
+
 
     // ✅ FUNCIÓN para guardar cambios pendientes
     const handleGuardarCambios = async () => {
@@ -226,7 +272,7 @@ export default function ProgramDetail() {
         verificarEstadoPlanificacion();
     };
 
-    const handleDiaFinalizado = (resultado) => {
+    /*const handleDiaFinalizado = (resultado) => {
         setUltimaComparativa(resultado.comparativa);
         setFechaUltimaFinalizacion(resultado.fechaFinalizada);
         
@@ -239,6 +285,28 @@ export default function ProgramDetail() {
         loadProgramData();
         
         toast.success(`📅 Día ${resultado.fechaFinalizada} finalizado. Nueva fecha inicio: ${resultado.nuevaFechaInicio}`);
+    };*/
+
+    // ✅ AGREGAR ESTOS ESTADOS al componente principal
+    const [showHistorialSnapshots, setShowHistorialSnapshots] = useState(false);
+    const [ultimoSnapshot, setUltimoSnapshot] = useState(null);
+    // ✅ ACTUALIZAR LA FUNCIÓN handleDiaFinalizado
+    const handleDiaFinalizado = (resultado) => {
+        setUltimoSnapshot({
+            id: resultado.snapshotId,
+            fecha: resultado.fechaFinalizada,
+            resumen: resultado.resumenDia,
+            comparacion: resultado.comparacionAnterior
+        });
+        
+        // Recargar datos del programa
+        loadProgramData();
+        
+        // Mostrar información del snapshot creado
+        toast.success(
+            `📸 Snapshot ${resultado.snapshotId} creado para ${resultado.fechaFinalizada}. ` +
+            `Eficiencia del día: ${resultado.resumenDia.eficiencia.toFixed(1)}%`
+        );
     };
 
     // ✅ RENDER de botones de planificación (agregar después de los controles existentes)
@@ -293,10 +361,20 @@ export default function ProgramDetail() {
                             onClick={() => setShowFinalizarDiaModal(true)}
                         >
                             <FaCalendarCheck className="me-1" />
-                            Finalizar Día
+                            Finalizar Día (Snapshot)
                         </Button>
 
-                        {/* Botón Ver Última Comparativa */}
+                        {/* Botón Historial de Snapshots */}
+                        <Button 
+                            variant="outline-info" 
+                            size="sm"
+                            onClick={() => setShowHistorialSnapshots(true)}
+                        >
+                            <FaHistory className="me-1" />
+                            Historial Snapshots
+                        </Button>
+
+                        {/* Botón Ver Última Comparativa }
                         {ultimaComparativa && (
                             <Button 
                                 variant="outline-info" 
@@ -306,7 +384,7 @@ export default function ProgramDetail() {
                                 <FaChartLine className="me-1" />
                                 Ver Última Comparativa
                             </Button>
-                        )}
+                        )*/}
                         <Button 
                             variant="info" 
                             size="sm"
@@ -315,6 +393,14 @@ export default function ProgramDetail() {
                             <FaChartBar className="me-1" />
                             Ver Dashboard Completo
                         </Button>
+
+
+                        {/* Mostrar último snapshot si existe */}
+                        {ultimoSnapshot && (
+                            <Badge bg="success" className="ms-2">
+                                Último snapshot: {ultimoSnapshot.fecha} (ID: {ultimoSnapshot.id})
+                            </Badge>
+                        )}
                     </div>
 
                     {/* Indicadores de estado */}
@@ -322,13 +408,13 @@ export default function ProgramDetail() {
                         {planificacionLista ? (
                             <Alert variant="success" className="py-2 mb-0">
                                 <small>
-                                    ✅ Planificación lista para generar JSON base
+                                    ✅ Planificación lista - sistema de snapshots activado
                                 </small>
                             </Alert>
                         ) : (
                             <Alert variant="warning" className="py-2 mb-0">
                                 <small>
-                                    ⚠️ Completar asignaciones de máquinas y estándares antes de generar JSON base
+                                    ⚠️ Completar asignaciones correspondientes antes de usar snapshots diarios
                                 </small>
                             </Alert>
                         )}
@@ -351,10 +437,14 @@ export default function ProgramDetail() {
             loadProgramData();
             /*console.log('dssddsdsss'+
                 timelineItems.values());*/
-            loadMaquinas();
-            cargarOTsConInconsistencias();
+            
+            //cargarOTsConInconsistencias();
         }
         /*console.log(timelineItems, 'items del timeline')*/
+    }, [programId]);
+
+    useEffect (() => {
+        loadMaquinas();
     }, [programId]);
 
     // Sincronizar órdenes con otList
@@ -373,17 +463,17 @@ export default function ProgramDetail() {
         }
     };
 
-    // Cargar OTs con inconsistencias
+    /*Cargar OTs con inconsistencias
     const cargarOTsConInconsistencias = async () => {
         const inconsistencias = checkInconsistencias();
         const otsConProblemas = [...new Set(
             inconsistencias.map(inc => inc.ot_codigo)
         )];
         setOtsConInconsistencias(otsConProblemas);
-    };
+    };*/
 
     // Manejar cambios en procesos
-    const handleProcessChange = (otId, procesoId, field, value) => {
+    const handleProcessChange = useCallback((otId, procesoId, field, value) => {
         if(!otList){
             console.error("otLIst no está inicializado.");
             return;
@@ -425,7 +515,7 @@ export default function ProgramDetail() {
 
         return newChanges;
         });
-    };
+    }, [otList, showPendingChangesAlert]);
 
     const handleSaveChanges = async () => {
         try {
@@ -503,12 +593,12 @@ export default function ProgramDetail() {
     };
 
     // Manejar expansión/colapso de OTs
-    const toggleOTExpansion = (otId) => {
+    const toggleOTExpansion = useCallback((otId) => {
         setExpandedOTs(prev => ({
             ...prev,
             [otId]: !prev[otId]
         }));
-    };
+    }, []);
 
     // Generar PDF
     const handleGeneratePDF = async () => {
@@ -537,7 +627,7 @@ export default function ProgramDetail() {
     };
 
     // Calcular resumen del programa
-    const calcularResumen = () => {
+    const calcularResumen = useMemo(() => {
         const procesosPorPlanificar = otList.reduce((acc, ot) => {
             return acc + (ot.procesos?.filter(p => 
                 p.estado_proceso !== 'COMPLETADO' && 
@@ -566,9 +656,6 @@ export default function ProgramDetail() {
             };
         }
 
-        /*console.log('=== DEBUGGING CALCULAR RESUMEN ===');
-        console.log('otList.length:', otList.length);
-        console.log('otList data:', otList);*/
     
         // ✅ CÁLCULOS con validación de datos
         const totales = otList.reduce((acc, ot, index) => {
@@ -584,14 +671,6 @@ export default function ProgramDetail() {
             const kilosPlanificados = cantidadPedido * pesoUnitario;
             const kilosFabricados = cantidadAvance * pesoUnitario;
 
-            /* console.log(`OT ${index + 1}:`, {
-                codigo: ot.orden_trabajo_codigo_ot,
-                cantidadPedido,
-                cantidadAvance,
-                valorUnitario,
-                valorPlanificado,
-                valorFabricado
-            });*/
             
             // Retornar acumulador actualizado
             return {
@@ -607,6 +686,8 @@ export default function ProgramDetail() {
             kilosTotalPlanificados: 0,
             kilosTotalFabricados: 0
         });
+
+        
 
         // ✅ LOG RESULTADO FINAL
         //console.log('Totales calculados:', totales);
@@ -631,6 +712,20 @@ export default function ProgramDetail() {
             // Mantener métricas originales
             //...metricas
         };
+    }, [otList, metricas]);
+
+    const handleSaveAllProcessChanges = async () => {
+            setSavingChanges(true);
+            try {
+                for (const otId of Object.keys(pendingChanges)){
+                    await handleSaveChanges(otId);
+                }
+                setPendingChanges({});
+            } catch (error){
+                console.error("Error guardando cambios: ", error);
+            } finally {
+                setSavingChanges(false);
+            }
     };
 
     // Función para verificar si hay procesos con estándar cero
@@ -653,7 +748,7 @@ export default function ProgramDetail() {
     };
 
     // Función para manejar el toggle del timeline
-    const handleToggleTimeline = () => {
+    const handleToggleTimeline = useCallback(() => {
         // Añadir logs de depuración
         console.log('Verificando procesos para timeline:', {
             programId,
@@ -675,7 +770,7 @@ export default function ProgramDetail() {
         
         // Pasar los procesos al toggleTimeline para validación
         toggleTimeline(otList.flatMap(ot => ot.procesos || []));
-    };
+    }, [otList, toggleTimeline]);
 
     if (loading) {
         return (
@@ -699,7 +794,7 @@ export default function ProgramDetail() {
         );
     }
 
-    const resumen = calcularResumen();
+    const resumen = calcularResumen;
     const hasInconsistencies = otsConInconsistencias.length > 0;
 
     return (
@@ -728,27 +823,7 @@ export default function ProgramDetail() {
                                 />
                             </div>
                             
-                            <div className="d-flex gap-2">
-                                <Button 
-                                    variant="outline-info" 
-                                    onClick={() => setShowHistory(true)}
-                                >
-                                    <FaHistory className="me-2" />
-                                    Historial
-                                </Button>
-                                
-                                {hasInconsistencies && (
-                                    <Button 
-                                        variant="warning" 
-                                        onClick={() => setShowInconsistencias(true)}
-                                    >
-                                        <FaExclamationTriangle className="me-2" />
-                                        Inconsistencias
-                                    </Button>
-                                )}
-
-                                
-                            </div>
+                            
                         </div>
                     </Col>
                 </Row>
@@ -925,6 +1000,9 @@ export default function ProgramDetail() {
                                         onShowTimelineReal={() => setShowTimelineTimeReal(true)}
                                         hasInconsistencies={hasInconsistencies}
                                         isAdmin={isAdmin}
+                                        onSaveAllProcessChanges={handleSaveAllProcessChanges}
+                                        savingChanges={savingChanges}
+                                        pendingChangesCount={Object.keys(pendingChanges).length}
                                     />
                                 </div>
                             </Card.Header>
@@ -1057,14 +1135,14 @@ export default function ProgramDetail() {
                 />
             )}
 
-            {showHistory && (
+            {/*showHistory && (
                 <ProgramHistory 
                     programId={programId} 
-                    isAdmin={isAdmin}
+                    isAdmin={true}
                     show={showHistory}
                     onHide={() => setShowHistory(false)}
                 />
-            )}
+            )*/}
 
             <AnalisisAvancesModal
                 show={showAnalisisAvances}
@@ -1108,6 +1186,14 @@ export default function ProgramDetail() {
                 onHide={() => setShowComparativaModal(false)}
                 comparativa={ultimaComparativa}
                 fechaFinalizada={fechaUltimaFinalizacion}
+            />
+
+            {/* Modal Historial de Snapshots */}
+            <HistorialSnapshotsModal
+                show={showHistorialSnapshots}
+                onHide={() => setShowHistorialSnapshots(false)}
+                programId={programId}
+                programData={programData}
             />
 
             {/* COMENTAR TEMPORALMENTE PARA TESTING */}

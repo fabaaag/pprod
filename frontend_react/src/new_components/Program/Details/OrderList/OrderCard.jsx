@@ -15,7 +15,11 @@ export const OrderCard = ({
     maquinasPrincipales
 }) => {
     const [showColorPicker, setShowColorPicker] = useState(false);
-    
+
+    const diasRestantes = Math.ceil((new Date(ot.orden_trabajo_fecha_termino) - new Date()) / (1000 * 60 * 60 * 24));
+    const estadoFecha = diasRestantes < 0 
+        ? <span className="text-danger">Atrasada {diasRestantes*(-1)} días</span> 
+        : <span className="text-success">Faltan {diasRestantes} días</span>;
 
   return (
     <Card className="mb-3 order-card">
@@ -37,19 +41,22 @@ export const OrderCard = ({
                     <div className="d-flex gap-3">
                         <small className="text-muted">
                             <FaCalendarAlt className="me-1" />
-                            {ot.orden_trabajo_fecha_termino}
+                            Fin: {ot.orden_trabajo_fecha_termino}
                         </small>
-                        {otInconsistencias && (
-                            <small className={tieneInconsistencias ? "text-warning" : "text-info"}>
-                                OT: {otInconsistencias.avance_ot} | 
-                                Último: {otInconsistencias.avance_procesos}
-                                {Math.abs(otInconsistencias.diferencia) > 0.01 && (
-                                    <span className="fw-bold ms-1">
-                                        (Δ{otInconsistencias.diferencia.toFixed(0)})
-                                    </span>
-                                )}
-                            </small>
-                        )}
+                        |
+                        <small>
+                            {estadoFecha}
+                        </small>
+                        |
+                        <small className="text-muted">
+                            {ot.orden_trabajo_situacion_ot ? (
+                                ot.orden_trabajo_situacion_ot
+                            ) : (
+                                "Sin situación"
+                            )}
+                        </small>
+                        
+
                         {maquinasPrincipales && maquinasPrincipales.length > 0  && (
                             <small className="text-info">
                                 🏭{maquinasPrincipales.join(', ')}
@@ -57,31 +64,8 @@ export const OrderCard = ({
                         )}
                     </div>
                 </div>
-                {/*
-                <div className="ms-3 position-relative">
-                    <Button 
-                        className="btn btn-sm"
-                        style={{
-                            backgroundColor: ot.color || "#2196f3",
-                            
-                            border: "2px solid #fff",
-                            borderRadius: "50%"
-                        }}
-                        onClick={() => setShowColorPicker(!showColorPicker)}
-                    />
-
-                    
-                    {showColorPicker && (
-                        <div className="position-absolute" >
-                            <div className="position-fixed ">
-                                
-                            </div>
-                        </div>
-                    )}
-                    </div>
-                **/}
                 <div className="d-flex gap-2">
-                    {savingChanges !== undefined && (
+                    {/*savingChanges !== undefined && (
                         <Button
                             variant='success'
                             size='sm'
@@ -90,7 +74,7 @@ export const OrderCard = ({
                         >
                             {savingChanges ?  "Guardando..." : "Guardar"}
                         </Button>
-                    )}
+                    )*/}
                     <Button
                         variant={isExpanded ? "primary" : "outline-primary"}
                         size="sm"

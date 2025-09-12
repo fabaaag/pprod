@@ -9,8 +9,10 @@ import { PageTransition } from '../components/UI/PageTransition';
 
 export function HomePage() {
     const navigate = useNavigate();
+    const user = JSON.parse(localStorage.getItem('user'));
+    
 
-    const menuItems = [
+    const allMenuItems = [
         {
             title: "Planificación",
             description: "Gestión de programas de producción",
@@ -21,7 +23,8 @@ export function HomePage() {
             title: "Mts / Diagnosticomaqs",
             description: "Sistema de diagnóstico de máquinas",
             icon: <FaTools size={32} />,
-            path: '/machines-diagnostico'
+            path: '/machines-diagnostico',
+            allowedRoles: ['ADMIN']
         },
         {
             title: "Gestión",
@@ -33,9 +36,14 @@ export function HomePage() {
             title: "Máquinas",
             description: "Control y gestión de máquinas",
             icon: <FaCogs size={32} />,
-            path: '/machines'
+            path: '/machines',
+            allowedRoles: ['ADMIN']
         }
     ];
+    const menuItems = allMenuItems.filter(item => {
+        if (!item.allowedRoles) return true;
+        return item.allowedRoles.includes(user?.rol);
+    });
 
     const handleNavigation = (path) => {
         // Primero animamos la salida

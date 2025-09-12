@@ -1,0 +1,51 @@
+# Frontend React - Dependencias esenciales
+# Generado: 2025-09-12
+
+# Framework principal
+react@^18.3.1
+react-dom@^18.3.1
+react-router-dom@^6.26.1
+
+# UI/UX y estilos
+react-bootstrap@^2.10.9
+bootstrap-icons@^1.11.3
+react-icons@^5.5.0
+react-colorful@^5.6.1
+framer-motion@^11.5.4
+
+# Formularios y validación
+react-hook-form@^7.54.2
+react-datepicker@^7.4.0
+
+# Drag & Drop
+react-sortablejs@^6.1.4
+
+# Gráficos y visualización
+chart.js@^4.5.0
+react-chartjs-2@^5.3.0
+react-calendar-timeline@^0.30.0
+
+# Calendario y fechas
+react-big-calendar@^1.14.1
+moment@^2.30.1
+
+# HTTP y APIs
+axios@^1.7.7
+
+# Utilidades
+lodash.debounce@^4.0.8
+js-cookie@^3.0.5
+react-hot-toast@^2.5.2
+tinycolor2@^1.6.0
+
+# PDF y canvas
+jspdf@^2.5.2
+html2canvas@^1.4.1
+
+# Desarrollo
+vite@^5.4.6
+@vitejs/plugin-react@^4.3.1
+sass-embedded@^1.79.3
+eslint@^8.57.1
+eslint-plugin-react@^7.37.1
+eslint-plugin-react-hooks@^4.6.2

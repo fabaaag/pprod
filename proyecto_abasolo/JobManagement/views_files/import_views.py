@@ -526,12 +526,14 @@ def procesar_avances_ots(path_file, programa_id=None):
     """Procesa solo los cambios en cantidad_avance de las OTs"""
 
     avances_procesados = []
+    ots_revisadas = []
 
     # Obtener OTs del programa si se especifica
     if programa_id:
-        ots_programa = OrdenTrabajo.objects.filter(
+        ots_programa = set(OrdenTrabajo.objects.filter(
             programaordentrabajo__programa_id=programa_id
-        ).values_list('codigo_ot', flat=True)
+        ).values_list('codigo_ot', flat=True))
+        print(f"[DEBUG] OTs del programa {programa_id}: {list(ots_programa)}")
     else:
         ots_programa = None
 
@@ -543,24 +545,31 @@ def procesar_avances_ots(path_file, programa_id=None):
 
     print(f"[INFO] Separador FORZADO para ot.txt: '$'")
     print(f"[INFO] Codificación detectada para ot.txt: {encoding}")
+
+    total_lineas = 0
+    lineas_validas = 0
+    lineas_en_programa = 0
+    ots_actualizadas = 0
+    cambios_situacion = 0
     
     with open(path_file, 'r', encoding=encoding) as file:
-        # ✅ FORZAR: Separador $ para ot.txt
         reader = csv.reader(file, delimiter='$')
-        next(reader)  # ✅ AGREGAR: Saltar header como en try_imports.py
+        next(reader)  # Saltar header
 
-        for row in reader:
+        for row_num, row in enumerate(reader, 1):
+            total_lineas += 1
+
+            #Debug cada 50 lineas
+            if row_num % 50 == 0:
+                print(f"[DEBUG] Procesando linea {row_num}...")
+            
             try:
-                # ✅ CAMBIAR: Validación más flexible como en try_imports.py
                 if len(row) == 0:  # Línea vacía
                     continue
                     
-                if len(row) < 17:  # Necesitamos al menos campo 16
-                    print(f"[DEBUG] Línea con {len(row)} campos (necesita 17+)")
-                    continue
-                    
-                if len(row) != 24:  # Log pero continúa
-                    print(f"[DEBUG] Línea con {len(row)} campos (esperaba 24)")
+                if len(row) != 25:  # Log pero continúa
+                    print(f"[DEBUG] Línea con {len(row)} campos (esperaba 25)")
+                lineas_validas += 1
 
                 # ✅ VERIFICAR: Campo 0 no vacío
                 if not row[0].strip():
@@ -573,8 +582,12 @@ def procesar_avances_ots(path_file, programa_id=None):
                     continue
 
                 # Solo procesar OTs del programa si se especifica
-                if ots_programa and codigo_ot not in ots_programa:
-                    continue
+                if ots_programa:
+                    if codigo_ot not in ots_programa:
+                        continue
+                    lineas_en_programa += 1
+                    
+                situacion_ot_nueva = row[2].strip()
 
                 # ✅ VERIFICAR: Campo 16 existe
                 if len(row) <= 16:
@@ -588,6 +601,7 @@ def procesar_avances_ots(path_file, programa_id=None):
                         cantidad_avance_nueva = 0.0
                     else:
                         cantidad_avance_nueva = float(cantidad_avance_str)
+                        print(f"[DEBUG] Línea {row_num}: OT {codigo_ot} - Cantidad avance nueva: {cantidad_avance_nueva}")
                 except (ValueError, IndexError):
                     continue
 
@@ -595,19 +609,52 @@ def procesar_avances_ots(path_file, programa_id=None):
                 try:
                     ot = OrdenTrabajo.objects.get(codigo_ot=codigo_ot)
                     cantidad_anterior = float(ot.cantidad_avance)
+                    situacion_anterior = ot.situacion_ot.codigo_situacion_ot
 
-                    # Solo actualizar si hay diferencia
-                    if abs(cantidad_avance_nueva - cantidad_anterior) > 0.01:
+                    cambio_avance = abs(cantidad_avance_nueva - cantidad_anterior) > 0.01
+                    cambio_situacion = situacion_ot_nueva and situacion_ot_nueva != situacion_anterior
+
+                    ot_data = {
+                        'codigo_ot': codigo_ot,
+                        'cantidad_anterior': cantidad_anterior,
+                        'cantidad_nueva': cantidad_avance_nueva,
+                        'situacion_anterior': situacion_anterior,
+                        'situacion_nueva': situacion_ot_nueva,
+                        'diferencia_avance': cantidad_avance_nueva - cantidad_anterior,
+                        'cambio_avance': cambio_avance,
+                        'cambio_situacion': cambio_situacion,
+                        'cambios_aplicados': []
+                    }
+
+                    campos_a_actualizar = []
+
+                    if cambio_avance:
                         ot.cantidad_avance = cantidad_avance_nueva
-                        ot.save(update_fields=['cantidad_avance'])
+                        campos_a_actualizar.append('cantidad_avance')
+                        ot_data['cambios_aplicados'].append('cantidad_avance')
+                        print(f"[DEBUG] ot {codigo_ot}: Avance {cantidad_anterior} → {cantidad_avance_nueva}")
+                    
+                    if cambio_situacion:
+                        try:
+                            situacion_obj, created = SituacionOT.objects.get_or_create(
+                                codigo_situacion_ot=situacion_ot_nueva
+                            )
+                            ot.situacion_ot = situacion_obj
+                            campos_a_actualizar.append('situacion_ot')
+                            ot_data['cambios_aplicados'].append('situacion_ot')
+                            cambios_situacion += 1
+                            print(f"[DEBUG] ot {codigo_ot}: Situación {situacion_anterior} → {situacion_ot_nueva}")
+                        except Exception as e:
+                            print(f"[ERROR] OT {codigo_ot}: No se pudo actualizar situación: {str(e)}")
 
-                        avances_procesados.append({
-                            'codigo_ot': codigo_ot,
-                            'cantidad_anterior': cantidad_anterior,
-                            'cantidad_nueva': cantidad_avance_nueva,
-                            'diferencia': cantidad_avance_nueva - cantidad_anterior
-                        })
-                        print(f"[DEBUG] OT {codigo_ot}: Avance {cantidad_anterior} → {cantidad_avance_nueva}")
+                    if campos_a_actualizar:
+                        ot.save(update_fields=campos_a_actualizar)
+                        avances_procesados.append(ot_data)
+                        ots_actualizadas += 1
+                    if cantidad_avance_nueva == 0 or cantidad_anterior == cantidad_avance_nueva:
+                        print("Situacion ot", row[2].strip())
+
+                    ots_revisadas.append(ot_data)
 
                 except OrdenTrabajo.DoesNotExist:
                     continue
@@ -615,8 +662,18 @@ def procesar_avances_ots(path_file, programa_id=None):
             except Exception as e:
                 print(f"Error procesando OT {codigo_ot}: {str(e)}")
                 continue
-            
-        return avances_procesados
+    # ✅ RESUMEN DETALLADO
+    print(f"[INFO] === RESUMEN PROCESAMIENTO OTs ===")
+    print(f"[INFO] Total líneas en archivo: {total_lineas}")
+    print(f"[INFO] Líneas válidas: {lineas_validas}")
+    print(f"[INFO] Líneas del programa: {lineas_en_programa}")
+    print(f"[INFO] OTs revisadas: {len(ots_revisadas)}")
+    print(f"[INFO] OTs con cambios aplicados: {ots_actualizadas}")
+    print(f"[INFO] Cambios de situación: {cambios_situacion}")
+    print(f"[INFO] Cambios de avance: {len([ot for ot in avances_procesados if ot['cambio_avance']])}")
+    
+    # ✅ RETORNAR: Lista de OTs revisadas (no solo las cambiadas)
+    return ots_revisadas
     
 def procesar_avances_items_ruta(path_file, programa_id=None):
     """Procesa solo los cambios en cantidades de ItemRuta"""
@@ -625,9 +682,10 @@ def procesar_avances_items_ruta(path_file, programa_id=None):
 
     # Obtener códigos de OT del programa si se especifica
     if programa_id:
-        ots_programa = OrdenTrabajo.objects.filter(
+        ots_programa = set(OrdenTrabajo.objects.filter(
             programaordentrabajo__programa_id=programa_id
-        ).values_list('codigo_ot', flat=True)
+        ).values_list('codigo_ot', flat=True))
+        print(f"[DEBUG] OTs del programa {programa_id}: {list(ots_programa)}")
     else:
         ots_programa = None
 
@@ -643,7 +701,7 @@ def procesar_avances_items_ruta(path_file, programa_id=None):
     with open(path_file, 'r', encoding=encoding) as file:
         # ✅ FORZAR: Separador @ para ruta_ot.txt
         reader = csv.reader(file, delimiter='@')
-        # ✅ NOTA: NO usar next(reader) para ruta_ot.txt (no tiene header según try_imports.py)
+        next(reader)  # Saltar header
 
         for idx, row in enumerate(reader):
             try:
@@ -688,13 +746,17 @@ def procesar_avances_items_ruta(path_file, programa_id=None):
                         cantidad_terminado_nueva = 0.0
                     else:
                         cantidad_terminado_nueva = float(cantidad_terminado_str)
-                    
+
+                    print(f"[DEBUG] OT {codigo_ot}: Cantidad avance nueva: {cantidad_terminado_nueva}")
+
                     # Cantidad perdida (campo 7)
                     cantidad_perdida_str = row[7].strip()
                     if cantidad_perdida_str in puntos:
                         cantidad_perdida_nueva = 0.0
                     else:
                         cantidad_perdida_nueva = float(cantidad_perdida_str)
+                    
+                    print(f"[DEBUG] OT {codigo_ot}: Cantidad perdida nueva: {cantidad_perdida_nueva}")
 
                 except (ValueError, IndexError):
                     continue
